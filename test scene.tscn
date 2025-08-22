@@ -6,8 +6,30 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gy7eo")]
-position = Vector2(467, 226)
+position = Vector2(565, 560)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_gy7eo")]
-position = Vector2(445, 435)
-scale = Vector2(22.575, 1.52)
+position = Vector2(563, 628)
+scale = Vector2(22, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_gy7eo")]
+position = Vector2(168, 578)
+scale = Vector2(11, 1)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_gy7eo")]
+position = Vector2(960, 576)
+scale = Vector2(11, 1)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_gy7eo")]
+position = Vector2(32, 346)
+rotation = 1.5708
+scale = Vector2(11, 1)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_gy7eo")]
+position = Vector2(1112, 346)
+rotation = 1.5708
+scale = Vector2(11, 1)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_gy7eo")]
+position = Vector2(533, 320)
+scale = Vector2(30, 1)
