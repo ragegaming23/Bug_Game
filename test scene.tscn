@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=4 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://test player.tscn" id="1_gy7eo"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://testfloor01.tscn" id="2_gy7eo"]
+[ext_resource type="Script" uid="uid://dv03hwqqw0swq" path="res://testfloor_01.gd" id="3_tiep7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,22 +12,23 @@ position = Vector2(565, 560)
 [node name="StaticBody2D" parent="." instance=ExtResource("2_gy7eo")]
 position = Vector2(563, 628)
 scale = Vector2(22, 1)
+script = ExtResource("3_tiep7")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_gy7eo")]
-position = Vector2(168, 578)
+position = Vector2(163, 520)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_gy7eo")]
-position = Vector2(960, 576)
+position = Vector2(960, 520)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_gy7eo")]
-position = Vector2(32, 346)
+position = Vector2(32, 320)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_gy7eo")]
-position = Vector2(1112, 346)
+position = Vector2(1112, 330)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
