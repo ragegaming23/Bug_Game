@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://lgipcsgc5s1w"]
+
+[ext_resource type="Script" uid="uid://c20anioq5clld" path="res://UI/character_selection.gd" id="1_3gqe6"]
+[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="2_is55k"]
+
+[node name="Character selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gqe6")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+offset_right = 253.0
+offset_bottom = 182.0
+
+[node name="Test character" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Test Character"
+icon = ExtResource("2_is55k")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="BoxContainer/Test character" to="." method="_on_button_pressed"]
