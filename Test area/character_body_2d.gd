@@ -1,9 +1,9 @@
 extends CharacterBody2D
-
+signal respawned()
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
+var Health :=1
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,4 +24,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func take_damage(Damage: int):
+	Health -= Damage
+	
+	if Health <= 0:
+		respawned.emit()
 	
