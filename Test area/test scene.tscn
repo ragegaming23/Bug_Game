@@ -24,7 +24,7 @@ position = Vector2(163, 520)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(960, 520)
+position = Vector2(928, 570)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_rk26f")]
