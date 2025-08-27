@@ -1,11 +1,11 @@
 extends CollisionShape2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var knockback_dir = Vector2()
+var knockback_wait = 10
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+for body in $".".get_overlapping_bodies():
+	if knockback_wait <= 0 and body.get("name") == "player"
+		print("knockback")
+		knockback_wait = 10
+knockback_wait

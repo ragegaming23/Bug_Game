@@ -1,6 +1,7 @@
 extends CharacterBody2D
 signal respawned()
 
+const Name = "player"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var Health :=10

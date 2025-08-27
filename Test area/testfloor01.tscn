@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfshj5p1g3jk5"]
+[gd_scene load_steps=5 format=3 uid="uid://cfshj5p1g3jk5"]
 
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_k18ni"]
+[ext_resource type="Script" uid="uid://btsl4mbrj24bn" path="res://Test area/knockback.gd" id="2_jbq30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfbca"]
 
@@ -19,5 +20,6 @@ texture = ExtResource("1_k18ni")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="testKnockback" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_hnf71")
+script = ExtResource("2_jbq30")
