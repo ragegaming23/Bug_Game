@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://fykpnc7xoslr"]
+
+[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_yc2ol"]
+
+[sub_resource type="GDScript" id="GDScript_yc2ol"]
+script/source = "extends RigidBody2D
+
+@onready var terget=$\".\"
+const Name = \"enemy\"
+var speed = 200
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	var direction=(terget.position-position).normalized()
+	velocity=direction * speed
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	
+	look_at(terget.position)
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_403ax"]
+size = Vector2(64, 115)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = SubResource("GDScript_yc2ol")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.994634, 0.615634, 0.682122, 1)
+position = Vector2(3, 0)
+scale = Vector2(0.515625, 1)
+texture = ExtResource("1_yc2ol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2.5)
+shape = SubResource("RectangleShape2D_403ax")

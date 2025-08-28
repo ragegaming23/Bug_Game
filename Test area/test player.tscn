@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="2_ky4m1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0faqu"]
-radius = 28.1114
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0faqu"]
+size = Vector2(55, 121)
 
-[node name="Test player" type="CharacterBody2D"]
+[node name="Test player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ecflg")
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -16,7 +16,7 @@ scale = Vector2(0.453125, 1)
 texture = ExtResource("2_ky4m1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -3.5)
-shape = SubResource("CircleShape2D_0faqu")
+position = Vector2(-2.5, -4.5)
+shape = SubResource("RectangleShape2D_0faqu")
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

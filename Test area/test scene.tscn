@@ -46,7 +46,7 @@ scale = Vector2(30, 1)
 script = ExtResource("5_ihbi5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(568, 648)
+position = Vector2(573, 910)
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
@@ -54,7 +54,7 @@ shape = SubResource("WorldBoundaryShape2D_7e5m4")
 position = Vector2(416, 556)
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(680, 552)
+position = Vector2(660, 554)
 
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

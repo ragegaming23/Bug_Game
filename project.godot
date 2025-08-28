@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Bug_Game"
-run/main_scene="res://Test area/test scene.tscn"
+run/main_scene="uid://cg2ch8yn4qy1r"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+Player=""
 
 [input]
 
