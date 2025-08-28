@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 signal respawned()
 
 const Name = "player"
@@ -29,8 +29,5 @@ func _physics_process(delta: float) -> void:
 func take_damage(Damage: int):
 	Health -= Damage
 	
-		
-	
 	if Health <= 0:
 		respawned.emit()
-	
