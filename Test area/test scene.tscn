@@ -13,7 +13,7 @@
 script = ExtResource("1_xw60q")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(416, 556)
+position = Vector2(456, 552)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
 position = Vector2(563, 628)

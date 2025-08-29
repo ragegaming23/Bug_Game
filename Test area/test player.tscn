@@ -1,22 +1,179 @@
-[gd_scene load_steps=4 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=36 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
-[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="2_ky4m1"]
+[ext_resource type="Texture2D" uid="uid://bv305w22vvnec" path="res://Praying Mantis/Praying_Mantis_BackBicep.png" id="3_b4ni4"]
+[ext_resource type="Texture2D" uid="uid://bvr434mk24cp7" path="res://Praying Mantis/Praying_Mantis_BackWrist.png" id="4_6b3dv"]
+[ext_resource type="Texture2D" uid="uid://c3ehl5qhwtw1r" path="res://Praying Mantis/Praying_Mantis_BackKnuckle.png" id="5_5nfjf"]
+[ext_resource type="Texture2D" uid="uid://cgpalshq64fub" path="res://Praying Mantis/Praying_Mantis_BackPincer.png" id="6_gr6cq"]
+[ext_resource type="Texture2D" uid="uid://daghcrj7ofy6l" path="res://Praying Mantis/Praying_Mantis_Neck.png" id="7_l0vf6"]
+[ext_resource type="Texture2D" uid="uid://y5a8b12mf61i" path="res://Praying Mantis/Praying_Mantis_Necklace.png" id="8_yis0a"]
+[ext_resource type="Texture2D" uid="uid://c1mgdkbn67g00" path="res://Praying Mantis/Praying_Mantis_Antennae.png" id="9_u8csd"]
+[ext_resource type="Texture2D" uid="uid://be0d4gc5l8sl3" path="res://Praying Mantis/Praying_Mantis_BackEye.png" id="10_skldg"]
+[ext_resource type="Texture2D" uid="uid://c6cw14v7angip" path="res://Praying Mantis/Praying_Mantis_Head.png" id="11_hcon3"]
+[ext_resource type="Texture2D" uid="uid://pb3niso5l2c2" path="res://Praying Mantis/Praying_Mantis_FrontEye.png" id="12_dxtcp"]
+[ext_resource type="Texture2D" uid="uid://qml34cp2k44n" path="res://Praying Mantis/Praying_Mantis_BackBigAnkle.png" id="13_pj6po"]
+[ext_resource type="Texture2D" uid="uid://b828x80788der" path="res://Praying Mantis/Praying_Mantis_BackBigThigh.png" id="14_3ts0h"]
+[ext_resource type="Texture2D" uid="uid://utomi7yig4cu" path="res://Praying Mantis/Praying_Mantis_BackBigFoot.png" id="15_5kk0t"]
+[ext_resource type="Texture2D" uid="uid://yqp2ipg28xee" path="res://Praying Mantis/Praying_Mantis_BackThigh.png" id="16_q2mh1"]
+[ext_resource type="Texture2D" uid="uid://4or7g2uo4oc8" path="res://Praying Mantis/Praying_Mantis_BackHip.png" id="17_rjdyd"]
+[ext_resource type="Texture2D" uid="uid://b1ba4oty2v24n" path="res://Praying Mantis/Praying_Mantis_BackFoot.png" id="18_2wem1"]
+[ext_resource type="Texture2D" uid="uid://c1hruye3cdwnu" path="res://Praying Mantis/Praying_Mantis_Underbelly.png" id="19_gflu2"]
+[ext_resource type="Texture2D" uid="uid://csy662ap03re7" path="res://Praying Mantis/Praying_Mantis_Thorax.png" id="20_7d4bw"]
+[ext_resource type="Texture2D" uid="uid://t80e0k4gx8xm" path="res://Praying Mantis/Praying_Mantis_BigAnkle.png" id="21_cetny"]
+[ext_resource type="Texture2D" uid="uid://wgcwawcul4ih" path="res://Praying Mantis/Praying_Mantis_BigFoot.png" id="22_r3sro"]
+[ext_resource type="Texture2D" uid="uid://cuxly5433xs3k" path="res://Praying Mantis/Praying_Mantis_BigHip.png" id="23_kscbv"]
+[ext_resource type="Texture2D" uid="uid://m5xws81apbyx" path="res://Praying Mantis/Praying_Mantis_BigThigh.png" id="24_rumdp"]
+[ext_resource type="Texture2D" uid="uid://cbq4n31773dt7" path="res://Praying Mantis/Praying_Mantis_FrontHip.png" id="25_ahtgu"]
+[ext_resource type="Texture2D" uid="uid://d1dcniqqcwk28" path="res://Praying Mantis/Praying_Mantis_FrontLegThigh.png" id="26_hw5lo"]
+[ext_resource type="Texture2D" uid="uid://dmoyrodvvu3k0" path="res://Praying Mantis/Praying_Mantis_FrontFoot.png" id="27_xrnwm"]
+[ext_resource type="Texture2D" uid="uid://ckpafna4knqac" path="res://Praying Mantis/Praying_Mantis_Robe.png" id="28_86wen"]
+[ext_resource type="Texture2D" uid="uid://l167jptnd4gc" path="res://Praying Mantis/Praying_Mantis_BicepSleeve.png" id="29_ckx67"]
+[ext_resource type="Texture2D" uid="uid://ch5crf0yj1mpp" path="res://Praying Mantis/Praying_Mantis_WristSleeve.png" id="30_wcj34"]
+[ext_resource type="Texture2D" uid="uid://dfih4mqe8roo" path="res://Praying Mantis/Praying_Mantis_Knuckle.png" id="31_xbwnu"]
+[ext_resource type="Texture2D" uid="uid://h8nckfg6a1no" path="res://Praying Mantis/Praying_Mantis_Pincer.png" id="32_flbv4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0faqu"]
-size = Vector2(55, 121)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3legy"]
+radius = 16.0
+height = 128.0
+
+[sub_resource type="Animation" id="Animation_1mvsa"]
+resource_name = "Mantis_Jab"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1xcd"]
+_data = {
+&"Mantis_Jab": SubResource("Animation_1mvsa")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ib0jf"]
+radius = 79.2972
+height = 480.0
 
 [node name="Test player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ecflg")
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0, 0.620255, 0.21937, 1)
-position = Vector2(-3, -3)
-scale = Vector2(0.453125, 1)
-texture = ExtResource("2_ky4m1")
+[node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_b4ni4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -4.5)
-shape = SubResource("RectangleShape2D_0faqu")
+[node name="PrayingMantisBackWrist" type="Sprite2D" parent="PrayingMantisBackBicep"]
+texture = ExtResource("4_6b3dv")
+
+[node name="PrayingMantisBackKnuckle" type="Sprite2D" parent="PrayingMantisBackBicep"]
+texture = ExtResource("5_5nfjf")
+
+[node name="PrayingMantisBackPincer" type="Sprite2D" parent="PrayingMantisBackBicep"]
+texture = ExtResource("6_gr6cq")
+
+[node name="PrayingMantisNeck" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_l0vf6")
+
+[node name="PrayingMantisNecklace" type="Sprite2D" parent="PrayingMantisNeck"]
+texture = ExtResource("8_yis0a")
+
+[node name="PrayingMantisAntennae" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_u8csd")
+
+[node name="PrayingMantisBackEye" type="Sprite2D" parent="PrayingMantisAntennae"]
+texture = ExtResource("10_skldg")
+
+[node name="PrayingMantisHead" type="Sprite2D" parent="PrayingMantisAntennae"]
+texture = ExtResource("11_hcon3")
+
+[node name="PrayingMantisFrontEye" type="Sprite2D" parent="PrayingMantisAntennae"]
+texture = ExtResource("12_dxtcp")
+
+[node name="PrayingMantisBackBigAnkle" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_pj6po")
+
+[node name="PrayingMantisBackBigThigh" type="Sprite2D" parent="PrayingMantisBackBigAnkle"]
+texture = ExtResource("14_3ts0h")
+
+[node name="PrayingMantisBackBigFoot" type="Sprite2D" parent="PrayingMantisBackBigAnkle"]
+texture = ExtResource("15_5kk0t")
+
+[node name="PrayingMantisBackThigh" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_q2mh1")
+
+[node name="PrayingMantisBackHip" type="Sprite2D" parent="PrayingMantisBackThigh"]
+texture = ExtResource("17_rjdyd")
+
+[node name="PrayingMantisBackFoot" type="Sprite2D" parent="PrayingMantisBackThigh"]
+texture = ExtResource("18_2wem1")
+
+[node name="PrayingMantisUnderbelly" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_gflu2")
+
+[node name="PrayingMantisThorax" type="Sprite2D" parent="PrayingMantisUnderbelly"]
+texture = ExtResource("20_7d4bw")
+
+[node name="PrayingMantisBigAnkle" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_cetny")
+
+[node name="PrayingMantisBigFoot" type="Sprite2D" parent="PrayingMantisBigAnkle"]
+texture = ExtResource("22_r3sro")
+
+[node name="PrayingMantisBigHip" type="Sprite2D" parent="PrayingMantisBigAnkle"]
+texture = ExtResource("23_kscbv")
+
+[node name="PrayingMantisBigThigh" type="Sprite2D" parent="PrayingMantisBigAnkle"]
+texture = ExtResource("24_rumdp")
+
+[node name="PrayingMantisFrontHip" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("25_ahtgu")
+
+[node name="PrayingMantisFrontLegThigh" type="Sprite2D" parent="PrayingMantisFrontHip"]
+texture = ExtResource("26_hw5lo")
+
+[node name="PrayingMantisFrontFoot" type="Sprite2D" parent="PrayingMantisFrontHip"]
+texture = ExtResource("27_xrnwm")
+
+[node name="PrayingMantisRobe" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("28_86wen")
+
+[node name="PrayingMantisBicepSleeve" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("29_ckx67")
+
+[node name="PrayingMantisWristSleeve" type="Sprite2D" parent="PrayingMantisBicepSleeve"]
+texture = ExtResource("30_wcj34")
+
+[node name="PrayingMantisKnuckle" type="Sprite2D" parent="PrayingMantisBicepSleeve"]
+texture = ExtResource("31_xbwnu")
+
+[node name="PrayingMantisPincer" type="Sprite2D" parent="PrayingMantisBicepSleeve"]
+texture = ExtResource("32_flbv4")
+
+[node name="FrontCollision" type="CollisionShape2D" parent="."]
+position = Vector2(24, 8)
+shape = SubResource("CapsuleShape2D_3legy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FrontCollision"]
+libraries = {
+&"": SubResource("AnimationLibrary_y1xcd")
+}
+
+[node name="BackCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-32, 32)
+rotation = 1.43815
+scale = Vector2(0.2, 0.237)
+shape = SubResource("CapsuleShape2D_ib0jf")
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
