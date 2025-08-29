@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="2_rk26f"]
 [ext_resource type="Script" uid="uid://dv03hwqqw0swq" path="res://Test area/testfloor_01.gd" id="3_xw60q"]
 [ext_resource type="Script" uid="uid://dqgdr7n5kaeeo" path="res://Test area/area_2d.gd" id="5_ihbi5"]
-[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://enemy.tscn" id="6_ihbi5"]
+[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Enemy/enemy.tscn" id="6_ihbi5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
 
