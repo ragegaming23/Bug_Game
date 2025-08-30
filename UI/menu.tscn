@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=3 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://UI/menu.gd" id="1_0h2wq"]
+[ext_resource type="AudioStream" uid="uid://i738ss3v1f4c" path="res://Music/CreepyBrawlers_MenuMusic.ogg" id="2_wfiwe"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,6 +40,10 @@ text = "Options"
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../Start")
 text = "Quit"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("2_wfiwe")
+autoplay = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
