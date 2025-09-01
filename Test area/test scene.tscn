@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=11 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://dv03hwqqw0swq" path="res://Test area/testfloor_01.gd" id="3_xw60q"]
 [ext_resource type="Script" uid="uid://dqgdr7n5kaeeo" path="res://Test area/area_2d.gd" id="5_ihbi5"]
 [ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Enemy/enemy.tscn" id="6_ihbi5"]
+[ext_resource type="AudioStream" uid="uid://clckrhbe6mh3e" path="res://Music/CreepyBrawlers_Grassfields.ogg" id="7_7e5m4"]
+[ext_resource type="AudioStream" uid="uid://bbleuigias4kd" path="res://Voice Lines/Announcer/AnnouncerHall_Ready.wav" id="8_of16h"]
+[ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
 
@@ -55,6 +58,17 @@ position = Vector2(416, 556)
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
 position = Vector2(660, 554)
+
+[node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7e5m4")
+volume_db = -10.0
+autoplay = true
+
+[node name="Ready" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_of16h")
+
+[node name="Fight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_w25ro")
 
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

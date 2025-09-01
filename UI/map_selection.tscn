@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8bc3726x8y3s"]
+[gd_scene load_steps=4 format=3 uid="uid://c8bc3726x8y3s"]
 
 [ext_resource type="Script" uid="uid://cv53d7o5xlaa" path="res://UI/map_selection.gd" id="1_dhj3i"]
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="2_xwpqq"]
+[ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="3_jbn6b"]
 
 [node name="Map selection" type="Control"]
 layout_mode = 3
@@ -23,5 +24,8 @@ text = "Test Level"
 icon = ExtResource("2_xwpqq")
 icon_alignment = 1
 vertical_icon_alignment = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jbn6b")
 
 [connection signal="pressed" from="BoxContainer/Button" to="." method="_on_button_pressed"]

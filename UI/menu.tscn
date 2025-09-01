@@ -43,6 +43,7 @@ text = "Quit"
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("2_wfiwe")
+volume_db = -25.0
 autoplay = true
 
 [node name="Button" type="Button" parent="."]

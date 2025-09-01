@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bw5icoyvkfvy2"
+path="res://.godot/imported/AnnouncerHall_FinalRound.ogg-b57d02f2f5495aac8ec93b79d3b77ed7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Voice Lines/Announcer/AnnouncerHall_FinalRound.ogg"
+dest_files=["res://.godot/imported/AnnouncerHall_FinalRound.ogg-b57d02f2f5495aac8ec93b79d3b77ed7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
