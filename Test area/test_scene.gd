@@ -6,16 +6,16 @@ extends Node2D
 	
 func _on_player_respawned(player):
 	player.global_position = marker_2d.global_position
-	start_round()
-	
-func start_round():
-	# Play "Ready"
-	$Announcer.stream = preload("res://Voice Lines/Announcer/AnnouncerHall_Ready.wav")
-	$Announcer.play()
-	await $Announcer.finished # Wait until sound ends
-	
-	# Play "Fight"
-	$Announcer.stream=preload("res://Voice Lines/Announcer/AnnouncerHall_Fight.ogg")
-	$Announcer.play()
-	await $Announcer.finished
-	
+
+@onready var announcer_ready = $AnnouncerReady
+@onready var announcer_fight = $AnnouncerFight
+@onready var bg_music = $PlaceholderOST
+
+func _ready():
+	announcer_ready.play()
+	await announcer_ready.finished
+
+	announcer_fight.play()
+	await announcer_fight.finished
+	#Start background music
+	bg_music.play()
