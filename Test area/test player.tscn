@@ -38,33 +38,9 @@ height = 128.0
 
 [sub_resource type="Animation" id="Animation_1mvsa"]
 resource_name = "Mantis_Jab"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../PrayingMantisBicepSleeve/PrayingMantisWristSleeve:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.87),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(300, 90), Vector2(-155, 215)]
-}
 
 [sub_resource type="Animation" id="Animation_s8wov"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../PrayingMantisBicepSleeve/PrayingMantisWristSleeve:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(300, 90)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y1xcd"]
 _data = {
@@ -181,7 +157,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("29_ckx67")
 
 [node name="PrayingMantisWristSleeve" type="Sprite2D" parent="PrayingMantisBicepSleeve"]
-position = Vector2(300, 90)
+position = Vector2(3.05176e-05, -4.99999)
 texture = ExtResource("30_wcj34")
 
 [node name="PrayingMantisKnuckle" type="Sprite2D" parent="PrayingMantisBicepSleeve"]
