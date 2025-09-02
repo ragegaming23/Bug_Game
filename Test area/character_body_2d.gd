@@ -6,7 +6,25 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var Health :=10
 
+var Knockback: Vector2 = Vector2.ZERO
+var Knockback_timer: float = 0.0
+
+func	apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
+	Knockback = direction * force
+	Knockback_timer = knockback_duration
+	CanvasModulate
+	Color(2,2,2,2)
+	Color(1,1,1,1)
+	Color(2,2,2,2)
+	Color(1,1,1,1)
+	
+
 func _physics_process(delta: float) -> void:
+	if Knockback_timer > 0.0:
+		velocity = Knockback
+		Knockback_timer -= delta
+		if Knockback_timer <= 0.0:
+			Knockback = Vector2.ZERO
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -23,11 +41,20 @@ func _physics_process(delta: float) -> void:
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		move_and_slide()
 
-	move_and_slide()
-	
 func take_damage(Damage: int):
 	Health -= Damage
 	
 	if Health <= 0:
 		respawned.emit()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body == get_tree().get_first_node_in_group("Player"):
+		var knockback_direction = (body.global_position - global_position).normalized()
+		body.apply_knockback(knockback_direction, 1500.0, 0.12)
+		
+	if body == get_tree().get_first_node_in_group("enemy"):
+		var knockback_direction = (body.global_position - global_position).normalized()
+		body.apply_knockback(knockback_direction, 1500.0, 0.12)
