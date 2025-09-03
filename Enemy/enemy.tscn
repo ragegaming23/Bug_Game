@@ -1,30 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt4clu7q72r7"]
+[gd_scene load_steps=8 format=3 uid="uid://dt4clu7q72r7"]
 
 [ext_resource type="Script" uid="uid://b0jfytybgdell" path="res://Enemy/enemy.gd" id="1_4gyqm"]
-[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_7k104"]
+[ext_resource type="PackedScene" uid="uid://bnitoalrbby3n" path="res://Dragonfly/Dragonfly.tscn" id="3_am0pq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
-size = Vector2(49, 123)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am0pq"]
+size = Vector2(52, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqilm"]
+size = Vector2(53.5, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncf7h"]
+size = Vector2(51, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px1sc"]
-size = Vector2(121, 20)
+size = Vector2(76.5, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6jha"]
+size = Vector2(21, 7)
 
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_4gyqm")
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0.776666, 0, 0.138922, 1)
-scale = Vector2(0.4375, 1)
-texture = ExtResource("1_7k104")
+[node name="Dragonfly" parent="." instance=ExtResource("3_am0pq")]
+position = Vector2(0, 64)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_4gyqm")
+[node name="Back Tail" type="CollisionShape2D" parent="."]
+position = Vector2(42, 6)
+shape = SubResource("RectangleShape2D_am0pq")
+
+[node name="Front Tail" type="CollisionShape2D" parent="."]
+position = Vector2(16, 2)
+rotation = 0.120428
+shape = SubResource("RectangleShape2D_eqilm")
+
+[node name="body" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, 0)
+shape = SubResource("RectangleShape2D_ncf7h")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, 25)
 shape = SubResource("RectangleShape2D_px1sc")
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 4)
+shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

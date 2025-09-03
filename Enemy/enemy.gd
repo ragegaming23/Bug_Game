@@ -6,7 +6,7 @@ var speed = 200
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
-func	apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
+func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = direction * force
 	Knockback_timer = knockback_duration
 	CanvasModulate
@@ -17,14 +17,12 @@ func	apply_knockback(direction: Vector2, force: float, knockback_duration: float
 
 func _physics_process(delta: float) -> void:
 	
-	#if Knockback_timer > 0.0:
-		#velocity = Knockback
-		#Knockback_timer -= delta
-		#if Knockback_timer <= 0.0:
-			#Knockback = Vector2.ZERO
-		#else:
-			#_physics_process(delta)
-		#move_and_slide()
+	if Knockback_timer > 0.0:
+		velocity = Knockback
+		Knockback_timer -= delta
+		if Knockback_timer <= 0.0:
+			Knockback = Vector2.ZERO
+	move_and_slide()
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
