@@ -219,10 +219,95 @@ bone_angle = 0.0
 
 [node name="head" type="Bone2D" parent="Skeleton2D/thorax/robe/neck"]
 position = Vector2(17.6152, -0.907276)
-rotation = 1.36185
-scale = Vector2(0.401657, 5.10721)
+rotation = 2.84074
+scale = Vector2(0.021102, -0.627814)
 
-[node name="frontbicep" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(99, -418)
-rotation = 0.692187
-scale = Vector2(12.6906, -53.0036)
+[node name="backbicep" type="Bone2D" parent="Skeleton2D/thorax/robe"]
+position = Vector2(16.9706, -0.0981432)
+rotation = 3.10565
+scale = Vector2(0.379873, -0.524491)
+skew = -1.25049
+
+[node name="backwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep"]
+position = Vector2(9.22814, 9.6774)
+rotation = 3.08865
+scale = Vector2(1, 1)
+
+[node name="backknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep/backwrist"]
+position = Vector2(29.4481, 0.948371)
+rotation = -0.2282
+scale = Vector2(0.566564, 0.37071)
+
+[node name="backpincer" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep/backwrist/backknuckle"]
+position = Vector2(9.68533, 0.212224)
+rotation = 0.500513
+scale = Vector2(0.894627, 0.29826)
+
+[node name="frontbicep" type="Bone2D" parent="Skeleton2D/thorax/robe"]
+position = Vector2(20.0983, 0.0368073)
+rotation = 3.10565
+scale = Vector2(0.385801, -0.523444)
+skew = -1.25049
+
+[node name="frontwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep"]
+position = Vector2(11.6406, 9.55118)
+rotation = 3.0119
+scale = Vector2(1, 1)
+
+[node name="frontknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep/frontwrist"]
+position = Vector2(29.4481, 0.948371)
+rotation = -0.597314
+scale = Vector2(0.316921, 0.37071)
+
+[node name="frontpincer" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep/frontwrist/frontknuckle"]
+position = Vector2(9.68533, 0.212224)
+rotation = -2.42392
+scale = Vector2(2.74494, 1)
+
+[node name="frontknee2" type="Bone2D" parent="Skeleton2D/thorax"]
+position = Vector2(182.96, -149.773)
+rotation = -0.790871
+scale = Vector2(0.5, 0.5)
+
+[node name="frontfoot2" type="Bone2D" parent="Skeleton2D/thorax/frontknee2"]
+position = Vector2(124.316, 18.4264)
+rotation = 0.804463
+scale = Vector2(10.786, 5.73736)
+
+[node name="frontknee1" type="Bone2D" parent="Skeleton2D/thorax"]
+position = Vector2(176.305, -142.242)
+rotation = -0.270413
+scale = Vector2(0.5, 0.5)
+
+[node name="frontfoot1" type="Bone2D" parent="Skeleton2D/thorax/frontknee1"]
+position = Vector2(99, 0)
+rotation = 1.06025
+scale = Vector2(5.18014, 2.7679)
+
+[node name="backthigh2" type="Bone2D" parent="Skeleton2D/thorax"]
+position = Vector2(154.865, -136.69)
+rotation = -0.747348
+scale = Vector2(0.471961, 0.389835)
+
+[node name="backknee2" type="Bone2D" parent="Skeleton2D/thorax/backthigh2"]
+position = Vector2(-158.911, -153.911)
+rotation = -0.0324678
+scale = Vector2(1.14823, 1.19799)
+
+[node name="backfoot2" type="Bone2D" parent="Skeleton2D/thorax/backthigh2/backknee2"]
+position = Vector2(-79.1443, 210.701)
+rotation = -2.49306
+scale = Vector2(148.795, -3.55858)
+
+[node name="backthigh1" type="Bone2D" parent="Skeleton2D/thorax"]
+position = Vector2(147.483, -110.081)
+rotation = -0.747348
+scale = Vector2(0.5, 0.5)
+
+[node name="backknee1" type="Bone2D" parent="Skeleton2D/thorax/backthigh1"]
+position = Vector2(-159, -153)
+
+[node name="backfoot1" type="Bone2D" parent="Skeleton2D/thorax/backthigh1/backknee1"]
+position = Vector2(-79, 214)
+rotation = 1.58867
+scale = Vector2(3.60814, -0.296081)
