@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc17nm7lpoj78"]
+[gd_scene load_steps=4 format=3 uid="uid://cc17nm7lpoj78"]
 
 [ext_resource type="Texture2D" uid="uid://cvukibw8c8hrw" path="res://Praying Mantis/Praying_Mantis_Sprite_Sheet/Praying_Mantis_split.png" id="2_13j6u"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_vibug"]
+target_nodepath = NodePath("../IK targets/FrontbackfootTarget")
+tip_nodepath = NodePath("thorax/frontknee2/frontfoot2")
+ccdik_data_chain_length = 1
+joint_data/0/bone_index = 16
+joint_data/0/bone2d_node = NodePath("thorax/frontknee2")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 297.143
+joint_data/0/constraint_angle_max = 314.286
+joint_data/0/constraint_angle_invert = false
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_vibug"]
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_vibug")
 
 [node name="PrayingMantisScene" type="Node2D"]
 
@@ -250,6 +268,7 @@ bones = ["thorax", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "thorax/robe", Packe
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 scale = Vector2(0.998594, 0.991196)
+modification_stack = SubResource("SkeletonModificationStack2D_vibug")
 
 [node name="thorax" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(-416, -159)
@@ -309,7 +328,7 @@ rest = Transform2D(4.32398, -0.0624569, -7.95366, -0.0336687, 512.883, 1.50488)
 position = Vector2(8.31941, 2.79653)
 rotation = 0.429199
 scale = Vector2(0.169767, 0.226991)
-skew = 0.475356
+skew = 0.475357
 rest = Transform2D(0.154369, 0.0706473, -0.178449, 0.140288, 8.31941, 2.79653)
 
 [node name="backbicep" type="Bone2D" parent="Skeleton2D/thorax/robe"]
@@ -322,6 +341,7 @@ rest = Transform2D(-0.379627, 0.0136507, 0.503428, 0.147144, 16.9706, -0.0981432
 [node name="backwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep"]
 position = Vector2(9.22814, 9.6774)
 rotation = 3.08865
+scale = Vector2(1, 1)
 rest = Transform2D(-0.998599, 0.0529179, -0.0529179, -0.998599, 9.22814, 9.6774)
 
 [node name="backknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep/backwrist"]
@@ -346,6 +366,7 @@ rest = Transform2D(-0.385552, 0.0138637, 0.502423, 0.14685, 20.0983, 0.0368073)
 [node name="frontwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep"]
 position = Vector2(11.6406, 9.55118)
 rotation = 3.0119
+scale = Vector2(1, 1)
 rest = Transform2D(-0.991602, 0.129329, -0.129329, -0.991602, 11.6406, 9.55118)
 
 [node name="frontknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep/frontwrist"]
@@ -356,20 +377,20 @@ rest = Transform2D(0.262046, -0.178244, 0.208496, 0.306521, 29.4481, 0.948371)
 
 [node name="frontpincer" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep/frontwrist/frontknuckle"]
 position = Vector2(9.68533, 0.212224)
-rotation = -2.38437
+rotation = -2.40041
 scale = Vector2(3.40412, 0.0109934)
 rest = Transform2D(-2.47394, -2.3383, 0.0075514, -0.00798944, 9.68533, 0.212224)
 
 [node name="frontknee2" type="Bone2D" parent="Skeleton2D/thorax"]
 position = Vector2(182.96, -149.773)
-rotation = -0.790871
+rotation = -0.805531
 scale = Vector2(0.5, 0.5)
 rest = Transform2D(0.351613, -0.355483, 0.355483, 0.351613, 182.96, -149.773)
 
 [node name="frontfoot2" type="Bone2D" parent="Skeleton2D/thorax/frontknee2"]
-position = Vector2(124.316, 18.4264)
-rotation = 0.804463
-scale = Vector2(7.60978, 6.83602)
+position = Vector2(125.528, 19.4603)
+rotation = 0.635333
+scale = Vector2(5.8855, 7.91706)
 rest = Transform2D(5.27737, 5.48253, -4.92507, 4.74077, 124.316, 18.4264)
 
 [node name="frontknee1" type="Bone2D" parent="Skeleton2D/thorax"]
@@ -392,14 +413,14 @@ rest = Transform2D(0.346181, -0.32079, 0.264969, 0.285942, 154.865, -136.69)
 
 [node name="backknee2" type="Bone2D" parent="Skeleton2D/thorax/backthigh2"]
 position = Vector2(-158.911, -153.911)
-rotation = -0.032468
+rotation = -0.0324682
 scale = Vector2(1.14823, 1.19799)
 rest = Transform2D(1.14762, -0.0372742, 0.0388895, 1.19736, -158.911, -153.911)
 
 [node name="backfoot2" type="Bone2D" parent="Skeleton2D/thorax/backthigh2/backknee2"]
 position = Vector2(-79.1443, 210.701)
 rotation = -2.49306
-scale = Vector2(3.6499, 6.36209)
+scale = Vector2(3.64989, 6.36209)
 rest = Transform2D(-2.90886, -2.2046, 3.84281, -5.0704, -79.1443, 210.701)
 
 [node name="backthigh1" type="Bone2D" parent="Skeleton2D/thorax"]
@@ -426,18 +447,42 @@ rest = Transform2D(-5.67511, 6.26224, -0.370495, -0.335758, 126.037, -108.127)
 
 [node name="longhip" type="Bone2D" parent="Skeleton2D/thorax"]
 position = Vector2(137.692, -116.176)
-rotation = -0.747347
+rotation = -0.747348
 scale = Vector2(0.5, 0.5)
 rest = Transform2D(0.366747, -0.339848, 0.339848, 0.366747, 137.692, -116.176)
 
 [node name="shorthip1" type="Bone2D" parent="Skeleton2D/thorax"]
 position = Vector2(173.269, -137.452)
-rotation = -0.747347
+rotation = -0.747348
 scale = Vector2(0.5, 0.5)
 rest = Transform2D(0.366747, -0.339848, 0.339848, 0.366747, 173.269, -137.452)
 
 [node name="shorthip2" type="Bone2D" parent="Skeleton2D/thorax"]
 position = Vector2(175.643, -144.467)
-rotation = -0.747347
+rotation = -0.747348
 scale = Vector2(0.5, 0.5)
 rest = Transform2D(0.366747, -0.339848, 0.339848, 0.366747, 175.643, -144.467)
+
+[node name="IK targets" type="Node2D" parent="."]
+
+[node name="FrontbackfootTarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(182, -110)
+scale = Vector2(3.07686, 4.95458)
+
+[node name="frontfrontfootTarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(124, -80)
+
+[node name="BackbackfootTarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(-229, -70)
+
+[node name="backfrontfootTarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(-285, -60)
+
+[node name="frontpincertarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(406, -410)
+
+[node name="backpincertarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(327, -434)
+
+[node name="headtarget" type="RemoteTransform2D" parent="IK targets"]
+position = Vector2(179, -503)
