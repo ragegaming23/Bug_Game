@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=12 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
+[ext_resource type="Texture2D" uid="uid://dv8o3ms5boq3p" path="res://Stages/patch of grass.png" id="2_of16h"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="2_rk26f"]
 [ext_resource type="Script" uid="uid://dv03hwqqw0swq" path="res://Test area/testfloor_01.gd" id="3_xw60q"]
 [ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Enemy/enemy.tscn" id="6_ihbi5"]
@@ -23,6 +24,11 @@ script/source = "extends Area2D
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xw60q")
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(573, 325)
+scale = Vector2(2.11091, 1.6175)
+texture = ExtResource("2_of16h")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
 position = Vector2(563, 628)

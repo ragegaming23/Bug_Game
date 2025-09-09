@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv8o3ms5boq3p"
-path="res://.godot/imported/patch of grass.png-dee12c0c53defa8b7eaa7e163e6c2ea0.ctex"
+path="res://.godot/imported/patch of grass.png-1c47da6f78bd994915bb43077229a6d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://patch of grass.png"
-dest_files=["res://.godot/imported/patch of grass.png-dee12c0c53defa8b7eaa7e163e6c2ea0.ctex"]
+source_file="res://Stages/patch of grass.png"
+dest_files=["res://.godot/imported/patch of grass.png-1c47da6f78bd994915bb43077229a6d6.ctex"]
 
 [params]
 
