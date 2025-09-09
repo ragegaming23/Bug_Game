@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhyk86e4f2p5f"
-valid=false
+uid="uid://7ap6bjxfakv5"
+path="res://.godot/imported/70%.png-cef4271977a90e144176e79e3188ceed.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Health Bar/Leaf Health Progression/70%.png"
+dest_files=["res://.godot/imported/70%.png-cef4271977a90e144176e79e3188ceed.ctex"]
 
 [params]
 

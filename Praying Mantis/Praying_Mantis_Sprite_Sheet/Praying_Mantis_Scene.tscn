@@ -341,7 +341,6 @@ rest = Transform2D(-0.379627, 0.0136507, 0.503428, 0.147144, 16.9706, -0.0981432
 [node name="backwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep"]
 position = Vector2(9.22814, 9.6774)
 rotation = 3.08865
-scale = Vector2(1, 1)
 rest = Transform2D(-0.998599, 0.0529179, -0.0529179, -0.998599, 9.22814, 9.6774)
 
 [node name="backknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/backbicep/backwrist"]
@@ -366,7 +365,6 @@ rest = Transform2D(-0.385552, 0.0138637, 0.502423, 0.14685, 20.0983, 0.0368073)
 [node name="frontwrist" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep"]
 position = Vector2(11.6406, 9.55118)
 rotation = 3.0119
-scale = Vector2(1, 1)
 rest = Transform2D(-0.991602, 0.129329, -0.129329, -0.991602, 11.6406, 9.55118)
 
 [node name="frontknuckle" type="Bone2D" parent="Skeleton2D/thorax/robe/frontbicep/frontwrist"]
