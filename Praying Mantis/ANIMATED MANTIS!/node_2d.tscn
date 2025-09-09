@@ -1,0 +1,93 @@
+[gd_scene load_steps=17 format=3 uid="uid://ceoxqx0s6rwbk"]
+
+[ext_resource type="Texture2D" uid="uid://btg4uh745owbh" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0001.png" id="1_roiec"]
+[ext_resource type="Texture2D" uid="uid://cotkbn0x4das7" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0002.png" id="2_yybcf"]
+[ext_resource type="Texture2D" uid="uid://duuithe0k1a8i" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0003.png" id="3_di4hl"]
+[ext_resource type="Texture2D" uid="uid://brfcjjhupkrnu" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0004.png" id="4_b8c2w"]
+[ext_resource type="Texture2D" uid="uid://7s4n132y7eu3" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0005.png" id="5_lt73v"]
+[ext_resource type="Texture2D" uid="uid://ksl0o6j4s2e" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0001.png" id="6_mf5ol"]
+[ext_resource type="Texture2D" uid="uid://bbgqcli3ahh2q" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0002.png" id="7_4cl26"]
+[ext_resource type="Texture2D" uid="uid://djpmgu742m4yv" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0003.png" id="8_tuvla"]
+[ext_resource type="Texture2D" uid="uid://cacvjo6egu4vm" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0004.png" id="9_41e6v"]
+[ext_resource type="Texture2D" uid="uid://0jlycgayct3x" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0005.png" id="10_6lqyi"]
+[ext_resource type="Texture2D" uid="uid://jfjdt2dlqx4a" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0007.png" id="11_mhhxy"]
+[ext_resource type="Texture2D" uid="uid://5c276e4s61vm" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0006.png" id="12_8hyqs"]
+[ext_resource type="Texture2D" uid="uid://botde8yd2t4i2" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0008.png" id="13_dhqcy"]
+[ext_resource type="Texture2D" uid="uid://faco0x70ycfn" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0009.png" id="14_edekr"]
+[ext_resource type="Texture2D" uid="uid://coak14pjoax0o" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0010.png" id="15_glij4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovqjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_roiec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yybcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_di4hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b8c2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lt73v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mf5ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4cl26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tuvla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_41e6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6lqyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6lqyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mhhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mhhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8hyqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mhhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dhqcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_edekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_glij4")
+}],
+"loop": true,
+"name": &"punch",
+"speed": 27.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, -375)
+sprite_frames = SubResource("SpriteFrames_ovqjn")
+animation = &"punch"
+frame = 1
+frame_progress = 0.683446
