@@ -12,5 +12,5 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Test area/test scene.tscn")
-	
+	get_tree().change_scene_to_file("res://UI/character_selection.tscn")
+	Global.chosen_spawn = "Spawnpoint1"

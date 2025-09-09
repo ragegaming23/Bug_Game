@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c20anioq5clld" path="res://UI/character_selection.gd" id="1_3gqe6"]
 [ext_resource type="Texture2D" uid="uid://g6mnk0vwpcw1" path="res://Praying Mantis/Mantis_Other/Mantis_Icon2.png" id="2_is55k"]
-[ext_resource type="Texture2D" uid="uid://dbe1ywgkmkpx3" path="res://Dragonfly/Dragonfly_Close-up.png" id="3_is55k"]
+[ext_resource type="Texture2D" uid="uid://cqbie4nece2h1" path="res://Dragonfly/ComingSoon_Close-up.png" id="3_is55k"]
 
 [node name="Character selection" type="Control"]
 layout_mode = 3
@@ -27,7 +27,8 @@ vertical_icon_alignment = 0
 
 [node name="Dragonfly" type="Button" parent="BoxContainer"]
 layout_mode = 2
-text = "Dragonfly"
+disabled = true
+text = "Coming Soon"
 icon = ExtResource("3_is55k")
 icon_alignment = 1
 vertical_icon_alignment = 0
