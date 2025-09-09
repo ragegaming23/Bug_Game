@@ -1,19 +1,28 @@
 extends CharacterBody2D
 #@onready var terget = get_tree().get_first_node_in_group("Player")
+#@onready var Healthbar = get_node("/root/Enemy/enemy_health_bar")
+
 const Name = "enemy"
 var speed = 200
-var Health = 100000000000
+var MaxHealth = 10
+var Health = 10
 
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
+#func _ready():
+	#Healthbar.set_enemy_health_bar(Health, MaxHealth)
+
 func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = direction * force
 	Knockback_timer = knockback_duration
-	_Take_Damage(1)
-	
-func _Take_Damage(Damage:int):
+	Take_Damage(1)
+
+func Take_Damage(Damage: int):
 	Health -= Damage
+	
+	if Health <= 0: Health = 0
+	#Healthbar.change_health(-Damage)
 
 func _physics_process(delta: float) -> void:
 	

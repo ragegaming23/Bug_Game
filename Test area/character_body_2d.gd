@@ -1,19 +1,23 @@
 extends CharacterBody2D 
-signal respawned()
+
+#@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
 
 const Name = "player"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var Health :=10
+
+var MaxHealth = 10
+var Health = 10
 
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
+#func _ready():
+	#healthbar.set_health_bar(Health, MaxHealth)
+
 func apply_knockback(knockbackDirection: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = knockbackDirection * force
 	Knockback_timer = knockback_duration
-	
-	
 
 func _physics_process(delta: float) -> void:
 	if Knockback_timer > 0.0:
@@ -42,23 +46,20 @@ func _movement(delta:float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
-	
-#func _Damage(Damage:int):
-	
-func _Take_Damage(Damage: int):
+
+func Take_Damage(Damage: int):
 	Health -= Damage
 	
-	if Health <= 0:
-		respawned.emit()
-
+	if Health <= 0: Health = 0
+	#healthbar.change_health(-Damage)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == get_tree().get_first_node_in_group("Player"):
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 300.0, 1.0)
-		
+		body.Take_Damage(1)
 		
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 300.0, 1.0)
-		
+		body.Take_Damage(1)
