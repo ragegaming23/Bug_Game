@@ -3111,7 +3111,6 @@ _data = {
 [node name="DragonflyFull" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.517647)
-position = Vector2(1, -362)
 texture = ExtResource("1_ia7hx")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true

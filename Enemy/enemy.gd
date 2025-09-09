@@ -1,7 +1,8 @@
 extends CharacterBody2D
-@onready var terget = get_tree().get_first_node_in_group("Player")
+#@onready var terget = get_tree().get_first_node_in_group("Player")
 const Name = "enemy"
 var speed = 200
+var Health = 100000000000
 
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
@@ -9,11 +10,10 @@ var Knockback_timer: float = 0.0
 func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = direction * force
 	Knockback_timer = knockback_duration
-	CanvasModulate
-	Color(2,2,2,2)
-	Color(1,1,1,1)
-	Color(2,2,2,2)
-	Color(1,1,1,1)
+	_Take_Damage(1)
+	
+func _Take_Damage(Damage:int):
+	Health -= Damage
 
 func _physics_process(delta: float) -> void:
 	
@@ -26,9 +26,9 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	var direction=(terget.position-position).normalized()
-	velocity=direction * speed
-	look_at(terget.position)
+	#var direction=(terget.position-position).normalized()
+	#velocity=direction * speed
+	#look_at(terget.position)
 	move_and_slide()
 
 
