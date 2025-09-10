@@ -27,7 +27,11 @@ func _physics_process(delta: float) -> void:
 			Knockback = Vector2.ZERO
 	else:
 		_movement(delta)
-	
+	if Input .is_action_pressed("punch"):
+		$Animantis.play("punch")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -42,9 +46,10 @@ func _movement(delta:float) -> void:
 	var direction := Input.get_axis("move left", "move right")
 	if direction:
 		velocity.x = direction * SPEED 
-		
+		$Animantis.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$Animantis.play("idle")
 	move_and_slide()
 
 func Take_Damage(Damage: int):
@@ -63,3 +68,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 300.0, 1.0)
 		body.Take_Damage(1)
+
+
+
+#play(idle) 
