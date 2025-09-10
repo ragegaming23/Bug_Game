@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://602hjpvvuh6t"
-path="res://.godot/imported/Health_70.png-2db1402f8bb3261a39de8126bc05a65e.ctex"
+uid="uid://bxyiamubmcymr"
+path="res://.godot/imported/Health_2.png-c409c6973c608bdfee19766d3edefb11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Health Bar/Leaf Health Progression/Health_70.png"
-dest_files=["res://.godot/imported/Health_70.png-2db1402f8bb3261a39de8126bc05a65e.ctex"]
+source_file="res://Health Bar/Leaf Health Progression/Health_2.png"
+dest_files=["res://.godot/imported/Health_2.png-c409c6973c608bdfee19766d3edefb11.ctex"]
 
 [params]
 

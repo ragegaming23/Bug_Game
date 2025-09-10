@@ -1,11 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlvp0d1ilil2q"]
+[gd_scene load_steps=2 format=3 uid="uid://dt8sinoh3wynp"]
 
-[ext_resource type="Script" uid="uid://dgk7yan8i2x5t" path="res://Health Bar/health_bar.gd" id="1_5cij4"]
+[sub_resource type="GDScript" id="GDScript_t4hyf"]
+script/source = "extends ProgressBar
+
+
+@onready var label = $Label
+
+func set_health_bar(Health, MaxHealth):
+	max_value = MaxHealth
+	value = Health
+	
+	label.text = str(Health)
+	
+func Change_Health(newValue):
+	value += newValue
+	Label.text = str(value)
+	
+"
 
 [node name="HealthBar" type="ProgressBar"]
 offset_right = 192.0
 offset_bottom = 27.0
-script = ExtResource("1_5cij4")
+script = SubResource("GDScript_t4hyf")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

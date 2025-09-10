@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xyqua85io72p"
-path="res://.godot/imported/Health_60.png-09316fe008b8a661531e3aacece9420a.ctex"
+path="res://.godot/imported/Health_6.png-c63efa9027d567d49234764956b738cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Health Bar/Leaf Health Progression/Health_60.png"
-dest_files=["res://.godot/imported/Health_60.png-09316fe008b8a661531e3aacece9420a.ctex"]
+source_file="res://Health Bar/Leaf Health Progression/Health_6.png"
+dest_files=["res://.godot/imported/Health_6.png-c63efa9027d567d49234764956b738cf.ctex"]
 
 [params]
 
