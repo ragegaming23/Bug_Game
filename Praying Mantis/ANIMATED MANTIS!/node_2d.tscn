@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ceoxqx0s6rwbk"]
+[gd_scene load_steps=28 format=3 uid="uid://ceoxqx0s6rwbk"]
 
 [ext_resource type="Texture2D" uid="uid://btg4uh745owbh" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0001.png" id="1_roiec"]
 [ext_resource type="Texture2D" uid="uid://cotkbn0x4das7" path="res://Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0002.png" id="2_yybcf"]
@@ -15,6 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://botde8yd2t4i2" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0008.png" id="13_dhqcy"]
 [ext_resource type="Texture2D" uid="uid://faco0x70ycfn" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0009.png" id="14_edekr"]
 [ext_resource type="Texture2D" uid="uid://coak14pjoax0o" path="res://Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0010.png" id="15_glij4"]
+[ext_resource type="Texture2D" uid="uid://dt62cm44sutxl" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0001.png" id="16_8hyqs"]
+[ext_resource type="Texture2D" uid="uid://j62h3pp0mju" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0002.png" id="17_dhqcy"]
+[ext_resource type="Texture2D" uid="uid://dj8r70in3kct2" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0003.png" id="18_edekr"]
+[ext_resource type="Texture2D" uid="uid://dt560054d5gfn" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0004.png" id="19_glij4"]
+[ext_resource type="Texture2D" uid="uid://brrue3ercy05" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0005.png" id="20_ovqjn"]
+[ext_resource type="Texture2D" uid="uid://dgp0f55yuux71" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0006.png" id="21_lf7me"]
+[ext_resource type="Texture2D" uid="uid://bevgob0hosen" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0007.png" id="22_5wwfg"]
+[ext_resource type="Texture2D" uid="uid://bfj8ihacjmy6x" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0008.png" id="23_5mq11"]
+[ext_resource type="Texture2D" uid="uid://by452x4aif4ef" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0009.png" id="24_pyvtg"]
+[ext_resource type="Texture2D" uid="uid://bbw763ly7diry" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0010.png" id="25_4ddrn"]
+[ext_resource type="Texture2D" uid="uid://dyfac6ks3sqfg" path="res://Praying Mantis/Praying_Mantis_WALK/Praying_Mantis_WALK0011.png" id="26_i8rf3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ovqjn"]
 animations = [{
@@ -81,12 +92,50 @@ animations = [{
 "loop": true,
 "name": &"punch",
 "speed": 27.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_8hyqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dhqcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_edekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_glij4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ovqjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lf7me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5wwfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5mq11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pyvtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4ddrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_i8rf3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 17.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Animated Praying Mantis" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Animantis" type="AnimatedSprite2D" parent="."]
 position = Vector2(14, -375)
 sprite_frames = SubResource("SpriteFrames_ovqjn")
-animation = &"punch"
-frame = 1
+animation = &"walk"
+frame_progress = 0.243095
