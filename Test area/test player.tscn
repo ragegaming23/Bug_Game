@@ -184,6 +184,7 @@ shape = SubResource("CapsuleShape2D_ib0jf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(59, -8)
 shape = SubResource("RectangleShape2D_s8wov")
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../FrontCollision")

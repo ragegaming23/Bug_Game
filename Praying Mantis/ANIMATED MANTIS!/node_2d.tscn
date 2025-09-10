@@ -90,4 +90,3 @@ position = Vector2(14, -375)
 sprite_frames = SubResource("SpriteFrames_ovqjn")
 animation = &"punch"
 frame = 1
-frame_progress = 0.683446
