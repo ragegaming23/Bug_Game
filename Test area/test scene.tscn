@@ -25,12 +25,11 @@ script/source = "extends Area2D
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(0, -16)
 scale = Vector2(2.33263, 2.23674)
 script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(573, 325)
+position = Vector2(583.033, 325.474)
 scale = Vector2(2.11091, 1.6175)
 texture = ExtResource("2_of16h")
 
