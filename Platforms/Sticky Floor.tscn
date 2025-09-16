@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx7r1lw6mjxmq"]
+
+[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_2ocfh"]
+[ext_resource type="Script" uid="uid://q1uv82s7wpf" path="res://Platforms/collision_shape_2d.gd" id="2_l6isy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6isy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeny1"]
+size = Vector2(133.333, 186.667)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l6isy")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.768946, 0.818621, 1.15514e-06, 1)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_2ocfh")
+
+[node name="Slow Effect" type="Area2D" parent="."]
+scale = Vector2(0.15, 0.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slow Effect"]
+position = Vector2(3.17891e-06, -26.6667)
+shape = SubResource("RectangleShape2D_xeny1")
+script = ExtResource("2_l6isy")
+
+[connection signal="body_entered" from="Slow Effect" to="Slow Effect/CollisionShape2D" method="_on_area_2d_body_entered"]
