@@ -33,5 +33,9 @@ icon = ExtResource("3_is55k")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="BoxContainer/Dragonfly"]
+_spawnable_scenes = PackedStringArray("uid://de3wg1slg72gg")
+spawn_path = NodePath("../../..")
+
 [connection signal="pressed" from="BoxContainer/Test character" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BoxContainer/Dragonfly" to="." method="_on_button_pressed"]
