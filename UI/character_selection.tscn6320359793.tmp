@@ -68,7 +68,7 @@ expand_icon = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://de3wg1slg72gg")
-spawn_path = NodePath("../players")
+spawn_path = NodePath("..")
 spawn_limit = 2
 script = ExtResource("4_hhfm1")
 network_player = ExtResource("5_fmww8")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=63 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://btg4uh745owbh" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0001.png" id="2_86wen"]
@@ -174,6 +174,11 @@ height = 480.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
 size = Vector2(90, 20)
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_86wen"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
 [node name="Test player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ecflg")
 
@@ -320,6 +325,9 @@ shape = SubResource("CapsuleShape2D_ib0jf")
 position = Vector2(59, -8)
 shape = SubResource("RectangleShape2D_s8wov")
 disabled = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_86wen")
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

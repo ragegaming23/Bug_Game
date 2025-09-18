@@ -15,11 +15,16 @@ var Knockback_timer: float = 0.0
 #func _ready():
 	#healthbar.set_health_bar(Health, MaxHealth)
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
+
 func apply_knockback(knockbackDirection: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = knockbackDirection * force
 	Knockback_timer = knockback_duration
 
 func _physics_process(delta: float) -> void:
+	#if !is_multiplayer_authority(): return
+	
 	if Knockback_timer > 0.0:
 		velocity = Knockback
 		Knockback_timer -= delta

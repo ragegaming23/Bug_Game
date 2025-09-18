@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bifcuulr8176p"]
+
+[ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_0i422"]
+[ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="2_imial"]
+
+[node name="Level4" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_0i422")]
+position = Vector2(552, 520)
+scale = Vector2(40, 1)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_imial")]
+position = Vector2(96, 530)
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_imial")]
+position = Vector2(1016, 520)
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_0i422")]
+position = Vector2(552, 360)
+scale = Vector2(20, 1)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_imial")]
+position = Vector2(24, 304)
+rotation = 1.22173
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_imial")]
+position = Vector2(1120, 312)
+rotation = -1.22173
+scale = Vector2(5, 1)

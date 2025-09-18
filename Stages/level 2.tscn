@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2gymu43ids3c"]
+
+[ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_8tuof"]
+[ext_resource type="PackedScene" uid="uid://dx7r1lw6mjxmq" path="res://Platforms/Sticky Floor.tscn" id="2_iemxh"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(504, 432)
+scale = Vector2(20, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_iemxh")]
+position = Vector2(792, 392)
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_iemxh")]
+position = Vector2(224, 392)
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(80, 288)
+rotation = -0.698132
+scale = Vector2(1, 10)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(936, 296)
+rotation = 0.698132
+scale = Vector2(1, 10)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(504, 192)
+scale = Vector2(20, 1)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(224, 224)
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_8tuof")]
+position = Vector2(792, 224)
+scale = Vector2(5, 1)

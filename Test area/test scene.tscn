@@ -95,9 +95,9 @@ volume_db = 1.5
 position = Vector2(943.357, 530.92)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(165, 530)
+position = Vector2(164.621, 494.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(432, 552)
+position = Vector2(432.13, 547.225)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
