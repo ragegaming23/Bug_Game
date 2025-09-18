@@ -1299,7 +1299,6 @@ animation = &"flying"
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(48, -61)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_am0pq")
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]

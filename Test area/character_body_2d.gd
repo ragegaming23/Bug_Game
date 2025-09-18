@@ -87,6 +87,11 @@ func _movement(_delta:float) -> void:
 func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
 	update_healthbar()
+	if current_health <= 0:
+		die()
+
+func die()-> void:
+	get_tree().change_scene_to_file("res://UI/win screen2.tscn")
 
 func update_healthbar() -> void:
 	# Calculate which image index to use (0–10)

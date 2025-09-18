@@ -34,11 +34,16 @@ var Knockback_timer: float = 0.0
 func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = direction * force
 	Knockback_timer = knockback_duration
-	Take_Damage(1)
+	
 
 func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
 	update_healthbar()
+	if current_health <= 0:
+		die()
+
+func die()-> void:
+	get_tree().change_scene_to_file("res://UI/win_screen.gd")
 
 func update_healthbar() -> void:
 	# Calculate which image index to use (0–10)
