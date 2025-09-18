@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=98 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://bxtpn8tan5748" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0001.png" id="2_ip0d5"]
@@ -186,7 +186,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("18_hiqba")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 12.0
 }, {
@@ -229,8 +229,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("16_p7rir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1mvsa")
 }],
-"loop": true,
+"loop": false,
 "name": &"punch",
 "speed": 27.0
 }, {
@@ -319,13 +322,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3legy"]
-radius = 16.0
-height = 128.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7yoy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ib0jf"]
-radius = 79.2972
-height = 480.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8dsq"]
+size = Vector2(158.594, 76.9175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk853"]
+size = Vector2(20, 78.61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
 size = Vector2(90, 20)
@@ -342,8 +345,9 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"idle"
-frame_progress = 0.698872
+animation = &"punch"
+frame = 13
+frame_progress = 1.0
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
 visible = false
@@ -467,14 +471,21 @@ texture = ExtResource("31_xbwnu")
 texture = ExtResource("32_flbv4")
 
 [node name="FrontCollision" type="CollisionShape2D" parent="."]
-position = Vector2(24, 8)
-shape = SubResource("CapsuleShape2D_3legy")
+position = Vector2(32, 56)
+rotation = -0.120428
+shape = SubResource("RectangleShape2D_x7yoy")
 
 [node name="BackCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-32, 32)
+position = Vector2(-48, 48)
 rotation = 1.43815
 scale = Vector2(0.2, 0.237)
-shape = SubResource("CapsuleShape2D_ib0jf")
+shape = SubResource("RectangleShape2D_q8dsq")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+position = Vector2(16, 2.38419e-07)
+rotation = 0.698132
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_fk853")
 
 [node name="Area2D" type="Area2D" parent="."]
 

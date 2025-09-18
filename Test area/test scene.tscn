@@ -69,9 +69,6 @@ position = Vector2(573, 910)
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
-[node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(660, 554)
-
 [node name="HealthBar2" type="Sprite2D" parent="."]
 position = Vector2(820, 118)
 scale = Vector2(0.1, 0.1)
@@ -106,5 +103,8 @@ position = Vector2(164.621, 494.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
 position = Vector2(432.13, 547.225)
+
+[node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
+position = Vector2(678.921, 604.71)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

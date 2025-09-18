@@ -1,5 +1,6 @@
 extends CharacterBody2D 
 
+var player_id = 1
 #@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
 
 const Name = "player"
@@ -40,6 +41,7 @@ func apply_knockback(knockbackDirection: Vector2, force: float, knockback_durati
 	Knockback = knockbackDirection * force
 	Knockback_timer = knockback_duration
 
+
 func _physics_process(delta: float) -> void:
 	#if !is_multiplayer_authority(): return
 	
@@ -50,24 +52,30 @@ func _physics_process(delta: float) -> void:
 			Knockback = Vector2.ZERO
 	else:
 		_movement(delta)
-	if Input .is_action_pressed("punch"):
-		$Animantis.play("punch")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1).timeout
+	#if Input.is_action_pressed("punch_%s" %[player_id]):
+		#$Animantis.play("punch")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-func _movement(delta:float) -> void:
-	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+func _movement(_delta:float) -> void:
+	if Input.is_action_pressed("punch_%s" %[player_id]):
+		$Animantis.play("punch")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move left", "move right")
+	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction:
 		velocity.x = direction * SPEED 
 		$Animantis.play("walk")
@@ -87,15 +95,17 @@ func update_healthbar() -> void:
 	HealthBar.texture = health_textures[index]
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body == get_tree().get_first_node_in_group("Player"):
-		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 5.0, 1.0)
-		body.Take_Damage(1)
-		
+	
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 5.0, 1.0)
 		body.Take_Damage(1)
+		if $".": return
+	else:
+		if body == get_tree().get_first_node_in_group("player"):
+			var knockback_direction = (body.global_position - global_position).normalized()
+			body.apply_knockback(knockback_direction, 5.0, 1.0)
+			body.Take_Damage(1)
 
 
 
