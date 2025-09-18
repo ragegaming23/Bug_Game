@@ -10,7 +10,7 @@ var Health = 10
 @export var max_health: int = 10
 var current_health: int = max_health
 
-@onready var HealthBar = $"../HealthBar"
+@onready var HealthBar = $"../HealthBar2"
 
 @onready var health_textures = [
 	preload("res://Health Bar/Leaf Health Progression/Health_0.png"),

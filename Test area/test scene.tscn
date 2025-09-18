@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Enemy/enemy.tscn" id="6_ihbi5"]
 [ext_resource type="Texture2D" uid="uid://cgun5ncoy3e4m" path="res://Health Bar/Leaf Health Progression/Health_10.png" id="6_nqsoe"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="7_1ga5t"]
-[ext_resource type="AudioStream" uid="uid://clckrhbe6mh3e" path="res://Music/CreepyBrawlers_Grassfields.ogg" id="7_7e5m4"]
+[ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
 
@@ -25,7 +25,8 @@ script/source = "extends Area2D
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2(2.33263, 2.23674)
+position = Vector2(-10, -15)
+scale = Vector2(1.67619, 1.69172)
 script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
@@ -71,14 +72,20 @@ shape = SubResource("WorldBoundaryShape2D_7e5m4")
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
 position = Vector2(660, 554)
 
-[node name="HealthBar" type="Sprite2D" parent="."]
+[node name="HealthBar2" type="Sprite2D" parent="."]
 position = Vector2(820, 118)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_nqsoe")
 script = ExtResource("7_1ga5t")
 
+[node name="HealthBar1" type="Sprite2D" parent="."]
+position = Vector2(361.534, 112.903)
+scale = Vector2(0.102, 0.102)
+texture = ExtResource("6_nqsoe")
+script = ExtResource("7_1ga5t")
+
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_7e5m4")
+stream = ExtResource("8_nqsoe")
 volume_db = -10.0
 
 [node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
