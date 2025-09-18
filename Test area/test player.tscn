@@ -1,52 +1,62 @@
-[gd_scene load_steps=87 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=97 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
-[ext_resource type="Texture2D" uid="uid://btg4uh745owbh" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0001.png" id="2_86wen"]
 [ext_resource type="Texture2D" uid="uid://bxtpn8tan5748" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0001.png" id="2_ip0d5"]
 [ext_resource type="Texture2D" uid="uid://c8whbhbfgisuj" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0002.png" id="3_7mwat"]
 [ext_resource type="Texture2D" uid="uid://bv305w22vvnec" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackBicep.png" id="3_b4ni4"]
-[ext_resource type="Texture2D" uid="uid://cotkbn0x4das7" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0002.png" id="3_ckx67"]
 [ext_resource type="Texture2D" uid="uid://bvr434mk24cp7" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackWrist.png" id="4_6b3dv"]
 [ext_resource type="Texture2D" uid="uid://bi2au7he0a8l6" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0003.png" id="4_c24l1"]
-[ext_resource type="Texture2D" uid="uid://duuithe0k1a8i" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0003.png" id="4_wcj34"]
 [ext_resource type="Texture2D" uid="uid://c3ehl5qhwtw1r" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackKnuckle.png" id="5_5nfjf"]
 [ext_resource type="Texture2D" uid="uid://v3ceje0txufg" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0004.png" id="5_f0rc8"]
-[ext_resource type="Texture2D" uid="uid://brfcjjhupkrnu" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0004.png" id="5_xbwnu"]
 [ext_resource type="Texture2D" uid="uid://bms7kdg2mpk42" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0005.png" id="6_2u13x"]
-[ext_resource type="Texture2D" uid="uid://7s4n132y7eu3" path="res://Fighters/Praying Mantis/Praying Mantis IDLE/Praying_Mantis_idle (2)0005.png" id="6_flbv4"]
 [ext_resource type="Texture2D" uid="uid://cgpalshq64fub" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackPincer.png" id="6_gr6cq"]
 [ext_resource type="Texture2D" uid="uid://ksl0o6j4s2e" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0001.png" id="7_1mvsa"]
 [ext_resource type="Texture2D" uid="uid://daghcrj7ofy6l" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Neck.png" id="7_l0vf6"]
 [ext_resource type="Texture2D" uid="uid://dij75of3j8f4d" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0006.png" id="7_xkik2"]
+[ext_resource type="Texture2D" uid="uid://iftoxfabbop2" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20001.png" id="8_x7yoy"]
 [ext_resource type="Texture2D" uid="uid://bbgqcli3ahh2q" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0002.png" id="8_y1xcd"]
 [ext_resource type="Texture2D" uid="uid://y5a8b12mf61i" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Necklace.png" id="8_yis0a"]
 [ext_resource type="Texture2D" uid="uid://djpmgu742m4yv" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0003.png" id="9_krrrv"]
+[ext_resource type="Texture2D" uid="uid://b57bmsdu0rhyg" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20002.png" id="9_q8dsq"]
 [ext_resource type="Texture2D" uid="uid://c1mgdkbn67g00" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Antennae.png" id="9_u8csd"]
+[ext_resource type="Texture2D" uid="uid://dqvtqf6yc85go" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20003.png" id="10_fk853"]
 [ext_resource type="Texture2D" uid="uid://cacvjo6egu4vm" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0004.png" id="10_odsey"]
 [ext_resource type="Texture2D" uid="uid://be0d4gc5l8sl3" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackEye.png" id="10_skldg"]
 [ext_resource type="Texture2D" uid="uid://0jlycgayct3x" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0005.png" id="11_38tv1"]
 [ext_resource type="Texture2D" uid="uid://c6cw14v7angip" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Head.png" id="11_hcon3"]
+[ext_resource type="Texture2D" uid="uid://c7eos8ecrkh43" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20004.png" id="11_o3vek"]
+[ext_resource type="Texture2D" uid="uid://byok2x7p75n8r" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20005.png" id="12_0r76q"]
 [ext_resource type="Texture2D" uid="uid://pb3niso5l2c2" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_FrontEye.png" id="12_dxtcp"]
 [ext_resource type="Texture2D" uid="uid://jfjdt2dlqx4a" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0007.png" id="12_kq2oe"]
 [ext_resource type="Texture2D" uid="uid://0dcq4wco23cu" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0001.png" id="13_20rux"]
+[ext_resource type="Texture2D" uid="uid://b2jkwl3nyg24i" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20006.png" id="13_64uwj"]
 [ext_resource type="Texture2D" uid="uid://5c276e4s61vm" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0006.png" id="13_nnrfg"]
 [ext_resource type="Texture2D" uid="uid://qml34cp2k44n" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackBigAnkle.png" id="13_pj6po"]
 [ext_resource type="Texture2D" uid="uid://botde8yd2t4i2" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0008.png" id="14_0l8ck"]
 [ext_resource type="Texture2D" uid="uid://b828x80788der" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackBigThigh.png" id="14_3ts0h"]
+[ext_resource type="Texture2D" uid="uid://0c23croq5x7b" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20007.png" id="14_3uc3h"]
 [ext_resource type="Texture2D" uid="uid://b3a05ni2pmyae" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0002.png" id="14_eptbh"]
 [ext_resource type="Texture2D" uid="uid://utomi7yig4cu" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackBigFoot.png" id="15_5kk0t"]
 [ext_resource type="Texture2D" uid="uid://faco0x70ycfn" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0009.png" id="15_l2f7o"]
 [ext_resource type="Texture2D" uid="uid://bkbnx3a4yvs7q" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0003.png" id="15_lccxv"]
+[ext_resource type="Texture2D" uid="uid://bfj8nnb1on1jp" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20008.png" id="15_qjc8k"]
+[ext_resource type="Texture2D" uid="uid://h4vfncbtdd25" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20009.png" id="16_dqtej"]
 [ext_resource type="Texture2D" uid="uid://coak14pjoax0o" path="res://Fighters/Praying Mantis/Praying Mantis PUNCH/Praying_Mantis_Punch0010.png" id="16_p7rir"]
 [ext_resource type="Texture2D" uid="uid://yqp2ipg28xee" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackThigh.png" id="16_q2mh1"]
 [ext_resource type="Texture2D" uid="uid://dtncvdrux8q2r" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0004.png" id="16_rssk0"]
 [ext_resource type="Texture2D" uid="uid://bopxwhds7d6w4" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0005.png" id="17_1lo56"]
 [ext_resource type="Texture2D" uid="uid://4or7g2uo4oc8" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackHip.png" id="17_rjdyd"]
+[ext_resource type="Texture2D" uid="uid://1fbo6ibo33mg" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20010.png" id="17_s4fcr"]
 [ext_resource type="Texture2D" uid="uid://b1ba4oty2v24n" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BackFoot.png" id="18_2wem1"]
+[ext_resource type="Texture2D" uid="uid://bwo7dpcjvm4sr" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20011.png" id="18_d42gp"]
 [ext_resource type="Texture2D" uid="uid://ctbx5li6n1rjw" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0006.png" id="18_hiqba"]
 [ext_resource type="Texture2D" uid="uid://c1hruye3cdwnu" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Underbelly.png" id="19_gflu2"]
+[ext_resource type="Texture2D" uid="uid://dysg6baf426ak" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20012.png" id="19_qa75d"]
 [ext_resource type="Texture2D" uid="uid://csy662ap03re7" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_Thorax.png" id="20_7d4bw"]
+[ext_resource type="Texture2D" uid="uid://b8anhk1xhgua" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20013.png" id="20_o5iut"]
 [ext_resource type="Texture2D" uid="uid://t80e0k4gx8xm" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BigAnkle.png" id="21_cetny"]
+[ext_resource type="Texture2D" uid="uid://yi0qbcvynowt" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20014.png" id="21_rsp70"]
+[ext_resource type="Texture2D" uid="uid://b44nb02smq167" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20015.png" id="22_1vc5f"]
 [ext_resource type="Texture2D" uid="uid://wgcwawcul4ih" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BigFoot.png" id="22_r3sro"]
 [ext_resource type="Texture2D" uid="uid://cuxly5433xs3k" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BigHip.png" id="23_kscbv"]
 [ext_resource type="Texture2D" uid="uid://m5xws81apbyx" path="res://Fighters/Praying Mantis/Praying_Mantis_Body_Parts/Praying_Mantis_BigThigh.png" id="24_rumdp"]
@@ -109,23 +119,53 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_86wen")
+"texture": ExtResource("8_x7yoy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ckx67")
+"texture": ExtResource("9_q8dsq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wcj34")
+"texture": ExtResource("10_fk853")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_xbwnu")
+"texture": ExtResource("11_o3vek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_flbv4")
+"texture": ExtResource("12_0r76q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_64uwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3uc3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qjc8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dqtej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s4fcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d42gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qa75d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_o5iut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rsp70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1vc5f")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 4.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -303,8 +343,7 @@ position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
 animation = &"idle"
-frame = 3
-frame_progress = 0.613685
+frame_progress = 0.698872
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
 visible = false

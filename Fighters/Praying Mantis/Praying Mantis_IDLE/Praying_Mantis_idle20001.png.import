@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1fdhmbo5pkk3"
-path="res://.godot/imported/Praying_Mantis_idle2_20005.jpg-1e561be826cffc9f9cf83762c1e0f846.ctex"
+uid="uid://iftoxfabbop2"
+path="res://.godot/imported/Praying_Mantis_idle20001.png-6fbdff176aace127d5a2c635293e720e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle2_20005.jpg"
-dest_files=["res://.godot/imported/Praying_Mantis_idle2_20005.jpg-1e561be826cffc9f9cf83762c1e0f846.ctex"]
+source_file="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20001.png"
+dest_files=["res://.godot/imported/Praying_Mantis_idle20001.png-6fbdff176aace127d5a2c635293e720e.ctex"]
 
 [params]
 
