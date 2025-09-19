@@ -24,6 +24,12 @@ LocalNetwork="*res://UI/local_network.gd"
 
 window/size/mode=3
 
+[file_customization]
+
+folder_colors={
+"res://Build/": "pink"
+}
+
 [global_group]
 
 Player=""
