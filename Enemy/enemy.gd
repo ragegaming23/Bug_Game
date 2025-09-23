@@ -87,7 +87,9 @@ func _movement(_delta:float) -> void:
 		get_node("Area2D/CollisionShape2D2").disabled = true
 	
 	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
+		$Dragonfly.play("flying")
 		velocity.y = JUMP_VELOCITY
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

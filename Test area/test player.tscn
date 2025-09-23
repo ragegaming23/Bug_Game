@@ -345,8 +345,8 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"punch"
-frame = 13
+animation = &"jump"
+frame = 5
 frame_progress = 1.0
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
@@ -484,7 +484,6 @@ shape = SubResource("RectangleShape2D_q8dsq")
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(16, 2.38419e-07)
 rotation = 0.698132
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fk853")
 
 [node name="Area2D" type="Area2D" parent="."]
