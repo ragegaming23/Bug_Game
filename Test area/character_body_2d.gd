@@ -107,15 +107,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 5.0, 1.0)
+		body.apply_knockback(knockback_direction, 200.0, 1.0)
 		body.Take_Damage(1)
+		$Animantis.play("flinch")
 		if $".": return
 	else:
 		if body == get_tree().get_first_node_in_group("player"):
 			var knockback_direction = (body.global_position - global_position).normalized()
 			body.apply_knockback(knockback_direction, 5.0, 1.0)
 			body.Take_Damage(1)
-
 
 
 #play(idle) 

@@ -9,7 +9,7 @@ func _ready():
 	var spawn_name = Global.chosen_spawn
 	var spawn_points = $Spawnpoints
 	var spawn_point = spawn_points.get_node(spawn_name)
-	var player = "player_%s" %[player_id]
+	var player = $"Test player" #"player_%s" %[player_id]
 	player.global_position = spawn_point.global_position
 	
 	announcer_ready.play()

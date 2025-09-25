@@ -202,3 +202,7 @@ Dash_4={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":3,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+Slash={
+"deadzone": 0.2,
+"events": []
+}
