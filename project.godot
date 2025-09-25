@@ -23,6 +23,7 @@ LocalNetwork="*res://UI/local_network.gd"
 [display]
 
 window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [file_customization]
 

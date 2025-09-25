@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var player_id = 1
 #@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
-var  Lives = 2
+var  Lives = 3
 const Name = "player"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -31,9 +31,6 @@ var current_health: int = max_health
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
-#func _ready():
-	#healthbar.set_health_bar(Health, MaxHealth)
-
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 
@@ -52,12 +49,7 @@ func _physics_process(delta: float) -> void:
 			Knockback = Vector2.ZERO
 	else:
 		_movement(delta)
-	#if Input.is_action_pressed("punch_%s" %[player_id]):
-		#$Animantis.play("punch")
-		#get_node("Area2D/CollisionShape2D").disabled = false
-		#await get_tree().create_timer(1.0).timeout
-		#$Animantis.stop("punch")
-		#get_node("Area2D/CollisionShape2D").disabled = true
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -90,7 +82,7 @@ func Take_Damage(Damage: int):
 	update_healthbar()
 	if current_health <= 0:
 		Lives -= 1
-		
+		current_health = 10
 	if Lives <= 0:
 		die()
 
