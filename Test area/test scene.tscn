@@ -65,7 +65,7 @@ scale = Vector2(30, 1)
 script = SubResource("GDScript_u6vuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(573, 910)
+position = Vector2(578.6933, 661.457)
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
@@ -107,4 +107,5 @@ position = Vector2(432.13, 547.225)
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
 position = Vector2(678.921, 604.71)
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

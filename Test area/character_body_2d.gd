@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var player_id = 1
 #@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
-
+var  Lives = 2
 const Name = "player"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -89,6 +89,9 @@ func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
 	update_healthbar()
 	if current_health <= 0:
+		Lives -= 1
+		
+	if Lives <= 0:
 		die()
 
 func die()-> void:

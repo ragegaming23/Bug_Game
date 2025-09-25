@@ -6,6 +6,7 @@ const Name = "enemy"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var Lives = 2
 var MaxHealth = 10
 var Health = 10
 
@@ -40,8 +41,10 @@ func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
 	update_healthbar()
 	if current_health <= 0:
+		Lives -= 1
+		
+	if Lives < 0:
 		die()
-
 func die()-> void:
 	get_tree().change_scene_to_file("res://UI/win_screen.gd")
 
