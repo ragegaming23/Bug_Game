@@ -1,4 +1,4 @@
-[gd_scene load_steps=312 format=3 uid="uid://iu41x4f22op2"]
+[gd_scene load_steps=417 format=3 uid="uid://iu41x4f22op2"]
 
 [ext_resource type="Texture2D" uid="uid://6axt3fyl4lba" path="res://Fighters/Dragonfly/Animations/Bicyclekick/Frames/Bicyclekick_Dragonfly0001.png0001.png" id="1_0nuta"]
 [ext_resource type="Texture2D" uid="uid://buly3exfeie7i" path="res://Fighters/Dragonfly/Animations/Bicyclekick/Frames/Bicyclekick_Dragonfly0001.png0002.png" id="2_67whk"]
@@ -310,6 +310,111 @@
 [ext_resource type="Texture2D" uid="uid://dcvheyvxxtww1" path="res://Fighters/Dragonfly/Animations/Jab/NewJab/0001-0097.mkv0095.png0045.png" id="308_5wn5j"]
 [ext_resource type="Texture2D" uid="uid://cj4ur0wrvhl8l" path="res://Fighters/Dragonfly/Animations/Jab/NewJab/0001-0097.mkv0095.png0046.png" id="309_o2o7p"]
 [ext_resource type="Texture2D" uid="uid://b58505u1qdp6q" path="res://Fighters/Dragonfly/Animations/Jab/NewJab/0001-0097.mkv0095.png0047.png" id="310_occ5c"]
+[ext_resource type="Texture2D" uid="uid://dl33ljmdtmsqi" path="res://Fighters/Dragonfly/Animations/Jab/0002.png" id="311_50sr3"]
+[ext_resource type="Texture2D" uid="uid://brgsd3cfgowlh" path="res://Fighters/Dragonfly/Animations/Jab/0003.png" id="312_8cc1v"]
+[ext_resource type="Texture2D" uid="uid://bge0qqgwkifxj" path="res://Fighters/Dragonfly/Animations/Jab/0004.png" id="313_rp8s7"]
+[ext_resource type="Texture2D" uid="uid://pc5a32xvsdlk" path="res://Fighters/Dragonfly/Animations/Jab/0005.png" id="314_s7n0h"]
+[ext_resource type="Texture2D" uid="uid://b6h5gpjo6qvs2" path="res://Fighters/Dragonfly/Animations/Jab/0006.png" id="315_e5npb"]
+[ext_resource type="Texture2D" uid="uid://yog4r0rrlq4k" path="res://Fighters/Dragonfly/Animations/Jab/0007.png" id="316_ii2fr"]
+[ext_resource type="Texture2D" uid="uid://bobwfiru04kxa" path="res://Fighters/Dragonfly/Animations/Jab/0008.png" id="317_qhavh"]
+[ext_resource type="Texture2D" uid="uid://gaygirr16oob" path="res://Fighters/Dragonfly/Animations/Jab/0009.png" id="318_7851l"]
+[ext_resource type="Texture2D" uid="uid://df5chjmkncmw1" path="res://Fighters/Dragonfly/Animations/Jab/0010.png" id="319_v66pb"]
+[ext_resource type="Texture2D" uid="uid://biljorhfgikl2" path="res://Fighters/Dragonfly/Animations/Jab/0011.png" id="320_g17nd"]
+[ext_resource type="Texture2D" uid="uid://byujsl5qmivk6" path="res://Fighters/Dragonfly/Animations/Jab/0012.png" id="321_rkcr6"]
+[ext_resource type="Texture2D" uid="uid://ct6irrjo1eorh" path="res://Fighters/Dragonfly/Animations/Jab/0013.png" id="322_lpsd5"]
+[ext_resource type="Texture2D" uid="uid://cgila2yghdtlh" path="res://Fighters/Dragonfly/Animations/Jab/0014.png" id="323_xdxpn"]
+[ext_resource type="Texture2D" uid="uid://b00lv20ek0ruk" path="res://Fighters/Dragonfly/Animations/Jab/0015.png" id="324_lj0um"]
+[ext_resource type="Texture2D" uid="uid://bggrsdjomll2e" path="res://Fighters/Dragonfly/Animations/Jab/0016.png" id="325_rf1yl"]
+[ext_resource type="Texture2D" uid="uid://r1ctrmwcbi1p" path="res://Fighters/Dragonfly/Animations/Jab/0017.png" id="326_trm3l"]
+[ext_resource type="Texture2D" uid="uid://c75e8l1nov1la" path="res://Fighters/Dragonfly/Animations/Jab/0018.png" id="327_w4jiq"]
+[ext_resource type="Texture2D" uid="uid://b0wrjyrdrv7k2" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0001.png" id="328_mj0fn"]
+[ext_resource type="Texture2D" uid="uid://bbosd1nxm353c" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0002.png" id="329_2d3x5"]
+[ext_resource type="Texture2D" uid="uid://cmx3fyxk2ifip" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0003.png" id="330_e1adx"]
+[ext_resource type="Texture2D" uid="uid://crkdjvky6uja0" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0004.png" id="331_tlc61"]
+[ext_resource type="Texture2D" uid="uid://o0onn24hkncd" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0005.png" id="332_tu12j"]
+[ext_resource type="Texture2D" uid="uid://b3yjfidh7r475" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0006.png" id="333_2ggfh"]
+[ext_resource type="Texture2D" uid="uid://coqig30pqc32p" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0007.png" id="334_mcjqq"]
+[ext_resource type="Texture2D" uid="uid://ycd1t6cfbyni" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0008.png" id="335_b2ll1"]
+[ext_resource type="Texture2D" uid="uid://0sbagihy2jj7" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0009.png" id="336_foxn3"]
+[ext_resource type="Texture2D" uid="uid://d2xlfme2he3hh" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0010.png" id="337_apssi"]
+[ext_resource type="Texture2D" uid="uid://d5oyat0pmic8" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0011.png" id="338_q6epp"]
+[ext_resource type="Texture2D" uid="uid://c2kyvs4vng8m1" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0012.png" id="339_vw261"]
+[ext_resource type="Texture2D" uid="uid://ynw3lh31babm" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0013.png" id="340_3gxf6"]
+[ext_resource type="Texture2D" uid="uid://cnwkqhwr1wrr0" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0014.png" id="341_yl88d"]
+[ext_resource type="Texture2D" uid="uid://spdm21c7evap" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0015.png" id="342_r4bmt"]
+[ext_resource type="Texture2D" uid="uid://nqcjmsy82pdi" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0016.png" id="343_rn44p"]
+[ext_resource type="Texture2D" uid="uid://bsncxm2by0nsg" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0017.png" id="344_y3a8b"]
+[ext_resource type="Texture2D" uid="uid://cky33e13sr6yf" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0018.png" id="345_rk8sf"]
+[ext_resource type="Texture2D" uid="uid://s5hqp158ukqc" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0019.png" id="346_uvqci"]
+[ext_resource type="Texture2D" uid="uid://dmvruka2imui" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0020.png" id="347_cqufs"]
+[ext_resource type="Texture2D" uid="uid://cf128c0phexsp" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0021.png" id="348_ha4s8"]
+[ext_resource type="Texture2D" uid="uid://cbf5hpuaqmcof" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0022.png" id="349_img0e"]
+[ext_resource type="Texture2D" uid="uid://dtm6f1qrh51gl" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0023.png" id="350_i7hom"]
+[ext_resource type="Texture2D" uid="uid://caiflq3f10thd" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0024.png" id="351_68be7"]
+[ext_resource type="Texture2D" uid="uid://olvdw60hovg1" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0025.png" id="352_gmi3p"]
+[ext_resource type="Texture2D" uid="uid://1uijcjeeollh" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0026.png" id="353_2anro"]
+[ext_resource type="Texture2D" uid="uid://dwl63kb0y4oo4" path="res://Fighters/Dragonfly/Animations/SpearSpin/NewSpearSpin_Dragonfly0027.png" id="354_k2eud"]
+[ext_resource type="Texture2D" uid="uid://b4a5pd5nt02j1" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0001.png" id="355_k7wjg"]
+[ext_resource type="Texture2D" uid="uid://ckwdy4sfd532x" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0002.png" id="356_6c8c6"]
+[ext_resource type="Texture2D" uid="uid://b1mbqv4eax6wo" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0003.png" id="357_gyspv"]
+[ext_resource type="Texture2D" uid="uid://drbgwnast0j51" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0004.png" id="358_u7m5k"]
+[ext_resource type="Texture2D" uid="uid://dar0357wwsoj8" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0005.png" id="359_ueujv"]
+[ext_resource type="Texture2D" uid="uid://draet4c5marld" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0006.png" id="360_4jjgs"]
+[ext_resource type="Texture2D" uid="uid://dcwc8caubkivj" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0007.png" id="361_ikaga"]
+[ext_resource type="Texture2D" uid="uid://drjfxqs8ngbwo" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0008.png" id="362_qg6hm"]
+[ext_resource type="Texture2D" uid="uid://cb4yi0usns0im" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0009.png" id="363_ks8f2"]
+[ext_resource type="Texture2D" uid="uid://bdijbi6b4p4ru" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0010.png" id="364_biu50"]
+[ext_resource type="Texture2D" uid="uid://ctpyxxfk2nap" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0011.png" id="365_v2we4"]
+[ext_resource type="Texture2D" uid="uid://da6u2kg6ftmak" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0012.png" id="366_o7t72"]
+[ext_resource type="Texture2D" uid="uid://ban4otl24q6el" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0013.png" id="367_yktdv"]
+[ext_resource type="Texture2D" uid="uid://degjuv5hl8rq0" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0014.png" id="368_w70wi"]
+[ext_resource type="Texture2D" uid="uid://d1jsg82o74u14" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0015.png" id="369_jo4j3"]
+[ext_resource type="Texture2D" uid="uid://weckuyt6wg3k" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0016.png" id="370_wrrxv"]
+[ext_resource type="Texture2D" uid="uid://cjktdusgcqfeu" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0017.png" id="371_kiedl"]
+[ext_resource type="Texture2D" uid="uid://c6svvc744w04c" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0018.png" id="372_3804g"]
+[ext_resource type="Texture2D" uid="uid://kvi816au4h35" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0019.png" id="373_ws3xy"]
+[ext_resource type="Texture2D" uid="uid://cjoltih7ya3uy" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0020.png" id="374_pinje"]
+[ext_resource type="Texture2D" uid="uid://bqg1kpj8ecawh" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0021.png" id="375_nfx22"]
+[ext_resource type="Texture2D" uid="uid://gun2b4xeepl0" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0022.png" id="376_rw2x8"]
+[ext_resource type="Texture2D" uid="uid://dlf707lk5wgq2" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0023.png" id="377_acndp"]
+[ext_resource type="Texture2D" uid="uid://cyh5ln064puqp" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0024.png" id="378_twi3t"]
+[ext_resource type="Texture2D" uid="uid://ctvvch1beym2a" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0025.png" id="379_mkjae"]
+[ext_resource type="Texture2D" uid="uid://dlsh646vhfho4" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0026.png" id="380_5326m"]
+[ext_resource type="Texture2D" uid="uid://bhx0s4qtjcvq8" path="res://Fighters/Dragonfly/Animations/SpearThrow/NewSpearThrow_Dragonfly0027.png" id="381_rg72x"]
+[ext_resource type="Texture2D" uid="uid://dfr7s0hxjtaqo" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0002.png" id="382_rk8sf"]
+[ext_resource type="Texture2D" uid="uid://c6hfxpijhmu0p" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0003.png" id="383_uvqci"]
+[ext_resource type="Texture2D" uid="uid://ci1nxpdym52rk" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0004.png" id="384_cqufs"]
+[ext_resource type="Texture2D" uid="uid://mme5jdexn85p" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0005.png" id="385_ha4s8"]
+[ext_resource type="Texture2D" uid="uid://doi2bok3xwt33" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0006.png" id="386_img0e"]
+[ext_resource type="Texture2D" uid="uid://32c73oj5gqmo" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0007.png" id="387_i7hom"]
+[ext_resource type="Texture2D" uid="uid://ckyo3gpt1vujp" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0008.png" id="388_68be7"]
+[ext_resource type="Texture2D" uid="uid://cnwp8quap3v5x" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0009.png" id="389_gmi3p"]
+[ext_resource type="Texture2D" uid="uid://bweik45ckhbmp" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0010.png" id="390_2anro"]
+[ext_resource type="Texture2D" uid="uid://v221ylqr2siy" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0011.png" id="391_k2eud"]
+[ext_resource type="Texture2D" uid="uid://b8bgakhmbdywa" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0012.png" id="392_k7wjg"]
+[ext_resource type="Texture2D" uid="uid://b5wn1r541g1ig" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0013.png" id="393_6c8c6"]
+[ext_resource type="Texture2D" uid="uid://bk02dbmrmwv7w" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0014.png" id="394_gyspv"]
+[ext_resource type="Texture2D" uid="uid://5tsinh6h7qp" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0015.png" id="395_u7m5k"]
+[ext_resource type="Texture2D" uid="uid://b2hfwbjqsm5lm" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0016.png" id="396_ueujv"]
+[ext_resource type="Texture2D" uid="uid://bm2trnllkx1io" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0017.png" id="397_4jjgs"]
+[ext_resource type="Texture2D" uid="uid://b3trggd0hwsgk" path="res://Fighters/Dragonfly/Animations/Grab&Sting/0018.png" id="398_ikaga"]
+[ext_resource type="Texture2D" uid="uid://i60ftedbe5mm" path="res://Fighters/Dragonfly/Animations/WindDust/0002.png" id="399_qg6hm"]
+[ext_resource type="Texture2D" uid="uid://gtpmrfo20ied" path="res://Fighters/Dragonfly/Animations/WindDust/0003.png" id="400_ks8f2"]
+[ext_resource type="Texture2D" uid="uid://dekkf3jnpykl6" path="res://Fighters/Dragonfly/Animations/WindDust/0004.png" id="401_biu50"]
+[ext_resource type="Texture2D" uid="uid://ddfmvqrua6xv7" path="res://Fighters/Dragonfly/Animations/WindDust/0005.png" id="402_v2we4"]
+[ext_resource type="Texture2D" uid="uid://dg8dmliwmf20c" path="res://Fighters/Dragonfly/Animations/WindDust/0006.png" id="403_o7t72"]
+[ext_resource type="Texture2D" uid="uid://sds37hs1tvh4" path="res://Fighters/Dragonfly/Animations/WindDust/0007.png" id="404_yktdv"]
+[ext_resource type="Texture2D" uid="uid://5ixameme15n3" path="res://Fighters/Dragonfly/Animations/WindDust/0008.png" id="405_w70wi"]
+[ext_resource type="Texture2D" uid="uid://477nhe3id0nr" path="res://Fighters/Dragonfly/Animations/WindDust/0009.png" id="406_jo4j3"]
+[ext_resource type="Texture2D" uid="uid://yowvn2q1rami" path="res://Fighters/Dragonfly/Animations/WindDust/0010.png" id="407_wrrxv"]
+[ext_resource type="Texture2D" uid="uid://6o1eu6p6scmp" path="res://Fighters/Dragonfly/Animations/WindDust/0011.png" id="408_kiedl"]
+[ext_resource type="Texture2D" uid="uid://dbp8q6vob8pwp" path="res://Fighters/Dragonfly/Animations/WindDust/0012.png" id="409_3804g"]
+[ext_resource type="Texture2D" uid="uid://cp73typ2hygth" path="res://Fighters/Dragonfly/Animations/WindDust/0013.png" id="410_ws3xy"]
+[ext_resource type="Texture2D" uid="uid://c2qg8q3dksfrv" path="res://Fighters/Dragonfly/Animations/WindDust/0014.png" id="411_pinje"]
+[ext_resource type="Texture2D" uid="uid://ba74uqxygspk6" path="res://Fighters/Dragonfly/Animations/WindDust/0015.png" id="412_nfx22"]
+[ext_resource type="Texture2D" uid="uid://whr3vpweeovs" path="res://Fighters/Dragonfly/Animations/WindDust/0016.png" id="413_rw2x8"]
+[ext_resource type="Texture2D" uid="uid://crmwv711fdns7" path="res://Fighters/Dragonfly/Animations/WindDust/0017.png" id="414_acndp"]
+[ext_resource type="Texture2D" uid="uid://crbdccqr8q0fh" path="res://Fighters/Dragonfly/Animations/WindDust/0018.png" id="415_twi3t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0mbv8"]
 animations = [{
@@ -1267,6 +1372,346 @@ animations = [{
 "loop": true,
 "name": &"Dragonfly_Jab",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("311_50sr3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("312_8cc1v")
+}, {
+"duration": 0.2,
+"texture": ExtResource("313_rp8s7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("314_s7n0h")
+}, {
+"duration": 0.2,
+"texture": ExtResource("315_e5npb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("316_ii2fr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("317_qhavh")
+}, {
+"duration": 0.2,
+"texture": ExtResource("318_7851l")
+}, {
+"duration": 0.2,
+"texture": ExtResource("319_v66pb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("320_g17nd")
+}, {
+"duration": 0.2,
+"texture": ExtResource("321_rkcr6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("322_lpsd5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("323_xdxpn")
+}, {
+"duration": 0.2,
+"texture": ExtResource("324_lj0um")
+}, {
+"duration": 0.2,
+"texture": ExtResource("325_rf1yl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("326_trm3l")
+}, {
+"duration": 0.2,
+"texture": ExtResource("327_w4jiq")
+}],
+"loop": true,
+"name": &"Dragonfly_New_Jab",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("328_mj0fn")
+}, {
+"duration": 0.2,
+"texture": ExtResource("329_2d3x5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("330_e1adx")
+}, {
+"duration": 0.2,
+"texture": ExtResource("331_tlc61")
+}, {
+"duration": 0.2,
+"texture": ExtResource("332_tu12j")
+}, {
+"duration": 0.2,
+"texture": ExtResource("333_2ggfh")
+}, {
+"duration": 0.2,
+"texture": ExtResource("334_mcjqq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("335_b2ll1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("336_foxn3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("337_apssi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("338_q6epp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("339_vw261")
+}, {
+"duration": 0.2,
+"texture": ExtResource("340_3gxf6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("341_yl88d")
+}, {
+"duration": 0.2,
+"texture": ExtResource("342_r4bmt")
+}, {
+"duration": 0.2,
+"texture": ExtResource("343_rn44p")
+}, {
+"duration": 0.2,
+"texture": ExtResource("344_y3a8b")
+}, {
+"duration": 0.2,
+"texture": ExtResource("345_rk8sf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("346_uvqci")
+}, {
+"duration": 0.2,
+"texture": ExtResource("347_cqufs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("348_ha4s8")
+}, {
+"duration": 0.2,
+"texture": ExtResource("349_img0e")
+}, {
+"duration": 0.2,
+"texture": ExtResource("350_i7hom")
+}, {
+"duration": 0.2,
+"texture": ExtResource("351_68be7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("352_gmi3p")
+}, {
+"duration": 0.2,
+"texture": ExtResource("353_2anro")
+}, {
+"duration": 0.2,
+"texture": ExtResource("354_k2eud")
+}],
+"loop": true,
+"name": &"Dragonfly_SpearSpin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("355_k7wjg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("356_6c8c6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("357_gyspv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("358_u7m5k")
+}, {
+"duration": 0.2,
+"texture": ExtResource("359_ueujv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("360_4jjgs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("361_ikaga")
+}, {
+"duration": 0.2,
+"texture": ExtResource("362_qg6hm")
+}, {
+"duration": 0.2,
+"texture": ExtResource("363_ks8f2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("364_biu50")
+}, {
+"duration": 0.2,
+"texture": ExtResource("365_v2we4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("366_o7t72")
+}, {
+"duration": 0.2,
+"texture": ExtResource("367_yktdv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("368_w70wi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("369_jo4j3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("370_wrrxv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("371_kiedl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("372_3804g")
+}, {
+"duration": 0.2,
+"texture": ExtResource("373_ws3xy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("374_pinje")
+}, {
+"duration": 0.2,
+"texture": ExtResource("375_nfx22")
+}, {
+"duration": 0.2,
+"texture": ExtResource("376_rw2x8")
+}, {
+"duration": 0.2,
+"texture": ExtResource("377_acndp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("378_twi3t")
+}, {
+"duration": 0.2,
+"texture": ExtResource("379_mkjae")
+}, {
+"duration": 0.2,
+"texture": ExtResource("380_5326m")
+}, {
+"duration": 0.2,
+"texture": ExtResource("381_rg72x")
+}],
+"loop": true,
+"name": &"Dragonfly_SpearThrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("382_rk8sf")
+}, {
+"duration": 0.3,
+"texture": ExtResource("383_uvqci")
+}, {
+"duration": 0.3,
+"texture": ExtResource("384_cqufs")
+}, {
+"duration": 0.3,
+"texture": ExtResource("385_ha4s8")
+}, {
+"duration": 0.3,
+"texture": ExtResource("386_img0e")
+}, {
+"duration": 0.2,
+"texture": ExtResource("387_i7hom")
+}, {
+"duration": 0.2,
+"texture": ExtResource("388_68be7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("389_gmi3p")
+}, {
+"duration": 0.2,
+"texture": ExtResource("390_2anro")
+}, {
+"duration": 0.2,
+"texture": ExtResource("391_k2eud")
+}, {
+"duration": 0.2,
+"texture": ExtResource("392_k7wjg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("393_6c8c6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("394_gyspv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("395_u7m5k")
+}, {
+"duration": 0.2,
+"texture": ExtResource("396_ueujv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("397_4jjgs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("398_ikaga")
+}],
+"loop": true,
+"name": &"Grab&Sting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("399_qg6hm")
+}, {
+"duration": 0.2,
+"texture": ExtResource("400_ks8f2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("401_biu50")
+}, {
+"duration": 0.2,
+"texture": ExtResource("402_v2we4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("403_o7t72")
+}, {
+"duration": 0.2,
+"texture": ExtResource("404_yktdv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("405_w70wi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("406_jo4j3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("407_wrrxv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("408_kiedl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("409_3804g")
+}, {
+"duration": 0.2,
+"texture": ExtResource("410_ws3xy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("411_pinje")
+}, {
+"duration": 0.2,
+"texture": ExtResource("412_nfx22")
+}, {
+"duration": 0.2,
+"texture": ExtResource("413_rw2x8")
+}, {
+"duration": 0.2,
+"texture": ExtResource("414_acndp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("415_twi3t")
+}],
+"loop": true,
+"name": &"WindDust",
+"speed": 5.0
 }]
 
 [node name="Dragonfly" type="Node2D"]
@@ -1274,5 +1719,5 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(86, -422)
 sprite_frames = SubResource("SpriteFrames_0mbv8")
-animation = &"Dragonfly_Idle"
-frame_progress = 0.874294
+animation = &"Dragonfly_BicycleKick"
+frame_progress = 0.964389
