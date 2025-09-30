@@ -79,8 +79,10 @@ func _physics_process(delta: float) -> void:
 	#velocity=direction * speed
 	#look_at(terget.position)
 	move_and_slide()
+var is_punching = false
 func _movement(_delta:float) -> void:
-	if Input.is_action_pressed("punch_%s" %[player_id]):
+	if Input.is_action_pressed("punch_%s" %[player_id]) and not is_punching:
+		is_punching = true
 		$Dragonfly.play("jab")
 		get_node("Area2D/CollisionShape2D").disabled = false
 		get_node("Area2D/CollisionShape2D2").disabled = false
@@ -88,6 +90,7 @@ func _movement(_delta:float) -> void:
 		#$Dragonfly.stop("jab")
 		get_node("Area2D/CollisionShape2D").disabled = true
 		get_node("Area2D/CollisionShape2D2").disabled = true
+		is_punching = false
 	
 	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
 		$Dragonfly.play("flying")
