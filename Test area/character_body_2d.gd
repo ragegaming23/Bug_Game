@@ -1,11 +1,11 @@
 extends CharacterBody2D 
 
-var player_id = 1
+@export var player_id = 1
 #@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
-var  Lives = 3
+@export var  Lives = 3
 const Name = "player"
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var SPEED = 300.0
+@export var JUMP_VELOCITY = -400.0
 
 var MaxHealth = 10
 var Health = 10
@@ -37,6 +37,8 @@ func _enter_tree() -> void:
 func apply_knockback(knockbackDirection: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = knockbackDirection * force
 	Knockback_timer = knockback_duration
+	if $".": return
+	$Animantis.play("flinch")
 
 
 func _physics_process(delta: float) -> void:
@@ -82,7 +84,10 @@ func Take_Damage(Damage: int):
 	update_healthbar()
 	if current_health <= 0:
 		Lives -= 1
+		
 		current_health = 10
+		
+		
 	if Lives <= 0:
 		die()
 
@@ -99,14 +104,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 200.0, 1.0)
+		body.apply_knockback(knockback_direction, 2.0, 1.0)
 		body.Take_Damage(1)
-		$Animantis.play("flinch")
 		if $".": return
 	else:
 		if body == get_tree().get_first_node_in_group("player"):
 			var knockback_direction = (body.global_position - global_position).normalized()
-			body.apply_knockback(knockback_direction, 5.0, 1.0)
+			body.apply_knockback(knockback_direction, 200.0, 1.0)
 			body.Take_Damage(1)
 
 

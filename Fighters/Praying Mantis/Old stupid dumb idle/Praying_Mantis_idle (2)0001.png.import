@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btg4uh745owbh"
-path="res://.godot/imported/Praying_Mantis_idle (2)0001.png-e0a141cf2bd2ed9790279c0eab174fc9.ctex"
+path="res://.godot/imported/Praying_Mantis_idle (2)0001.png-5ec776c587c6e906a5d543b9adcae6a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fighters/Praying Mantis/Old stupid idle/Praying_Mantis_idle (2)0001.png"
-dest_files=["res://.godot/imported/Praying_Mantis_idle (2)0001.png-e0a141cf2bd2ed9790279c0eab174fc9.ctex"]
+source_file="res://Fighters/Praying Mantis/Old stupid dumb idle/Praying_Mantis_idle (2)0001.png"
+dest_files=["res://.godot/imported/Praying_Mantis_idle (2)0001.png-5ec776c587c6e906a5d543b9adcae6a6.ctex"]
 
 [params]
 

@@ -1,14 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://dx7r1lw6mjxmq"]
 
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_2ocfh"]
-[ext_resource type="Script" uid="uid://q1uv82s7wpf" path="res://Platforms/collision_shape_2d.gd" id="2_l6isy"]
+[ext_resource type="Script" uid="uid://j17fg8w057w3" path="res://Platforms/sticky_floor.gd" id="1_l6isy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6isy"]
+size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeny1"]
-size = Vector2(133.333, 186.667)
+size = Vector2(120, 180.00021)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_l6isy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_l6isy")
@@ -22,8 +24,8 @@ texture = ExtResource("1_2ocfh")
 scale = Vector2(0.15, 0.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slow Effect"]
-position = Vector2(3.17891e-06, -26.6667)
+position = Vector2(-5.9604645e-07, -30.000101)
 shape = SubResource("RectangleShape2D_xeny1")
-script = ExtResource("2_l6isy")
 
+[connection signal="body_entered" from="Slow Effect" to="." method="_on_slow_effect_body_entered"]
 [connection signal="body_entered" from="Slow Effect" to="Slow Effect/CollisionShape2D" method="_on_area_2d_body_entered"]
