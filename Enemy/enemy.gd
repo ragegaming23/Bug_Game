@@ -78,28 +78,38 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 var is_punching = false
 func _movement(_delta:float) -> void:
+	var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
+	if y_direction:
+		velocity.y = y_direction * SPEED
+		if !is_punching:
+			$Dragonfly.play("Dragonfly_Flying")
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+		if !is_punching:
+			$Dragonfly.play("Dragonfly_Idle")
+		
 	if Input.is_action_pressed("punch_%s" %[player_id]) and not is_punching:
 		is_punching = true
-		$Dragonfly.play("jab")
+		var animPlayer: AnimatedSprite2D = $Dragonfly
+		animPlayer.play("Dragonfly_New_Jab")
 		get_node("Area2D/CollisionShape2D").disabled = false
 		get_node("Area2D/CollisionShape2D2").disabled = false
-		await get_tree().create_timer(1.0).timeout
-		#$Dragonfly.stop("jab")
+		
+		await animPlayer.animation_finished
 		get_node("Area2D/CollisionShape2D").disabled = true
 		get_node("Area2D/CollisionShape2D2").disabled = true
 		is_punching = false
 	
-	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
-		$Dragonfly.play("flying")
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_pressed("spear_spin_%s" %[player_id]):
+		$Dragonfly.play("Dragonfly_SpearSpin")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
 		
-	var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
-	if y_direction:
-		velocity.y = y_direction * SPEED
-		$Dragonfly.play("flying")
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-		$Dragonfly.play("idle")
+	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
+		$Dragonfly.play("Dragonfly_Flying")
+		velocity.y = JUMP_VELOCITY
 
 
 	# Get the input direction and handle the movement/deceleration.
@@ -107,10 +117,10 @@ func _movement(_delta:float) -> void:
 	var x_direction := Input.get_axis("move left_%s" %[player_id],"move right_%s" %[player_id])
 	if x_direction:
 		velocity.x = x_direction * SPEED 
-		$Dragonfly.play("flying")
+		$Dragonfly.play("Dragonfly_Flying")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$Dragonfly.play("idle")
+		$Dragonfly.play("Dragonfly_Idle")
 	move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
