@@ -1271,7 +1271,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cwyc6"]
-radius = 3.000001
+radius = 3.0
 height = 64.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rklmf"]
@@ -1290,16 +1290,18 @@ script = ExtResource("1_4gyqm")
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_0awqk")
-animation = &"idle"
+animation = &"jab"
+frame = 32
+frame_progress = 1.0
 
 [node name="Tail" type="CollisionShape2D" parent="."]
 position = Vector2(23, 21)
-rotation = -1.5707964
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_cwyc6")
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-40, 16)
-rotation = -1.5707964
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_rklmf")
 
 [node name="Area2D" type="Area2D" parent="."]
