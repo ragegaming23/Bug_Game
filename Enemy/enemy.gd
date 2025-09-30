@@ -6,7 +6,7 @@ const Name = "enemy"
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var Lives = 2
+var Lives = 3
 var MaxHealth = 10
 var Health = 10
 
@@ -43,10 +43,14 @@ func Take_Damage(Damage: int):
 	if current_health <= 0:
 		Lives -= 1
 		
-	if Lives < 0:
+		current_health = 10
+		
+		
+	if Lives <= 0:
 		die()
+
 func die()-> void:
-	get_tree().change_scene_to_file("res://UI/win_screen.gd")
+	get_tree().change_scene_to_file("res://UI/win screen.tscn")
 
 func update_healthbar() -> void:
 	# Calculate which image index to use (0–10)
@@ -64,17 +68,10 @@ func _physics_process(delta: float) -> void:
 			Knockback = Vector2.ZERO
 	else:
 		_movement(delta)
-	#if Input.is_action_pressed("punch_%s" %[player_id]):
-		#$Dragonfly.play("jab")
-		#get_node("Area2D/CollisionShape2D").disabled = false
-		#get_node("Area2D/CollisionShape2D2").disabled = false
-		#await get_tree().create_timer(1.0).timeout
-		#$Dragonfly.stop("jab")
-		#get_node("Area2D/CollisionShape2D").disabled = true
-		#get_node("Area2D/CollisionShape2D2").disabled = true
 	
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 	#var direction=(terget.position-position).normalized()
 	#velocity=direction * speed
 	#look_at(terget.position)
@@ -93,12 +90,20 @@ func _movement(_delta:float) -> void:
 		$Dragonfly.play("flying")
 		velocity.y = JUMP_VELOCITY
 		
+	var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
+	if y_direction:
+		velocity.y = y_direction * SPEED
+		$Dragonfly.play("flying")
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+		$Dragonfly.play("idle")
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
-	if direction:
-		velocity.x = direction * SPEED 
+	var x_direction := Input.get_axis("move left_%s" %[player_id],"move right_%s" %[player_id])
+	if x_direction:
+		velocity.x = x_direction * SPEED 
 		$Dragonfly.play("flying")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

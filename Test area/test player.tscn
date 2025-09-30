@@ -385,13 +385,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7yoy"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kagy3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8dsq"]
-size = Vector2(158.594, 76.9175)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v24a8"]
+radius = 39.99611
+height = 135.00793
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk853"]
-size = Vector2(20, 78.61)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3x2"]
+height = 90.16525
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
 size = Vector2(90, 20)
@@ -533,20 +534,20 @@ texture = ExtResource("31_xbwnu")
 texture = ExtResource("32_flbv4")
 
 [node name="FrontCollision" type="CollisionShape2D" parent="."]
-position = Vector2(32, 56)
+position = Vector2(32, 53)
 rotation = -0.120428
-shape = SubResource("RectangleShape2D_x7yoy")
+shape = SubResource("CapsuleShape2D_kagy3")
 
 [node name="BackCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-48, 48)
-rotation = 1.43815
+position = Vector2(-49.000004, 52.000004)
+rotation = 0.013962634
 scale = Vector2(0.2, 0.237)
-shape = SubResource("RectangleShape2D_q8dsq")
+shape = SubResource("CapsuleShape2D_v24a8")
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(16, 2.38419e-07)
 rotation = 0.698132
-shape = SubResource("RectangleShape2D_fk853")
+shape = SubResource("CapsuleShape2D_vq3x2")
 
 [node name="Area2D" type="Area2D" parent="."]
 
