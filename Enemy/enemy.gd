@@ -107,6 +107,34 @@ func _movement(_delta:float) -> void:
 		#$Animantis.stop("punch")
 		get_node("Area2D/CollisionShape2D").disabled = true
 		
+	if Input.is_action_pressed("spearthrow_2" %[player_id]):
+		$Dragonfly.play("Dragonfly_SpearThrow")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("winddust_2" %[player_id]):
+		$Dragonfly.play("WindDust")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("block_2" %[player_id]):
+		$Dragonfly.play("Dragonfly_Block")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("bicyclekick_2" %[player_id]):
+		$Dragonfly.play("Dragonfly_BicycleKick")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("punch")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
 	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
 		$Dragonfly.play("Dragonfly_Flying")
 		velocity.y = JUMP_VELOCITY
