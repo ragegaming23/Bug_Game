@@ -13,6 +13,6 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	LocalNetwork.Start_client()
-	get_tree().change_scene_to_file("res://Test area/test scene.tscn")
+	print("Button pressed, trying to load loading screen…")
+	get_tree().change_scene_to_file("res://UI/Loading Screen/LoadingScreen.tscn")
 	

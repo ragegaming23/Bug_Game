@@ -103,8 +103,9 @@ func _movement(_delta:float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
-	if direction:
+	if direction !=0:
 		velocity.x = direction * SPEED 
+		$Animantis.flip_h=direction <0
 		$Animantis.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
