@@ -416,6 +416,7 @@
 [ext_resource type="Texture2D" uid="uid://whr3vpweeovs" path="res://Fighters/Dragonfly/Animations/WindDust/0016.png" id="414_svq1b"]
 [ext_resource type="Texture2D" uid="uid://crmwv711fdns7" path="res://Fighters/Dragonfly/Animations/WindDust/0017.png" id="415_iq7y1"]
 [ext_resource type="Texture2D" uid="uid://crbdccqr8q0fh" path="res://Fighters/Dragonfly/Animations/WindDust/0018.png" id="416_ey6rn"]
+[ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="417_lqwjd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k2yf2"]
 animations = [{
@@ -1715,17 +1716,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_am0pq"]
-size = Vector2(52, 9)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqwjd"]
+radius = 9.89949
+height = 43.840607
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqilm"]
-size = Vector2(53.5, 13.4949)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
+height = 59.999992
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncf7h"]
-size = Vector2(49.5, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_glvfu"]
-size = Vector2(20, 66)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgpb"]
+height = 58.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px1sc"]
 size = Vector2(34.75, 31)
@@ -1737,27 +1736,25 @@ size = Vector2(21, 88)
 script = ExtResource("1_4gyqm")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
-position = Vector2(34.32, -115.64)
+position = Vector2(-28.999992, -68)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Dragonfly_Block"
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
-position = Vector2(72, -64)
-shape = SubResource("RectangleShape2D_am0pq")
+position = Vector2(28.999996, -109.00001)
+rotation = -0.7853982
+shape = SubResource("CapsuleShape2D_lqwjd")
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
-position = Vector2(16, -64)
-rotation = 0.120428
-shape = SubResource("RectangleShape2D_eqilm")
+position = Vector2(41, -58.000004)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qkr4w")
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -65)
-shape = SubResource("RectangleShape2D_ncf7h")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -23)
-shape = SubResource("RectangleShape2D_glvfu")
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_ubgpb")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-0.5, -65)
@@ -1771,5 +1768,8 @@ disabled = true
 position = Vector2(-55.5, -3)
 shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
+
+[node name="DamageSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("417_lqwjd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

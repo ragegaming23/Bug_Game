@@ -113,12 +113,17 @@ func _movement(_delta:float) -> void:
 
 func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
+	
+	# Play damage sound
+	if $DamageSFX.playing: # if it’s already playing, restart it
+		$DamageSFX.stop()
+	$DamageSFX.play()
+	
 	update_healthbar()
+	
 	if current_health <= 0:
 		Lives -= 1
-		
 		current_health = 10
-		
 		
 	if Lives <= 0:
 		die()
