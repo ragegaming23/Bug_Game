@@ -147,8 +147,9 @@ func _movement(_delta:float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var x_direction := Input.get_axis("move left_%s" %[player_id],"move right_%s" %[player_id])
-	if x_direction:
+	if x_direction !=0:
 		velocity.x = x_direction * SPEED 
+		$Dragonfly.flip_h=x_direction>0
 		$Dragonfly.play("Dragonfly_Flying")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

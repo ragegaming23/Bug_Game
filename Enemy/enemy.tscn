@@ -1718,10 +1718,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqwjd"]
 radius = 9.89949
-height = 43.840607
+height = 43.8406
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
-height = 59.999992
+height = 60.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgpb"]
 height = 58.0
@@ -1736,24 +1736,24 @@ size = Vector2(21, 88)
 script = ExtResource("1_4gyqm")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
-position = Vector2(-28.999992, -68)
+position = Vector2(-29, -68)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Dragonfly_Block"
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
-position = Vector2(28.999996, -109.00001)
-rotation = -0.7853982
+position = Vector2(29, -109)
+rotation = -0.785398
 shape = SubResource("CapsuleShape2D_lqwjd")
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
-position = Vector2(41, -58.000004)
-rotation = -1.5707964
+position = Vector2(41, -58)
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_qkr4w")
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -65)
-rotation = -1.5707964
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_ubgpb")
 
 [node name="Area2D" type="Area2D" parent="."]
