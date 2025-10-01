@@ -67,13 +67,39 @@ func _movement(_delta:float) -> void:
 	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
 		$Animantis.play("jump")
 		velocity.y = JUMP_VELOCITY
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("jump")
+		get_node("Area2D/CollisionShape2D").disabled = true
 		
 	if Input.is_action_pressed("slash_%s" %[player_id]):
 		$Animantis.play("slash")
 		get_node("Area2D/CollisionShape2D").disabled = false
 		await get_tree().create_timer(1.0).timeout
-		#$Animantis.stop("punch")
+		#$Animantis.stop("slash")
 		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("multislash_%s" %[player_id]):
+		$Animantis.play("multislash")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("multislash")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("headbut_%s" %[player_id]):
+		$Animantis.play("headbut")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("headbut")
+		get_node("Area2D/CollisionShape2D").disabled = true
+		
+	if Input.is_action_pressed("block_%s" %[player_id]):
+		$Animantis.play("block")
+		get_node("Area2D/CollisionShape2D").disabled = false
+		await get_tree().create_timer(1.0).timeout
+		#$Animantis.stop("block")
+		get_node("Area2D/CollisionShape2D").disabled = true
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
