@@ -15,6 +15,8 @@ var current_health: int = max_health
 
 @onready var HealthBar = $"../HealthBar1"
 
+@onready var lives_ui = $"../P1LivesUI"
+
 @onready var health_textures = [
 	preload("res://Health Bar/Leaf Health Progression/Health_0.png"),
 	preload("res://Health Bar/Leaf Health Progression/Health_1.png"),
@@ -130,9 +132,20 @@ func Take_Damage(Damage: int):
 	if current_health <= 0:
 		Lives -= 1
 		current_health = 10
+		update_lives_ui()
 		
 	if Lives <= 0:
 		die()
+
+func update_lives_ui():
+	# Lives = 3 → show 2 icons
+	# Lives = 2 → show 1 icon
+	# Lives = 1 → show 0 icons (but still alive)
+	# Lives = 0 → dead
+	if lives_ui.has_node("Life1"):
+		lives_ui.get_node("Life1").visible = Lives >= 2
+	if lives_ui.has_node("Life2"):
+		lives_ui.get_node("Life2").visible = Lives >= 3
 
 func die()-> void:
 	get_tree().change_scene_to_file("res://UI/win screen2.tscn")

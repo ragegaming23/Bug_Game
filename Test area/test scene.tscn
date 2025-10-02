@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=16 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
+[ext_resource type="Texture2D" uid="uid://c5y1ga2pbe7bm" path="res://Health Bar/Stocks/roly_poly.png" id="13_ywtjr"]
 
 [sub_resource type="GDScript" id="GDScript_u6vuv"]
 script/source = "extends Area2D
@@ -29,8 +30,8 @@ script/source = "extends Area2D
 script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(583.033, 325.474)
-scale = Vector2(2.11091, 1.6175)
+position = Vector2(583.033, 321.987)
+scale = Vector2(2.11091, 1.6349348)
 texture = ExtResource("2_1ga5t")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
@@ -69,13 +70,13 @@ scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="HealthBar2" type="Sprite2D" parent="."]
-position = Vector2(820, 118)
+position = Vector2(920, 119)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_nqsoe")
 script = ExtResource("7_1ga5t")
 
 [node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(361.534, 112.903)
+position = Vector2(264, 122.00001)
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_nqsoe")
@@ -103,6 +104,30 @@ SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
 position = Vector2(678.921, 604.71)
+
+[node name="P2LivesUI" type="Node2D" parent="."]
+
+[node name="Life1" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(872.99994, 68)
+scale = Vector2(0.12374997, 0.12374997)
+texture = ExtResource("13_ywtjr")
+
+[node name="Life2" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(986.99994, 71.999985)
+scale = Vector2(0.12374997, 0.12374997)
+texture = ExtResource("13_ywtjr")
+
+[node name="P1LivesUI" type="Node2D" parent="."]
+
+[node name="Life1" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(211.99998, 74)
+scale = Vector2(0.12374997, 0.12374997)
+texture = ExtResource("13_ywtjr")
+
+[node name="Life2" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(333, 76)
+scale = Vector2(0.1253125, 0.12531252)
+texture = ExtResource("13_ywtjr")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
