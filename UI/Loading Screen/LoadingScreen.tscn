@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8bb2230pl8og"]
 
 [ext_resource type="Script" uid="uid://ddvmcayv2dxrq" path="res://UI/Loading Screen/loading_screen.gd" id="1_0s80v"]
-[ext_resource type="Texture2D" uid="uid://px7r7wvdy3ml" path="res://UI/Loading Screen/maxresdefault.jpg" id="1_jsvqk"]
+[ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://UI/Loading Screen/Loading Screen.jpg" id="2_0s80v"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0s80v")
 
-[node name="Maxresdefault" type="Sprite2D" parent="."]
-position = Vector2(565, 341)
-scale = Vector2(1.059375, 1)
-texture = ExtResource("1_jsvqk")
+[node name="LoadingScreen" type="Sprite2D" parent="."]
+position = Vector2(575.50006, 321.50003)
+scale = Vector2(2.1218178, 1.6758792)
+texture = ExtResource("2_0s80v")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=115 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -107,6 +107,7 @@
 [ext_resource type="Texture2D" uid="uid://bt0bvnxb1g06m" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20003.png" id="52_vq3x2"]
 [ext_resource type="Texture2D" uid="uid://bx73dnbiojw4t" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20004.png" id="53_ckxau"]
 [ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="107_v24a8"]
+[ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="108_vq3x2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
 animations = [{
@@ -560,8 +561,11 @@ disabled = true
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_86wen")
 
-[node name="DamageSFX" type="AudioStreamPlayer" parent="."]
+[node name="HealthSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("107_v24a8")
+
+[node name="HitSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("108_vq3x2")
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

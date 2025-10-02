@@ -39,10 +39,15 @@ func apply_knockback(direction: Vector2, force: float, knockback_duration: float
 func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)
 	
-	# Play damage sound
-	if $DamageSFX.playing: # if it’s already playing, restart it
-		$DamageSFX.stop()
-	$DamageSFX.play()
+	# Play Health sound
+	if $HealthSFX.playing: # if it’s already playing, restart it
+		$HealthSFX.stop()
+	$HealthSFX.play()
+	
+	# Play Hit sound
+	if $HitSFX.playing:
+		$HitSFX.stop()
+	$HitSFX.play()
 	
 	update_healthbar()
 	
