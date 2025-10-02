@@ -1,10 +1,15 @@
 extends State
+@export var player: CharacterBody2D
+@export var SPEED:= 0
+const is_on_floor()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func enter() -> void:
+	$Animantis.play("idle")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+func _physics_process(delta) -> void:
+	if not is_on_floor():
+		velocity += get_gravity() * delta

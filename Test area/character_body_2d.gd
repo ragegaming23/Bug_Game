@@ -58,12 +58,12 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 func _movement(_delta:float) -> void:
-	if Input.is_action_pressed("punch_%s" %[player_id]):
-		$Animantis.play("punch")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("punch_%s" %[player_id]):
+		#$Animantis.play("punch")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
 	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
 		$Animantis.play("jump")
@@ -155,7 +155,7 @@ func update_healthbar() -> void:
 	var health_ratio = float(current_health) / float(max_health)
 	var index = int(round(health_ratio * 10))  # 0–10 scale
 	HealthBar.texture = health_textures[index]
-	
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()

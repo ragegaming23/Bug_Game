@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=121 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -111,6 +111,8 @@
 [ext_resource type="Script" uid="uid://cmr70fhjuepl6" path="res://StateMachine.gd" id="109_nsn7i"]
 [ext_resource type="Script" uid="uid://d38crnj0nwfs2" path="res://Test area/idle.gd" id="110_b63db"]
 [ext_resource type="Script" uid="uid://cs7k1wkg02pel" path="res://Test area/punch.gd" id="111_65v4l"]
+[ext_resource type="Script" uid="uid://tvt1myocn8hm" path="res://Test area/movement.gd" id="112_b63db"]
+[ext_resource type="Script" uid="uid://dcs8d7ipyyslc" path="res://Test area/jump.gd" id="113_65v4l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
 animations = [{
@@ -579,16 +581,29 @@ stream = ExtResource("107_v24a8")
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("108_vq3x2")
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("109_nsn7i")
+initial_state = NodePath("idle")
+startOnReady = true
 metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 
-[node name="idle" type="Node" parent="StateMachine"]
+[node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("110_b63db")
+player = NodePath("../..")
+SPEED = null
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="punch" type="Node" parent="StateMachine"]
+[node name="punch" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("111_65v4l")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="movement" type="Node" parent="StateMachine"]
+script = ExtResource("112_b63db")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="jump" type="Node" parent="StateMachine"]
+script = ExtResource("113_65v4l")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

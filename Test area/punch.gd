@@ -1,5 +1,6 @@
 extends State
 
+@export var player: CharacterBody2D
 @export var player_id = 1
 
 func enter() -> void:
