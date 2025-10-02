@@ -42,7 +42,6 @@ func apply_knockback(knockbackDirection: Vector2, force: float, knockback_durati
 	if $".": return
 	$Animantis.play("flinch")
 
-
 func _physics_process(delta: float) -> void:
 	#if !is_multiplayer_authority(): return
 	
@@ -148,6 +147,7 @@ func update_lives_ui():
 		lives_ui.get_node("Life2").visible = Lives >= 3
 
 func die()-> void:
+	
 	get_tree().change_scene_to_file("res://UI/win screen2.tscn")
 
 func update_healthbar() -> void:
@@ -157,10 +157,9 @@ func update_healthbar() -> void:
 	HealthBar.texture = health_textures[index]
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	
 	if body == get_tree().get_first_node_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 2.0, 1.0)
+		body.apply_knockback(knockback_direction, 50.0, 1.0)
 		body.Take_Damage(1)
 		if $".": return
 	else:

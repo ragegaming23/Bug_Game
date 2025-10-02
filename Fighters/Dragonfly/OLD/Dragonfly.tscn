@@ -1320,7 +1320,7 @@ tracks/40/keys = {
 "times": PackedFloat32Array(0, 0.605662, 1.22726, 2.0977, 2.98021, 3.43333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0166532, -0.105837, 0.0217993, 0.246517, -0.0791266]
+"values": [0.0, 0.0166532, -0.105837, 0.0217993, 0.24651699999999999, -0.0791266]
 }
 tracks/41/type = "value"
 tracks/41/imported = false
@@ -2141,7 +2141,7 @@ tracks/40/keys = {
 "times": PackedFloat32Array(0, 0.605662, 1.22726, 2.0977, 2.98021, 3.43333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0166532, -0.105837, 0.0217993, 0.246517, -0.0791266]
+"values": [0.0, 0.0166532, -0.105837, 0.0217993, 0.24651699999999999, -0.0791266]
 }
 tracks/41/type = "value"
 tracks/41/imported = false
@@ -5074,7 +5074,7 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(-4.53857, -123.019)
 rotation = 1.57142
 scale = Vector2(0.999999, 0.384618)
-skew = 0.00359702
+skew = 0.003597021
 rest = Transform2D(-0.000624461, 0.999999, -0.384615, -0.00162365, -4.53857, -123.019)
 editor_settings/show_bone_gizmo = false
 
@@ -5104,7 +5104,7 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(-3.04445, -52.0129)
 rotation = 1.57142
 scale = Vector2(0.999999, 0.384618)
-skew = 0.00359702
+skew = 0.003597021
 rest = Transform2D(-0.000624461, 0.999999, -0.384615, -0.00162365, -3.04445, -52.0129)
 editor_settings/show_bone_gizmo = false
 
@@ -5132,14 +5132,14 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(20.4064, -34.9139)
 rotation = 1.57142
 scale = Vector2(0.999999, 0.384618)
-skew = 0.0035969
+skew = 0.003596902
 rest = Transform2D(-0.00062449, 0.999999, -0.384615, -0.00162367, 20.4064, -34.9139)
 editor_settings/show_bone_gizmo = false
 
 [node name="Wing Top Tip" type="Bone2D" parent="Polygons/Skeleton2D/center hip/Wing Top F"]
 position = Vector2(139, -183)
 rotation = -1.41554
-scale = Vector2(1, 1)
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.154633, -0.987972, 0.987972, 0.154633, 139, -183)
 editor_settings/show_bone_gizmo = false
 
@@ -5147,14 +5147,14 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(14.9968, 5.06332)
 rotation = 1.68016
 scale = Vector2(0.967359, 0.460592)
-skew = 0.52918
+skew = 0.52917993
 rest = Transform2D(-0.105587, 0.961579, -0.369838, -0.274527, 14.9968, 5.06332)
 editor_settings/show_bone_gizmo = false
 
 [node name="Wing bottom Tip" type="Bone2D" parent="Polygons/Skeleton2D/center hip/Wing Bottom F"]
 position = Vector2(139, -183)
 rotation = -1.41554
-scale = Vector2(1, 1)
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.154633, -0.987972, 0.987972, 0.154633, 139, -183)
 editor_settings/show_bone_gizmo = false
 
@@ -5169,7 +5169,7 @@ editor_settings/show_bone_gizmo = false
 [node name="Wing bottom Tip" type="Bone2D" parent="Polygons/Skeleton2D/center hip/Wing Bottom B"]
 position = Vector2(145.275, -271.984)
 rotation = -1.41554
-scale = Vector2(1, 1)
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.154633, -0.987972, 0.987972, 0.154633, 145.275, -271.984)
 editor_settings/show_bone_gizmo = false
 
@@ -5177,7 +5177,7 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(23.1019, -39.9025)
 rotation = 1.67677
 scale = Vector2(0.967359, 0.460592)
-skew = 0.529179
+skew = 0.52917874
 rest = Transform2D(-0.105587, 0.96158, -0.369838, -0.274527, 23.1019, -39.9025)
 editor_settings/show_bone_gizmo = false
 
@@ -5216,7 +5216,7 @@ editor_settings/show_bone_gizmo = false
 [node name="back leg tip mid" type="Bone2D" parent="Polygons/Skeleton2D/center hip/back leg mid/back leg bottom mid"]
 position = Vector2(-13.0488, -45.0552)
 rotation = -2.73526
-scale = Vector2(1, 1)
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(-0.918575, -0.395246, 0.395246, -0.918575, -13.0488, -45.0552)
 editor_settings/show_bone_gizmo = false
 
@@ -5240,7 +5240,7 @@ editor_settings/show_bone_gizmo = false
 position = Vector2(1.21192, -92.995)
 rotation = 1.57142
 scale = Vector2(0.999999, 0.384618)
-skew = 0.00359702
+skew = 0.003597021
 rest = Transform2D(-0.000624461, 0.999999, -0.384615, -0.00162365, 1.21192, -92.995)
 editor_settings/show_bone_gizmo = false
 

@@ -1,6 +1,6 @@
 class_name StateMachine
 extends Node
-
+ 
 @export var currentState: State
 @export var startOnReady: bool = false
 
@@ -20,11 +20,11 @@ func start() -> void:
 			
 	currentState.enter()
 	
-func _process(delta) -> void:
-	currentState.update(delta)
+#func _process(delta) -> void:
+	#currentState.update(delta)
 		
-func _physics_process(delta) -> void:
-	currentState.physics_update(delta)
+#func _physics_process(delta) -> void:
+	#currentState.physics_update(delta)
 	
 func on_child_transitioned(newStateName: StringName) -> void:
 	var newState = states.get(newStateName)
@@ -35,3 +35,6 @@ func on_child_transitioned(newStateName: StringName) -> void:
 			currentState = newState
 	else:
 		push_warning("Called transition on a state that does not exist")
+
+func add_state(stateName):
+	states[stateName] = states.size()
