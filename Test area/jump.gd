@@ -1,4 +1,5 @@
 extends State
+class_name jump
 
 @export var player: CharacterBody2D
 @export var player_id = 1

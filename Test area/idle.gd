@@ -1,4 +1,6 @@
 extends State
+class_name Idle
+
 @export var player: CharacterBody2D
 @export var SPEED:= 0
 const is_on_floor()

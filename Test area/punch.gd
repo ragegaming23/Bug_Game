@@ -1,4 +1,5 @@
 extends State
+class_name punch
 
 @export var player: CharacterBody2D
 @export var player_id = 1
