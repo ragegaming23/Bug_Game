@@ -16,10 +16,11 @@ func enter() -> void:
 		#$Animantis.stop("jump")
 		get_node("Area2D/CollisionShape2D").disabled = true
 
-func _process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func exit() -> void:
+	pass
+	
+func update(_delta: float) -> void:
+	pass
 
-func _physics_process(delta) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func physics_update(_delta: float) -> void:
+	pass

@@ -589,8 +589,8 @@ metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 
 [node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("110_b63db")
-SPEED = null
 player = NodePath("../..")
+SPEED = null
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [node name="punch" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
@@ -598,12 +598,12 @@ script = ExtResource("111_65v4l")
 player = NodePath("../..")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="movement" type="Node" parent="StateMachine"]
-script = ExtResource("112_b63db")
-metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
-
 [node name="jump" type="Node" parent="StateMachine"]
 script = ExtResource("113_65v4l")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="movement" type="Node" parent="StateMachine"]
+script = ExtResource("112_b63db")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

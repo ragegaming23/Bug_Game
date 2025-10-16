@@ -1,5 +1,6 @@
 class_name StateMachine
 extends Node
+
 @export var initial_state : State
 @export var currentState: State
 @export var startOnReady: bool = false

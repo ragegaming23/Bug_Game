@@ -5,7 +5,6 @@ class_name movement
 @export var player_id = 1
 @export var SPEED = 300.0
 
-
 func enter() -> void:
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction !=0:
@@ -17,10 +16,11 @@ func enter() -> void:
 		$Animantis.play("idle")
 	move_and_slide()
 
-func _process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func exit() -> void:
+	pass
+	
+func update(_delta: float) -> void:
+	pass
 
-func _physics_process(delta) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func physics_update(_delta: float) -> void:
+	pass
