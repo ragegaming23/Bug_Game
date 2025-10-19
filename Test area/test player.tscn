@@ -590,7 +590,6 @@ metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 [node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("110_b63db")
 player = NodePath("../..")
-SPEED = null
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [node name="punch" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]

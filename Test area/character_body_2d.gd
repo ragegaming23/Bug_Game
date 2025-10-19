@@ -65,13 +65,13 @@ func _movement(_delta:float) -> void:
 		#$Animantis.stop("punch")
 		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
-		$Animantis.play("jump")
-		velocity.y = JUMP_VELOCITY
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
+		#$Animantis.play("jump")
+		#velocity.y = JUMP_VELOCITY
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("jump")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
 	if Input.is_action_pressed("slash_%s" %[player_id]):
 		$Animantis.play("slash")
@@ -103,15 +103,15 @@ func _movement(_delta:float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
-	if direction !=0:
-		velocity.x = direction * SPEED 
-		$Animantis.flip_h=direction <0
-		$Animantis.play("walk")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$Animantis.play("idle")
-	move_and_slide()
+	#var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
+	#if direction !=0:
+		#velocity.x = direction * SPEED 
+		#$Animantis.flip_h=direction <0
+		#$Animantis.play("walk")
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		#$Animantis.play("idle")
+	#move_and_slide()
 
 func Take_Damage(Damage: int):
 	current_health = max(current_health - Damage, 0)

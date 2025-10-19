@@ -8,18 +8,20 @@ class_name movement
 func enter() -> void:
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction !=0:
-		velocity.x = direction * SPEED 
-		$Animantis.flip_h=direction <0
-		$Animantis.play("walk")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$Animantis.play("idle")
-	move_and_slide()
+		#velocity.x = direction * SPEED 
+		$"../../Animantis".flip_h=direction <0
+		$"../../Animantis".play("walk")
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		#$Animantis.play("idle")
+	#move_and_slide()
 
 func exit() -> void:
 	pass
 	
 func update(_delta: float) -> void:
+	if Input.is_action_pressed("punch_%s" %[player_id]):
+		return
 	pass
 
 func physics_update(_delta: float) -> void:
