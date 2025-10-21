@@ -1,4 +1,7 @@
-class_name StateMachine
+#extends StateMachine
+
+
+class_name Movement_State_Machine
 extends Node
 
 @export var initial_state : State

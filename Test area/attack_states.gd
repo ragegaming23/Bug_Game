@@ -1,8 +1,11 @@
-class_name StateMachine
+#extends StateMachine
+
+
+class_name Attack_State_Machine
 extends Node
 
-@export var initial_state : State
-@export var currentState: State
+@export var initial_state : Attack_State
+@export var currentState: Attack_State
 @export var startOnReady: bool = true
 
 var states: Dictionary = {}
@@ -13,7 +16,7 @@ func _ready() -> void:
 
 func start() -> void:
 	for child in get_children():
-		if child is State:
+		if child is Attack_State:
 			states[child.name] = child
 			child.transitioned.connect(on_child_transitioned)
 		else:

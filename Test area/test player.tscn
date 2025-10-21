@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=123 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -108,11 +108,13 @@
 [ext_resource type="Texture2D" uid="uid://bx73dnbiojw4t" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20004.png" id="53_ckxau"]
 [ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="107_v24a8"]
 [ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="108_vq3x2"]
-[ext_resource type="Script" uid="uid://cmr70fhjuepl6" path="res://StateMachine.gd" id="109_nsn7i"]
+[ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://Test area/movement_states.gd" id="109_fsy0b"]
 [ext_resource type="Script" uid="uid://d38crnj0nwfs2" path="res://Test area/idle.gd" id="110_b63db"]
 [ext_resource type="Script" uid="uid://cs7k1wkg02pel" path="res://Test area/punch.gd" id="111_65v4l"]
 [ext_resource type="Script" uid="uid://tvt1myocn8hm" path="res://Test area/movement.gd" id="112_b63db"]
 [ext_resource type="Script" uid="uid://dcs8d7ipyyslc" path="res://Test area/jump.gd" id="113_65v4l"]
+[ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://Test area/attack_states.gd" id="113_507ph"]
+[ext_resource type="Script" uid="uid://dlbn23u66prbe" path="res://Test area/no_attack.gd" id="114_ptgi3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
 animations = [{
@@ -286,7 +288,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("49_3pj1c")
 }],
-"loop": true,
+"loop": false,
 "name": &"multislash",
 "speed": 13.0
 }, {
@@ -420,8 +422,7 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"punch"
-frame_progress = 0.46879244
+animation = &"walk prep"
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
 visible = false
@@ -581,29 +582,47 @@ stream = ExtResource("107_v24a8")
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("108_vq3x2")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("109_nsn7i")
+[node name="Movement States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("109_fsy0b")
 initial_state = NodePath("idle")
-startOnReady = true
 metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 
-[node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="idle" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("110_b63db")
 player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="punch" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="jump" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("113_65v4l")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="movement" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("112_b63db")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="Attack States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("113_507ph")
+initial_state = NodePath("No_Attack")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="No_Attack" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("114_ptgi3")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="punch" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("111_65v4l")
 player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="jump" type="Node" parent="StateMachine"]
-script = ExtResource("113_65v4l")
-metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
-
-[node name="movement" type="Node" parent="StateMachine"]
-script = ExtResource("112_b63db")
-metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
