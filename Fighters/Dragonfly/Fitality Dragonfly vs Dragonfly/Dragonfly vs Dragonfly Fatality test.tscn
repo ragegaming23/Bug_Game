@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbcw0vpotescl"]
+
+[ext_resource type="VideoStream" uid="uid://d0ufrqmugtnt8" path="res://Fighters/Dragonfly/Fitality Dragonfly vs Dragonfly/Dragonfly_Attacker_New0000-0210.ogv" id="1_oq0rb"]
+
+[node name="DragonflyVsDragonflyFatalityTest" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -5.0
+offset_top = -425.0
+offset_right = 1915.0
+offset_bottom = 655.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+stream = ExtResource("1_oq0rb")
+autoplay = true

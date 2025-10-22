@@ -1718,8 +1718,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqwjd"]
-radius = 11.313713
-height = 65.05383
+radius = 11.3137
+height = 65.0538
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
 height = 60.0
@@ -1744,8 +1744,8 @@ sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Dragonfly_Block"
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
-position = Vector2(10, -96.999985)
-rotation = -2.6005406
+position = Vector2(10, -97)
+rotation = -2.60054
 shape = SubResource("CapsuleShape2D_lqwjd")
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
