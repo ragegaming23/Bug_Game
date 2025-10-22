@@ -31,7 +31,7 @@ script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
 position = Vector2(583.033, 321.987)
-scale = Vector2(2.11091, 1.6349348)
+scale = Vector2(2.11091, 1.63493)
 texture = ExtResource("2_1ga5t")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
@@ -76,7 +76,7 @@ texture = ExtResource("6_nqsoe")
 script = ExtResource("7_1ga5t")
 
 [node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(264, 122.00001)
+position = Vector2(264, 122)
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_nqsoe")
@@ -108,25 +108,25 @@ position = Vector2(678.921, 604.71)
 [node name="P2LivesUI" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(872.99994, 68)
-scale = Vector2(0.12374997, 0.12374997)
+position = Vector2(873, 68)
+scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="Life2" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(986.99994, 71.999985)
-scale = Vector2(0.12374997, 0.12374997)
+position = Vector2(987, 72)
+scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="P1LivesUI" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(211.99998, 74)
-scale = Vector2(0.12374997, 0.12374997)
+position = Vector2(212, 74)
+scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="Life2" type="Sprite2D" parent="P1LivesUI"]
 position = Vector2(333, 76)
-scale = Vector2(0.1253125, 0.12531252)
+scale = Vector2(0.125313, 0.125313)
 texture = ExtResource("13_ywtjr")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
