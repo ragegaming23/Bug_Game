@@ -5,10 +5,9 @@
 [node name="DragonflyVsDragonflyFatalityTest" type="Node2D"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_left = -5.0
-offset_top = -425.0
-offset_right = 1915.0
-offset_bottom = 655.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60058004, 0.59562963)
 size_flags_horizontal = 6
 size_flags_vertical = 6
 stream = ExtResource("1_oq0rb")

@@ -422,7 +422,7 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"walk prep"
+animation = &"punch"
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
 visible = false
@@ -621,8 +621,6 @@ script = ExtResource("111_65v4l")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
