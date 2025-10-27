@@ -58,6 +58,7 @@ func _physics_process(delta: float) -> void:
 		#velocity += get_gravity() * delta
 
 func _movement(_delta:float) -> void:
+	pass
 	#if Input.is_action_pressed("punch_%s" %[player_id]):
 		#$Animantis.play("punch")
 		#get_node("Area2D/CollisionShape2D").disabled = false
@@ -73,33 +74,34 @@ func _movement(_delta:float) -> void:
 		#$Animantis.stop("jump")
 		#get_node("Area2D/CollisionShape2D").disabled = true
 
-	if Input.is_action_pressed("slash_%s" %[player_id]):
-		$Animantis.play("slash")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("slash_%s" %[player_id]):
+		#$Animantis.play("slash")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("slash")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 
-	if Input.is_action_pressed("multislash_%s" %[player_id]):
-		$Animantis.play("multislash")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("multislash_%s" %[player_id]):
+		#$Animantis.play("multislash")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("multislash")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 
-	if Input.is_action_pressed("headbut_%s" %[player_id]):
-		$Animantis.play("headbut")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("headbut_%s" %[player_id]):
+		#$Animantis.play("headbut")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("headbut")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 
-	if Input.is_action_pressed("block_%s" %[player_id]):
-		$Animantis.play("block")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+
+	#if Input.is_action_pressed("block_%s" %[player_id]):
+		#$Animantis.play("block")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("block")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

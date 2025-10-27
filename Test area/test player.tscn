@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=127 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -115,6 +115,10 @@
 [ext_resource type="Script" uid="uid://dcs8d7ipyyslc" path="res://Test area/jump.gd" id="113_65v4l"]
 [ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://Test area/attack_states.gd" id="113_507ph"]
 [ext_resource type="Script" uid="uid://dlbn23u66prbe" path="res://Test area/no_attack.gd" id="114_ptgi3"]
+[ext_resource type="Script" uid="uid://ole1vaxxid0q" path="res://Test area/slash.gd" id="116_cvjqa"]
+[ext_resource type="Script" uid="uid://cybxrlovst5lv" path="res://Test area/multislash.gd" id="117_spbgj"]
+[ext_resource type="Script" uid="uid://haln38fuu10p" path="res://Test area/headbut.gd" id="118_i5wc2"]
+[ext_resource type="Script" uid="uid://c15adkg7v5til" path="res://Test area/block.gd" id="119_83u2j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
 animations = [{
@@ -620,6 +624,22 @@ metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 script = ExtResource("111_65v4l")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="slash" type="Node" parent="Attack States"]
+script = ExtResource("116_cvjqa")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="multislash" type="Node" parent="Attack States"]
+script = ExtResource("117_spbgj")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="headbut" type="Node" parent="Attack States"]
+script = ExtResource("118_i5wc2")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="block" type="Node" parent="Attack States"]
+script = ExtResource("119_83u2j")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

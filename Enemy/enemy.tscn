@@ -1,4 +1,4 @@
-[gd_scene load_steps=425 format=3 uid="uid://dt4clu7q72r7"]
+[gd_scene load_steps=430 format=3 uid="uid://dt4clu7q72r7"]
 
 [ext_resource type="Script" uid="uid://b0jfytybgdell" path="res://Enemy/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://6axt3fyl4lba" path="res://Fighters/Dragonfly/Animations/Bicyclekick/Frames/Bicyclekick_Dragonfly0001.png0001.png" id="2_yl6tp"]
@@ -418,6 +418,11 @@
 [ext_resource type="Texture2D" uid="uid://crbdccqr8q0fh" path="res://Fighters/Dragonfly/Animations/WindDust/0018.png" id="416_ey6rn"]
 [ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="417_lqwjd"]
 [ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="418_qkr4w"]
+[ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://Test area/movement_states.gd" id="419_4gwa2"]
+[ext_resource type="Script" uid="uid://e5xxfkdf2cpm" path="res://Enemy/df_idle.gd" id="420_53c6d"]
+[ext_resource type="Script" uid="uid://crcy3ifw077ki" path="res://Enemy/movement(fly).gd" id="421_kf2kk"]
+[ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://Test area/attack_states.gd" id="422_njj2q"]
+[ext_resource type="Script" uid="uid://dlc6f4b4nc2fe" path="res://Enemy/df_no_attack.gd" id="423_4gwa2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k2yf2"]
 animations = [{
@@ -1741,7 +1746,7 @@ script = ExtResource("1_4gyqm")
 position = Vector2(-29, -68)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
-animation = &"Dragonfly_Block"
+animation = &"Dragonfly_Idle"
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(10, -97)
@@ -1777,5 +1782,33 @@ stream = ExtResource("417_lqwjd")
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("418_qkr4w")
 volume_db = -10.0
+
+[node name="DF_Movement States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("419_4gwa2")
+initial_state = NodePath("DF_idle")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="DF_idle" type="Node" parent="DF_Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("420_53c6d")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Dragonfly")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="movement(fly)" type="Node" parent="DF_Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("421_kf2kk")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Dragonfly")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="DF_Attack States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("422_njj2q")
+initial_state = NodePath("DF_No_Attack")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="DF_No_Attack" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("423_4gwa2")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Dragonfly")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
