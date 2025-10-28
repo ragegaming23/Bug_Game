@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0qmj4oxj6iuv"
+path="res://.godot/imported/AnnouncerHall_WinnerIs.ogg-63842fd2e46c7ef5f5d7fce12770827d.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_WinnerIs.ogg"
+dest_files=["res://.godot/imported/AnnouncerHall_WinnerIs.ogg-63842fd2e46c7ef5f5d7fce12770827d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://h4sgmkfd6tyw"]
 
-[ext_resource type="Texture2D" uid="uid://cgun5ncoy3e4m" path="res://Health Bar/Leaf Health Progression/Health_10.png" id="1_is8yv"]
+[ext_resource type="Texture2D" uid="uid://cgun5ncoy3e4m" path="res://Assets/Health Bar/Leaf Health Progression/Health_10.png" id="1_is8yv"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="2_yjlfw"]
 
 [node name="HealthBar1" type="Sprite2D"]

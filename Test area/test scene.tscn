@@ -5,14 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://b17nkru8wmtb7" path="res://Stages/Moss-rocks.png" id="2_1ga5t"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="2_rk26f"]
 [ext_resource type="Script" uid="uid://dv03hwqqw0swq" path="res://Test area/testfloor_01.gd" id="3_xw60q"]
-[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Enemy/enemy.tscn" id="6_ihbi5"]
-[ext_resource type="Texture2D" uid="uid://cgun5ncoy3e4m" path="res://Health Bar/Leaf Health Progression/Health_10.png" id="6_nqsoe"]
+[ext_resource type="Texture2D" uid="uid://bd0pho3vpxfbi" path="res://Assets/Health Bar/New Health Bar/100.png" id="5_ywtjr"]
+[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="6_ihbi5"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="7_1ga5t"]
 [ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="7_ywtjr"]
-[ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
-[ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
-[ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
-[ext_resource type="Texture2D" uid="uid://c5y1ga2pbe7bm" path="res://Health Bar/Stocks/roly_poly.png" id="13_ywtjr"]
+[ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
+[ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
+[ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
+[ext_resource type="Texture2D" uid="uid://c5y1ga2pbe7bm" path="res://Assets/Health Bar/Stocks/roly_poly.png" id="13_ywtjr"]
 
 [sub_resource type="GDScript" id="GDScript_u6vuv"]
 script/source = "extends Area2D
@@ -35,30 +35,30 @@ scale = Vector2(2.11091, 1.63493)
 texture = ExtResource("2_1ga5t")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(563, 628)
+position = Vector2(560, 526)
 scale = Vector2(22, 1)
 script = ExtResource("3_xw60q")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(168, 570)
+position = Vector2(165, 468)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(952, 568)
+position = Vector2(949, 466)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(32, 392)
+position = Vector2(29, 290)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(1112, 408)
+position = Vector2(1109, 306)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(573, 328)
+position = Vector2(570, 226)
 scale = Vector2(30, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -70,13 +70,14 @@ scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="HealthBar2" type="Sprite2D" parent="."]
-position = Vector2(920, 119)
+position = Vector2(527, 546)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("6_nqsoe")
+texture = ExtResource("5_ywtjr")
 script = ExtResource("7_1ga5t")
 
 [node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(264, 122)
+position = Vector2(254, 543.99994)
+texture = ExtResource("5_ywtjr")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_nqsoe")
@@ -93,39 +94,39 @@ volume_db = 1.5
 [node name="Spawnpoints" type="Node2D" parent="."]
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(943.357, 530.92)
+position = Vector2(940.357, 428.91998)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(164.621, 494.917)
+position = Vector2(161.621, 392.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(432.13, 547.225)
+position = Vector2(429.13, 445.22498)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(678.921, 604.71)
+position = Vector2(675.921, 502.71002)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(873, 68)
+position = Vector2(448.00003, 567)
 scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="Life2" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(987, 72)
+position = Vector2(476, 553)
 scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="P1LivesUI" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(212, 74)
+position = Vector2(172, 566)
 scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
 [node name="Life2" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(333, 76)
+position = Vector2(204, 551)
 scale = Vector2(0.125313, 0.125313)
 texture = ExtResource("13_ywtjr")
 

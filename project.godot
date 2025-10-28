@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Global.gd"
-LocalNetwork="*res://UI/local_network.gd"
+LocalNetwork="*res://Assets/UI/local_network.gd"
 
 [display]
 
@@ -27,7 +27,15 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
-"res://Build/": "pink"
+"res://Assets/": "green",
+"res://Assets/Health Bar/": "green",
+"res://Build/": "pink",
+"res://Fighters/": "red",
+"res://Script-Dragonfly/": "teal",
+"res://SoundEffects/": "pink",
+"res://SoundEffects/Music/": "pink",
+"res://Stages/": "orange",
+"res://Test area/": "gray"
 }
 
 [global_group]

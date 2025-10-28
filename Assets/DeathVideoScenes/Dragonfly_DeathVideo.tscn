@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwipe37nglwii"]
+
+[ext_resource type="Script" uid="uid://dku203k6kev33" path="res://Assets/DeathVideoScenes/dragonfly_death_video.gd" id="1_3l8ov"]
+[ext_resource type="VideoStream" uid="uid://cvylngtr2j6uj" path="res://Fighters/Praying Mantis/Mantis_FATALITY/Placeholder-Fatality-MANTIS.ogv" id="2_3emar"]
+
+[node name="DragonflyDeathVideo" type="Node2D"]
+script = ExtResource("1_3l8ov")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_3emar")
+autoplay = true

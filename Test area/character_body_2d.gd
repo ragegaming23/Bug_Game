@@ -18,17 +18,27 @@ var current_health: int = max_health
 @onready var lives_ui = $"../P1LivesUI"
 
 @onready var health_textures = [
-	preload("res://Health Bar/Leaf Health Progression/Health_0.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_1.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_2.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_3.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_4.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_5.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_6.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_7.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_8.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_9.png"),
-	preload("res://Health Bar/Leaf Health Progression/Health_10.png"),
+	preload("res://Health Bar/New Health Bar/0.png"),
+	preload("res://Health Bar/New Health Bar/5.png"),
+	preload("res://Health Bar/New Health Bar/10.png"),
+	preload("res://Health Bar/New Health Bar/15.png"),
+	preload("res://Health Bar/New Health Bar/20.png"),
+	preload("res://Health Bar/New Health Bar/25.png"),
+	preload("res://Health Bar/New Health Bar/30.png"),
+	preload("res://Health Bar/New Health Bar/35.png"),
+	preload("res://Health Bar/New Health Bar/40.png"),
+	preload("res://Health Bar/New Health Bar/45.png"),
+	preload("res://Health Bar/New Health Bar/50.png"),
+	preload("res://Health Bar/New Health Bar/55.png"),
+	preload("res://Health Bar/New Health Bar/60.png"),
+	preload("res://Health Bar/New Health Bar/65.png"),
+	preload("res://Health Bar/New Health Bar/70.png"),
+	preload("res://Health Bar/New Health Bar/75.png"),
+	preload("res://Health Bar/New Health Bar/80.png"),
+	preload("res://Health Bar/New Health Bar/85.png"),
+	preload("res://Health Bar/New Health Bar/90.png"),
+	preload("res://Health Bar/New Health Bar/95.png"),
+	preload("res://Health Bar/New Health Bar/100.png"),
 ]
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
@@ -153,9 +163,9 @@ func die()-> void:
 	get_tree().change_scene_to_file("res://UI/win screen2.tscn")
 
 func update_healthbar() -> void:
-	# Calculate which image index to use (0–10)
 	var health_ratio = float(current_health) / float(max_health)
-	var index = int(round(health_ratio * 10))  # 0–10 scale
+	var index = int(round(health_ratio * 20))  # 21 total textures
+	index = clamp(index, 0, health_textures.size() - 1)
 	HealthBar.texture = health_textures[index]
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

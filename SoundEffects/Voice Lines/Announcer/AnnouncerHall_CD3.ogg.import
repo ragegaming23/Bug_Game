@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://boqxh7p1gdlot"
+path="res://.godot/imported/AnnouncerHall_CD3.ogg-84677285e93b782a7aaa698f256a2fa0.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_CD3.ogg"
+dest_files=["res://.godot/imported/AnnouncerHall_CD3.ogg-84677285e93b782a7aaa698f256a2fa0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
