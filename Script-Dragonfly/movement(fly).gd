@@ -9,7 +9,7 @@ class_name Move_fly
 
 func enter() -> void:
 	#$"../../Animantis".flip_h=direction <0
-	$"../../Dragonfly".play("walk")
+	$"../../Dragonfly".play("Dragonfly_Flying")
 
 func exit() -> void:
 	pass

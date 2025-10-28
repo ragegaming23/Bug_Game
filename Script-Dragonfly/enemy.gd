@@ -72,7 +72,7 @@ func Take_Damage(Damage: int):
 		die()
 	
 func die() -> void:
-	get_tree().change_scene_to_file("res://DeathVideoScenes/Dragonfly_DeathVideo.tscn")
+	get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn")
 
 	
 func update_lives_ui():

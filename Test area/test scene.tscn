@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=18 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -13,6 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
 [ext_resource type="Texture2D" uid="uid://c5y1ga2pbe7bm" path="res://Assets/Health Bar/Stocks/roly_poly.png" id="13_ywtjr"]
+[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/MbannerYELLOW.png" id="14_lhl0s"]
+[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/DbannerBLUE.png" id="15_vjeew"]
 
 [sub_resource type="GDScript" id="GDScript_u6vuv"]
 script/source = "extends Area2D
@@ -148,6 +150,16 @@ texture = ExtResource("13_ywtjr")
 position = Vector2(204, 551)
 scale = Vector2(0.125313, 0.125313)
 texture = ExtResource("13_ywtjr")
+
+[node name="MbannerYellow" type="Sprite2D" parent="."]
+position = Vector2(329, 599.00006)
+scale = Vector2(0.1246527, 0.124652706)
+texture = ExtResource("14_lhl0s")
+
+[node name="DbannerBLUE" type="Sprite2D" parent="."]
+position = Vector2(600, 601.00006)
+scale = Vector2(0.1246527, 0.124652706)
+texture = ExtResource("15_vjeew")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
