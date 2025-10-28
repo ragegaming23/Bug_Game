@@ -16,23 +16,24 @@ func exit() -> void:
 
 func update(_delta: float) -> void:
 	if Input.is_action_pressed("punch_%s" %[player_id]):
-		$"..".on_child_transitioned("jab")
+		$"..".on_child_transitioned("Jab")
 		return
 
 	if Input.is_action_pressed("bicyclekick_%s" %[player_id]):
-		$"..".on_child_transitioned("bicyclekick")
+		$"..".on_child_transitioned("BicycleKick")
 
 	if Input.is_action_pressed("spearthrow_%s" %[player_id]):
-		$"..".on_child_transitioned("spearthrow")
+		$"..".on_child_transitioned("SpearThrow")
 
 	if Input.is_action_pressed("spear_spin_%s" %[player_id]):
-		$"..".on_child_transitioned("spearspin")
+		await get_tree().create_timer(0.3).timeout
+		$"..".on_child_transitioned("DF_No_Attack")
 
 	if Input.is_action_pressed("winddust_%s" %[player_id]):
 		$"..".on_child_transitioned("WindDust")
 
 	if Input.is_action_pressed("block_%s" %[player_id]):
-		$"..".on_child_transitioned("block")
+		$"..".on_child_transitioned("Block")
 
 func physics_update(_delta: float) -> void:
 	pass

@@ -7,7 +7,7 @@ class_name punch
 
 func enter() -> void:
 	if Input.is_action_pressed("punch_%s" %[player_id]):
-		$"../../Animantis".play("punch")
+		$"../../Animantis".play("jab")
 		get_node("../../Area2D/CollisionShape2D").disabled = false
 		await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
@@ -20,8 +20,18 @@ func update(_delta: float) -> void:
 	if Input.is_action_just_released("punch_%s" %[player_id]):
 		await get_tree().create_timer(0.3).timeout
 		$"..".on_child_transitioned("No_Attack")
-		
-	pass
+
+	if Input.is_action_pressed("slash_%s" %[player_id]):
+		$"..".on_child_transitioned("slash")
+
+	if Input.is_action_pressed("multislash_%s" %[player_id]):
+		$"..".on_child_transitioned("multislash")
+
+	if Input.is_action_pressed("headbut_%s" %[player_id]):
+		$"..".on_child_transitioned("headbut")
+
+	if Input.is_action_pressed("block_%s" %[player_id]):
+		$"..".on_child_transitioned("block")
 
 func physics_update(_delta: float) -> void:
 	pass

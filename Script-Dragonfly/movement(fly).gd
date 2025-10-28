@@ -17,16 +17,24 @@ func exit() -> void:
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("move left_%s" %[player_id]):
 		player.velocity.x = move_toward(player.velocity.x, 0, SPEED)
-		$"..".on_child_transitioned("idle")
+		$"..".on_child_transitioned("DF_idle")
 		#return
 	if Input.is_action_just_released("move right_%s" %[player_id]):
 		player.velocity.x = move_toward(player.velocity.x, 0, SPEED)
-		$"..".on_child_transitioned("idle")
+		$"..".on_child_transitioned("DF_idle")
+		
+	if Input.is_action_just_released("move up_%s" %[player_id]):
+		player.velocity.y = move_toward(player.velocity.y, 0, SPEED)
+		$"..".on_child_transitioned("DF_idle")
+		#return
+	if Input.is_action_just_released("Move down_%s" %[player_id]):
+		player.velocity.y = move_toward(player.velocity.y, 0, SPEED)
+		$"..".on_child_transitioned("DF_idle")
 	pass
 
 func physics_update(_delta: float) -> void:
 	var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
-	if y_direction:
+	if y_direction !=0:
 		player.velocity.y = y_direction * SPEED
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction !=0:

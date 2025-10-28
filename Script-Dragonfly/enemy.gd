@@ -117,7 +117,7 @@ var is_punching = false
 	#if y_direction:
 		#velocity.y = y_direction * SPEED
 		#if !is_punching:
-			##$Dragonfly.play("Dragonfly_Flying")
+			#$Dragonfly.play("Dragonfly_Flying")
 	#else:
 		#velocity.y = move_toward(velocity.y, 0, SPEED)
 		#if !is_punching:
