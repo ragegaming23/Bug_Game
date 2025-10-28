@@ -21,7 +21,19 @@ func update(_delta: float) -> void:
 	if Input.is_action_just_released("multislash_%s" %[player_id]):
 		await get_tree().create_timer(0.6).timeout
 		$"..".on_child_transitioned("No_Attack")
-		
+
+	if Input.is_action_pressed("punch_%s" %[player_id]):
+		$"..".on_child_transitioned("punch")
+		return
+
+	if Input.is_action_pressed("slash_%s" %[player_id]):
+		$"..".on_child_transitioned("slash")
+
+	if Input.is_action_pressed("headbut_%s" %[player_id]):
+		$"..".on_child_transitioned("headbut")
+
+	if Input.is_action_pressed("block_%s" %[player_id]):
+		$"..".on_child_transitioned("block")
 	pass
 
 func physics_update(_delta: float) -> void:

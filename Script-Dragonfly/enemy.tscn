@@ -1862,6 +1862,4 @@ animated_sprite_2d = NodePath("../../Dragonfly")
 player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
