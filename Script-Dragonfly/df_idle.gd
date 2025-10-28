@@ -15,7 +15,7 @@ func exit() -> void:
 
 func update(_delta: float) -> void:
 	if (Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])):
-		$"..".on_child_transitioned("move_fly")
+		$"..".on_child_transitioned("movement(fly)")
 
 
 func physics_update(_delta: float) -> void:

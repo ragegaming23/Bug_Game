@@ -31,6 +31,6 @@ func physics_update(_delta: float) -> void:
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction !=0:
 		player.velocity.x = direction * SPEED 
-		$"../../Dragonfly".flip_h=direction <0
+		$"../../Dragonfly".flip_h=direction >0
 	player.move_and_slide()
 	pass

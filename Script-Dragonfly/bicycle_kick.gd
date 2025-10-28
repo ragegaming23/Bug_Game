@@ -1,5 +1,5 @@
-extends Attack_State 
-class_name df_no_attack
+extends Attack_State
+class_name BicycleKick
 
 @export var player: CharacterBody2D
 @export var animated_sprite_2d: AnimatedSprite2D

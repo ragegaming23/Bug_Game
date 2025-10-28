@@ -1,5 +1,5 @@
-extends Attack_State 
-class_name df_no_attack
+extends Attack_State
+class_name Df_block
 
 @export var player: CharacterBody2D
 @export var animated_sprite_2d: AnimatedSprite2D
@@ -8,7 +8,7 @@ class_name df_no_attack
 
 
 func enter() -> void:
-	$"../../Dragonfly".play("Dragonfly_Idle")
+	$"../../Dragonfly".play("Dragonfly_Block")
 	pass
 	
 func exit() -> void:

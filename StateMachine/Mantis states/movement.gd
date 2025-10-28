@@ -30,4 +30,6 @@ func physics_update(_delta: float) -> void:
 		player.velocity.x = direction * SPEED 
 		$"../../Animantis".flip_h=direction <0
 	player.move_and_slide()
+	if not player.is_on_floor():
+		player.velocity += player.get_gravity() * _delta
 	pass

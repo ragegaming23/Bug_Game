@@ -18,27 +18,27 @@ var current_health: int = max_health
 @onready var lives_ui = $"../P2LivesUI"
 
 @onready var health_textures = [
-	preload("res://Health Bar/New Health Bar/0.png"),
-	preload("res://Health Bar/New Health Bar/5.png"),
-	preload("res://Health Bar/New Health Bar/10.png"),
-	preload("res://Health Bar/New Health Bar/15.png"),
-	preload("res://Health Bar/New Health Bar/20.png"),
-	preload("res://Health Bar/New Health Bar/25.png"),
-	preload("res://Health Bar/New Health Bar/30.png"),
-	preload("res://Health Bar/New Health Bar/35.png"),
-	preload("res://Health Bar/New Health Bar/40.png"),
-	preload("res://Health Bar/New Health Bar/45.png"),
-	preload("res://Health Bar/New Health Bar/50.png"),
-	preload("res://Health Bar/New Health Bar/55.png"),
-	preload("res://Health Bar/New Health Bar/60.png"),
-	preload("res://Health Bar/New Health Bar/65.png"),
-	preload("res://Health Bar/New Health Bar/70.png"),
-	preload("res://Health Bar/New Health Bar/75.png"),
-	preload("res://Health Bar/New Health Bar/80.png"),
-	preload("res://Health Bar/New Health Bar/85.png"),
-	preload("res://Health Bar/New Health Bar/90.png"),
-	preload("res://Health Bar/New Health Bar/95.png"),
-	preload("res://Health Bar/New Health Bar/100.png"),
+	preload("res://Assets/Health Bar/New Health Bar/0.png"),
+	preload("res://Assets/Health Bar/New Health Bar/5.png"),
+	preload("res://Assets/Health Bar/New Health Bar/10.png"),
+	preload("res://Assets/Health Bar/New Health Bar/15.png"),
+	preload("res://Assets/Health Bar/New Health Bar/20.png"),
+	preload("res://Assets/Health Bar/New Health Bar/25.png"),
+	preload("res://Assets/Health Bar/New Health Bar/30.png"),
+	preload("res://Assets/Health Bar/New Health Bar/35.png"),
+	preload("res://Assets/Health Bar/New Health Bar/40.png"),
+	preload("res://Assets/Health Bar/New Health Bar/45.png"),
+	preload("res://Assets/Health Bar/New Health Bar/50.png"),
+	preload("res://Assets/Health Bar/New Health Bar/55.png"),
+	preload("res://Assets/Health Bar/New Health Bar/60.png"),
+	preload("res://Assets/Health Bar/New Health Bar/65.png"),
+	preload("res://Assets/Health Bar/New Health Bar/70.png"),
+	preload("res://Assets/Health Bar/New Health Bar/75.png"),
+	preload("res://Assets/Health Bar/New Health Bar/80.png"),
+	preload("res://Assets/Health Bar/New Health Bar/85.png"),
+	preload("res://Assets/Health Bar/New Health Bar/90.png"),
+	preload("res://Assets/Health Bar/New Health Bar/95.png"),
+	preload("res://Assets/Health Bar/New Health Bar/100.png"),
 ]
 
 var Knockback: Vector2 = Vector2.ZERO
@@ -101,8 +101,8 @@ func _physics_process(delta: float) -> void:
 		Knockback_timer -= delta
 		if Knockback_timer <= 0.0:
 			Knockback = Vector2.ZERO
-	else:
-		_movement(delta)
+	#else:
+		#_movement(delta)
 	
 	
 	#if not is_on_floor():
@@ -112,80 +112,80 @@ func _physics_process(delta: float) -> void:
 	#look_at(terget.position)
 	move_and_slide()
 var is_punching = false
-func _movement(_delta:float) -> void:
-	var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
-	if y_direction:
-		velocity.y = y_direction * SPEED
-		if !is_punching:
-			$Dragonfly.play("Dragonfly_Flying")
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-		if !is_punching:
-			$Dragonfly.play("Dragonfly_Idle")
+#func _movement(_delta:float) -> void:
+	#var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
+	#if y_direction:
+		#velocity.y = y_direction * SPEED
+		#if !is_punching:
+			##$Dragonfly.play("Dragonfly_Flying")
+	#else:
+		#velocity.y = move_toward(velocity.y, 0, SPEED)
+		#if !is_punching:
+			#$Dragonfly.play("Dragonfly_Idle")
 		
-	if Input.is_action_pressed("punch_%s" %[player_id]) and not is_punching:
-		is_punching = true
-		var animPlayer: AnimatedSprite2D = $Dragonfly
-		animPlayer.play("Dragonfly_New_Jab")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		get_node("Area2D/CollisionShape2D2").disabled = false
+	#if Input.is_action_pressed("punch_%s" %[player_id]) and not is_punching:
+		#is_punching = true
+		#var animPlayer: AnimatedSprite2D = $Dragonfly
+		#animPlayer.play("Dragonfly_New_Jab")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#get_node("Area2D/CollisionShape2D2").disabled = false
 		
-		await animPlayer.animation_finished
-		get_node("Area2D/CollisionShape2D").disabled = true
-		get_node("Area2D/CollisionShape2D2").disabled = true
-		is_punching = false
+		#await animPlayer.animation_finished
+		#get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D2").disabled = true
+		#is_punching = false
 	
-	if Input.is_action_pressed("spear_spin_%s" %[player_id]):
-		$Dragonfly.play("Dragonfly_SpearSpin")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("spear_spin_%s" %[player_id]):
+		#$Dragonfly.play("Dragonfly_SpearSpin")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_pressed("spearthrow_%s" %[player_id]):
-		$Dragonfly.play("Dragonfly_SpearThrow")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("spearthrow_%s" %[player_id]):
+		#$Dragonfly.play("Dragonfly_SpearThrow")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_pressed("winddust_%s" %[player_id]):
-		$Dragonfly.play("WindDust")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("winddust_%s" %[player_id]):
+		#$Dragonfly.play("WindDust")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_pressed("block_%s" %[player_id]):
-		$Dragonfly.play("Dragonfly_Block")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("block_%s" %[player_id]):
+		#$Dragonfly.play("Dragonfly_Block")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_pressed("bicyclekick_%s" %[player_id]):
-		$Dragonfly.play("Dragonfly_BicycleKick")
-		get_node("Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+	#if Input.is_action_pressed("bicyclekick_%s" %[player_id]):
+		#$Dragonfly.play("Dragonfly_BicycleKick")
+		#get_node("Area2D/CollisionShape2D").disabled = false
+		#await get_tree().create_timer(1.0).timeout
 		#$Animantis.stop("punch")
-		get_node("Area2D/CollisionShape2D").disabled = true
+		#get_node("Area2D/CollisionShape2D").disabled = true
 		
-	if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
-		$Dragonfly.play("Dragonfly_Flying")
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("jump_%s" %[player_id]) and is_on_floor():
+		#$Dragonfly.play("Dragonfly_Flying")
+		#velocity.y = JUMP_VELOCITY
 
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var x_direction := Input.get_axis("move left_%s" %[player_id],"move right_%s" %[player_id])
-	if x_direction !=0:
-		velocity.x = x_direction * SPEED 
-		$Dragonfly.flip_h=x_direction>0
-		$Dragonfly.play("Dragonfly_Flying")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$Dragonfly.play("Dragonfly_Idle")
-	move_and_slide()
+	#var x_direction := Input.get_axis("move left_%s" %[player_id],"move right_%s" %[player_id])
+	#if x_direction !=0:
+		#velocity.x = x_direction * SPEED 
+		#$Dragonfly.flip_h=x_direction>0
+		#$Dragonfly.play("Dragonfly_Flying")
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		#$Dragonfly.play("Dragonfly_Idle")
+	#move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == get_tree().get_first_node_in_group("Player"):

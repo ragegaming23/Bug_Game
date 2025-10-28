@@ -1,5 +1,5 @@
-extends Attack_State 
-class_name df_no_attack
+extends Attack_State
+class_name WindDust
 
 @export var player: CharacterBody2D
 @export var animated_sprite_2d: AnimatedSprite2D
@@ -8,15 +8,16 @@ class_name df_no_attack
 
 
 func enter() -> void:
-	$"../../Dragonfly".play("Dragonfly_Idle")
+	$"../../Dragonfly".play("WindDust")
 	pass
 	
 func exit() -> void:
 	pass
 
 func update(_delta: float) -> void:
-	if Input.is_action_pressed("punch_%s" %[player_id]):
-		$"..".on_child_transitioned("jab")
+	if Input.is_action_just_released("winddust_%s" %[player_id]):
+		await get_tree().create_timer(0.3).timeout
+		$"..".on_child_transitioned("DF_No_Attack")
 		return
 
 	if Input.is_action_pressed("bicyclekick_%s" %[player_id]):
@@ -28,8 +29,8 @@ func update(_delta: float) -> void:
 	if Input.is_action_pressed("spear_spin_%s" %[player_id]):
 		$"..".on_child_transitioned("spearspin")
 
-	if Input.is_action_pressed("winddust_%s" %[player_id]):
-		$"..".on_child_transitioned("WindDust")
+	if Input.is_action_pressed("punch_%s" %[player_id]):
+		$"..".on_child_transitioned("jab")
 
 	if Input.is_action_pressed("block_%s" %[player_id]):
 		$"..".on_child_transitioned("block")
