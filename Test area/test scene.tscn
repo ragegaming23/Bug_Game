@@ -27,7 +27,7 @@ script/source = "extends Area2D
 "
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
-distance = 3.0517578e-05
+distance = 3.05176e-05
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xw60q")
@@ -74,19 +74,19 @@ shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1164, 296)
-rotation = -1.5707941
+rotation = -1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3, 287.99997)
-rotation = 1.5707941
+position = Vector2(3, 288)
+rotation = 1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(591.99994, 6.1035156e-05)
-rotation = 3.1415882
+position = Vector2(592, 6.10352e-05)
+rotation = 3.14159
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
@@ -97,7 +97,7 @@ texture = ExtResource("5_ywtjr")
 script = ExtResource("7_1ga5t")
 
 [node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(254, 543.99994)
+position = Vector2(254, 544)
 texture = ExtResource("5_ywtjr")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
@@ -115,22 +115,22 @@ volume_db = 1.5
 [node name="Spawnpoints" type="Node2D" parent="."]
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(940.357, 428.91998)
+position = Vector2(940.357, 428.92)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
 position = Vector2(161.621, 392.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(429.13, 445.22498)
+position = Vector2(429.13, 445.225)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(675.921, 502.71002)
+position = Vector2(675.921, 502.71)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(448.00003, 567)
+position = Vector2(448, 567)
 scale = Vector2(0.12375, 0.12375)
 texture = ExtResource("13_ywtjr")
 
@@ -152,13 +152,13 @@ scale = Vector2(0.125313, 0.125313)
 texture = ExtResource("13_ywtjr")
 
 [node name="MbannerYellow" type="Sprite2D" parent="."]
-position = Vector2(329, 599.00006)
-scale = Vector2(0.1246527, 0.124652706)
+position = Vector2(329, 599)
+scale = Vector2(0.124653, 0.124653)
 texture = ExtResource("14_lhl0s")
 
 [node name="DbannerBLUE" type="Sprite2D" parent="."]
-position = Vector2(600, 601.00006)
-scale = Vector2(0.1246527, 0.124652706)
+position = Vector2(600, 601)
+scale = Vector2(0.124653, 0.124653)
 texture = ExtResource("15_vjeew")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
