@@ -40,6 +40,15 @@ var current_health: int = max_health
 	preload("res://Assets/Health Bar/New Health Bar/95.png"),
 	preload("res://Assets/Health Bar/New Health Bar/100.png"),
 ]
+
+@onready var banner = $"../P1LivesUI/MbannerYellow"
+
+var banner_textures = {
+	3: preload("res://Assets/Health Bar/banners/full health/MbannerYELLOW.png"),
+	2: preload ("res://Assets/Health Bar/banners/damaged/Myellowban2.png"),
+	1: preload ("res://Assets/Health Bar/banners/damaged/Myellowban2.png"),
+	0: preload("res://Assets/Health Bar/banners/damaged/Myellowban2.png"),
+	}
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
@@ -102,10 +111,12 @@ func update_lives_ui():
 		lives_ui.get_node("Life1").visible = Lives >= 2
 	if lives_ui.has_node("Life2"):
 		lives_ui.get_node("Life2").visible = Lives >= 3
+	if banner:
+		if Lives in banner_textures:
+			banner.texture = banner_textures[Lives]
 
-func die()-> void:
-	
-	get_tree().change_scene_to_file("res://UI/win screen2.tscn")
+func die() -> void:
+	get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Mantis_DeathVideo.tscn")
 
 func update_healthbar() -> void:
 	var health_ratio = float(current_health) / float(max_health)

@@ -9,6 +9,10 @@ class_name Jab
 
 func enter() -> void:
 	$"../../Dragonfly".play("Dragonfly_New_Jab")
+	get_node("../../Area2D/CollisionShape2D").disabled = false
+	await get_tree().create_timer(1.0).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/CollisionShape2D").disabled = true
 	pass
 	
 func exit() -> void:

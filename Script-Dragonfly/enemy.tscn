@@ -1740,7 +1740,7 @@ radius = 21.0
 height = 58.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px1sc"]
-size = Vector2(34.75, 31)
+size = Vector2(20.375, 14.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6jha"]
 size = Vector2(21, 88)
@@ -1752,7 +1752,8 @@ script = ExtResource("1_4gyqm")
 position = Vector2(-29, -68)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
-animation = &"Dragonfly_SpearThrow"
+animation = &"Dragonfly_New_Jab"
+frame_progress = 0.93371123
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(10, -97)
@@ -1773,12 +1774,12 @@ shape = SubResource("CapsuleShape2D_ubgpb")
 position = Vector2(-0.5, -65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-26.5, 39)
+position = Vector2(-121.5, 13)
 shape = SubResource("RectangleShape2D_px1sc")
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-55.5, -3)
+position = Vector2(0.5, 101)
 shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
 

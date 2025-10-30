@@ -43,12 +43,12 @@ var current_health: int = max_health
 
 @onready var banner = $"../P2LivesUI/DbannerBLUE"
 
-#var banner_textures = {
-#	3: preload("res://Assets/Health Bar/banners/full health/DbannerBLUE.png"),
-#	2: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
-#	1: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
-#	0: preload("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
-#}
+var banner_textures = {
+	3: preload("res://Assets/Health Bar/banners/full health/DbannerBLUE.png"),
+	2: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
+	1: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
+	0: preload("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
+}
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
 
@@ -88,11 +88,9 @@ func update_lives_ui():
 		lives_ui.get_node("Life1").visible = Lives >= 2
 	if lives_ui.has_node("Life2"):
 		lives_ui.get_node("Life2").visible = Lives >= 3
-	#if banner:
-		#if Lives in banner_textures:
-			#banner.texture = banner_textures[Lives]
-			
-	flash_banner()
+	if banner:
+		if Lives in banner_textures:
+			banner.texture = banner_textures[Lives]
 
 func update_healthbar() -> void:
 	var health_ratio = float(current_health) / float(max_health)
@@ -100,10 +98,6 @@ func update_healthbar() -> void:
 	index = clamp(index, 0, health_textures.size() - 1)
 	HealthBar.texture = health_textures[index]
 
-func flash_banner():
-	var tween = get_tree().create_tween()
-	banner.modulate = Color(1,1,1,0)
-	tween.tween_property(banner, "modulate:a", 1, 0.5).set_trans(Tween.TRANS_SINE)
 
 func _physics_process(delta: float) -> void:
 	
@@ -122,7 +116,7 @@ func _physics_process(delta: float) -> void:
 	#velocity=direction * speed
 	#look_at(terget.position)
 	move_and_slide()
-var is_punching = false
+
 #func _movement(_delta:float) -> void:
 	#var y_direction := Input.get_axis("move up_%s" %[player_id],"Move down_%s" %[player_id])
 	#if y_direction:
