@@ -7,10 +7,10 @@ const Name = "player"
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
 
-var MaxHealth = 10
-var Health = 10
+var MaxHealth = 20
+var Health = 20
 
-@export var max_health: int = 10
+@export var max_health: int = 20
 var current_health: int = max_health
 
 @onready var HealthBar = $"../HealthBar1"
@@ -96,7 +96,7 @@ func Take_Damage(Damage: int):
 	
 	if current_health <= 0:
 		Lives -= 1
-		current_health = 10
+		current_health = 20
 		update_lives_ui()
 		
 	if Lives <= 0:
