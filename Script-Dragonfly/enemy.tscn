@@ -1,4 +1,4 @@
-[gd_scene load_steps=436 format=3 uid="uid://dt4clu7q72r7"]
+[gd_scene load_steps=439 format=3 uid="uid://dt4clu7q72r7"]
 
 [ext_resource type="Script" uid="uid://b0jfytybgdell" path="res://Script-Dragonfly/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://6axt3fyl4lba" path="res://Fighters/Dragonfly/Animations/Bicyclekick/Frames/Bicyclekick_Dragonfly0001.png0001.png" id="2_yl6tp"]
@@ -541,7 +541,7 @@ animations = [{
 "duration": 0.15,
 "texture": ExtResource("37_xp1k7")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_BicycleKick",
 "speed": 5.0
 }, {
@@ -1439,7 +1439,7 @@ animations = [{
 "duration": 0.2,
 "texture": ExtResource("295_cwyc6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_New_Jab",
 "speed": 5.0
 }, {
@@ -1525,7 +1525,7 @@ animations = [{
 "duration": 0.2,
 "texture": ExtResource("355_fg7xc")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_SpearSpin",
 "speed": 5.0
 }, {
@@ -1611,7 +1611,7 @@ animations = [{
 "duration": 0.2,
 "texture": ExtResource("382_40660")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_SpearThrow",
 "speed": 5.0
 }, {
@@ -1723,17 +1723,17 @@ animations = [{
 "duration": 0.2,
 "texture": ExtResource("416_ey6rn")
 }],
-"loop": true,
+"loop": false,
 "name": &"WindDust",
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
+height = 60.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqwjd"]
 radius = 11.3137
 height = 65.0538
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
-height = 60.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgpb"]
 radius = 21.0
@@ -1745,6 +1745,15 @@ size = Vector2(20.375, 14.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6jha"]
 size = Vector2(21, 88)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufpjl"]
+size = Vector2(40, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsqk6"]
+size = Vector2(72, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw6kr"]
+size = Vector2(36, 88)
+
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_4gyqm")
 
@@ -1752,18 +1761,19 @@ script = ExtResource("1_4gyqm")
 position = Vector2(-29, -68)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
-animation = &"Dragonfly_New_Jab"
-frame_progress = 0.93371123
+animation = &"WindDust"
+
+[node name="Front Tail" type="CollisionShape2D" parent="."]
+position = Vector2(40.999992, -58.000004)
+rotation = -1.5708
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_qkr4w")
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(10, -97)
-rotation = -2.60054
+rotation = -0.85346603
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("CapsuleShape2D_lqwjd")
-
-[node name="Front Tail" type="CollisionShape2D" parent="."]
-position = Vector2(41, -58)
-rotation = -1.5708
-shape = SubResource("CapsuleShape2D_qkr4w")
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-14, -61)
@@ -1773,14 +1783,40 @@ shape = SubResource("CapsuleShape2D_ubgpb")
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-0.5, -65)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Jab Damage" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-121.5, 13)
 shape = SubResource("RectangleShape2D_px1sc")
 disabled = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 101)
+[node name="BicycleKick Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-121.5, 13)
 shape = SubResource("RectangleShape2D_m6jha")
+disabled = true
+
+[node name="BicycleKick2 Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-87.5, -40.999992)
+rotation = 1.097812
+shape = SubResource("RectangleShape2D_m6jha")
+disabled = true
+
+[node name="SpearThrow Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-123.5, 41.5)
+shape = SubResource("RectangleShape2D_ufpjl")
+disabled = true
+
+[node name="SpearSpin Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-95.5, 13)
+shape = SubResource("RectangleShape2D_dsqk6")
+disabled = true
+
+[node name="WindDust Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-77.5, 13)
+shape = SubResource("RectangleShape2D_yw6kr")
+disabled = true
+
+[node name="WindDust2 Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-113.5, 13)
+shape = SubResource("RectangleShape2D_yw6kr")
 disabled = true
 
 [node name="HealthSFX" type="AudioStreamPlayer" parent="."]

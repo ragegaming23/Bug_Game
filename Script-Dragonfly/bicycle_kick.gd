@@ -8,7 +8,17 @@ class_name BicycleKick
 
 
 func enter() -> void:
-	$"../../Dragonfly".play("Dragonfly_Idle")
+	$"../../Dragonfly".play("Dragonfly_BicycleKick")
+	await get_tree().create_timer(.5).timeout
+	get_node("../../Area2D/BicycleKick Damage").disabled = false
+	await get_tree().create_timer(.3).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/BicycleKick Damage").disabled = true
+	await get_tree().create_timer(.2).timeout
+	get_node("../../Area2D/BicycleKick2 Damage").disabled = false
+	await get_tree().create_timer(.3).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/BicycleKick2 Damage").disabled = true
 	pass
 	
 func exit() -> void:
@@ -19,8 +29,9 @@ func update(_delta: float) -> void:
 		$"..".on_child_transitioned("Jab")
 		return
 
-	if Input.is_action_pressed("bicyclekick_%s" %[player_id]):
-		$"..".on_child_transitioned("BicycleKick")
+	if Input.is_action_just_released("bicyclekick_%s" %[player_id]):
+		await get_tree().create_timer(1).timeout
+		$"..".on_child_transitioned("DF_No_Attack")
 
 	if Input.is_action_pressed("spearthrow_%s" %[player_id]):
 		$"..".on_child_transitioned("SpearThrow")

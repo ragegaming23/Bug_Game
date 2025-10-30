@@ -9,6 +9,16 @@ class_name WindDust
 
 func enter() -> void:
 	$"../../Dragonfly".play("WindDust")
+	await get_tree().create_timer(.4).timeout
+	get_node("../../Area2D/WindDust Damage").disabled = false
+	await get_tree().create_timer(.1).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/WindDust Damage").disabled = true
+	await get_tree().create_timer(.1).timeout
+	get_node("../../Area2D/WindDust2 Damage").disabled = false
+	await get_tree().create_timer(.1).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/WindDust2 Damage").disabled = true
 	pass
 	
 func exit() -> void:
@@ -16,7 +26,7 @@ func exit() -> void:
 
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("winddust_%s" %[player_id]):
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(.6).timeout
 		$"..".on_child_transitioned("DF_No_Attack")
 		return
 

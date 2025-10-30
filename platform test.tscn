@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dowkmmq41k08q"]
+[gd_scene load_steps=7 format=3 uid="uid://dowkmmq41k08q"]
 
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="1_pmxtv"]
 [ext_resource type="PackedScene" uid="uid://dx7r1lw6mjxmq" path="res://Platforms/Sticky Floor.tscn" id="2_uxlkv"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="3_qbgw2"]
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_fcdeq"]
 [ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="5_uxlkv"]
+[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="6_qbgw2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,3 +30,6 @@ position = Vector2(368, 168)
 
 [node name="HealthBar1" parent="." instance=ExtResource("5_uxlkv")]
 position = Vector2(376.00003, 415.99997)
+
+[node name="enemy" parent="." instance=ExtResource("6_qbgw2")]
+position = Vector2(688, 224)

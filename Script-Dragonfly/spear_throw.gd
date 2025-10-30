@@ -9,6 +9,11 @@ class_name SpearThrow
 
 func enter() -> void:
 	$"../../Dragonfly".play("Dragonfly_SpearThrow")
+	await get_tree().create_timer(.8).timeout
+	get_node("../../Area2D/SpearThrow Damage").disabled = false
+	await get_tree().create_timer(.3).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/SpearThrow Damage").disabled = true
 	pass
 	
 func exit() -> void:
@@ -23,7 +28,7 @@ func update(_delta: float) -> void:
 		$"..".on_child_transitioned("BicycleKick")
 
 	if Input.is_action_just_released("spearthrow_%s" %[player_id]):
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(1).timeout
 		$"..".on_child_transitioned("DF_No_Attack")
 
 	if Input.is_action_pressed("spear_spin_%s" %[player_id]):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=130 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -412,7 +412,15 @@ radius = 14.861969
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
-size = Vector2(90, 20)
+size = Vector2(84, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvjqa"]
+size = Vector2(23.5, 93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spbgj"]
+size = Vector2(22, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5wc2"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_86wen"]
 properties/0/path = NodePath(".:position")
@@ -427,6 +435,7 @@ position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
 animation = &"punch"
+frame_progress = 0.22907332
 
 [node name="PrayingMantisBackBicep" type="Sprite2D" parent="."]
 visible = false
@@ -572,9 +581,24 @@ shape = SubResource("CapsuleShape2D_nsn7i")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(64, -5)
+[node name="Punch Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(83, -5)
 shape = SubResource("RectangleShape2D_s8wov")
+disabled = true
+
+[node name="Slash Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100.25, 6)
+shape = SubResource("RectangleShape2D_cvjqa")
+disabled = true
+
+[node name="MultiSlash Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(120, 6)
+shape = SubResource("RectangleShape2D_spbgj")
+disabled = true
+
+[node name="HeadBut Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(69, -9)
+shape = SubResource("RectangleShape2D_i5wc2")
 disabled = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

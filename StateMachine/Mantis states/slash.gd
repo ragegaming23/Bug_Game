@@ -8,10 +8,11 @@ class_name slash
 func enter() -> void:
 	if Input.is_action_pressed("slash_%s" %[player_id]):
 		$"../../Animantis".play("slash")
-		get_node("../../Area2D/CollisionShape2D").disabled = false
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(.2).timeout
+		get_node("../../Area2D/Slash Damage").disabled = false
+		await get_tree().create_timer(.3).timeout
 		#$Animantis.stop("punch")
-		get_node("../../Area2D/CollisionShape2D").disabled = true
+		get_node("../../Area2D/Slash Damage").disabled = true
 
 func exit() -> void:
 	pass
