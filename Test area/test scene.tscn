@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=19 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -12,9 +12,10 @@
 [ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
-[ext_resource type="Texture2D" uid="uid://c5y1ga2pbe7bm" path="res://Assets/Health Bar/Stocks/roly_poly.png" id="13_ywtjr"]
-[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/MbannerYELLOW.png" id="14_lhl0s"]
-[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/DbannerBLUE.png" id="15_vjeew"]
+[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/full health/MbannerYELLOW.png" id="14_lhl0s"]
+[ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="14_vjeew"]
+[ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_8xd0e"]
+[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/full health/DbannerBLUE.png" id="15_vjeew"]
 
 [sub_resource type="GDScript" id="GDScript_u6vuv"]
 script/source = "extends Area2D
@@ -38,30 +39,30 @@ scale = Vector2(2.11091, 1.63493)
 texture = ExtResource("2_1ga5t")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(560, 526)
+position = Vector2(565, 497)
 scale = Vector2(22, 1)
 script = ExtResource("3_xw60q")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(165, 468)
+position = Vector2(170, 439)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(949, 466)
+position = Vector2(954, 437)
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(29, 290)
+position = Vector2(34, 261)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(1109, 306)
+position = Vector2(1114, 277)
 rotation = 1.5708
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(570, 226)
+position = Vector2(575, 197)
 scale = Vector2(30, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -73,13 +74,13 @@ scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1164, 296)
+position = Vector2(1169, 267)
 rotation = -1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3, 288)
+position = Vector2(8, 259)
 rotation = 1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
@@ -115,51 +116,51 @@ volume_db = 1.5
 [node name="Spawnpoints" type="Node2D" parent="."]
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(940.357, 428.92)
+position = Vector2(945.357, 399.92)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(161.621, 392.917)
+position = Vector2(166.621, 363.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(429.13, 445.225)
+position = Vector2(434.13, 416.225)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(675.921, 502.71)
+position = Vector2(680.921, 473.71)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
 
+[node name="DbannerBLUE" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(600, 601)
+scale = Vector2(0.124653, 0.124653)
+texture = ExtResource("15_vjeew")
+
 [node name="Life1" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(448, 567)
-scale = Vector2(0.12375, 0.12375)
-texture = ExtResource("13_ywtjr")
+position = Vector2(577, 546)
+scale = Vector2(0.04104162, 0.04104162)
+texture = ExtResource("15_8xd0e")
 
 [node name="Life2" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(476, 553)
-scale = Vector2(0.12375, 0.12375)
-texture = ExtResource("13_ywtjr")
+position = Vector2(621, 547)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("14_vjeew")
 
 [node name="P1LivesUI" type="Node2D" parent="."]
 
-[node name="Life1" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(172, 566)
-scale = Vector2(0.12375, 0.12375)
-texture = ExtResource("13_ywtjr")
-
-[node name="Life2" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(204, 551)
-scale = Vector2(0.125313, 0.125313)
-texture = ExtResource("13_ywtjr")
-
-[node name="MbannerYellow" type="Sprite2D" parent="."]
+[node name="MbannerYellow" type="Sprite2D" parent="P1LivesUI"]
 position = Vector2(329, 599)
 scale = Vector2(0.124653, 0.124653)
 texture = ExtResource("14_lhl0s")
 
-[node name="DbannerBLUE" type="Sprite2D" parent="."]
-position = Vector2(600, 601)
-scale = Vector2(0.124653, 0.124653)
-texture = ExtResource("15_vjeew")
+[node name="Life1" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(308, 545)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("15_8xd0e")
+
+[node name="Life2" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(345, 545)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("14_vjeew")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
