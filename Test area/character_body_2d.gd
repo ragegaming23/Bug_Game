@@ -77,6 +77,7 @@ func _physics_process(delta: float) -> void:
 		#velocity += get_gravity() * delta
 
 func _movement(_delta:float) -> void:
+	
 	pass
 
 func Take_Damage(Damage: int):

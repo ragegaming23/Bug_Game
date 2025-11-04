@@ -5,6 +5,7 @@ class_name Move_fly
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var player_id = 1
 @export var SPEED = 300.0
+var flipped = false
 #var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 
 func enter() -> void:
@@ -39,6 +40,12 @@ func physics_update(_delta: float) -> void:
 	var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 	if direction !=0:
 		player.velocity.x = direction * SPEED 
-		$"../../Dragonfly".flip_h=direction >0
+		#$"../../Dragonfly".flip_h=direction >0
+	if Input.is_action_pressed("move left_%s" %[player_id]) and flipped:
+		player.scale.x = -1 
+		flipped = false
+	if Input.is_action_pressed("move right_%s" %[player_id]) and not flipped:
+		player.scale.x = -1 
+		flipped = true
 	player.move_and_slide()
 	pass

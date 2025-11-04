@@ -29,13 +29,13 @@ script/source = "extends Area2D
 "
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
-distance = 3.05176e-05
+distance = -54.14595
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(583.033, 321.987)
+position = Vector2(579, 321)
 scale = Vector2(2.11091, 1.63493)
 texture = ExtResource("2_1ga5t")
 
@@ -45,26 +45,26 @@ scale = Vector2(22, 1)
 script = ExtResource("3_xw60q")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(170, 439)
-scale = Vector2(11, 1)
+position = Vector2(240, 520)
+scale = Vector2(18.400002, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(954, 437)
-scale = Vector2(11, 1)
+position = Vector2(848, 520)
+scale = Vector2(17, 0.9935538)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(34, 261)
-rotation = 1.5708
+position = Vector2(24.000008, 416)
+rotation = 1.047196
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(1114, 277)
-rotation = 1.5708
+position = Vector2(1080.0001, 422.00003)
+rotation = 2.094392
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(575, 197)
-scale = Vector2(30, 1)
+position = Vector2(592, -10)
+scale = Vector2(59.04, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = SubResource("GDScript_u6vuv")
@@ -162,6 +162,20 @@ texture = ExtResource("15_8xd0e")
 position = Vector2(345, 545)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("14_vjeew")
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_rk26f")]
+position = Vector2(-10, 393)
+rotation = 1.5707941
+scale = Vector2(59.04, 1)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_rk26f")]
+position = Vector2(1164, 424)
+rotation = 1.5707941
+scale = Vector2(59.04, 1)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_rk26f")]
+position = Vector2(592, 663)
+scale = Vector2(59.04, 1)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

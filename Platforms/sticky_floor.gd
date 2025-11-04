@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var slow: float  = 0.5
+@export var slow: float  = 0.8
 func apply_slow(SPEED:float) -> void:
 	SPEED = SPEED * slow
 
