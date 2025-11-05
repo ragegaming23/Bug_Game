@@ -23,6 +23,8 @@ func update(_delta: float) -> void:
 	if Input.is_action_just_released("move right_%s" %[player_id]):
 		player.velocity.x = move_toward(player.velocity.x, 0, SPEED)
 		$"..".on_child_transitioned("idle")
+	if Input.is_action_just_pressed("jump_%s" %[player_id]) and player.is_on_floor():
+		$"..".on_child_transitioned("jump")
 	pass
 
 func physics_update(_delta: float) -> void:

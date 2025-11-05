@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=101 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -377,6 +377,9 @@ height = 135.00793
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3x2"]
 height = 90.16525
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfg85"]
+height = 107.99998
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nsn7i"]
 radius = 14.861969
 height = 48.0
@@ -422,6 +425,11 @@ shape = SubResource("CapsuleShape2D_v24a8")
 position = Vector2(16, 2.38419e-07)
 rotation = 0.698132
 shape = SubResource("CapsuleShape2D_vq3x2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-33, 36)
+rotation = 1.5707941
+shape = SubResource("CapsuleShape2D_lfg85")
 
 [node name="ArmCollision" type="CollisionShape2D" parent="."]
 position = Vector2(64, -4.9999995)
@@ -516,8 +524,6 @@ metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 [node name="block" type="Node" parent="Attack States"]
 script = ExtResource("119_83u2j")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

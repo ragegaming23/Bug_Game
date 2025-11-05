@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=21 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="14_vjeew"]
 [ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_8xd0e"]
 [ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/full health/DbannerBLUE.png" id="15_vjeew"]
+[ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="18_6t5vm"]
 
 [sub_resource type="GDScript" id="GDScript_u6vuv"]
 script/source = "extends Area2D
@@ -176,6 +177,42 @@ scale = Vector2(59.04, 1)
 [node name="StaticBody2D9" parent="." instance=ExtResource("2_rk26f")]
 position = Vector2(592, 663)
 scale = Vector2(59.04, 1)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(333, 500)
+Force = 800.0
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(796, 500)
+Force = 800.0
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(227, 500)
+Force = 800.0
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(125, 500)
+Force = 800.0
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(884, 500)
+Force = 800.0
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(969, 500)
+Force = 800.0
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(28.000004, 388)
+rotation = 1.0471976
+scale = Vector2(3.6753542, 0.6768347)
+Force = 800.0
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("18_6t5vm")]
+position = Vector2(1080, 388)
+rotation = -1.0471976
+scale = Vector2(3.7368464, 0.727898)
+Force = 800.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
