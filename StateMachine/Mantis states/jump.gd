@@ -30,8 +30,8 @@ func update(_delta: float) -> void:
 	pass
 
 func physics_update(_delta: float) -> void:
-	if Input.is_action_just_pressed("jump_%s" %[player_id]) and player.is_on_floor():
-		player.velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("jump_%s" %[player_id]) and player.is_on_floor():
+	player.velocity.y = JUMP_VELOCITY
 
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * _delta
