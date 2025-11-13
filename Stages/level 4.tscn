@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bifcuulr8176p"]
+[gd_scene load_steps=6 format=3 uid="uid://bifcuulr8176p"]
 
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_0i422"]
+[ext_resource type="Script" uid="uid://ccbk0e6a1ej3g" path="res://Stages/level_4.gd" id="1_imial"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="2_imial"]
+[ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_351ck"]
+[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="5_1yg4k"]
 
 [node name="Level4" type="Node2D"]
+script = ExtResource("1_imial")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_0i422")]
 position = Vector2(552, 520)
@@ -30,3 +34,17 @@ scale = Vector2(5, 1)
 position = Vector2(1120, 312)
 rotation = -1.22173
 scale = Vector2(5, 1)
+
+[node name="Spawnpoints" type="Node2D" parent="."]
+
+[node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(853, 497)
+
+[node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
+position = Vector2(246, 487)
+
+[node name="Test player" parent="." instance=ExtResource("4_351ck")]
+position = Vector2(425, 434)
+
+[node name="enemy" parent="." instance=ExtResource("5_1yg4k")]
+position = Vector2(712, 525)

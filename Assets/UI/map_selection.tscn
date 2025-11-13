@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8bc3726x8y3s"]
+[gd_scene load_steps=9 format=3 uid="uid://c8bc3726x8y3s"]
 
 [ext_resource type="Script" uid="uid://cv53d7o5xlaa" path="res://Assets/UI/map_selection.gd" id="1_dhj3i"]
+[ext_resource type="PackedScene" uid="uid://bicoui28vdrt1" path="res://Test area/test scene.tscn" id="2_ao80t"]
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="2_xwpqq"]
+[ext_resource type="PackedScene" uid="uid://b2gymu43ids3c" path="res://Stages/level 2.tscn" id="3_c4jnd"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="3_jbn6b"]
+[ext_resource type="PackedScene" uid="uid://dk0yycfoueis4" path="res://Stages/level 3.tscn" id="4_lk5kp"]
+[ext_resource type="PackedScene" uid="uid://bifcuulr8176p" path="res://Stages/level 4.tscn" id="5_op1ma"]
+[ext_resource type="PackedScene" uid="uid://yssrdt8rjr8c" path="res://Stages/level 5.tscn" id="6_fep7l"]
 
 [node name="Map selection" type="Control"]
 layout_mode = 3
@@ -12,15 +17,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dhj3i")
+Stage_1 = ExtResource("2_ao80t")
+Stage_2 = ExtResource("3_c4jnd")
+Stage_3 = ExtResource("4_lk5kp")
+Stage_4 = ExtResource("5_op1ma")
+Stage_5 = ExtResource("6_fep7l")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="BoxContainer"]
+[node name="Stage_1" type="Button" parent="BoxContainer"]
 layout_mode = 2
-text = "Test Level"
+text = "Stage 1"
+icon = ExtResource("2_xwpqq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Stage 2" type="Button" parent="BoxContainer"]
+modulate = Color(0.60634255, 0.07016479, 0.53611076, 1)
+layout_mode = 2
+text = "Stage 2"
+icon = ExtResource("2_xwpqq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Stage 3" type="Button" parent="BoxContainer"]
+modulate = Color(0.6192527, 0.49142516, 0.1376951, 1)
+layout_mode = 2
+text = "Stage 3"
+icon = ExtResource("2_xwpqq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Stage 4" type="Button" parent="BoxContainer"]
+modulate = Color(0.34741336, 0.5795659, 0.5074838, 1)
+layout_mode = 2
+text = "Stage 4"
+icon = ExtResource("2_xwpqq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Stage 5" type="Button" parent="BoxContainer"]
+modulate = Color(0.7882353, 0.6, 0.36078432, 1)
+layout_mode = 2
+text = "Stage 5"
 icon = ExtResource("2_xwpqq")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -28,4 +70,9 @@ vertical_icon_alignment = 0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbn6b")
 
-[connection signal="pressed" from="BoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage_1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage_1" to="." method="_on_stage_1_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage 2" to="." method="_on_stage_2_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage 3" to="." method="_on_stage_3_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage 4" to="." method="_on_stage_4_pressed"]
+[connection signal="pressed" from="BoxContainer/Stage 5" to="." method="_on_stage_5_pressed"]

@@ -1,4 +1,5 @@
 extends Control
+var Chosen_stage = Global.Chosen_Stage
 
 func _ready() -> void:
 	# Small delay to let LoadingScreen actually render
@@ -7,4 +8,5 @@ func _ready() -> void:
 
 func _start_client_and_load_game() -> void:
 	LocalNetwork.Start_client()
-	get_tree().change_scene_to_file("res://Test area/test scene.tscn")
+	Global.load_scene(Chosen_stage)
+	#get_tree().change_scene_to_file("res://Test area/test scene.tscn")
