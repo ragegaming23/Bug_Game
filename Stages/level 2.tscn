@@ -12,65 +12,66 @@
 script = ExtResource("1_dntir")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(552, 573)
+position = Vector2(-32, 249)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_iemxh")]
-position = Vector2(840, 533)
+position = Vector2(256, 209)
 scale = Vector2(5, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_iemxh")]
-position = Vector2(272, 533)
+position = Vector2(-312, 209)
 scale = Vector2(5, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(-130, 331)
+position = Vector2(-714, 7)
 rotation = -1.5707964
 scale = Vector2(1, 10)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(1216, 336)
+position = Vector2(632, 12)
 rotation = 1.5707964
 scale = Vector2(1, 10)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(554, 299)
+position = Vector2(-30, -25)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(270, 330)
+position = Vector2(-314, 6)
 scale = Vector2(5, 1)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("1_8tuof")]
-position = Vector2(838, 336)
+position = Vector2(254, 12)
 scale = Vector2(5, 1)
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("3_317mm")]
-position = Vector2(72.00001, 424)
+position = Vector2(-511.99994, 100)
 rotation = 0.7630469
 scale = Vector2(10.76, 1)
 
 [node name="StaticBody2D10" parent="." instance=ExtResource("3_317mm")]
-position = Vector2(1019, 446.00006)
+position = Vector2(435, 122.00009)
 rotation = -0.66026366
 scale = Vector2(6.9999976, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
-position = Vector2(577, 322)
+position = Vector2(-5, -2)
 script = ExtResource("4_dntir")
-player1 = NodePath("")
-player2 = NodePath("")
+player1 = NodePath("../Test player")
+player2 = NodePath("../enemy")
 
 [node name="Spawnpoints" type="Node2D" parent="."]
+position = Vector2(-584, -324)
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(713, 524)
+position = Vector2(713, 495)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(402, 538)
+position = Vector2(407, 474)
 
 [node name="Test player" parent="." instance=ExtResource("6_33686")]
-position = Vector2(542, 480)
+position = Vector2(-42, 156)
 
 [node name="enemy" parent="." instance=ExtResource("7_v0tt3")]
-position = Vector2(584, 283)
+position = Vector2(0, -41)

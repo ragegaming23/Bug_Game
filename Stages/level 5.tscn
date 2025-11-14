@@ -1,54 +1,62 @@
-[gd_scene load_steps=6 format=3 uid="uid://yssrdt8rjr8c"]
+[gd_scene load_steps=7 format=3 uid="uid://yssrdt8rjr8c"]
 
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="1_hj4m8"]
 [ext_resource type="Script" uid="uid://datk0sob4bi7g" path="res://Stages/level_5.gd" id="1_wgam1"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="2_wgam1"]
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_1rlng"]
 [ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="5_ap41c"]
+[ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_tcq6s"]
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_wgam1")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_hj4m8")]
-position = Vector2(408, 576)
+position = Vector2(-169, 253)
 scale = Vector2(10, 1)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_wgam1")]
-position = Vector2(144, 416)
+position = Vector2(-433, 92.99994)
 rotation = 0.872665
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_wgam1")]
-position = Vector2(392, 256)
+position = Vector2(-185, -67)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_wgam1")]
-position = Vector2(752, 528)
+position = Vector2(175, 205)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("1_hj4m8")]
-position = Vector2(1016, 472)
+position = Vector2(439, 149)
 scale = Vector2(5, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("1_hj4m8")]
-position = Vector2(1112, 168)
+position = Vector2(535, -155)
 rotation = -1.309
 scale = Vector2(10, 1)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("2_wgam1")]
-position = Vector2(760, 256)
+position = Vector2(183, -67)
 scale = Vector2(10, 1)
 
 [node name="Spawnpoints" type="Node2D" parent="."]
+position = Vector2(-577, -323)
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(919, 489)
+position = Vector2(918, 450)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(605, 493)
+position = Vector2(598, 428)
 
 [node name="Test player" parent="." instance=ExtResource("4_1rlng")]
-position = Vector2(724, 437)
+position = Vector2(126, 35)
 
 [node name="enemy" parent="." instance=ExtResource("5_ap41c")]
-position = Vector2(863, 529)
+position = Vector2(297, 101)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
+position = Vector2(0, -1)
+script = ExtResource("6_tcq6s")
+player1 = NodePath("../Test player")
+player2 = NodePath("../enemy")

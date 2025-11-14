@@ -34,42 +34,42 @@ script/source = "extends Area2D
 distance = -54.14595
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(-579, -320)
 script = ExtResource("1_xw60q")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(579, 321)
+position = Vector2(9, 0)
 scale = Vector2(2.11091, 1.63493)
 texture = ExtResource("2_1ga5t")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(565, 497)
+position = Vector2(-5, 176)
 scale = Vector2(22, 1)
 script = ExtResource("3_xw60q")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(240, 520)
+position = Vector2(-330, 199)
 scale = Vector2(18.400002, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(848, 520)
+position = Vector2(278.00006, 199.00003)
 scale = Vector2(17, 0.9935538)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(24.000008, 416)
+position = Vector2(-546, 95)
 rotation = 1.047196
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(1080.0001, 422.00003)
+position = Vector2(510.00012, 101)
 rotation = 2.094392
 scale = Vector2(11, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(592, -10)
+position = Vector2(22, -331)
 scale = Vector2(59.04, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-570, -321)
 script = SubResource("GDScript_u6vuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -96,13 +96,13 @@ scale = Vector2(7.055, 7.055)
 shape = SubResource("WorldBoundaryShape2D_7e5m4")
 
 [node name="HealthBar2" type="Sprite2D" parent="."]
-position = Vector2(869, 546)
+position = Vector2(299.00006, 225.00003)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_8xd0e")
 script = ExtResource("7_1ga5t")
 
 [node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(254, 544)
+position = Vector2(-315.99994, 223.00003)
 texture = ExtResource("5_ywtjr")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
@@ -118,6 +118,7 @@ stream = ExtResource("9_w25ro")
 volume_db = 1.5
 
 [node name="Spawnpoints" type="Node2D" parent="."]
+position = Vector2(-570, -321)
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
 position = Vector2(945.357, 399.92)
@@ -126,13 +127,14 @@ position = Vector2(945.357, 399.92)
 position = Vector2(166.621, 363.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(434.13, 416.225)
+position = Vector2(-135.87, 95.225006)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(680.921, 473.71)
+position = Vector2(110.92102, 152.70999)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
+position = Vector2(-570, -321)
 
 [node name="DbannerBLUE" type="Sprite2D" parent="P2LivesUI"]
 position = Vector2(791.00006, 600)
@@ -150,6 +152,7 @@ scale = Vector2(0.04, 0.04)
 texture = ExtResource("14_vjeew")
 
 [node name="P1LivesUI" type="Node2D" parent="."]
+position = Vector2(-570, -321)
 
 [node name="MbannerYellow" type="Sprite2D" parent="P1LivesUI"]
 position = Vector2(329, 599)
@@ -167,43 +170,43 @@ scale = Vector2(0.04, 0.04)
 texture = ExtResource("14_vjeew")
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(-10, 393)
+position = Vector2(-580, 72)
 rotation = 1.5707941
 scale = Vector2(59.04, 1)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(1164, 424)
+position = Vector2(594, 103)
 rotation = 1.5707941
 scale = Vector2(59.04, 1)
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(592, 663)
+position = Vector2(22, 342)
 scale = Vector2(59.04, 1)
 
 [node name="StaticBody2D12" parent="." instance=ExtResource("18_6t5vm")]
-position = Vector2(227, 500)
+position = Vector2(-343.00006, 179)
 scale = Vector2(6.988857, 0.7167663)
 Force = 800.0
 
 [node name="StaticBody2D14" parent="." instance=ExtResource("18_6t5vm")]
-position = Vector2(884, 500)
+position = Vector2(314.00006, 179)
 scale = Vector2(-6.683478, 0.8374232)
 Force = 800.0
 
 [node name="StaticBody2D16" parent="." instance=ExtResource("18_6t5vm")]
-position = Vector2(28.000004, 388)
+position = Vector2(-541.99994, 67.00003)
 rotation = 1.0471976
 scale = Vector2(3.6753542, 0.6768347)
 Force = 800.0
 
 [node name="StaticBody2D17" parent="." instance=ExtResource("18_6t5vm")]
-position = Vector2(1080, 388)
+position = Vector2(510.00006, 67)
 rotation = -1.0471976
 scale = Vector2(3.7368464, 0.727898)
 Force = 800.0
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
-position = Vector2(577, 322)
+position = Vector2(7, 1)
 script = ExtResource("19_djvg0")
 player1 = NodePath("../Test player")
 player2 = NodePath("../enemy")
