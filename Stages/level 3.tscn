@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk0yycfoueis4"]
+[gd_scene load_steps=18 format=3 uid="uid://dk0yycfoueis4"]
 
 [ext_resource type="Script" uid="uid://bwk8bpcvcvt2v" path="res://Stages/level_3.gd" id="1_3o4tr"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_lauke"]
@@ -6,16 +6,27 @@
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_3splg"]
 [ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="5_a6den"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_3hkdd"]
+[ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="7_nts3s"]
+[ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="8_oxvtf"]
+[ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="9_lx7ro"]
+[ext_resource type="Texture2D" uid="uid://bd0pho3vpxfbi" path="res://Assets/Health Bar/New Health Bar/100.png" id="10_xxbcx"]
+[ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="11_k0mqa"]
+[ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="12_r6b76"]
+[ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="13_50jjw"]
+[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/full health/DbannerBLUE.png" id="14_0l0r1"]
+[ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_vqql7"]
+[ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="16_8yf0t"]
+[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/full health/MbannerYELLOW.png" id="17_rxora"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_3o4tr")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_lauke")]
-position = Vector2(-416, 54)
+position = Vector2(-416.00003, 8)
 scale = Vector2(10, 1)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("1_lauke")]
-position = Vector2(-15, 160)
+position = Vector2(4, 72)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("1_lauke")]
@@ -42,7 +53,7 @@ rotation = -1.5707964
 scale = Vector2(60, 1)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("2_1vnp6")]
-position = Vector2(-1, 336)
+position = Vector2(-1, 200)
 scale = Vector2(60, 1)
 
 [node name="Spawnpoints" type="Node2D" parent="."]
@@ -52,10 +63,10 @@ position = Vector2(-573, -321)
 position = Vector2(993, 221)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(160, 256)
+position = Vector2(165, 217)
 
 [node name="Test player" parent="." instance=ExtResource("4_3splg")]
-position = Vector2(-403, -113)
+position = Vector2(-400, -168)
 
 [node name="enemy" parent="." instance=ExtResource("5_a6den")]
 position = Vector2(426, -116)
@@ -65,3 +76,61 @@ position = Vector2(4, 1)
 script = ExtResource("6_3hkdd")
 player1 = NodePath("../Test player")
 player2 = NodePath("../enemy")
+
+[node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_k0mqa")
+volume_db = -10.0
+
+[node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_r6b76")
+volume_db = 1.5
+
+[node name="AnnouncerFight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_50jjw")
+volume_db = 1.5
+
+[node name="HealthBar2" type="Sprite2D" parent="."]
+position = Vector2(299.00006, 225.00003)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_nts3s")
+script = ExtResource("8_oxvtf")
+
+[node name="P2LivesUI" type="Node2D" parent="."]
+position = Vector2(-570, -321)
+
+[node name="DbannerBLUE" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(791.00006, 600)
+scale = Vector2(0.124653, 0.124653)
+texture = ExtResource("14_0l0r1")
+
+[node name="Life1" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(772, 548.00006)
+scale = Vector2(0.04104162, 0.04104162)
+texture = ExtResource("15_vqql7")
+
+[node name="Life2" type="Sprite2D" parent="P2LivesUI"]
+position = Vector2(809, 547)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("16_8yf0t")
+
+[node name="HealthBar1" parent="." instance=ExtResource("9_lx7ro")]
+position = Vector2(-315.99994, 223.00003)
+texture = ExtResource("10_xxbcx")
+
+[node name="P1LivesUI" type="Node2D" parent="."]
+position = Vector2(-570, -321)
+
+[node name="MbannerYellow" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(329, 599)
+scale = Vector2(0.124653, 0.124653)
+texture = ExtResource("17_rxora")
+
+[node name="Life1" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(308, 545)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("15_vqql7")
+
+[node name="Life2" type="Sprite2D" parent="P1LivesUI"]
+position = Vector2(345, 545)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("16_8yf0t")

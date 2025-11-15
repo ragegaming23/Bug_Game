@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dem6scg1tuw7l"]
 
-[ext_resource type="Script" uid="uid://dku203k6kev33" path="res://Assets/DeathVideoScenes/dragonfly_death_video.gd" id="1_vffrj"]
+[ext_resource type="Script" uid="uid://c7exnwtgu3xmr" path="res://Assets/DeathVideoScenes/mantis_death_video.gd" id="1_vffrj"]
 [ext_resource type="VideoStream" uid="uid://tgy6kk6qgn7p" path="res://Fighters/Dragonfly/Fatality Dragonfly/2025-10-29 16-58-07.ogv" id="2_vffrj"]
 
 [node name="DragonflyDeathVideo" type="Node2D"]
