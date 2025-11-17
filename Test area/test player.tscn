@@ -1,10 +1,14 @@
-[gd_scene load_steps=101 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=105 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
+[ext_resource type="Texture2D" uid="uid://dh8hucjw03tr" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0001.png" id="2_fk853"]
 [ext_resource type="Texture2D" uid="uid://bxtpn8tan5748" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0001.png" id="2_ip0d5"]
 [ext_resource type="Texture2D" uid="uid://c8whbhbfgisuj" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0002.png" id="3_7mwat"]
+[ext_resource type="Texture2D" uid="uid://cthfur5cv3ska" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0002.png" id="3_o3vek"]
+[ext_resource type="Texture2D" uid="uid://cjxk13l1utqiv" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0003.png" id="4_0r76q"]
 [ext_resource type="Texture2D" uid="uid://bi2au7he0a8l6" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0003.png" id="4_c24l1"]
+[ext_resource type="Texture2D" uid="uid://cr47mokligha6" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0004.png" id="5_64uwj"]
 [ext_resource type="Texture2D" uid="uid://v3ceje0txufg" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0004.png" id="5_f0rc8"]
 [ext_resource type="Texture2D" uid="uid://bms7kdg2mpk42" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0005.png" id="6_2u13x"]
 [ext_resource type="Texture2D" uid="uid://dij75of3j8f4d" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0006.png" id="7_xkik2"]
@@ -70,12 +74,12 @@
 [ext_resource type="Texture2D" uid="uid://c5iaidfvjow1p" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20012.png" id="48_q8dsq"]
 [ext_resource type="Texture2D" uid="uid://cq3psv11xh650" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20015.png" id="49_3pj1c"]
 [ext_resource type="Texture2D" uid="uid://dxieyqdau06c0" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20013.png" id="49_fk853"]
-[ext_resource type="Texture2D" uid="uid://bptt75cy2obke" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20001.png" id="50_kagy3"]
+[ext_resource type="Texture2D" uid="uid://dh3asfg6n0pmb" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0001.png" id="50_lfg85"]
 [ext_resource type="Texture2D" uid="uid://b6tsi2b8iys25" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20014.png" id="50_o3vek"]
 [ext_resource type="Texture2D" uid="uid://d2pqj85fihg07" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20015.png" id="51_0r76q"]
-[ext_resource type="Texture2D" uid="uid://1m8abwrqftyb" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20002.png" id="51_v24a8"]
-[ext_resource type="Texture2D" uid="uid://bt0bvnxb1g06m" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20003.png" id="52_vq3x2"]
-[ext_resource type="Texture2D" uid="uid://bx73dnbiojw4t" path="res://Fighters/Praying Mantis/Mantis JAB2/Praying_Mantis_jab20004.png" id="53_ckxau"]
+[ext_resource type="Texture2D" uid="uid://bxuyiediye3u8" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0002.png" id="51_qfu2l"]
+[ext_resource type="Texture2D" uid="uid://b43dy83rcq3jp" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0003.png" id="52_x7yoy"]
+[ext_resource type="Texture2D" uid="uid://onw73st0qmgl" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0004.png" id="53_q8dsq"]
 [ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="107_v24a8"]
 [ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="108_vq3x2"]
 [ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="109_fsy0b"]
@@ -92,6 +96,23 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fk853")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o3vek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0r76q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_64uwj")
+}],
+"loop": true,
+"name": &"antiair",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_b63db")
@@ -268,16 +289,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("50_kagy3")
+"texture": ExtResource("50_lfg85")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_v24a8")
+"texture": ExtResource("51_qfu2l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_vq3x2")
+"texture": ExtResource("52_x7yoy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_ckxau")
+"texture": ExtResource("53_q8dsq")
 }],
 "loop": true,
 "name": &"punch",
@@ -371,17 +392,17 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kagy3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v24a8"]
-radius = 39.99611
-height = 135.00793
+radius = 39.9961
+height = 135.008
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3x2"]
-height = 90.16525
+height = 90.1653
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfg85"]
-height = 107.99998
+height = 108.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nsn7i"]
-radius = 14.861969
+radius = 14.862
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
@@ -407,8 +428,9 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"punch"
-frame_progress = 0.22907332
+animation = &"multislash"
+frame = 14
+frame_progress = 1.0
 
 [node name="FrontCollision" type="CollisionShape2D" parent="."]
 position = Vector2(32, 53)
@@ -416,8 +438,8 @@ rotation = -0.120428
 shape = SubResource("CapsuleShape2D_kagy3")
 
 [node name="BackCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-49.000004, 52.000004)
-rotation = 0.013962634
+position = Vector2(-49, 52)
+rotation = 0.0139626
 scale = Vector2(0.2, 0.237)
 shape = SubResource("CapsuleShape2D_v24a8")
 
@@ -428,17 +450,16 @@ shape = SubResource("CapsuleShape2D_vq3x2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-33, 36)
-rotation = 1.5707941
+rotation = 1.57079
 shape = SubResource("CapsuleShape2D_lfg85")
 
 [node name="ArmCollision" type="CollisionShape2D" parent="."]
-position = Vector2(64, -4.9999995)
-rotation = 0.36651915
+position = Vector2(64, -5)
+rotation = 0.366519
 shape = SubResource("CapsuleShape2D_nsn7i")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(4.7683716e-07, 4.7683716e-07)
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(4.76837e-07, 4.76837e-07)
 
 [node name="Punch Damage" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(83, -5)
