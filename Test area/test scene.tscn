@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=24 format=3 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="1_0rq7t"]
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
@@ -20,18 +20,17 @@
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="18_6t5vm"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="19_djvg0"]
 
-[sub_resource type="GDScript" id="GDScript_u6vuv"]
-script/source = "extends Area2D
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djvg0"]
+size = Vector2(164.28067, 3.5435867)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myoe6"]
+size = Vector2(92.41671, 3.26017)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt11a"]
+size = Vector2(90.57408, 5.2445717)
 
-
-
-	
-"
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7e5m4"]
-distance = -54.14595
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5figy"]
+size = Vector2(164.7059, 5.3862686)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xw60q")
@@ -64,36 +63,30 @@ position = Vector2(510.00012, 101)
 rotation = 2.094392
 scale = Vector2(11, 1)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(22, -331)
-scale = Vector2(59.04, 1)
+[node name="world edges" type="StaticBody2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-570, -321)
-script = SubResource("GDScript_u6vuv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(578.693, 661.457)
+[node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
+position = Vector2(4.499939, 338.5)
 scale = Vector2(7.055, 7.055)
-shape = SubResource("WorldBoundaryShape2D_7e5m4")
+shape = SubResource("RectangleShape2D_djvg0")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1169, 267)
+[node name="world wall Right" type="CollisionShape2D" parent="world edges"]
+position = Vector2(595.49976, -9.1552734e-05)
 rotation = -1.57079
 scale = Vector2(7.055, 7.055)
-shape = SubResource("WorldBoundaryShape2D_7e5m4")
+shape = SubResource("RectangleShape2D_myoe6")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(8, 259)
+[node name="world wall Left" type="CollisionShape2D" parent="world edges"]
+position = Vector2(-590.4998, 0.49993896)
 rotation = 1.57079
 scale = Vector2(7.055, 7.055)
-shape = SubResource("WorldBoundaryShape2D_7e5m4")
+shape = SubResource("RectangleShape2D_nt11a")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(592, 6.10352e-05)
+[node name="world wall Top" type="CollisionShape2D" parent="world edges"]
+position = Vector2(6.000061, -342.99997)
 rotation = 3.14159
 scale = Vector2(7.055, 7.055)
-shape = SubResource("WorldBoundaryShape2D_7e5m4")
+shape = SubResource("RectangleShape2D_5figy")
 
 [node name="HealthBar2" type="Sprite2D" parent="."]
 position = Vector2(299.00006, 225.00003)
@@ -169,20 +162,6 @@ position = Vector2(345, 545)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("14_vjeew")
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(-580, 72)
-rotation = 1.5707941
-scale = Vector2(59.04, 1)
-
-[node name="StaticBody2D8" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(594, 103)
-rotation = 1.5707941
-scale = Vector2(59.04, 1)
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("2_rk26f")]
-position = Vector2(22, 342)
-scale = Vector2(59.04, 1)
-
 [node name="StaticBody2D12" parent="." instance=ExtResource("18_6t5vm")]
 position = Vector2(-343.00006, 179)
 scale = Vector2(6.988857, 0.7167663)
@@ -210,6 +189,3 @@ position = Vector2(7, 1)
 script = ExtResource("19_djvg0")
 player1 = NodePath("../Test player")
 player2 = NodePath("../enemy")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

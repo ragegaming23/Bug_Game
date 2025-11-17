@@ -21,9 +21,9 @@ func _ready():
 	bg_music.play()
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body == get_tree().get_first_node_in_group("enemy"):
-		body.Take_Damage(10)
-	else:
-		if body == get_tree().get_first_node_in_group("player"):
-			body.Take_Damage(10)
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+	#if body == get_tree().get_first_node_in_group("enemy"):
+		#body.Take_Damage(10)
+	#else:
+		#if body == get_tree().get_first_node_in_group("player"):
+			#body.Take_Damage(10)

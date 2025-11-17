@@ -7,24 +7,24 @@
 size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeny1"]
-size = Vector2(120, 180.00021)
+size = Vector2(120, 60.0001)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_l6isy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_l6isy")
 
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0.768946, 0.818621, 1.15514e-06, 1)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_2ocfh")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l6isy")
+
 [node name="Slow Effect" type="Area2D" parent="."]
 scale = Vector2(0.15, 0.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slow Effect"]
-position = Vector2(-5.9604645e-07, -30.000101)
+position = Vector2(0, -90.00005)
 shape = SubResource("RectangleShape2D_xeny1")
 
 [connection signal="body_entered" from="Slow Effect" to="." method="_on_slow_effect_body_entered"]
