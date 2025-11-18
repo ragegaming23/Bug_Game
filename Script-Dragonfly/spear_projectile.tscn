@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dowuqfy0sqrna"]
+
+[ext_resource type="Script" uid="uid://deqeuenkixsqs" path="res://Script-Dragonfly/spear_projectile.gd" id="1_7itds"]
+[ext_resource type="Texture2D" uid="uid://cka1xj3ja7muc" path="res://Fighters/Dragonfly/Spear/Spear.png" id="2_6eq2p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_74dt7"]
+height = 486.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jd5gd"]
+height = 484.0
+
+[node name="SpearProjectile" type="CharacterBody2D"]
+script = ExtResource("1_7itds")
+
+[node name="Spear" type="Sprite2D" parent="."]
+rotation = -1.5707964
+texture = ExtResource("2_6eq2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_74dt7")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_jd5gd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
