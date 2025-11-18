@@ -7,6 +7,9 @@ const Name = "player"
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
 
+func _init(input_prefix):
+	player_id = input_prefix
+	
 var MaxHealth = 20
 var Health = 20
 

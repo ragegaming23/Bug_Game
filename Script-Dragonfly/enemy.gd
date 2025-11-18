@@ -3,8 +3,11 @@ extends CharacterBody2D
 #@onready var Healthbar = get_node("/root/Enemy/enemy_health_bar")
 var player_id = 2
 const Name = "enemy"
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -400.0
+
+func _init(input_prefix):
+	player_id = input_prefix
 
 var Lives = 3
 var MaxHealth = 20
