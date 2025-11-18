@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=109 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -11,12 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://cr47mokligha6" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0004.png" id="5_64uwj"]
 [ext_resource type="Texture2D" uid="uid://v3ceje0txufg" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0004.png" id="5_f0rc8"]
 [ext_resource type="Texture2D" uid="uid://bms7kdg2mpk42" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0005.png" id="6_2u13x"]
+[ext_resource type="Texture2D" uid="uid://bfu3yvq70vqte" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0001.png" id="7_3uc3h"]
 [ext_resource type="Texture2D" uid="uid://dij75of3j8f4d" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0006.png" id="7_xkik2"]
+[ext_resource type="Texture2D" uid="uid://bry2jd30121m" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0002.png" id="8_qjc8k"]
 [ext_resource type="Texture2D" uid="uid://iftoxfabbop2" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20001.png" id="8_x7yoy"]
 [ext_resource type="Texture2D" uid="uid://b8tko4qwn7tvv" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0001.png" id="9_65v4l"]
+[ext_resource type="Texture2D" uid="uid://bukoohwxu50ym" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0003.png" id="9_dqtej"]
 [ext_resource type="Texture2D" uid="uid://b57bmsdu0rhyg" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20002.png" id="9_q8dsq"]
 [ext_resource type="Texture2D" uid="uid://dinufbmxg7amq" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0002.png" id="10_0d130"]
 [ext_resource type="Texture2D" uid="uid://dqvtqf6yc85go" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20003.png" id="10_fk853"]
+[ext_resource type="Texture2D" uid="uid://dwpe4wr7l86mw" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0004.png" id="10_s4fcr"]
 [ext_resource type="Texture2D" uid="uid://livijnif4s0h" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0003.png" id="11_fsy0b"]
 [ext_resource type="Texture2D" uid="uid://c7eos8ecrkh43" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20004.png" id="11_o3vek"]
 [ext_resource type="Texture2D" uid="uid://byok2x7p75n8r" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20005.png" id="12_0r76q"]
@@ -119,6 +123,26 @@ animations = [{
 }],
 "loop": true,
 "name": &"block",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3uc3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qjc8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dqtej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s4fcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s4fcr")
+}],
+"loop": true,
+"name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -428,9 +452,7 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"multislash"
-frame = 14
-frame_progress = 1.0
+animation = &"death"
 
 [node name="FrontCollision" type="CollisionShape2D" parent="."]
 position = Vector2(32, 53)
