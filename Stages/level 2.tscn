@@ -1,12 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2gymu43ids3c"]
+[gd_scene load_steps=17 format=3 uid="uid://b2gymu43ids3c"]
 
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_8tuof"]
 [ext_resource type="Script" uid="uid://d2r7ds2sy7sl4" path="res://Stages/level_2.gd" id="1_dntir"]
 [ext_resource type="PackedScene" uid="uid://dx7r1lw6mjxmq" path="res://Platforms/Sticky Floor.tscn" id="2_iemxh"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="3_317mm"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="4_dntir"]
-[ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="6_33686"]
-[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="7_v0tt3"]
 [ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="8_ojlyd"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="9_pcwfq"]
 [ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="10_jd8s7"]
@@ -69,23 +67,14 @@ scale = Vector2(6.9999976, 1)
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
 position = Vector2(-5, -2)
 script = ExtResource("4_dntir")
-player1 = NodePath("../Test player")
-player2 = NodePath("../enemy")
+player1 = NodePath("")
+player2 = NodePath("")
 
-[node name="Spawnpoints" type="Node2D" parent="."]
-position = Vector2(-584, -324)
+[node name="Spawnpoint2" type="Marker2D" parent="."]
+position = Vector2(-13, -167)
 
-[node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(713, 495)
-
-[node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(407, 474)
-
-[node name="Test player" parent="." instance=ExtResource("6_33686")]
-position = Vector2(-42, 156)
-
-[node name="enemy" parent="." instance=ExtResource("7_v0tt3")]
-position = Vector2(0, -41)
+[node name="Spawnpoint1" type="Marker2D" parent="."]
+position = Vector2(-8, 177)
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_15mh6")
