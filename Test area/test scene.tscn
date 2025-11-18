@@ -114,17 +114,17 @@ volume_db = 1.5
 position = Vector2(-570, -321)
 
 [node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(945.357, 399.92)
+position = Vector2(732, 419)
 
 [node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(166.621, 363.917)
+position = Vector2(410, 406)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
 position = Vector2(-160, 86)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(335, 101)
+position = Vector2(162, 98)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
 position = Vector2(-570, -321)

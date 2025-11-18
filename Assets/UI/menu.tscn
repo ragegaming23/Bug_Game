@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=12 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://Assets/UI/menu.gd" id="1_0h2wq"]
 [ext_resource type="Texture2D" uid="uid://u7pp1rqmbn5u" path="res://Assets/Main Menu/backgound_NoButtons.png" id="2_dvixa"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://r50j651vjq5e" path="res://Assets/Main Menu/SE/TV_ON_PH.mp3" id="6_nwcpr"]
 [ext_resource type="Texture2D" uid="uid://cnon56lf2ur84" path="res://Assets/Main Menu/png/Settings_Hoovered.png" id="8_7skmn"]
 [ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://Assets/UI/Loading Screen/Loading Screen.jpg" id="10_8ngtt"]
+[ext_resource type="Texture2D" uid="uid://ceicvkl03a6pc" path="res://Assets/Main Menu/png/CreepyBrawlers Tittle.png" id="11_0lkms"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -50,11 +51,11 @@ texture_hover = ExtResource("8_7skmn")
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 527.0
-offset_top = 352.0
-offset_right = 597.0
-offset_bottom = 383.0
-scale = Vector2(1.3708138, 1.4234586)
+offset_left = 553.0
+offset_top = 366.0
+offset_right = 595.0
+offset_bottom = 397.0
+scale = Vector2(0.7896468, 0.8199724)
 text = "Quit"
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
@@ -62,26 +63,10 @@ stream = ExtResource("2_wfiwe")
 volume_db = -25.0
 autoplay = true
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.50600004
-anchor_top = 0.48200002
-anchor_right = 0.50600004
-anchor_bottom = 0.48200002
-offset_left = -179.91205
-offset_top = -88.33603
-offset_right = -44.91205
-offset_bottom = -57.33603
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.453344, 2.4077144)
-alignment = 1
-vertical = true
-
-[node name="Button" type="Button" parent="BoxContainer"]
-layout_mode = 2
-text = "Creepy Brawlers"
+[node name="CreepyBrawlersTittle" type="Sprite2D" parent="."]
+position = Vector2(557, 285)
+scale = Vector2(0.19564618, 0.11743343)
+texture = ExtResource("11_0lkms")
 
 [node name="LoadingScreen" type="TextureRect" parent="."]
 visible = false
