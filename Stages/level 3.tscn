@@ -1,10 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dk0yycfoueis4"]
+[gd_scene load_steps=16 format=3 uid="uid://dk0yycfoueis4"]
 
 [ext_resource type="Script" uid="uid://bwk8bpcvcvt2v" path="res://Stages/level_3.gd" id="1_3o4tr"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_lauke"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="2_1vnp6"]
-[ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_3splg"]
-[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="5_a6den"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_3hkdd"]
 [ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="7_nts3s"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="8_oxvtf"]
@@ -56,26 +54,17 @@ scale = Vector2(60, 1)
 position = Vector2(-1, 200)
 scale = Vector2(60, 1)
 
-[node name="Spawnpoints" type="Node2D" parent="."]
-position = Vector2(-573, -321)
+[node name="Spawnpoint2" type="Marker2D" parent="."]
+position = Vector2(420, -100)
 
-[node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(993, 221)
-
-[node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(165, 217)
-
-[node name="Test player" parent="." instance=ExtResource("4_3splg")]
-position = Vector2(-400, -168)
-
-[node name="enemy" parent="." instance=ExtResource("5_a6den")]
-position = Vector2(426, -116)
+[node name="Spawnpoint1" type="Marker2D" parent="."]
+position = Vector2(-408, -104)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
 position = Vector2(4, 1)
 script = ExtResource("6_3hkdd")
-player1 = NodePath("../Test player")
-player2 = NodePath("../enemy")
+player1 = NodePath("")
+player2 = NodePath("")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_k0mqa")

@@ -1,10 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bifcuulr8176p"]
+[gd_scene load_steps=16 format=3 uid="uid://bifcuulr8176p"]
 
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_0i422"]
 [ext_resource type="Script" uid="uid://ccbk0e6a1ej3g" path="res://Stages/level_4.gd" id="1_imial"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="2_imial"]
-[ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="4_351ck"]
-[ext_resource type="PackedScene" uid="uid://dt4clu7q72r7" path="res://Script-Dragonfly/enemy.tscn" id="5_1yg4k"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_80qkx"]
 [ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="7_5ct8i"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="8_ao3ad"]
@@ -47,26 +45,17 @@ position = Vector2(541, -12.0000305)
 rotation = -1.22173
 scale = Vector2(5, 1)
 
-[node name="Spawnpoints" type="Node2D" parent="."]
-position = Vector2(-579, -324)
+[node name="Spawnpoint2" type="Marker2D" parent="."]
+position = Vector2(297, 95)
 
-[node name="Spawnpoint2" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(899, 404)
-
-[node name="Spawnpoint1" type="Marker2D" parent="Spawnpoints"]
-position = Vector2(259, 404)
-
-[node name="Test player" parent="." instance=ExtResource("4_351ck")]
-position = Vector2(-154, 110)
-
-[node name="enemy" parent="." instance=ExtResource("5_1yg4k")]
-position = Vector2(328, 168)
+[node name="Spawnpoint1" type="Marker2D" parent="."]
+position = Vector2(-208, -57)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
 position = Vector2(-2, -2)
 script = ExtResource("6_80qkx")
-player1 = NodePath("../Test player")
-player2 = NodePath("../enemy")
+player1 = NodePath("")
+player2 = NodePath("")
 
 [node name="HealthBar2" type="Sprite2D" parent="."]
 position = Vector2(299.00006, 225.00003)

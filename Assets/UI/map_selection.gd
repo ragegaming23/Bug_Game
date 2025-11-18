@@ -24,31 +24,26 @@ func _process(_delta: float) -> void:
 func _on_stage_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_1
-	Global.chosen_spawn = "Spawnpoint1"
 	LocalNetwork.start_server()
 
 
 func _on_stage_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_2
-	Global.chosen_spawn = "Spawnpoint1"
 	LocalNetwork.start_server()
 
 func _on_stage_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_3
-	Global.chosen_spawn = "Spawnpoint1"
 	LocalNetwork.start_server()
 
 
 func _on_stage_4_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_4
-	Global.chosen_spawn = "Spawnpoint1"
 	LocalNetwork.start_server()
 
 func _on_stage_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_5
-	Global.chosen_spawn = "Spawnpoint1"
 	LocalNetwork.start_server()
