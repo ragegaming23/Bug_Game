@@ -2,7 +2,6 @@ extends Control
 var Chosen_stage = Global.Chosen_Stage
 
 func _ready() -> void:
-	# Small delay to let LoadingScreen actually render
 	await get_tree().process_frame
 	_start_client_and_load_game()
 

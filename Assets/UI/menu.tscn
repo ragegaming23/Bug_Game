@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=11 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://Assets/UI/menu.gd" id="1_0h2wq"]
+[ext_resource type="Texture2D" uid="uid://u7pp1rqmbn5u" path="res://Assets/Main Menu/backgound_NoButtons.png" id="2_dvixa"]
 [ext_resource type="AudioStream" uid="uid://i738ss3v1f4c" path="res://SoundEffects/Music/CreepyBrawlers_MenuMusic.ogg" id="2_wfiwe"]
+[ext_resource type="Texture2D" uid="uid://c14o6wsup308o" path="res://Assets/Settings.png" id="3_3d5hf"]
+[ext_resource type="Texture2D" uid="uid://badqs120ljvdc" path="res://Assets/Main Menu/png/TV_Off.png" id="3_6pqcx"]
+[ext_resource type="Texture2D" uid="uid://csrjkkt6wmsdr" path="res://Assets/Main Menu/png/TV_On.png" id="4_6a31s"]
+[ext_resource type="Script" uid="uid://dosf7p6ss2yl0" path="res://Assets/UI/TVStart.gd" id="5_6a31s"]
+[ext_resource type="AudioStream" uid="uid://r50j651vjq5e" path="res://Assets/Main Menu/SE/TV_ON_PH.mp3" id="6_nwcpr"]
+[ext_resource type="Texture2D" uid="uid://cnon56lf2ur84" path="res://Assets/Main Menu/png/Settings_Hoovered.png" id="8_7skmn"]
+[ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://Assets/UI/Loading Screen/Loading Screen.jpg" id="10_8ngtt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,54 +20,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0h2wq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -50.5
-offset_right = 35.0
-offset_bottom = 50.5
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
+[node name="Bar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 657.0
+texture = ExtResource("2_dvixa")
 
-[node name="Start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../Quit")
-text = "Start"
+[node name="Start" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_right = 725.0
+offset_bottom = 227.0
+texture_normal = ExtResource("3_6pqcx")
+texture_hover = ExtResource("4_6a31s")
+script = ExtResource("5_6a31s")
 
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Start"]
+stream = ExtResource("6_nwcpr")
+volume_db = 11.45
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_neighbor_bottom = NodePath("../Start")
+[node name="Options" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 216.0
+offset_right = 364.0
+offset_bottom = 464.0
+texture_normal = ExtResource("3_3d5hf")
+texture_hover = ExtResource("8_7skmn")
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 352.0
+offset_right = 597.0
+offset_bottom = 383.0
+scale = Vector2(1.3708138, 1.4234586)
 text = "Quit"
 
-[node name="MenuMusic" type="AudioStreamPlayer" parent="VBoxContainer"]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wfiwe")
 volume_db = -25.0
 autoplay = true
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -112.0
-offset_top = -164.0
-offset_right = 23.0
-offset_bottom = -133.0
+anchors_preset = -1
+anchor_left = 0.50600004
+anchor_top = 0.48200002
+anchor_right = 0.50600004
+anchor_bottom = 0.48200002
+offset_left = -179.91205
+offset_top = -88.33603
+offset_right = -44.91205
+offset_bottom = -57.33603
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.75436, 2.2127)
+scale = Vector2(2.453344, 2.4077144)
 alignment = 1
 vertical = true
 
@@ -67,6 +83,15 @@ vertical = true
 layout_mode = 2
 text = "Creepy Brawlers"
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="LoadingScreen" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 1153.0
+offset_bottom = 654.0
+texture = ExtResource("10_8ngtt")
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

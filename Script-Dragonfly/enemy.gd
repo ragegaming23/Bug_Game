@@ -46,8 +46,8 @@ var current_health: int = max_health
 var banner_textures = {
 	3: preload("res://Assets/Health Bar/banners/full health/DbannerBLUE.png"),
 	2: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
-	1: preload ("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
-	0: preload("res://Assets/Health Bar/banners/damaged/Dblooban2.png"),
+	1: preload ("res://Assets/Health Bar/banners/sappy/DbannerBLUE3.png"),
+	0: preload("res://Assets/Health Bar/banners/sappy/DbannerBLUE3.png"),
 }
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
@@ -63,11 +63,6 @@ func Take_Damage(Damage: int):
 	if $HealthSFX.playing: # if it’s already playing, restart it
 		$HealthSFX.stop()
 	$HealthSFX.play()
-	
-	# Play Hit sound
-	if $HitSFX.playing:
-		$HitSFX.stop()
-	$HitSFX.play()
 	
 	update_healthbar()
 	

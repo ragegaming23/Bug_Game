@@ -1,25 +1,22 @@
 extends Control
 
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$VBoxContainer/Start.grab_focus()
+	$Start.grab_focus()
 	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	
 func _process(_delta: float) -> void:
 	pass
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Assets/UI/map_selection.tscn")
+	$LoadingScreen.visible=true
+	await get_tree().create_timer(1.5).timeout
 	LocalNetwork.Start_client()
+	get_tree().change_scene_to_file("res://Assets/UI/map_selection.tscn")
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	pass 
 
 
 func _on_quit_pressed() -> void:

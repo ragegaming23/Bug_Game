@@ -120,11 +120,11 @@ position = Vector2(945.357, 399.92)
 position = Vector2(166.621, 363.917)
 
 [node name="Test player" parent="." instance=ExtResource("1_0rq7t")]
-position = Vector2(-135.87, 95.225006)
+position = Vector2(-160, 86)
 SPEED = 150.0
 
 [node name="enemy" parent="." instance=ExtResource("6_ihbi5")]
-position = Vector2(110.92102, 152.70999)
+position = Vector2(335, 101)
 
 [node name="P2LivesUI" type="Node2D" parent="."]
 position = Vector2(-570, -321)
