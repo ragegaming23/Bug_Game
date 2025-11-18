@@ -91,9 +91,11 @@ func Take_Damage(Damage: int):
 	update_healthbar()
 	
 	if current_health <= 0:
+		$Animantis.play("death")
 		Lives -= 1
-		current_health = 20
+		current_health += 20
 		update_lives_ui()
+		update_healthbar()
 		
 	if Lives <= 0:
 		die()
