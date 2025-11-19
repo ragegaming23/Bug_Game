@@ -6,8 +6,8 @@ const Name = "enemy"
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
-func _init(input_prefix):
-	player_id = input_prefix
+func _init(p_id := 2):
+	player_id = p_id
 
 var Lives = 3
 var MaxHealth = 20
@@ -191,7 +191,7 @@ func _physics_process(delta: float) -> void:
 	#move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body == get_tree().get_first_node_in_group("Player"):
+	if body.is_in_group("player"):
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 5.0, 1.0)
 		body.Take_Damage(1)

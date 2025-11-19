@@ -1835,14 +1835,12 @@ metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 script = ExtResource("420_53c6d")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [node name="movement(fly)" type="Node" parent="DF_Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("421_kf2kk")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [node name="DF_Attack States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -1854,49 +1852,42 @@ metadata/_custom_type_script = "uid://cmr70fhjuepl6"
 script = ExtResource("423_4gwa2")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [node name="Jab" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("424_ufpjl")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="BicycleKick" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("425_dsqk6")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="SpearThrow" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("426_yw6kr")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="SpearSpin" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("427_0cawu")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="WindDust" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("428_winqv")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="Block" type="Node" parent="DF_Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("429_hnrsl")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
-player_id = 2
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
