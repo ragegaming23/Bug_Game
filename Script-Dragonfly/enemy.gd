@@ -5,7 +5,8 @@ var player_id = 2
 const Name = "enemy"
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
-
+@onready var main = get_tree().get_root().get_node(".")
+@onready var projectile = load("res://Script-Dragonfly/spear_projectile.tscn")
 func _init(p_id := 2):
 	player_id = p_id
 
@@ -189,6 +190,13 @@ func _physics_process(delta: float) -> void:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 		#$Dragonfly.play("Dragonfly_Idle")
 	#move_and_slide()
+func Spearthrow():
+	var instance = projectile.instantiate()
+	instance.direction = rotation
+	instance.global_position = $"Area2D/SpearThrow Damage".global_position
+	instance.SpawnRot = rotation
+	instance.Zdex = z_index -1
+	main.add_child.call_deferred(instance)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

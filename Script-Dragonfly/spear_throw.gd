@@ -8,11 +8,12 @@ class_name SpearThrow
 
 func enter() -> void:
 	$"../../Dragonfly".play("Dragonfly_SpearThrow")
-	await get_tree().create_timer(.8).timeout
-	get_node("../../Area2D/SpearThrow Damage").disabled = false
-	await get_tree().create_timer(.3).timeout
-	#$Animantis.stop("punch")
-	get_node("../../Area2D/SpearThrow Damage").disabled = true
+	#await get_tree().create_timer(.8).timeout
+	#get_node("../../Area2D/SpearThrow Damage").disabled = false
+	#await get_tree().create_timer(.3).timeout
+	##$Animantis.stop("punch")
+	#get_node("../../Area2D/SpearThrow Damage").disabled = true
+	player.Spearthrow()
 	pass
 	
 func exit() -> void:

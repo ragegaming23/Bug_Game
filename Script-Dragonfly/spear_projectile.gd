@@ -13,19 +13,23 @@ func _Ready():
 	global_rotation = SpawnRot
 	z_index = Zdex
 func _physics_process(_delta: float):
-		velocity = Vector2(Speed,0).rotated(direction)
+		velocity = Vector2(-Speed,0).rotated(direction)
 		move_and_slide()
 
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body == get_tree().get_first_node_in_group("enemy"):
+	var enemy = "res://Script-Dragonfly/enemy.tscn"
+	if body.is_in_group("enemy"):
+		if enemy: return
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 50.0, 1.0)
 		body.Take_Damage(2)
-		if $".": return
+		queue_free()
+		#if enemy: return
 	else:
-		if body == get_tree().get_first_node_in_group("player"):
+		if body.is_in_group("Player"):
 			var knockback_direction = (body.global_position - global_position).normalized()
 			body.apply_knockback(knockback_direction, 200.0, 1.0)
 			body.Take_Damage(2)
+			queue_free()

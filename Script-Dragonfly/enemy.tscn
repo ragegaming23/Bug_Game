@@ -1,4 +1,4 @@
-[gd_scene load_steps=439 format=3 uid="uid://dt4clu7q72r7"]
+[gd_scene load_steps=451 format=3 uid="uid://dt4clu7q72r7"]
 
 [ext_resource type="Script" uid="uid://b0jfytybgdell" path="res://Script-Dragonfly/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://6axt3fyl4lba" path="res://Fighters/Dragonfly/Animations/Bicyclekick/Frames/Bicyclekick_Dragonfly0001.png0001.png" id="2_yl6tp"]
@@ -1728,16 +1728,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkr4w"]
-height = 88.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cawu"]
+size = Vector2(14.999998, 72)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqwjd"]
-radius = 11.3137
-height = 65.0538
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_winqv"]
+size = Vector2(15.439499, 34.434437)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgpb"]
-radius = 21.0
-height = 58.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnrsl"]
+size = Vector2(44.000023, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px1sc"]
 size = Vector2(20.375, 14.5)
@@ -1754,6 +1752,40 @@ size = Vector2(72, 88)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw6kr"]
 size = Vector2(36, 88)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swvmt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa3gu"]
+size = Vector2(13.25, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jc7p"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dhev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b4ch"]
+size = Vector2(12, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh6u2"]
+size = Vector2(16, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmonk"]
+size = Vector2(8, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmovo"]
+size = Vector2(7, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rqyc"]
+size = Vector2(5, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo03f"]
+size = Vector2(4, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1djd"]
+size = Vector2(4, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aki2f"]
+size = Vector2(2, 11)
+
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_4gyqm")
 
@@ -1764,21 +1796,21 @@ sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Dragonfly_Idle"
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
-position = Vector2(49, -60)
+position = Vector2(59.00001, -60.500004)
 rotation = -1.5708
 scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("CapsuleShape2D_qkr4w")
+shape = SubResource("RectangleShape2D_0cawu")
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
-position = Vector2(36.999996, -121)
-rotation = -0.85346603
+position = Vector2(12, -86)
+rotation = -1.5707964
 scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("CapsuleShape2D_lqwjd")
+shape = SubResource("RectangleShape2D_winqv")
 
 [node name="body" type="CollisionShape2D" parent="."]
-position = Vector2(-14, -61)
+position = Vector2(-7.4999914, -57.000042)
 rotation = -1.5708
-shape = SubResource("CapsuleShape2D_ubgpb")
+shape = SubResource("RectangleShape2D_hnrsl")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-0.5, -65)
@@ -1800,7 +1832,8 @@ shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
 
 [node name="SpearThrow Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-66.3, 28.299988)
+position = Vector2(-64.5, 21)
+scale = Vector2(0.37049568, -0.2469888)
 shape = SubResource("RectangleShape2D_ufpjl")
 disabled = true
 
@@ -1889,5 +1922,53 @@ script = ExtResource("429_hnrsl")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Dragonfly")
 metadata/_custom_type_script = "uid://bspcpd1iwyono"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, -104)
+shape = SubResource("RectangleShape2D_swvmt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(17.375, -120)
+shape = SubResource("RectangleShape2D_pa3gu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(26, -133)
+shape = SubResource("RectangleShape2D_3jc7p")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(34, -104)
+shape = SubResource("RectangleShape2D_0dhev")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(30, -119.5)
+shape = SubResource("RectangleShape2D_8b4ch")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(44, -118)
+shape = SubResource("RectangleShape2D_hh6u2")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(33, -87.5)
+shape = SubResource("RectangleShape2D_jmonk")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(40.5, -90)
+shape = SubResource("RectangleShape2D_hmovo")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(46, -104)
+shape = SubResource("RectangleShape2D_2rqyc")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(50, -107.5)
+shape = SubResource("RectangleShape2D_fo03f")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(53, -113)
+shape = SubResource("RectangleShape2D_t1djd")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2(34, -131.5)
+shape = SubResource("RectangleShape2D_aki2f")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

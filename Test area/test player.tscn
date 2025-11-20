@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=110 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -413,21 +413,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kagy3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uc3h"]
+size = Vector2(12, 10)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v24a8"]
-radius = 39.9961
-height = 135.008
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjc8k"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3x2"]
-height = 90.1653
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqtej"]
+size = Vector2(20.784607, 27.563034)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfg85"]
-height = 108.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4fcr"]
+size = Vector2(34.500015, 22.999949)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nsn7i"]
-radius = 14.862
-height = 48.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d42gp"]
+size = Vector2(127, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa75d"]
+size = Vector2(79, 37.489285)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
 size = Vector2(84, 20)
@@ -452,33 +453,33 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"death"
+animation = &"slash"
 
-[node name="FrontCollision" type="CollisionShape2D" parent="."]
-position = Vector2(32, 53)
-rotation = -0.120428
-shape = SubResource("CapsuleShape2D_kagy3")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 5)
+shape = SubResource("RectangleShape2D_3uc3h")
 
-[node name="BackCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-49, 52)
-rotation = 0.0139626
-scale = Vector2(0.2, 0.237)
-shape = SubResource("CapsuleShape2D_v24a8")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(22, -20)
+shape = SubResource("RectangleShape2D_qjc8k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-21.999998, 17)
+scale = Vector2(2.2253942, 0.6263155)
+shape = SubResource("RectangleShape2D_dqtej")
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(16, 2.38419e-07)
-rotation = 0.698132
-shape = SubResource("CapsuleShape2D_vq3x2")
+position = Vector2(42, -27)
+rotation = 1.5707941
+shape = SubResource("RectangleShape2D_s4fcr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-33, 36)
-rotation = 1.57079
-shape = SubResource("CapsuleShape2D_lfg85")
+position = Vector2(-22.5, 46.5)
+shape = SubResource("RectangleShape2D_d42gp")
 
 [node name="ArmCollision" type="CollisionShape2D" parent="."]
-position = Vector2(64, -5)
-rotation = 0.366519
-shape = SubResource("CapsuleShape2D_nsn7i")
+position = Vector2(39.5, 8.402588)
+shape = SubResource("RectangleShape2D_qa75d")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
@@ -552,20 +553,28 @@ player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="slash" type="Node" parent="Attack States"]
+[node name="slash" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("116_cvjqa")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="multislash" type="Node" parent="Attack States"]
+[node name="multislash" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("117_spbgj")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="headbut" type="Node" parent="Attack States"]
+[node name="headbut" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("118_i5wc2")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
-[node name="block" type="Node" parent="Attack States"]
+[node name="block" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("119_83u2j")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

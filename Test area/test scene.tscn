@@ -151,29 +151,23 @@ scale = Vector2(0.04, 0.04)
 texture = ExtResource("14_vjeew")
 
 [node name="StaticBody2D12" parent="." instance=ExtResource("18_6t5vm")]
-position = Vector2(-343.00006, 179)
+position = Vector2(-343, 179.00002)
 scale = Vector2(6.988857, 0.7167663)
-Force = 800.0
 
 [node name="StaticBody2D14" parent="." instance=ExtResource("18_6t5vm")]
 position = Vector2(314.00006, 179)
 scale = Vector2(-6.683478, 0.8374232)
-Force = 800.0
 
 [node name="StaticBody2D16" parent="." instance=ExtResource("18_6t5vm")]
 position = Vector2(-541.99994, 67.00003)
 rotation = 1.0471976
 scale = Vector2(3.6753542, 0.6768347)
-Force = 800.0
 
 [node name="StaticBody2D17" parent="." instance=ExtResource("18_6t5vm")]
 position = Vector2(510.00006, 67)
 rotation = -1.0471976
 scale = Vector2(3.7368464, 0.727898)
-Force = 800.0
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(7, 1)
 script = ExtResource("19_djvg0")
-player1 = NodePath("")
-player2 = NodePath("")

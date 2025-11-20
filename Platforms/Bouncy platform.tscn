@@ -11,6 +11,7 @@ size = Vector2(18, 14)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_qpmql")
+Force = 800.0
 
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0.577682, 0.222507, 0.500052, 1)

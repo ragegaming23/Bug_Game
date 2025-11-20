@@ -14,10 +14,12 @@ script = ExtResource("1_7itds")
 
 [node name="Spear" type="Sprite2D" parent="."]
 rotation = -1.5707964
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_6eq2p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5707964
+scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_74dt7")
 disabled = true
 
@@ -25,6 +27,7 @@ disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 rotation = -1.5707964
+scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_jd5gd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
