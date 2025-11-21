@@ -36,9 +36,9 @@ position = Vector2(0, -186)
 scale = Vector2(20, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_1vnp6")]
-position = Vector2(-569, -33)
+position = Vector2(-570, -56.000004)
 rotation = 1.5707964
-scale = Vector2(60, 1)
+scale = Vector2(27.28125, 1.4895948)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(-2, -325)
@@ -46,9 +46,9 @@ rotation = 3.1415927
 scale = Vector2(60, 1)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("2_1vnp6")]
-position = Vector2(590, -9)
+position = Vector2(575, -64)
 rotation = -1.5707964
-scale = Vector2(60, 1)
+scale = Vector2(27, 1.981)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(-1, 200)
@@ -60,11 +60,9 @@ position = Vector2(420, -100)
 [node name="Spawnpoint1" type="Marker2D" parent="."]
 position = Vector2(-408, -104)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(4, 1)
 script = ExtResource("6_3hkdd")
-player1 = NodePath("")
-player2 = NodePath("")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_k0mqa")
