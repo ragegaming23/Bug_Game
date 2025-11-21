@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://yssrdt8rjr8c"]
+[gd_scene load_steps=20 format=3 uid="uid://yssrdt8rjr8c"]
 
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="1_hj4m8"]
 [ext_resource type="Script" uid="uid://datk0sob4bi7g" path="res://Stages/level_5.gd" id="1_wgam1"]
@@ -15,6 +15,18 @@
 [ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_g8enf"]
 [ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="16_edfwg"]
 [ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/full health/MbannerYELLOW.png" id="17_8grt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b14hn"]
+size = Vector2(164.28067, 3.5435867)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tn748"]
+size = Vector2(92.41671, 3.26017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4y1b"]
+size = Vector2(90.57408, 5.2445717)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi554"]
+size = Vector2(164.7059, 5.3862686)
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_wgam1")
@@ -55,11 +67,9 @@ position = Vector2(185, 146)
 [node name="Spawnpoint1" type="Marker2D" parent="."]
 position = Vector2(-316, -122)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
 script = ExtResource("6_tcq6s")
-player1 = NodePath("")
-player2 = NodePath("")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_jeldl")
@@ -118,3 +128,28 @@ texture = ExtResource("15_g8enf")
 position = Vector2(345, 545)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("16_edfwg")
+
+[node name="world edges" type="StaticBody2D" parent="."]
+
+[node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
+position = Vector2(4.499939, 338.5)
+scale = Vector2(7.055, 7.055)
+shape = SubResource("RectangleShape2D_b14hn")
+
+[node name="world wall Right" type="CollisionShape2D" parent="world edges"]
+position = Vector2(595.49976, -9.1552734e-05)
+rotation = -1.57079
+scale = Vector2(7.055, 7.055)
+shape = SubResource("RectangleShape2D_tn748")
+
+[node name="world wall Left" type="CollisionShape2D" parent="world edges"]
+position = Vector2(-590.4998, 0.49993896)
+rotation = 1.57079
+scale = Vector2(7.055, 7.055)
+shape = SubResource("RectangleShape2D_l4y1b")
+
+[node name="world wall Top" type="CollisionShape2D" parent="world edges"]
+position = Vector2(6.000061, -342.99997)
+rotation = 3.14159
+scale = Vector2(7.055, 7.055)
+shape = SubResource("RectangleShape2D_oi554")
