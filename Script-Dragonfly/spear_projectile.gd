@@ -20,15 +20,16 @@ func _physics_process(_delta: float):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	var enemy = "res://Script-Dragonfly/enemy.tscn"
-	if body.is_in_group("enemy"):
-		if enemy: return
+	if body.is_in_group("player2"):
+		#if enemy: return
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 50.0, 1.0)
 		body.Take_Damage(2)
 		queue_free()
 		#if enemy: return
 	else:
-		if body.is_in_group("Player"):
+		if body.is_in_group("Player1"):
+			#if enemy: return
 			var knockback_direction = (body.global_position - global_position).normalized()
 			body.apply_knockback(knockback_direction, 200.0, 1.0)
 			body.Take_Damage(2)

@@ -7,8 +7,7 @@ var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 @onready var main = get_tree().get_root().get_node(".")
 @onready var projectile = load("res://Script-Dragonfly/spear_projectile.tscn")
-func _init(p_id := 2):
-	player_id = p_id
+
 
 var Lives = 3
 var MaxHealth = 20
@@ -55,6 +54,14 @@ var banner_textures = {
 }
 var Knockback: Vector2 = Vector2.ZERO
 var Knockback_timer: float = 0.0
+
+func _ready() -> void:
+	if player_id == 1:
+		add_to_group("Player1")
+		print("hi")
+	if player_id == 2:
+		add_to_group("Player2")
+		print("hello")
 
 func apply_knockback(direction: Vector2, force: float, knockback_duration: float) -> void:
 	Knockback = direction * force
