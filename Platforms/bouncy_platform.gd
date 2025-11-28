@@ -11,5 +11,6 @@ func apply_knockback(knockbackDirection: Vector2, force: float, knockback_durati
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	$Mushroom.play("Bounce")
 	var knockback_direction = (body.global_position - global_position).normalized()
 	body.apply_knockback(knockback_direction, Force, 0.1)
