@@ -1685,4 +1685,4 @@ position = Vector2(87, -422)
 sprite_frames = SubResource("SpriteFrames_0mbv8")
 animation = &"Grab&Sting"
 frame = 18
-frame_progress = 0.19690268
+frame_progress = 0.196903
