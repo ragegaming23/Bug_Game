@@ -32,49 +32,47 @@ size = Vector2(219.98584, 5.9532127)
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_dntir")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(-32, 249)
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_iemxh")]
+[node name="StaticBody2D" parent="." instance=ExtResource("2_iemxh")]
 position = Vector2(256, 209)
 scale = Vector2(5, 1)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("2_iemxh")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_iemxh")]
 position = Vector2(-312, 209)
 scale = Vector2(5, 1)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor2" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(-714, 7)
 rotation = -1.5707964
 scale = Vector2(1, 10)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor3" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(632, 12)
 rotation = 1.5707964
 scale = Vector2(1, 10)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor4" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(-30, -25)
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor5" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(-314, 6)
 scale = Vector2(5, 1)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("1_8tuof")]
+[node name="Floor6" parent="." instance=ExtResource("1_8tuof")]
 position = Vector2(254, 12)
 scale = Vector2(5, 1)
 
-[node name="StaticBody2D9" parent="." instance=ExtResource("3_317mm")]
+[node name="Mushroom" parent="." instance=ExtResource("3_317mm")]
 position = Vector2(-511.99994, 100)
 rotation = 0.7630469
-scale = Vector2(10.76, 1)
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("3_317mm")]
+[node name="Mushroom2" parent="." instance=ExtResource("3_317mm")]
 position = Vector2(435, 122.00009)
 rotation = -0.66026366
-scale = Vector2(6.9999976, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-5, -2)

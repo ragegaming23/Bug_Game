@@ -204,6 +204,11 @@ func Spearthrow():
 	instance.SpawnRot = rotation
 	instance.Zdex = z_index -1
 	main.add_child.call_deferred(instance)
+	await instance.ready
+	instance.get_node("Area2D/CollisionShape2D").set_disabled(true)
+	await get_tree().create_timer(.1).timeout
+	instance.get_node("Area2D/CollisionShape2D").set_disabled(false)
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

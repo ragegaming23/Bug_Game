@@ -1800,6 +1800,7 @@ position = Vector2(59.00001, -60.500004)
 rotation = -1.5708
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0cawu")
+disabled = true
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(12, -86)
@@ -1926,49 +1927,61 @@ metadata/_custom_type_script = "uid://bspcpd1iwyono"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(14, -104)
 shape = SubResource("RectangleShape2D_swvmt")
+disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(17.375, -120)
 shape = SubResource("RectangleShape2D_pa3gu")
+disabled = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(26, -133)
 shape = SubResource("RectangleShape2D_3jc7p")
+disabled = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 position = Vector2(34, -104)
 shape = SubResource("RectangleShape2D_0dhev")
+disabled = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
 position = Vector2(30, -119.5)
 shape = SubResource("RectangleShape2D_8b4ch")
+disabled = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
 position = Vector2(44, -118)
 shape = SubResource("RectangleShape2D_hh6u2")
+disabled = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
 position = Vector2(33, -87.5)
 shape = SubResource("RectangleShape2D_jmonk")
+disabled = true
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
 position = Vector2(40.5, -90)
 shape = SubResource("RectangleShape2D_hmovo")
+disabled = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
 position = Vector2(46, -104)
 shape = SubResource("RectangleShape2D_2rqyc")
+disabled = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
 position = Vector2(50, -107.5)
 shape = SubResource("RectangleShape2D_fo03f")
+disabled = true
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
 position = Vector2(53, -113)
 shape = SubResource("RectangleShape2D_t1djd")
+disabled = true
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
 position = Vector2(34, -131.5)
 shape = SubResource("RectangleShape2D_aki2f")
+disabled = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -14,6 +14,7 @@ func enter() -> void:
 	##$Animantis.stop("punch")
 	#get_node("../../Area2D/SpearThrow Damage").disabled = true
 	player.Spearthrow()
+	
 	pass
 	
 func exit() -> void:
