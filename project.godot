@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Bug_Game"
 run/main_scene="uid://cg2ch8yn4qy1r"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
