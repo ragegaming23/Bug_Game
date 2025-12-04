@@ -447,6 +447,7 @@ properties/0/spawn = true
 properties/0/replication_mode = 1
 
 [node name="Test player" type="CharacterBody2D" groups=["Player"]]
+modulate = Color(0.09803922, 1, 1, 1)
 script = ExtResource("1_ecflg")
 
 [node name="Animantis" type="AnimatedSprite2D" parent="."]

@@ -1,0 +1,582 @@
+[gd_scene load_steps=110 format=3 uid="uid://de0qjoon4sn3i"]
+
+[ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_b80ql"]
+[ext_resource type="Texture2D" uid="uid://dh8hucjw03tr" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0001.png" id="2_o8w55"]
+[ext_resource type="Texture2D" uid="uid://cthfur5cv3ska" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0002.png" id="3_i8ci3"]
+[ext_resource type="Texture2D" uid="uid://cjxk13l1utqiv" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0003.png" id="4_u3rri"]
+[ext_resource type="Texture2D" uid="uid://cr47mokligha6" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Praying_Mantis_antiair0004.png" id="5_2di3c"]
+[ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="6_mtypb"]
+[ext_resource type="Texture2D" uid="uid://bfu3yvq70vqte" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0001.png" id="7_wwtv6"]
+[ext_resource type="Texture2D" uid="uid://bry2jd30121m" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0002.png" id="8_dlib5"]
+[ext_resource type="Texture2D" uid="uid://bukoohwxu50ym" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0003.png" id="9_uj2r8"]
+[ext_resource type="Texture2D" uid="uid://dwpe4wr7l86mw" path="res://Fighters/Praying Mantis/Praying Mantis DEATH/Praying_Mantis_DEATH0004.png" id="10_xihrj"]
+[ext_resource type="Texture2D" uid="uid://bxtpn8tan5748" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0001.png" id="11_e716h"]
+[ext_resource type="Texture2D" uid="uid://c8whbhbfgisuj" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0002.png" id="12_pr7mo"]
+[ext_resource type="Texture2D" uid="uid://bi2au7he0a8l6" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0003.png" id="13_hfpii"]
+[ext_resource type="Texture2D" uid="uid://v3ceje0txufg" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0004.png" id="14_nwcfm"]
+[ext_resource type="Texture2D" uid="uid://bms7kdg2mpk42" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0005.png" id="15_1ohc5"]
+[ext_resource type="Texture2D" uid="uid://dij75of3j8f4d" path="res://Fighters/Praying Mantis/Praying Mantis FLINCH/Praying_Mantis_Flinch0006.png" id="16_8yfm7"]
+[ext_resource type="Texture2D" uid="uid://b8tko4qwn7tvv" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0001.png" id="17_jjejh"]
+[ext_resource type="Texture2D" uid="uid://dinufbmxg7amq" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0002.png" id="18_7witg"]
+[ext_resource type="Texture2D" uid="uid://livijnif4s0h" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0003.png" id="19_odc4l"]
+[ext_resource type="Texture2D" uid="uid://bj8b8tygsbyjf" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0004.png" id="20_weoo3"]
+[ext_resource type="Texture2D" uid="uid://dwvmnmjcp15te" path="res://Fighters/Praying Mantis/Mantis HEADBUT/Praying_Mantis_headbut0005.png" id="21_8gk57"]
+[ext_resource type="Texture2D" uid="uid://iftoxfabbop2" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20001.png" id="22_n3gvj"]
+[ext_resource type="Texture2D" uid="uid://b57bmsdu0rhyg" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20002.png" id="23_7vkx2"]
+[ext_resource type="Texture2D" uid="uid://dqvtqf6yc85go" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20003.png" id="24_vx6jr"]
+[ext_resource type="Texture2D" uid="uid://c7eos8ecrkh43" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20004.png" id="25_lfnl1"]
+[ext_resource type="Texture2D" uid="uid://byok2x7p75n8r" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20005.png" id="26_7mtwa"]
+[ext_resource type="Texture2D" uid="uid://b2jkwl3nyg24i" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20006.png" id="27_ds4e6"]
+[ext_resource type="Texture2D" uid="uid://0c23croq5x7b" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20007.png" id="28_shxwy"]
+[ext_resource type="Texture2D" uid="uid://bfj8nnb1on1jp" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20008.png" id="29_t2geo"]
+[ext_resource type="Texture2D" uid="uid://h4vfncbtdd25" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20009.png" id="30_420bj"]
+[ext_resource type="Texture2D" uid="uid://1fbo6ibo33mg" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20010.png" id="31_366pp"]
+[ext_resource type="Texture2D" uid="uid://bwo7dpcjvm4sr" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20011.png" id="32_t4g8q"]
+[ext_resource type="Texture2D" uid="uid://dysg6baf426ak" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20012.png" id="33_33kj6"]
+[ext_resource type="Texture2D" uid="uid://b8anhk1xhgua" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20013.png" id="34_qwbe5"]
+[ext_resource type="Texture2D" uid="uid://yi0qbcvynowt" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20014.png" id="35_4tj3n"]
+[ext_resource type="Texture2D" uid="uid://b44nb02smq167" path="res://Fighters/Praying Mantis/Praying Mantis_IDLE/Praying_Mantis_idle20015.png" id="36_3wjji"]
+[ext_resource type="Texture2D" uid="uid://0dcq4wco23cu" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0001.png" id="37_5x3cd"]
+[ext_resource type="Texture2D" uid="uid://b3a05ni2pmyae" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0002.png" id="38_4q5cl"]
+[ext_resource type="Texture2D" uid="uid://bkbnx3a4yvs7q" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0003.png" id="39_yp424"]
+[ext_resource type="Texture2D" uid="uid://dtncvdrux8q2r" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0004.png" id="40_sdg7l"]
+[ext_resource type="Texture2D" uid="uid://bopxwhds7d6w4" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0005.png" id="41_7t5x3"]
+[ext_resource type="Texture2D" uid="uid://ctbx5li6n1rjw" path="res://Fighters/Praying Mantis/Praying Mantis JUMP/Praying_Mantis_Jump0006.png" id="42_0kwi2"]
+[ext_resource type="Texture2D" uid="uid://mrsi2ws4g1l2" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20001.png" id="43_bh5hi"]
+[ext_resource type="Texture2D" uid="uid://bo7p6l2fjouyt" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20002.png" id="44_intxx"]
+[ext_resource type="Texture2D" uid="uid://ci6lsk7de67rv" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20003.png" id="45_a8pob"]
+[ext_resource type="Texture2D" uid="uid://b4dcg4eggi83w" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20004.png" id="46_eh013"]
+[ext_resource type="Texture2D" uid="uid://bn75tcd5niieb" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20005.png" id="47_mkykh"]
+[ext_resource type="Texture2D" uid="uid://cnxv6qeakx6sj" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20006.png" id="48_5xbdh"]
+[ext_resource type="Texture2D" uid="uid://mykc2irtjpy7" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20007.png" id="49_36bfa"]
+[ext_resource type="Texture2D" uid="uid://dn7ygdn8fm2vb" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20008.png" id="50_udee7"]
+[ext_resource type="Texture2D" uid="uid://tr4e73lr8l11" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20009.png" id="51_pmekd"]
+[ext_resource type="Texture2D" uid="uid://b5d4e1isnjo3e" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20010.png" id="52_d68nq"]
+[ext_resource type="Texture2D" uid="uid://c2v68oyo7uma4" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20011.png" id="53_kg357"]
+[ext_resource type="Texture2D" uid="uid://d2aeaadv0iwhi" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20012.png" id="54_p5nc3"]
+[ext_resource type="Texture2D" uid="uid://byovp54mji3qj" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20013.png" id="55_hxjw2"]
+[ext_resource type="Texture2D" uid="uid://dlxaec0qphr87" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20014.png" id="56_bb7hi"]
+[ext_resource type="Texture2D" uid="uid://cq3psv11xh650" path="res://Fighters/Praying Mantis/Mantis MULTISLASH/Praying_Mantis_Multi-Slash20015.png" id="57_a2w6j"]
+[ext_resource type="Texture2D" uid="uid://dh3asfg6n0pmb" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0001.png" id="58_v5cnd"]
+[ext_resource type="Texture2D" uid="uid://bxuyiediye3u8" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0002.png" id="59_fueoi"]
+[ext_resource type="Texture2D" uid="uid://b43dy83rcq3jp" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0003.png" id="60_t5igh"]
+[ext_resource type="Texture2D" uid="uid://onw73st0qmgl" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0004.png" id="61_hgyty"]
+[ext_resource type="Texture2D" uid="uid://syjp7wpmf4ws" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0001.png" id="62_oonu7"]
+[ext_resource type="Texture2D" uid="uid://doyga1hiex37n" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0002.png" id="63_kmf3m"]
+[ext_resource type="Texture2D" uid="uid://djbw3c2b5u6is" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0003.png" id="64_qhu6r"]
+[ext_resource type="Texture2D" uid="uid://drlv3qfdv8xv" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0004.png" id="65_31gv8"]
+[ext_resource type="Texture2D" uid="uid://dd70rgwjv6jd3" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0005.png" id="66_2qa7e"]
+[ext_resource type="Texture2D" uid="uid://b4slyi4r22lnh" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0006.png" id="67_y1c8j"]
+[ext_resource type="Texture2D" uid="uid://bpwxlgtifjgw2" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0007.png" id="68_che26"]
+[ext_resource type="Texture2D" uid="uid://cl2cs66cyyil4" path="res://Fighters/Praying Mantis/Praying Mantis SLASH/Praying_Mantis_Slash0008.png" id="69_lcejj"]
+[ext_resource type="Texture2D" uid="uid://bcp4ujfrgsivl" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20001.png" id="70_nu3bn"]
+[ext_resource type="Texture2D" uid="uid://cu6wecytdsye6" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20002.png" id="71_hjs12"]
+[ext_resource type="Texture2D" uid="uid://sjwg1so1xni7" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20003.png" id="72_a0l68"]
+[ext_resource type="Texture2D" uid="uid://bldeus1a306dq" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20004.png" id="73_wewa4"]
+[ext_resource type="Texture2D" uid="uid://dqyu6xfl51ii7" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20005.png" id="74_2jqg6"]
+[ext_resource type="Texture2D" uid="uid://bvvd2v6vysxes" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20006.png" id="75_cehsl"]
+[ext_resource type="Texture2D" uid="uid://clbhebnicqsb1" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20007.png" id="76_sgahu"]
+[ext_resource type="Texture2D" uid="uid://cxdo14h4ohoj8" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20008.png" id="77_xv6e4"]
+[ext_resource type="Texture2D" uid="uid://c4qn1wprjcgf0" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20009.png" id="78_upyj6"]
+[ext_resource type="Texture2D" uid="uid://cnor0j2sk3ef0" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20010.png" id="79_ph3br"]
+[ext_resource type="Texture2D" uid="uid://bnhc8jryouvax" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20011.png" id="80_mlf8l"]
+[ext_resource type="Texture2D" uid="uid://c5iaidfvjow1p" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20012.png" id="81_wi87v"]
+[ext_resource type="Texture2D" uid="uid://dxieyqdau06c0" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20013.png" id="82_tq2xj"]
+[ext_resource type="Texture2D" uid="uid://b6tsi2b8iys25" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20014.png" id="83_ii54d"]
+[ext_resource type="Texture2D" uid="uid://d2pqj85fihg07" path="res://Fighters/Praying Mantis/Praying Mantis Walk 2/Praying_Mantis_Walk20015.png" id="84_tvodr"]
+[ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="85_owk3j"]
+[ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="86_ytxgs"]
+[ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="87_xfung"]
+[ext_resource type="Script" uid="uid://d38crnj0nwfs2" path="res://StateMachine/Mantis states/idle.gd" id="88_hevqo"]
+[ext_resource type="Script" uid="uid://dcs8d7ipyyslc" path="res://StateMachine/Mantis states/jump.gd" id="89_elxvr"]
+[ext_resource type="Script" uid="uid://tvt1myocn8hm" path="res://StateMachine/Mantis states/movement.gd" id="90_rph8s"]
+[ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://StateMachine/attack_states.gd" id="91_nw7c7"]
+[ext_resource type="Script" uid="uid://dlbn23u66prbe" path="res://StateMachine/no_attack.gd" id="92_8eg6a"]
+[ext_resource type="Script" uid="uid://cs7k1wkg02pel" path="res://StateMachine/Mantis states/punch.gd" id="93_16euv"]
+[ext_resource type="Script" uid="uid://ole1vaxxid0q" path="res://StateMachine/Mantis states/slash.gd" id="94_5tsd0"]
+[ext_resource type="Script" uid="uid://cybxrlovst5lv" path="res://StateMachine/Mantis states/multislash.gd" id="95_xdvyv"]
+[ext_resource type="Script" uid="uid://haln38fuu10p" path="res://StateMachine/Mantis states/headbut.gd" id="96_ew7fj"]
+[ext_resource type="Script" uid="uid://c15adkg7v5til" path="res://StateMachine/Mantis states/block.gd" id="97_0xgt1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20rux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o8w55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i8ci3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u3rri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2di3c")
+}],
+"loop": true,
+"name": &"antiair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mtypb")
+}],
+"loop": true,
+"name": &"block",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_wwtv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dlib5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uj2r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xihrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xihrj")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_e716h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pr7mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hfpii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nwcfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1ohc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8yfm7")
+}],
+"loop": false,
+"name": &"flinch",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jjejh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7witg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_odc4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_weoo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8gk57")
+}],
+"loop": false,
+"name": &"headbut",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_n3gvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7vkx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vx6jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lfnl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7mtwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ds4e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_shxwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_t2geo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_420bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_366pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_t4g8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_33kj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qwbe5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4tj3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3wjji")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_5x3cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4q5cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_yp424")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_sdg7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7t5x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0kwi2")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_bh5hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_intxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_a8pob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_eh013")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_mkykh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_5xbdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_36bfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_udee7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_pmekd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_d68nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kg357")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_p5nc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_hxjw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_bb7hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_a2w6j")
+}],
+"loop": false,
+"name": &"multislash",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_v5cnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_fueoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_t5igh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hgyty")
+}],
+"loop": true,
+"name": &"punch",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_oonu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_kmf3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_qhu6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_31gv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_2qa7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_y1c8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_che26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_lcejj")
+}],
+"loop": false,
+"name": &"slash",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_nu3bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_hjs12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_a0l68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_wewa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_2jqg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_cehsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_sgahu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_xv6e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_upyj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_ph3br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_mlf8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_wi87v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_tq2xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ii54d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_tvodr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 17.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk prep",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uc3h"]
+size = Vector2(12, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjc8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqtej"]
+size = Vector2(20.784607, 27.563034)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4fcr"]
+size = Vector2(34.500015, 22.999949)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d42gp"]
+size = Vector2(127, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa75d"]
+size = Vector2(79, 37.489285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
+size = Vector2(84, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvjqa"]
+size = Vector2(23.5, 93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spbgj"]
+size = Vector2(22, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5wc2"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_86wen"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Test player" type="CharacterBody2D" groups=["Player"]]
+modulate = Color(0.09803922, 1, 1, 1)
+script = ExtResource("1_b80ql")
+
+[node name="Animantis" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_20rux")
+animation = &"slash"
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 5)
+shape = SubResource("RectangleShape2D_3uc3h")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(22, -20)
+shape = SubResource("RectangleShape2D_qjc8k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-21.999998, 17)
+scale = Vector2(2.2253942, 0.6263155)
+shape = SubResource("RectangleShape2D_dqtej")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+position = Vector2(42, -27)
+rotation = 1.5707941
+shape = SubResource("RectangleShape2D_s4fcr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22.5, 46.5)
+shape = SubResource("RectangleShape2D_d42gp")
+
+[node name="ArmCollision" type="CollisionShape2D" parent="."]
+position = Vector2(39.5, 8.402588)
+shape = SubResource("RectangleShape2D_qa75d")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(4.76837e-07, 4.76837e-07)
+
+[node name="Punch Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(83, -5)
+shape = SubResource("RectangleShape2D_s8wov")
+disabled = true
+
+[node name="Slash Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100.25, 6)
+shape = SubResource("RectangleShape2D_cvjqa")
+disabled = true
+
+[node name="MultiSlash Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(120, 6)
+shape = SubResource("RectangleShape2D_spbgj")
+disabled = true
+
+[node name="HeadBut Damage" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(69, -9)
+shape = SubResource("RectangleShape2D_i5wc2")
+disabled = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_86wen")
+
+[node name="HealthSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("85_owk3j")
+
+[node name="HitSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("86_ytxgs")
+
+[node name="Movement States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("87_xfung")
+initial_state = NodePath("idle")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="idle" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("88_hevqo")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="jump" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("89_elxvr")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="movement" type="Node" parent="Movement States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("90_rph8s")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="Attack States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("91_nw7c7")
+initial_state = NodePath("No_Attack")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="No_Attack" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("92_8eg6a")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="punch" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("93_16euv")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="slash" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("94_5tsd0")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="multislash" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("95_xdvyv")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="headbut" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("96_ew7fj")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="block" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("97_0xgt1")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

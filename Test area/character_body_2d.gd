@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-# ---------------- PLAYER DATA ----------------
 @export var player_id: int = 1
 @export var max_health: int = 100
 @export var move_speed: float = 300.0
@@ -9,16 +8,13 @@ extends CharacterBody2D
 var current_health: int
 var lives: int = 3
 
-# ---------------- COMBAT ----------------
 var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
-# ---------------- SIGNALS (FOR UI) ----------------
 signal health_changed(current, max)
 signal lives_changed(lives)
 signal died
 
-# ---------------- READY ----------------
 func _ready():
 	current_health = max_health
 	
@@ -35,7 +31,6 @@ func _ready():
 	emit_signal("lives_changed", lives)
 
 
-# ---------------- DAMAGE SYSTEM ----------------
 func take_damage(dmg: int):
 	current_health = max(current_health - dmg, 0)
 
@@ -56,14 +51,12 @@ func lose_life():
 		$Animantis.play("death")
 
 	if lives > 0:
-		# Reset for next life
 		current_health = max_health
 		emit_signal("health_changed", current_health, max_health)
 	else:
 		die()
 
 
-# ---------------- DEATH ----------------
 func die():
 	emit_signal("died")
 
@@ -72,8 +65,6 @@ func die():
 	else:
 		get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn")
 
-
-# ---------------- KNOCKBACK ----------------
 func apply_knockback(direction: Vector2, force: float, duration: float):
 	knockback = direction * force
 	knockback_timer = duration
@@ -82,7 +73,6 @@ func apply_knockback(direction: Vector2, force: float, duration: float):
 		$Animantis.play("flinch")
 
 
-# ---------------- MOVEMENT ----------------
 func _physics_process(delta):
 	if knockback_timer > 0:
 		velocity = knockback
@@ -94,11 +84,9 @@ func _physics_process(delta):
 
 
 func _movement(_delta: float):
-	# Your movement logic goes here
 	pass
 
 
-# ---------------- COLLISION DAMAGE ----------------
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("enemy") or body.is_in_group("player"):
 		var direction = (body.global_position - global_position).normalized()
