@@ -33,7 +33,6 @@ script = ExtResource("1_wgam1")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(-169, 253)
-scale = Vector2(10, 1)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_wgam1")]
 position = Vector2(-433, 92.99994)
@@ -50,12 +49,10 @@ scale = Vector2(20, 1)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(439, 149)
-scale = Vector2(5, 1)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(535, -155)
 rotation = -1.309
-scale = Vector2(10, 1)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("2_wgam1")]
 position = Vector2(183, -67)
@@ -153,3 +150,13 @@ position = Vector2(6.000061, -342.99997)
 rotation = 3.14159
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_oi554")
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_hj4m8")]
+position = Vector2(-212, 253)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_hj4m8")]
+position = Vector2(481, 149)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_hj4m8")]
+position = Vector2(522, -112.999985)
+rotation = -1.3089969

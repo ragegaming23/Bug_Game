@@ -36,7 +36,7 @@ func _ready() -> void:
 	emit_signal("lives_changed", lives)
 
 
-func take_damage(dmg: int) -> void:
+func Take_Damage(dmg: int) -> void:
 	current_health = max(current_health - dmg, 0)
 
 	if has_node("HealthSFX"):
@@ -111,5 +111,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if body.has_method("apply_knockback"):
 			body.apply_knockback(direction, 200.0, 1.0)
 
-		if body.has_method("take_damage"):
-			body.take_damage(1)
+		if body.has_method("Take_Damage"):
+			body.Take_Damage(1)

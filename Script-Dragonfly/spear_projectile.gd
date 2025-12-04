@@ -19,7 +19,6 @@ func _physics_process(_delta: float):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	var enemy = "res://Script-Dragonfly/enemy.tscn"
 	if body.is_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 50.0, 1.0)

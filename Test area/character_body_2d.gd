@@ -31,15 +31,9 @@ func _ready():
 	emit_signal("lives_changed", lives)
 
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
 # ---------------- DAMAGE SYSTEM ----------------
 func Take_Damage(dmg: int):
-=======
->>>>>>> Stashed changes
-func take_damage(dmg: int):
->>>>>>> 5cd558f7a616be90e4f0c29bdd9b6b6ce844b99e
 	current_health = max(current_health - dmg, 0)
 
 	if has_node("HealthSFX"):
@@ -96,11 +90,16 @@ func _movement(_delta: float):
 
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("enemy") or body.is_in_group("player"):
+	if body.is_in_group("enemy") :
 		var direction = (body.global_position - global_position).normalized()
-
 		if body.has_method("apply_knockback"):
 			body.apply_knockback(direction, 200.0, 1.0)
-
 		if body.has_method("take_damage"):
 			body.Take_Damage(1)
+	else: 
+		if body.is_in_group("player"):
+			var direction = (body.global_position - global_position).normalized()
+			if body.has_method("apply_knockback"):
+				body.apply_knockback(direction, 200.0, 1.0)
+			if body.has_method("take_damage"):
+				body.Take_Damage(1)

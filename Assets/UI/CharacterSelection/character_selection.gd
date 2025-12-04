@@ -18,6 +18,7 @@ func _ready() -> void:
 func _on_mantis_pressed() -> void:
 	_set_player_choice("Mantis")
 
+
 func _on_dragonfly_pressed() -> void:
 	_set_player_choice("Dragonfly")
 
