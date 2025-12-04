@@ -1729,13 +1729,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cawu"]
-size = Vector2(14.999998, 72)
+size = Vector2(15, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_winqv"]
-size = Vector2(15.439499, 34.434437)
+size = Vector2(15.4395, 34.4344)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnrsl"]
-size = Vector2(44.000023, 65)
+size = Vector2(44, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px1sc"]
 size = Vector2(20.375, 14.5)
@@ -1787,30 +1787,30 @@ size = Vector2(4, 20)
 size = Vector2(2, 11)
 
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
-modulate = Color(0.91764706, 0.57254905, 1, 1)
+modulate = Color(0.917647, 0.572549, 1, 1)
 script = ExtResource("1_sogp8")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
-position = Vector2(28.199993, -81.20001)
+position = Vector2(28.2, -81.2)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Dragonfly_Idle"
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
-position = Vector2(59.00001, -60.500004)
+position = Vector2(59, -60.5)
 rotation = -1.5708
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0cawu")
 disabled = true
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(12, -86)
-rotation = -1.5707964
-scale = Vector2(0.9999998, 0.9999998)
+rotation = -1.5708
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_winqv")
 
 [node name="body" type="CollisionShape2D" parent="."]
-position = Vector2(-7.4999914, -57.000042)
+position = Vector2(-7.49999, -57)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_hnrsl")
 
@@ -1818,39 +1818,39 @@ shape = SubResource("RectangleShape2D_hnrsl")
 position = Vector2(-0.5, -65)
 
 [node name="Jab Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-64.3, -0.2000122)
+position = Vector2(-64.3, -0.200012)
 shape = SubResource("RectangleShape2D_px1sc")
 disabled = true
 
 [node name="BicycleKick Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-64.3, -0.2000122)
+position = Vector2(-64.3, -0.200012)
 shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
 
 [node name="BicycleKick2 Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-30.300003, -54.200005)
-rotation = 1.097812
+position = Vector2(-30.3, -54.2)
+rotation = 1.09781
 shape = SubResource("RectangleShape2D_m6jha")
 disabled = true
 
 [node name="SpearThrow Damage" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-64.5, 21)
-scale = Vector2(0.37049568, -0.2469888)
+scale = Vector2(0.370496, -0.246989)
 shape = SubResource("RectangleShape2D_ufpjl")
 disabled = true
 
 [node name="SpearSpin Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-38.300003, -0.2000122)
+position = Vector2(-38.3, -0.200012)
 shape = SubResource("RectangleShape2D_dsqk6")
 disabled = true
 
 [node name="WindDust Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-20.300003, -0.2000122)
+position = Vector2(-20.3, -0.200012)
 shape = SubResource("RectangleShape2D_yw6kr")
 disabled = true
 
 [node name="WindDust2 Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-56.300003, -0.2000122)
+position = Vector2(-56.3, -0.200012)
 shape = SubResource("RectangleShape2D_yw6kr")
 disabled = true
 

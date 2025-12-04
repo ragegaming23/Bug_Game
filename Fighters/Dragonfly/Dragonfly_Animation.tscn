@@ -1377,7 +1377,7 @@ animations = [{
 "duration": 0.2,
 "texture": ExtResource("317_tu12j")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_New_Jab",
 "speed": 5.0
 }, {
@@ -1648,4 +1648,5 @@ animations = [{
 position = Vector2(87, -422)
 sprite_frames = SubResource("SpriteFrames_0mbv8")
 animation = &"Dragonfly_SpearSpin"
-frame_progress = 0.936275
+frame = 8
+frame_progress = 0.730975

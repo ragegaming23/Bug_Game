@@ -55,7 +55,7 @@ offset_left = 553.0
 offset_top = 366.0
 offset_right = 595.0
 offset_bottom = 397.0
-scale = Vector2(0.7896468, 0.8199724)
+scale = Vector2(0.789647, 0.819972)
 text = "Quit"
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
@@ -65,7 +65,7 @@ autoplay = true
 
 [node name="CreepyBrawlersTittle" type="Sprite2D" parent="."]
 position = Vector2(557, 285)
-scale = Vector2(0.19564618, 0.11743343)
+scale = Vector2(0.195646, 0.117433)
 texture = ExtResource("11_0lkms")
 
 [node name="LoadingScreen" type="TextureRect" parent="."]
