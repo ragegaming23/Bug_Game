@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-# ---------------- PLAYER DATA ----------------
 @export var player_id: int = 2
 @export var max_health: int = 20
 @export var move_speed: float = 300.0
@@ -14,17 +13,14 @@ var lives: int = 3
 @onready var main = get_tree().get_root().get_node(".")
 @onready var projectile = preload("res://Script-Dragonfly/spear_projectile.tscn")
 
-# ---------------- COMBAT ----------------
 var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
-# ---------------- SIGNALS (FOR UI) ----------------
 signal health_changed(current, max)
 signal lives_changed(lives)
 signal died
 
 
-# ---------------- READY ----------------
 func _ready() -> void:
 	current_health = max_health
 
@@ -40,7 +36,6 @@ func _ready() -> void:
 	emit_signal("lives_changed", lives)
 
 
-# ---------------- DAMAGE ----------------
 func take_damage(dmg: int) -> void:
 	current_health = max(current_health - dmg, 0)
 
@@ -69,7 +64,6 @@ func lose_life() -> void:
 		die()
 
 
-# ---------------- DEATH ----------------
 func die() -> void:
 	emit_signal("died")
 
@@ -79,7 +73,6 @@ func die() -> void:
 		get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn")
 
 
-# ---------------- KNOCKBACK ----------------
 func apply_knockback(direction: Vector2, force: float, duration: float) -> void:
 	knockback = direction * force
 	knockback_timer = duration
@@ -87,8 +80,6 @@ func apply_knockback(direction: Vector2, force: float, duration: float) -> void:
 	if has_node("AnimDragonfly"):
 		$AnimDragonfly.play("flinch")
 
-
-# ---------------- MOVEMENT ----------------
 func _physics_process(delta: float) -> void:
 	if knockback_timer > 0:
 		velocity = knockback
@@ -97,7 +88,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-# ---------------- PROJECTILE ----------------
 func Spearthrow() -> void:
 	var instance = projectile.instantiate()
 
@@ -114,7 +104,6 @@ func Spearthrow() -> void:
 	instance.get_node("Area2D/CollisionShape2D").set_disabled(false)
 
 
-# ---------------- COLLISION DAMAGE ----------------
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player_1") or body.is_in_group("player_2") or body.is_in_group("enemy"):
 		var direction = (body.global_position - global_position).normalized()
