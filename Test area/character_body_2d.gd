@@ -1,141 +1,110 @@
-extends CharacterBody2D 
+extends CharacterBody2D
 
-@export var player_id = 1
-#@onready var healthbar = get_node("res://Health Bar/health_bar.tscn")
-@export var  Lives = 3
-const Name = "player"
-@export var SPEED = 300.0
-@export var JUMP_VELOCITY = -400.0
+# ---------------- PLAYER DATA ----------------
+@export var player_id: int = 1
+@export var max_health: int = 100
+@export var move_speed: float = 300.0
+@export var jump_force: float = -400.0
 
-func _init(p_id := 1):
-	player_id = p_id
+var current_health: int
+var lives: int = 3
+
+# ---------------- COMBAT ----------------
+var knockback: Vector2 = Vector2.ZERO
+var knockback_timer: float = 0.0
+
+# ---------------- SIGNALS (FOR UI) ----------------
+signal health_changed(current, max)
+signal lives_changed(lives)
+signal died
+
+# ---------------- READY ----------------
+func _ready():
+	current_health = max_health
 	
-var MaxHealth = 20
-var Health = 20
+	if player_id == 1:
+		add_to_group("player_1")
+		print("Added to player_1 group")
 
-@export var max_health: int = 20
-var current_health: int = max_health
+	elif player_id == 2:
+		add_to_group("player_2")
+		print("Added to player_2 group")
 
-@onready var HealthBar = $"../HealthBar1"
+	# Fire starting values for UI
+	emit_signal("health_changed", current_health, max_health)
+	emit_signal("lives_changed", lives)
 
-@onready var lives_ui = $"../P1LivesUI"
 
-@onready var health_textures = [
-	preload("res://Assets/Health Bar/New Health Bar/0.png"),
-	preload("res://Assets/Health Bar/New Health Bar/5.png"),
-	preload("res://Assets/Health Bar/New Health Bar/10.png"),
-	preload("res://Assets/Health Bar/New Health Bar/15.png"),
-	preload("res://Assets/Health Bar/New Health Bar/20.png"),
-	preload("res://Assets/Health Bar/New Health Bar/25.png"),
-	preload("res://Assets/Health Bar/New Health Bar/30.png"),
-	preload("res://Assets/Health Bar/New Health Bar/35.png"),
-	preload("res://Assets/Health Bar/New Health Bar/40.png"),
-	preload("res://Assets/Health Bar/New Health Bar/45.png"),
-	preload("res://Assets/Health Bar/New Health Bar/50.png"),
-	preload("res://Assets/Health Bar/New Health Bar/55.png"),
-	preload("res://Assets/Health Bar/New Health Bar/60.png"),
-	preload("res://Assets/Health Bar/New Health Bar/65.png"),
-	preload("res://Assets/Health Bar/New Health Bar/70.png"),
-	preload("res://Assets/Health Bar/New Health Bar/75.png"),
-	preload("res://Assets/Health Bar/New Health Bar/80.png"),
-	preload("res://Assets/Health Bar/New Health Bar/85.png"),
-	preload("res://Assets/Health Bar/New Health Bar/90.png"),
-	preload("res://Assets/Health Bar/New Health Bar/95.png"),
-	preload("res://Assets/Health Bar/New Health Bar/100.png"),
-]
+# ---------------- DAMAGE SYSTEM ----------------
+func take_damage(dmg: int):
+	current_health = max(current_health - dmg, 0)
 
-@onready var banner = $"../P1LivesUI/MbannerYellow"
+	if has_node("HealthSFX"):
+		$HealthSFX.play()
 
-var banner_textures = {
-	3: preload("res://Assets/Health Bar/banners/full health/MbannerYELLOW.png"),
-	2: preload ("res://Assets/Health Bar/banners/damaged/Myellowban2.png"),
-	1: preload ("res://Assets/Health Bar/banners/sappy/DbannerYELLA3.png"),
-	0: preload("res://Assets/Health Bar/banners/sappy/DbannerYELLA3.png"),
-	}
-var Knockback: Vector2 = Vector2.ZERO
-var Knockback_timer: float = 0.0
+	emit_signal("health_changed", current_health, max_health)
 
-func _enter_tree() -> void:
-	set_multiplayer_authority(name.to_int())
-
-func apply_knockback(knockbackDirection: Vector2, force: float, knockback_duration: float) -> void:
-	Knockback = knockbackDirection * force
-	Knockback_timer = knockback_duration
-	if $".": return
-	$Animantis.play("flinch")
-
-func _physics_process(delta: float) -> void:
-	#if !is_multiplayer_authority(): return
-	
-	if Knockback_timer > 0.0:
-		velocity = Knockback
-		Knockback_timer -= delta
-		if Knockback_timer <= 0.0:
-			Knockback = Vector2.ZERO
-	else:
-		_movement(delta)
-	
-	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
-
-func _movement(_delta:float) -> void:
-	
-	pass
-
-func Take_Damage(Damage: int):
-	current_health = max(current_health - Damage, 0)
-	
-	# Play damage sound
-	if $HealthSFX.playing:
-		$HealthSFX.stop()
-	$HealthSFX.play()
-	
-	update_healthbar()
-	
 	if current_health <= 0:
+		lose_life()
+
+
+func lose_life():
+	lives -= 1
+	emit_signal("lives_changed", lives)
+
+	if has_node("Animantis"):
 		$Animantis.play("death")
-		Lives -= 1
-		current_health += 20
-		update_lives_ui()
-		update_healthbar()
-		
-	if Lives <= 0:
+
+	if lives > 0:
+		# Reset for next life
+		current_health = max_health
+		emit_signal("health_changed", current_health, max_health)
+	else:
 		die()
 
-func update_lives_ui():
-	# Lives = 3 → show 2 icons
-	# Lives = 2 → show 1 icon
-	# Lives = 1 → show 0 icons (but still alive)
-	# Lives = 0 → dead
-	if lives_ui.has_node("Life1"):
-		lives_ui.get_node("Life1").visible = Lives >= 2
-	if lives_ui.has_node("Life2"):
-		lives_ui.get_node("Life2").visible = Lives >= 3
-	if banner:
-		if Lives in banner_textures:
-			banner.texture = banner_textures[Lives]
 
-func die() -> void:
-	get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Mantis_DeathVideo.tscn")
+# ---------------- DEATH ----------------
+func die():
+	emit_signal("died")
 
-func update_healthbar() -> void:
-	var health_ratio = float(current_health) / float(max_health)
-	var index = int(round(health_ratio * 20))  # 21 total textures
-	index = clamp(index, 0, health_textures.size() - 1)
-	HealthBar.texture = health_textures[index]
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemy"):
-		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 50.0, 1.0)
-		body.Take_Damage(1)
-		if $".": return
+	if player_id == 1:
+		get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Mantis_DeathVideo.tscn")
 	else:
-		if body.is_in_group("player"):
-			var knockback_direction = (body.global_position - global_position).normalized()
-			body.apply_knockback(knockback_direction, 200.0, 1.0)
-			body.Take_Damage(1)
+		get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn")
 
 
-#play(idle) 
+# ---------------- KNOCKBACK ----------------
+func apply_knockback(direction: Vector2, force: float, duration: float):
+	knockback = direction * force
+	knockback_timer = duration
+
+	if has_node("Animantis"):
+		$Animantis.play("flinch")
+
+
+# ---------------- MOVEMENT ----------------
+func _physics_process(delta):
+	if knockback_timer > 0:
+		velocity = knockback
+		knockback_timer -= delta
+	else:
+		_movement(delta)
+
+	move_and_slide()
+
+
+func _movement(_delta: float):
+	# Your movement logic goes here
+	pass
+
+
+# ---------------- COLLISION DAMAGE ----------------
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("enemy") or body.is_in_group("player"):
+		var direction = (body.global_position - global_position).normalized()
+
+		if body.has_method("apply_knockback"):
+			body.apply_knockback(direction, 200.0, 1.0)
+
+		if body.has_method("take_damage"):
+			body.take_damage(1)

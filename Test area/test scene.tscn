@@ -1,18 +1,10 @@
-[gd_scene load_steps=23 format=4 uid="uid://bicoui28vdrt1"]
+[gd_scene load_steps=15 format=4 uid="uid://bicoui28vdrt1"]
 
 [ext_resource type="Script" uid="uid://bvgxn0qu34wla" path="res://Test area/test_scene.gd" id="1_xw60q"]
 [ext_resource type="Texture2D" uid="uid://b17nkru8wmtb7" path="res://Stages/Moss-rocks.png" id="2_1ga5t"]
-[ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="5_8xd0e"]
-[ext_resource type="Texture2D" uid="uid://bd0pho3vpxfbi" path="res://Assets/Health Bar/New Health Bar/100.png" id="5_ywtjr"]
-[ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="7_1ga5t"]
-[ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="7_ywtjr"]
 [ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="8_nqsoe"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="8_of16h"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="9_w25ro"]
-[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/full health/MbannerYELLOW.png" id="14_lhl0s"]
-[ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="14_vjeew"]
-[ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_8xd0e"]
-[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/full health/DbannerBLUE.png" id="15_vjeew"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="18_6t5vm"]
 [ext_resource type="Texture2D" uid="uid://cnjf3hpeqasr2" path="res://Platforms/tile maps/Tile-Map_STONES.png" id="18_djvg0"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="19_djvg0"]
@@ -610,16 +602,6 @@ rotation = 3.14159
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_5figy")
 
-[node name="HealthBar2" type="Sprite2D" parent="."]
-position = Vector2(299.00006, 225.00003)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_8xd0e")
-script = ExtResource("7_1ga5t")
-
-[node name="HealthBar1" parent="." instance=ExtResource("7_ywtjr")]
-position = Vector2(-315.99994, 223.00003)
-texture = ExtResource("5_ywtjr")
-
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_nqsoe")
 volume_db = -10.0
@@ -637,42 +619,6 @@ position = Vector2(162, 98)
 
 [node name="Spawnpoint1" type="Marker2D" parent="."]
 position = Vector2(-160, 85)
-
-[node name="P2LivesUI" type="Node2D" parent="."]
-position = Vector2(-570, -321)
-
-[node name="DbannerBLUE" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(791.00006, 600)
-scale = Vector2(0.124653, 0.124653)
-texture = ExtResource("15_vjeew")
-
-[node name="Life1" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(772, 548.00006)
-scale = Vector2(0.04104162, 0.04104162)
-texture = ExtResource("15_8xd0e")
-
-[node name="Life2" type="Sprite2D" parent="P2LivesUI"]
-position = Vector2(809, 547)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("14_vjeew")
-
-[node name="P1LivesUI" type="Node2D" parent="."]
-position = Vector2(-570, -321)
-
-[node name="MbannerYellow" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(329, 599)
-scale = Vector2(0.124653, 0.124653)
-texture = ExtResource("14_lhl0s")
-
-[node name="Life1" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(308, 545)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("15_8xd0e")
-
-[node name="Life2" type="Sprite2D" parent="P1LivesUI"]
-position = Vector2(345, 545)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("14_vjeew")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(7, 1)

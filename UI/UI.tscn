@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://1ckng1l2ty8r"]
+
+[ext_resource type="Script" uid="uid://be4dsahmq3ln4" path="res://UI/ui.gd" id="1_byuxr"]
+[ext_resource type="Texture2D" uid="uid://bd0pho3vpxfbi" path="res://Assets/Health Bar/New Health Bar/100.png" id="2_d050y"]
+[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/Mantis/P1_full.png" id="3_byuxr"]
+[ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="4_vx7wu"]
+[ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="5_r2vy3"]
+[ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="6_qhxh2"]
+[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/Dragonfly/P2_full.png" id="7_017wa"]
+
+[node name="Ui" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_byuxr")
+
+[node name="P1_Bar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthTexture" type="TextureRect" parent="P1_Bar"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 399.00003
+offset_right = 2717.0
+offset_bottom = 2447.0
+scale = Vector2(0.12197317, 0.12197317)
+texture = ExtResource("2_d050y")
+
+[node name="Banner" type="TextureRect" parent="P1_Bar"]
+layout_mode = 0
+offset_left = 169.00002
+offset_top = 533.00006
+offset_right = 1449.0
+offset_bottom = 1253.0
+scale = Vector2(0.11238656, 0.11238656)
+texture = ExtResource("3_byuxr")
+
+[node name="Life1" type="TextureRect" parent="P1_Bar"]
+layout_mode = 0
+offset_left = 234.00002
+offset_top = 508.0
+offset_right = 1514.0
+offset_bottom = 1228.0
+scale = Vector2(0.041482877, 0.041482877)
+texture = ExtResource("4_vx7wu")
+
+[node name="Life2" type="TextureRect" parent="P1_Bar"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 508.0
+offset_right = 1472.0
+offset_bottom = 1228.0
+scale = Vector2(0.041, 0.041)
+texture = ExtResource("5_r2vy3")
+
+[node name="P2_Bar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 834.0
+offset_right = 874.0
+offset_bottom = 40.0
+
+[node name="HealthTexture" type="TextureRect" parent="P2_Bar"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 398.0
+offset_right = 2725.0
+offset_bottom = 2446.0
+scale = Vector2(0.12197317, 0.12197317)
+texture = ExtResource("6_qhxh2")
+
+[node name="Banner" type="TextureRect" parent="P2_Bar"]
+layout_mode = 0
+offset_left = -5.999995
+offset_top = 533.0
+offset_right = 1274.0
+offset_bottom = 1253.0
+scale = Vector2(0.11238656, 0.11238656)
+texture = ExtResource("7_017wa")
+
+[node name="Life1" type="TextureRect" parent="P2_Bar"]
+layout_mode = 0
+offset_left = 58.00003
+offset_top = 509.0
+offset_right = 1338.0
+offset_bottom = 1229.0
+scale = Vector2(0.041482877, 0.041482877)
+texture = ExtResource("4_vx7wu")
+
+[node name="Life2" type="TextureRect" parent="P2_Bar"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 509.00003
+offset_right = 1298.0
+offset_bottom = 1229.0
+scale = Vector2(0.041, 0.041)
+texture = ExtResource("5_r2vy3")

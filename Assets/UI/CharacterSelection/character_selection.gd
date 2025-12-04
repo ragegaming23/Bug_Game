@@ -3,8 +3,8 @@ extends Control
 var current_player := 1
 
 @onready var player_label: Label = $Label_Player
-@onready var button_mantis: Button = $BoxContainer/ButtonMantis
-@onready var button_dragonfly: Button = $BoxContainer/ButtonDragonfly
+@onready var button_mantis: TextureButton = $BoxContainer/ButtonMantis
+@onready var button_dragonfly: TextureButton = $BoxContainer/ButtonDragonfly
 
 func _ready() -> void:
 	button_mantis.grab_focus()
@@ -36,4 +36,10 @@ func _set_player_choice(character_name: String) -> void:
 
 func _start_game() -> void:
 	print("Both players selected. Loading game...")
-	get_tree().change_scene_to_file("res://Assets/UI/Loading Screen/LoadingScreen.tscn")
+	var Chosen_stage = Global.Chosen_Stage
+	await get_tree().process_frame
+	_start_client_and_load_game()
+
+func _start_client_and_load_game() -> void:
+	LocalNetwork.Start_client()
+	Global.load_scene(Global.Chosen_Stage)

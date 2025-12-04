@@ -6,15 +6,15 @@
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_tcq6s"]
 [ext_resource type="Texture2D" uid="uid://xdbsedtodd0" path="res://Assets/Health Bar/New Health bar Mirrored/100.png" id="7_l4y1b"]
 [ext_resource type="Script" uid="uid://dpj5uplshwu10" path="res://Test area/health.gd" id="8_oi554"]
-[ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Test area/health_bar_1.tscn" id="9_yh67n"]
+[ext_resource type="PackedScene" uid="uid://h4sgmkfd6tyw" path="res://Assets/health_bar_1.tscn" id="9_yh67n"]
 [ext_resource type="Texture2D" uid="uid://bd0pho3vpxfbi" path="res://Assets/Health Bar/New Health Bar/100.png" id="10_kqpuj"]
 [ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="11_jeldl"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="12_qvh7v"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="13_py08a"]
-[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/full health/DbannerBLUE.png" id="14_v87sv"]
+[ext_resource type="Texture2D" uid="uid://7m2cms5j6kq6" path="res://Assets/Health Bar/banners/Dragonfly/P2_full.png" id="14_v87sv"]
 [ext_resource type="Texture2D" uid="uid://cfnhkf1mij77h" path="res://Assets/Health Bar/Stocks/roly-freakin-polyR.png" id="15_g8enf"]
 [ext_resource type="Texture2D" uid="uid://bitya2ts0yv40" path="res://Assets/Health Bar/Stocks/roly-freakin-polyL.png" id="16_edfwg"]
-[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/full health/MbannerYELLOW.png" id="17_8grt4"]
+[ext_resource type="Texture2D" uid="uid://t7y7sqqvoffj" path="res://Assets/Health Bar/banners/Mantis/P1_full.png" id="17_8grt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b14hn"]
 size = Vector2(164.28067, 3.5435867)

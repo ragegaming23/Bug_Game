@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://lgipcsgc5s1w"]
+[gd_scene load_steps=9 format=3 uid="uid://lgipcsgc5s1w"]
 
 [ext_resource type="Script" uid="uid://c20anioq5clld" path="res://Assets/UI/CharacterSelection/character_selection.gd" id="1_3gqe6"]
-[ext_resource type="Texture2D" uid="uid://g6mnk0vwpcw1" path="res://Fighters/Praying Mantis/Mantis_Other/Mantis_Icon2.png" id="2_is55k"]
-[ext_resource type="Texture2D" uid="uid://dbe1ywgkmkpx3" path="res://Fighters/Dragonfly/Dragonfly_Close-up.png" id="3_51tlq"]
+[ext_resource type="Texture2D" uid="uid://bi3ln36os3gja" path="res://Assets/UI/CharacterSelection/Unselected.png" id="2_bf7sj"]
 [ext_resource type="Script" uid="uid://c8po28rsgaqpw" path="res://Assets/UI/localmultiplayer_spawner.gd" id="4_hhfm1"]
+[ext_resource type="Texture2D" uid="uid://b4urwn8i3resf" path="res://Assets/UI/CharacterSelection/Mantis_CC.png" id="5_5sdtd"]
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="5_fmww8"]
+[ext_resource type="Texture2D" uid="uid://8vimhn620l1i" path="res://Assets/UI/CharacterSelection/Dragonfly_CC.png" id="6_48e1e"]
 
 [sub_resource type="GDScript" id="GDScript_ejiwe"]
 script/source = "extends Node
@@ -19,66 +20,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = -3.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0022715, 1.015654)
 script = ExtResource("1_3gqe6")
 
-[node name="ChooseYourBrawler" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 289.00003
-offset_top = 45.000004
-offset_right = 455.00003
-offset_bottom = 68.0
-scale = Vector2(3.2627187, 5.399097)
-text = "Choose your Brawler!"
-
-[node name="BoxContainer" type="BoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -235.0
-offset_top = -125.0
-offset_right = 239.0
-offset_bottom = 133.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_neighbor_left = NodePath("coming soon")
-focus_neighbor_right = NodePath("ButtonMantis")
-
-[node name="ButtonMantis" type="Button" parent="BoxContainer"]
-layout_mode = 2
-text = "Praying Mantis"
-icon = ExtResource("2_is55k")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
-[node name="ButtonDragonfly" type="Button" parent="BoxContainer"]
-layout_mode = 2
-text = "     Dragonfly      "
-icon = ExtResource("3_51tlq")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
-[node name="coming soon2" type="Button" parent="BoxContainer"]
-layout_mode = 2
-disabled = true
-text = "Coming Soon"
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
-[node name="coming soon" type="Button" parent="BoxContainer"]
-layout_mode = 2
-disabled = true
-text = "Coming Soon"
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_bf7sj")
 
 [node name="PlayerSelectors" type="Control" parent="."]
 anchors_preset = 0
@@ -100,6 +55,37 @@ spawn_limit = 2
 script = ExtResource("4_hhfm1")
 network_player = ExtResource("5_fmww8")
 
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -572.0
+offset_top = -320.0
+offset_right = 2.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonMantis" type="TextureButton" parent="BoxContainer"]
+layout_mode = 2
+texture_hover = ExtResource("5_5sdtd")
+
+[node name="ButtonDragonfly" type="TextureButton" parent="BoxContainer"]
+layout_mode = 2
+texture_hover = ExtResource("6_48e1e")
+
+[node name="ChooseYourBrawler" type="Label" parent="."]
+layout_mode = 0
+offset_left = 289.00003
+offset_top = 45.000004
+offset_right = 455.00003
+offset_bottom = 68.0
+scale = Vector2(3.2627187, 5.399097)
+text = "Choose your Brawler!"
+
 [node name="Label_Player" type="Label" parent="."]
 layout_mode = 0
 offset_left = 222.0
@@ -109,7 +95,5 @@ offset_bottom = 531.0
 scale = Vector2(2.996234, 2.996234)
 text = "Player 1, choose your character!"
 
-[connection signal="pressed" from="BoxContainer/ButtonMantis" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="BoxContainer/ButtonDragonfly" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="BoxContainer/coming soon2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="BoxContainer/coming soon" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonMantis" to="." method="_on_mantis_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonDragonfly" to="." method="_on_dragonfly_pressed"]

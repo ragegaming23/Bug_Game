@@ -12,13 +12,14 @@ config_version=5
 
 config/name="Bug_Game"
 run/main_scene="uid://cg2ch8yn4qy1r"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Global.gd"
 LocalNetwork="*res://Assets/UI/local_network.gd"
+UI="*res://UI/UI.tscn"
 
 [display]
 
@@ -37,7 +38,8 @@ folder_colors={
 "res://SoundEffects/Music/": "pink",
 "res://Stages/": "orange",
 "res://StateMachine/": "blue",
-"res://Test area/": "gray"
+"res://Test area/": "gray",
+"res://UI/": "purple"
 }
 
 [global_group]

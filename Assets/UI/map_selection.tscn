@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8bc3726x8y3s"]
+[gd_scene load_steps=10 format=3 uid="uid://c8bc3726x8y3s"]
 
 [ext_resource type="Script" uid="uid://cv53d7o5xlaa" path="res://Assets/UI/map_selection.gd" id="1_dhj3i"]
 [ext_resource type="PackedScene" uid="uid://bicoui28vdrt1" path="res://Test area/test scene.tscn" id="2_ao80t"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dk0yycfoueis4" path="res://Stages/level 3.tscn" id="4_lk5kp"]
 [ext_resource type="PackedScene" uid="uid://bifcuulr8176p" path="res://Stages/level 4.tscn" id="5_op1ma"]
 [ext_resource type="PackedScene" uid="uid://yssrdt8rjr8c" path="res://Stages/level 5.tscn" id="6_fep7l"]
+[ext_resource type="Texture2D" uid="uid://bnqnv3tkfbm4e" path="res://Assets/UI/Map Selection Background/Background_TV.png" id="7_c4jnd"]
 
 [node name="Map selection" type="Control"]
 layout_mode = 3
@@ -23,10 +24,19 @@ Stage_3 = ExtResource("4_lk5kp")
 Stage_4 = ExtResource("5_op1ma")
 Stage_5 = ExtResource("6_fep7l")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+scale = Vector2(0.90002745, 0.90009475)
+texture = ExtResource("7_c4jnd")
+
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 223.0
+offset_top = 54.0
+offset_right = 919.0
+offset_bottom = 236.0
 
 [node name="Stage_1" type="Button" parent="BoxContainer"]
 layout_mode = 2
