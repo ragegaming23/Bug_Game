@@ -1751,6 +1751,8 @@ size = Vector2(4, 20)
 size = Vector2(2, 11)
 
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ufpjl")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
@@ -1764,14 +1766,12 @@ frame_progress = 1.0
 [node name="Front Tail" type="CollisionShape2D" parent="."]
 position = Vector2(59, -60.5)
 rotation = -1.5708
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0cawu")
 disabled = true
 
 [node name="Back Tail" type="CollisionShape2D" parent="."]
 position = Vector2(12, -86)
 rotation = -1.5708
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_winqv")
 
 [node name="body" type="CollisionShape2D" parent="."]
