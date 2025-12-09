@@ -40,11 +40,13 @@ func physics_update(_delta: float) -> void:
 	if direction !=0:
 		player.velocity.x = direction * SPEED 
 		#$"../../Dragonfly".flip_h=direction >0
-	if Input.is_action_pressed("move left_%s" %[player.player_id]) and flipped:
-		player.scale.x = -1 
-		flipped = false
-	if Input.is_action_pressed("move right_%s" %[player.player_id]) and not flipped:
-		player.scale.x = -1 
-		flipped = true
+	if Input.is_action_pressed("move left_%s" %[player.player_id]):
+		if !Input.is_action_pressed("move right_%s" %[player.player_id]):
+			player.scale.x = -1 
+		
+	if Input.is_action_pressed("move right_%s" %[player.player_id]):  
+		if !Input.is_action_pressed("move left_%s" %[player.player_id]):
+			player.scale.x = -1 
+		
 	player.move_and_slide()
 	pass
