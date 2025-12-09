@@ -4,7 +4,7 @@ class_name movement
 @export var player: CharacterBody2D
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var SPEED = 300.0
-var flipped = true
+var flipped = false
 #var direction := Input.get_axis("move left_%s" %[player_id], "move right_%s" %[player_id])
 
 func enter() -> void:
@@ -31,14 +31,14 @@ func physics_update(_delta: float) -> void:
 	if direction !=0:
 		player.velocity.x = direction * SPEED 
 		#$"../../Animantis".flip_h=direction <0
-	if Input.is_action_pressed("move left_%s" %[player.player_id]): 
+	if Input.is_action_pressed("move left_%s" %[player.player_id]) and !flipped: 
 		if !Input.is_action_pressed("move right_%s" %[player.player_id]):
 			player.scale.x = -1 
-		
-	if Input.is_action_pressed("move right_%s" %[player.player_id]): 
+			flipped = true
+	if Input.is_action_pressed("move right_%s" %[player.player_id]) and flipped: 
 		if !Input.is_action_pressed("move left_%s" %[player.player_id]):
 			player.scale.x = -1 
-		
+			flipped = false
 	player.move_and_slide()
 	
 	if not player.is_on_floor():

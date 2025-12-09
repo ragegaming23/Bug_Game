@@ -86,14 +86,11 @@ func _physics_process(delta):
 	
 func MantisCross() -> void:
 	var instance = projectile.instantiate()
-
 	instance.direction = rotation
 	instance.global_position = $"Area2D/HeadBut Damage".global_position
 	instance.SpawnRot = rotation
 	instance.Zdex = z_index - 1
-
 	main.add_child.call_deferred(instance)
-
 	await instance.ready
 	instance.get_node("Area2D/CollisionShape2D").set_disabled(true)
 	await get_tree().create_timer(0.1).timeout

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var Speed = 900
+@export var Speed = 300
 
 @export var direction: float
 var SpawnPos: Vector2
@@ -9,14 +9,16 @@ var SpawnRot: float
 var Zdex: int
 
 func _Ready():
+	
 	global_position = SpawnPos
 	global_rotation = SpawnRot
 	z_index = Zdex
+	
 func _physics_process(_delta: float):
-		velocity = Vector2(0,Speed).rotated(direction)
-		await get_tree().create_timer(5).timeout
-		velocity = Vector2(0,-Speed).rotated(direction)
-		move_and_slide()
+	$AnimatedSprite2D.play("Spin")
+	velocity = Vector2(Speed,-Speed).rotated(direction)
+	move_and_slide()
+	
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
