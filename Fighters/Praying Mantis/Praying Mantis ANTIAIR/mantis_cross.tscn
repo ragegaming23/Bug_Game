@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2bemmkudpbpn"]
+
+[ext_resource type="Script" uid="uid://tincdq22hxq5" path="res://mantis_cross.gd" id="1_xw0md"]
+[ext_resource type="Texture2D" uid="uid://b3tahru2fkqjy" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0001.png" id="2_mrtqw"]
+[ext_resource type="Texture2D" uid="uid://d073xbx2pt46g" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0002.png" id="3_wysi8"]
+[ext_resource type="Texture2D" uid="uid://4a5w1r4q8x2n" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0003.png" id="4_goqi8"]
+[ext_resource type="Texture2D" uid="uid://cibj62525e1nh" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0004.png" id="5_x5w3r"]
+[ext_resource type="Texture2D" uid="uid://chqwhjjd0b4bs" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0005.png" id="6_msdum"]
+[ext_resource type="Texture2D" uid="uid://hnqauoptq6lw" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_animated0006.png" id="7_ryeko"]
+[ext_resource type="Texture2D" uid="uid://ie6d50mjr14g" path="res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/Cross_projectile_lined.png" id="8_wlaib"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iw1br"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mrtqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wysi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_goqi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x5w3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_msdum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ryeko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wlaib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wuvfj"]
+radius = 195.1256
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8emu"]
+radius = 195.06409
+
+[node name="Mantis Cross" type="CharacterBody2D"]
+script = ExtResource("1_xw0md")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iw1br")
+frame_progress = 0.37547794
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, -38)
+shape = SubResource("CircleShape2D_wuvfj")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-14, -40)
+shape = SubResource("CircleShape2D_t8emu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

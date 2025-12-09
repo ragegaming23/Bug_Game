@@ -4,7 +4,8 @@ extends CharacterBody2D
 @export var max_health: int = 100
 @export var move_speed: float = 300.0
 @export var jump_force: float = -400.0
-
+@onready var main = get_tree().get_root().get_node(".")
+@onready var projectile = preload("res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/mantis_cross.tscn")
 var current_health: int
 var lives: int = 3
 
@@ -81,8 +82,22 @@ func _physics_process(delta):
 		knockback_timer -= delta
 	else:
 		_movement(delta)
-
 	move_and_slide()
+	
+func MantisCross() -> void:
+	var instance = projectile.instantiate()
+
+	instance.direction = rotation
+	instance.global_position = $"Area2D/HeadBut Damage".global_position
+	instance.SpawnRot = rotation
+	instance.Zdex = z_index - 1
+
+	main.add_child.call_deferred(instance)
+
+	await instance.ready
+	instance.get_node("Area2D/CollisionShape2D").set_disabled(true)
+	await get_tree().create_timer(0.1).timeout
+	instance.get_node("Area2D/CollisionShape2D").set_disabled(false)
 
 
 func _movement(_delta: float):

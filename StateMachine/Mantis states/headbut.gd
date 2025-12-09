@@ -9,6 +9,7 @@ class_name headbut
 func enter() -> void:
 	if Input.is_action_pressed("headbut_%s" %[player.player_id]):
 		$"../../Animantis".play("headbut")
+		player.MantisCross()
 		await get_tree().create_timer(.4).timeout
 		get_node("../../Area2D/HeadBut Damage").disabled = false
 		await get_tree().create_timer(.2).timeout
