@@ -87,7 +87,7 @@ func _physics_process(delta):
 func MantisCross() -> void:
 	var instance = projectile.instantiate()
 	instance.direction = rotation
-	instance.global_position = $"Area2D/HeadBut Damage".global_position
+	instance.global_position = $"Area2D/Cross Spawn".global_position
 	instance.SpawnRot = rotation
 	instance.Zdex = z_index - 1
 	main.add_child.call_deferred(instance)

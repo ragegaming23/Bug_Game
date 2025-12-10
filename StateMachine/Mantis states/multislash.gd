@@ -31,6 +31,9 @@ func update(_delta: float) -> void:
 		$"..".on_child_transitioned("punch")
 		return
 
+	if Input.is_action_pressed("Antiair_%s" %[player.player_id]):
+		$"..".on_child_transitioned("Anti air")
+
 	if Input.is_action_pressed("slash_%s" %[player.player_id]):
 		$"..".on_child_transitioned("slash")
 

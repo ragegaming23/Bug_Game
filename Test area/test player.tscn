@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://de3wg1slg72gg"]
+[gd_scene load_steps=112 format=3 uid="uid://de3wg1slg72gg"]
 
 [ext_resource type="Script" uid="uid://7lepwy4vxh2o" path="res://Test area/character_body_2d.gd" id="1_ecflg"]
 [ext_resource type="Texture2D" uid="uid://c5oslcc87s5lb" path="res://Fighters/Praying Mantis/Mantis BLOCK/Praying_Mantis_block.png" id="2_b63db"]
@@ -84,6 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://bxuyiediye3u8" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0002.png" id="51_qfu2l"]
 [ext_resource type="Texture2D" uid="uid://b43dy83rcq3jp" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0003.png" id="52_x7yoy"]
 [ext_resource type="Texture2D" uid="uid://onw73st0qmgl" path="res://Fighters/Praying Mantis/Praying Mantis_Jab2/Praying_Mantis_jabLONG0004.png" id="53_q8dsq"]
+[ext_resource type="Script" uid="uid://nxx5r0yheqi6" path="res://Test area/anti_air.gd" id="97_qjc8k"]
 [ext_resource type="AudioStream" uid="uid://drrcndw2pyi10" path="res://SoundEffects/CreepyBrawlers_Leaf.ogg" id="107_v24a8"]
 [ext_resource type="AudioStream" uid="uid://b3lascx20nrn6" path="res://SoundEffects/Placeholder Hit Effect.mp3" id="108_vq3x2"]
 [ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="109_fsy0b"]
@@ -113,9 +114,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_64uwj")
 }],
-"loop": true,
+"loop": false,
 "name": &"antiair",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -309,7 +310,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"multislash",
-"speed": 13.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -324,7 +325,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("53_q8dsq")
 }],
-"loop": true,
+"loop": false,
 "name": &"punch",
 "speed": 12.0
 }, {
@@ -441,6 +442,8 @@ size = Vector2(22, 92)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5wc2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5iut"]
+
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_86wen"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
@@ -453,7 +456,9 @@ script = ExtResource("1_ecflg")
 position = Vector2(8, 8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_20rux")
-animation = &"flinch"
+animation = &"antiair"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(-4, 5)
@@ -504,6 +509,11 @@ disabled = true
 [node name="HeadBut Damage" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(69, -9)
 shape = SubResource("RectangleShape2D_i5wc2")
+disabled = true
+
+[node name="Cross Spawn" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100, -56)
+shape = SubResource("RectangleShape2D_o5iut")
 disabled = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
@@ -572,6 +582,12 @@ script = ExtResource("118_i5wc2")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../Animantis")
 metadata/_custom_type_script = "uid://ddjjcc0bjjbqd"
+
+[node name="Anti air" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("97_qjc8k")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../Animantis")
+metadata/_custom_type_script = "uid://bspcpd1iwyono"
 
 [node name="block" type="Node" parent="Attack States" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("119_83u2j")

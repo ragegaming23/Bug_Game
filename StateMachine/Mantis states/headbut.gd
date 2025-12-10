@@ -9,7 +9,6 @@ class_name headbut
 func enter() -> void:
 	if Input.is_action_pressed("headbut_%s" %[player.player_id]):
 		$"../../Animantis".play("headbut")
-		player.MantisCross()
 		await get_tree().create_timer(.4).timeout
 		get_node("../../Area2D/HeadBut Damage").disabled = false
 		await get_tree().create_timer(.2).timeout
@@ -27,6 +26,9 @@ func update(_delta: float) -> void:
 	if Input.is_action_pressed("punch_%s" %[player.player_id]):
 		$"..".on_child_transitioned("punch")
 		return
+
+	if Input.is_action_pressed("Antiair_%s" %[player.player_id]):
+		$"..".on_child_transitioned("Anti air")
 
 	if Input.is_action_pressed("slash_%s" %[player.player_id]):
 		$"..".on_child_transitioned("slash")

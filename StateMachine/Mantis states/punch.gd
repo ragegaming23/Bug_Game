@@ -34,5 +34,7 @@ func update(_delta: float) -> void:
 	if Input.is_action_pressed("block_%s" %[player.player_id]):
 		$"..".on_child_transitioned("block")
 
+	if Input.is_action_pressed("Antiair_%s" %[player.player_id]):
+		$"..".on_child_transitioned("Anti air")
 func physics_update(_delta: float) -> void:
 	pass
