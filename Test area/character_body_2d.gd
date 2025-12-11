@@ -15,7 +15,7 @@ var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
 var last_attacker_insect: String = ""
-var last_attacker_player_id: int = 0  
+var last_attacker_player_id: int = 0
 
 signal health_changed(current, max)
 signal lives_changed(lives)
@@ -24,9 +24,9 @@ signal died
 
 func _ready():
 	current_health = max_health
-
 	emit_signal("health_changed", current_health, max_health)
 	emit_signal("lives_changed", lives)
+
 
 func Take_Damage(dmg: int, attacker_insect: String = "", attacker_player_id: int = 0):
 	if attacker_insect != "":
@@ -68,9 +68,22 @@ func die():
 	if ui:
 		ui.visible = false
 
+	if last_attacker_player_id == 0:
+		if player_id == 1:
+			last_attacker_player_id = 2
+		else:
+			last_attacker_player_id = 1
+
+	if last_attacker_insect == "":
+		if last_attacker_player_id == 1:
+			last_attacker_insect = Global.player1_character
+		elif last_attacker_player_id == 2:
+			last_attacker_insect = Global.player2_character
+
 	Global.last_winner_player_id = last_attacker_player_id
 	Global.last_winner_insect = last_attacker_insect
 
+	# --- Pick death video ---
 	var scene_path := "res://Assets/DeathVideoScenes/DragonflyWins_MantisDies_2025-10-29_16-58-07.tscn"
 	if last_attacker_insect == "Mantis":
 		scene_path = "res://Assets/DeathVideoScenes/MantisVsMantis_Fatality_PLACEHOLDER.tscn"
@@ -98,7 +111,6 @@ func _physics_process(delta):
 
 func MantisCross() -> void:
 	var instance = projectile.instantiate()
-
 	instance.direction = rotation
 	instance.global_position = $"Area2D/Cross Spawn".global_position
 	instance.SpawnRot = rotation

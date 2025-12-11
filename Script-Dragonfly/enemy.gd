@@ -26,9 +26,9 @@ signal died
 
 func _ready() -> void:
 	current_health = max_health
-
 	emit_signal("health_changed", current_health, max_health)
 	emit_signal("lives_changed", lives)
+
 
 func Take_Damage(dmg: int, attacker_insect: String = "", attacker_player_id: int = 0) -> void:
 	if attacker_insect != "":
@@ -65,10 +65,21 @@ func lose_life() -> void:
 
 func die() -> void:
 	emit_signal("died")
-	
 	var ui := get_tree().root.get_node_or_null("UI")
 	if ui:
 		ui.visible = false
+
+	if last_attacker_player_id == 0:
+		if player_id == 1:
+			last_attacker_player_id = 2
+		else:
+			last_attacker_player_id = 1
+
+	if last_attacker_insect == "":
+		if last_attacker_player_id == 1:
+			last_attacker_insect = Global.player1_character
+		elif last_attacker_player_id == 2:
+			last_attacker_insect = Global.player2_character
 
 	Global.last_winner_player_id = last_attacker_player_id
 	Global.last_winner_insect = last_attacker_insect
@@ -124,7 +135,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 	if body == self:
 		return
-
 	if body.player_id == player_id:
 		return
 
