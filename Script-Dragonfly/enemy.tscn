@@ -1752,7 +1752,7 @@ size = Vector2(2, 11)
 
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_ufpjl")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]
