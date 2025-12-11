@@ -14,6 +14,8 @@ var lives: int = 3
 var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
+var last_attacker_insect: String = ""
+
 signal health_changed(current, max)
 signal lives_changed(lives)
 signal died
@@ -26,7 +28,10 @@ func _ready():
 	emit_signal("lives_changed", lives)
 
 
-func Take_Damage(dmg: int):
+func Take_Damage(dmg: int, attacker_insect: String = ""):
+	if attacker_insect != "":
+		last_attacker_insect = attacker_insect
+
 	current_health = max(current_health - dmg, 0)
 
 	if has_node("HealthSFX"):
@@ -56,7 +61,16 @@ func lose_life():
 
 func die():
 	emit_signal("died")
-	get_tree().change_scene_to_file("res://Assets/DeathVideoScenes/Mantis_DeathVideo.tscn")
+	var ui := get_tree().root.get_node_or_null("UI")
+	if ui:
+		ui.visible = false
+
+	var scene_path := "res://Assets/DeathVideoScenes/DragonflyWins_MantisDies_2025-10-29_16-58-07.tscn"
+
+	if last_attacker_insect == "Mantis":
+		scene_path = "res://Assets/DeathVideoScenes/MantisVsMantis_Fatality_PLACEHOLDER.tscn"
+	get_tree().change_scene_to_file(scene_path)
+
 
 func apply_knockback(direction: Vector2, force: float, duration: float):
 	knockback = direction * force
@@ -74,6 +88,7 @@ func _physics_process(delta):
 		_movement(delta)
 
 	move_and_slide()
+
 
 func MantisCross() -> void:
 	var instance = projectile.instantiate()
@@ -94,6 +109,7 @@ func MantisCross() -> void:
 func _movement(_delta: float):
 	pass
 
+
 func _on_area_2d_body_entered(body):
 	if not body.has_method("Take_Damage"):
 		return
@@ -105,5 +121,4 @@ func _on_area_2d_body_entered(body):
 
 	if body.has_method("apply_knockback"):
 		body.apply_knockback(direction, 200.0, 1.0)
-
-	body.Take_Damage(1)
+	body.Take_Damage(1, "Mantis")

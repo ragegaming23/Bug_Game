@@ -22,6 +22,7 @@ func _ready():
 
 	connect_players()
 
+
 func connect_players():
 	var p1 = get_tree().get_first_node_in_group("player_1")
 	var p2 = get_tree().get_first_node_in_group("player_2")
@@ -30,37 +31,29 @@ func connect_players():
 		assign_player_insect(1, Global.player1_character)
 
 		p1.health_changed.connect(func(current, max):
-			set_player_health(1, int(float(current)/float(max) * 100))
+			set_player_health(1, int(float(current) / float(max) * 100))
 		)
 
 		p1.lives_changed.connect(func(lives):
 			set_player_lives(1, lives)
 		)
 
+		set_player_health(1, int(float(p1.current_health) / float(p1.max_health) * 100))
+		set_player_lives(1, p1.lives)
+
 	if p2:
 		assign_player_insect(2, Global.player2_character)
 
 		p2.health_changed.connect(func(current, max):
-			set_player_health(2, int(float(current)/float(max) * 100))
+			set_player_health(2, int(float(current) / float(max) * 100))
 		)
 
 		p2.lives_changed.connect(func(lives):
 			set_player_lives(2, lives)
 		)
 
-
-func _on_player1_health_changed(current, max):
-	set_player_health(1, int((float(current) / float(max)) * 100))
-
-func _on_player2_health_changed(current, max):
-	set_player_health(2, int((float(current) / float(max)) * 100))
-
-
-func _on_player1_lives_changed(lives):
-	set_player_lives(1, lives)
-
-func _on_player2_lives_changed(lives):
-	set_player_lives(2, lives)
+		set_player_health(2, int(float(p2.current_health) / float(p2.max_health) * 100))
+		set_player_lives(2, p2.lives)
 
 
 func _load_health_bars():
@@ -73,7 +66,6 @@ func _load_health_bars():
 
 
 func set_player_health(player: int, percent: int):
-
 	if !players.has(player):
 		return
 
@@ -91,9 +83,7 @@ func set_player_health(player: int, percent: int):
 	if health_textures[player].has(display_value):
 		bar.texture = health_textures[player][display_value]
 
-
 func set_player_lives(player: int, lives: int):
-
 	if !players.has(player):
 		return
 
@@ -102,13 +92,12 @@ func set_player_lives(player: int, lives: int):
 	var life1 = bar.get_node("Life1")
 	var life2 = bar.get_node("Life2")
 
-	life1.visible = lives >= 2
-	life2.visible = lives >= 3
+	life1.visible = lives >= 1
+	life2.visible = lives >= 2
 
 	_update_banner_from_lives(player, lives)
 
 func assign_player_insect(player: int, insect_name: String):
-
 	if !players.has(player):
 		return
 
@@ -127,7 +116,6 @@ func _get_stage_from_lives(lives: int) -> String:
 
 
 func _update_banner_from_lives(player: int, lives: int):
-
 	if !players.has(player):
 		return
 
@@ -136,7 +124,6 @@ func _update_banner_from_lives(player: int, lives: int):
 
 	var insect = players[player].get_meta("insect")
 	var stage = _get_stage_from_lives(lives)
-
 	var p_tag = "P" + str(player)
 
 	var path = "res://Assets/Health Bar/banners/%s/%s_%s.png" % [insect, p_tag, stage]
@@ -149,16 +136,7 @@ func _update_banner_from_lives(player: int, lives: int):
 		print("MISSING BANNER:", path)
 
 func take_damage(player: int, new_health: int, lives: int):
-
 	set_player_health(player, new_health)
 
 	if new_health <= 0:
 		set_player_lives(player, lives)
-
-func _input(event):
-
-	if event.is_action_pressed("ui_accept"):
-		set_player_health(1, 45)
-
-	if event.is_action_pressed("ui_cancel"):
-		set_player_lives(1, 1)
