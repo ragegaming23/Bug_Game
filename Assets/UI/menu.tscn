@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=14 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://Assets/UI/menu.gd" id="1_0h2wq"]
 [ext_resource type="Texture2D" uid="uid://u7pp1rqmbn5u" path="res://Assets/Main Menu/backgound_NoButtons.png" id="2_dvixa"]
@@ -9,8 +9,10 @@
 [ext_resource type="Script" uid="uid://dosf7p6ss2yl0" path="res://Assets/UI/TVStart.gd" id="5_6a31s"]
 [ext_resource type="AudioStream" uid="uid://r50j651vjq5e" path="res://Assets/Main Menu/SE/TV_ON_PH.mp3" id="6_nwcpr"]
 [ext_resource type="Texture2D" uid="uid://cnon56lf2ur84" path="res://Assets/Main Menu/png/Settings_Hoovered.png" id="8_7skmn"]
+[ext_resource type="Script" uid="uid://byonpjh2qe8yw" path="res://Assets/UI/FocusTextureButton.gd" id="9_mbd6i"]
 [ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://Assets/UI/Loading Screen/Loading Screen.jpg" id="10_8ngtt"]
 [ext_resource type="Texture2D" uid="uid://ceicvkl03a6pc" path="res://Assets/Main Menu/png/CreepyBrawlers Tittle.png" id="11_0lkms"]
+[ext_resource type="Script" uid="uid://bwf8tsqn0ccrk" path="res://settings_menu.gd" id="11_r2cov"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -27,7 +29,7 @@ offset_right = 1152.0
 offset_bottom = 657.0
 texture = ExtResource("2_dvixa")
 
-[node name="Start" type="TextureButton" parent="."]
+[node name="Start" type="TextureButton" parent="." groups=["menu_button"]]
 layout_mode = 0
 offset_left = 416.0
 offset_right = 725.0
@@ -38,9 +40,9 @@ script = ExtResource("5_6a31s")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Start"]
 stream = ExtResource("6_nwcpr")
-volume_db = 11.45
+volume_db = 15.876
 
-[node name="Options" type="TextureButton" parent="."]
+[node name="Options" type="TextureButton" parent="." groups=["menu_button"]]
 layout_mode = 0
 offset_left = 243.0
 offset_top = 216.0
@@ -48,15 +50,7 @@ offset_right = 364.0
 offset_bottom = 464.0
 texture_normal = ExtResource("3_3d5hf")
 texture_hover = ExtResource("8_7skmn")
-
-[node name="Quit" type="Button" parent="."]
-layout_mode = 0
-offset_left = 553.0
-offset_top = 366.0
-offset_right = 595.0
-offset_bottom = 397.0
-scale = Vector2(0.789647, 0.819972)
-text = "Quit"
+script = ExtResource("9_mbd6i")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wfiwe")
@@ -67,6 +61,34 @@ autoplay = true
 position = Vector2(557, 285)
 scale = Vector2(0.195646, 0.117433)
 texture = ExtResource("11_0lkms")
+
+[node name="SettingsMenu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_r2cov")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = 607.0
+offset_top = 425.0
+offset_right = 748.0
+offset_bottom = 538.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="Settings" type="Label" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="ButtonBack" type="Button" parent="SettingsMenu/MarginContainer/VBoxContainer" groups=["settings_button"]]
+layout_mode = 2
+text = "Back"
+
+[node name="ButtonQuit" type="Button" parent="SettingsMenu/MarginContainer/VBoxContainer" groups=["settings_button"]]
+layout_mode = 2
+text = "Quit Game"
 
 [node name="LoadingScreen" type="TextureRect" parent="."]
 visible = false
@@ -79,4 +101,5 @@ texture = ExtResource("10_8ngtt")
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]

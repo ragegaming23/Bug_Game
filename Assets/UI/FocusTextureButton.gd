@@ -1,26 +1,18 @@
 extends TextureButton
 
-@export var click_sound: AudioStream
-
-func _ready():
-	focus_mode = Control.FOCUS_ALL
-	_normal_tex = texture_normal
-	_hover_tex = texture_hover
-	focus_entered.connect(_on_focus_entered)
-	focus_exited.connect(_on_focus_exited)
-	
-	pressed.connect(_play_click)
-
-func _play_click():
-	if click_sound:
-		var player = $AudioStreamPlayer
-		player.stream = click_sound
-		player.play()
-
 @export var use_hover_as_focus: bool = true
 
 var _normal_tex: Texture2D
 var _hover_tex: Texture2D
+
+func _ready() -> void:
+	focus_mode = Control.FOCUS_ALL
+
+	_normal_tex = texture_normal
+	_hover_tex = texture_hover
+
+	focus_entered.connect(_on_focus_entered)
+	focus_exited.connect(_on_focus_exited)
 
 
 func _on_focus_entered() -> void:

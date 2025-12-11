@@ -3,8 +3,8 @@ extends Control
 var current_player := 1
 
 @onready var player_label: Label = $Label_Player
-@onready var button_mantis: TextureButton = $BoxContainer/ButtonMantis
-@onready var button_dragonfly: TextureButton = $BoxContainer/ButtonDragonfly
+@onready var button_mantis: TextureButton = $Mantis/ButtonMantis
+@onready var button_dragonfly: TextureButton = $Dragonfly/ButtonDragonfly
 
 func _ready() -> void:
 	button_mantis.grab_focus()
