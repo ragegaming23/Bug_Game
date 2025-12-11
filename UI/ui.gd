@@ -92,8 +92,8 @@ func set_player_lives(player: int, lives: int):
 	var life1 = bar.get_node("Life1")
 	var life2 = bar.get_node("Life2")
 
-	life1.visible = lives >= 1
-	life2.visible = lives >= 2
+	life1.visible = lives >= 2
+	life2.visible = lives >= 3
 
 	_update_banner_from_lives(player, lives)
 
