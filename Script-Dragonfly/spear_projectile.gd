@@ -25,7 +25,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.apply_knockback(knockback_direction, 50.0, 1.0)
 		body.Take_Damage(2)
 		queue_free()
-		
+
 	else:
 		if body.is_in_group("Player"):
 			
