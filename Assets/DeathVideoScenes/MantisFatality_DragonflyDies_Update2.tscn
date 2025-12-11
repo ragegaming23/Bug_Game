@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwipe37nglwii"]
+
+[ext_resource type="Script" uid="uid://dku203k6kev33" path="res://Assets/DeathVideoScenes/MantisFatality_DragonflyDies_Update2.gd" id="1_n47dd"]
+[ext_resource type="VideoStream" uid="uid://dcoi3uricaiju" path="res://Fighters/Praying Mantis/Mantis_FATALITY/TRIAL____________Mantis Fatality Update 2.ogv" id="2_n47dd"]
+
+[node name="DragonflyDeathVideo" type="Node2D"]
+script = ExtResource("1_n47dd")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1925.2028
+offset_bottom = 1085.3654
+scale = Vector2(0.598898, 0.599798)
+stream = ExtResource("2_n47dd")
+autoplay = true

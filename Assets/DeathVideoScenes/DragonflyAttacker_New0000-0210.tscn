@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cctrvn0lay7gi"]
+
+[ext_resource type="Script" uid="uid://dnjj3pgs45kwj" path="res://Assets/DeathVideoScenes/DragonflyAttacker_New0000-0210.gd" id="1_uel0i"]
+[ext_resource type="VideoStream" uid="uid://d0ufrqmugtnt8" path="res://Fighters/Dragonfly/Fitality Dragonfly vs Dragonfly/Dragonfly_Attacker_New0000-0210.ogv" id="2_8fyyh"]
+
+[node name="DragonflyDeathVideo" type="Node2D"]
+script = ExtResource("1_uel0i")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.598898, 0.599798)
+stream = ExtResource("2_8fyyh")
+autoplay = true

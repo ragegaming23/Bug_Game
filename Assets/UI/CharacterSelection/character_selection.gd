@@ -10,10 +10,6 @@ func _ready() -> void:
 	button_mantis.grab_focus()
 	player_label.text = "Player 1, choose your character"
 
-	# Connect button signals
-	button_mantis.pressed.connect(_on_mantis_pressed)
-	button_dragonfly.pressed.connect(_on_dragonfly_pressed)
-
 
 func _on_mantis_pressed() -> void:
 	_set_player_choice("Mantis")
