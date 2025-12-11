@@ -12,3 +12,6 @@ var spawn_points = {
 	1: "Spawnpoint1",
 	2: "Spawnpoint2"
 }
+
+var last_winner_player_id: int = 0
+var last_winner_insect: String = ""

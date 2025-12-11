@@ -16,8 +16,8 @@ var lives: int = 3
 var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
-# NEW: remember what insect last hit this Dragonfly
 var last_attacker_insect: String = ""
+var last_attacker_player_id: int = 0
 
 signal health_changed(current, max)
 signal lives_changed(lives)
@@ -30,11 +30,11 @@ func _ready() -> void:
 	emit_signal("health_changed", current_health, max_health)
 	emit_signal("lives_changed", lives)
 
-
-# CHANGED: now takes optional attacker_insect
-func Take_Damage(dmg: int, attacker_insect: String = "") -> void:
+func Take_Damage(dmg: int, attacker_insect: String = "", attacker_player_id: int = 0) -> void:
 	if attacker_insect != "":
 		last_attacker_insect = attacker_insect
+	if attacker_player_id != 0:
+		last_attacker_player_id = attacker_player_id
 
 	current_health = max(current_health - dmg, 0)
 
@@ -66,25 +66,22 @@ func lose_life() -> void:
 func die() -> void:
 	emit_signal("died")
 	
-	# Hide UI when a round ends
 	var ui := get_tree().root.get_node_or_null("UI")
 	if ui:
 		ui.visible = false
 
-	# DEFAULT death scene
+	Global.last_winner_player_id = last_attacker_player_id
+	Global.last_winner_insect = last_attacker_insect
+
 	var scene_path := "res://Assets/DeathVideoScenes/MantisFatality_DragonflyDies_Update2.tscn"
 
-	# SPECIAL CASES based on who killed Dragonfly:
-	#   "Mantis Fatality Update 2"   -> Mantis wins vs Dragonfly
-	#   "Dragonfly_Attacker_New0000-0210" -> Dragonfly wins vs Dragonfly
 	match last_attacker_insect:
 		"Mantis":
 			scene_path = "res://Assets/DeathVideoScenes/MantisFatality_DragonflyDies_Update2.tscn"
 		"Dragonfly":
 			scene_path = "res://Assets/DeathVideoScenes/DragonflyAttacker_New0000-0210.tscn"
 		_:
-			# keep default Dragonfly_DeathVideo
-			pass
+			scene_path = "res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn"
 
 	get_tree().change_scene_to_file(scene_path)
 
@@ -122,15 +119,12 @@ func Spearthrow() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	# Must be damageable
 	if not body.has_method("Take_Damage"):
 		return
 
-	# Don't hit yourself
 	if body == self:
 		return
 
-	# Avoid friendly fire by player_id, same as Mantis
 	if body.player_id == player_id:
 		return
 
@@ -139,5 +133,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("apply_knockback"):
 		body.apply_knockback(direction, 200.0, 1.0)
 
-	# IMPORTANT: tell the victim that a DRAGONFLY hit them
-	body.Take_Damage(1, "Dragonfly")
+	body.Take_Damage(1, "Dragonfly", player_id)

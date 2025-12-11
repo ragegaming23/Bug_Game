@@ -15,6 +15,7 @@ var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
 var last_attacker_insect: String = ""
+var last_attacker_player_id: int = 0  
 
 signal health_changed(current, max)
 signal lives_changed(lives)
@@ -27,10 +28,11 @@ func _ready():
 	emit_signal("health_changed", current_health, max_health)
 	emit_signal("lives_changed", lives)
 
-
-func Take_Damage(dmg: int, attacker_insect: String = ""):
+func Take_Damage(dmg: int, attacker_insect: String = "", attacker_player_id: int = 0):
 	if attacker_insect != "":
 		last_attacker_insect = attacker_insect
+	if attacker_player_id != 0:
+		last_attacker_player_id = attacker_player_id
 
 	current_health = max(current_health - dmg, 0)
 
@@ -61,14 +63,18 @@ func lose_life():
 
 func die():
 	emit_signal("died")
+
 	var ui := get_tree().root.get_node_or_null("UI")
 	if ui:
 		ui.visible = false
 
-	var scene_path := "res://Assets/DeathVideoScenes/DragonflyWins_MantisDies_2025-10-29_16-58-07.tscn"
+	Global.last_winner_player_id = last_attacker_player_id
+	Global.last_winner_insect = last_attacker_insect
 
+	var scene_path := "res://Assets/DeathVideoScenes/DragonflyWins_MantisDies_2025-10-29_16-58-07.tscn"
 	if last_attacker_insect == "Mantis":
 		scene_path = "res://Assets/DeathVideoScenes/MantisVsMantis_Fatality_PLACEHOLDER.tscn"
+
 	get_tree().change_scene_to_file(scene_path)
 
 
@@ -121,4 +127,5 @@ func _on_area_2d_body_entered(body):
 
 	if body.has_method("apply_knockback"):
 		body.apply_knockback(direction, 200.0, 1.0)
-	body.Take_Damage(1, "Mantis")
+
+	body.Take_Damage(1, "Mantis", player_id)

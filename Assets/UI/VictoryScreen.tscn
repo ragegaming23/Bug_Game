@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds5rwtsxe6u2u"]
+
+[ext_resource type="Script" uid="uid://7qvm8bfbsv5p" path="res://Assets/UI/VictoryScreen.gd" id="1_3ob48"]
+[ext_resource type="Texture2D" uid="uid://dfuoft7gqjp2v" path="res://Fighters/Praying Mantis/Praying Mantis WINSCREEN/winscreen.png" id="2_6lrkt"]
+[ext_resource type="Script" uid="uid://bknpgip0i8g0l" path="res://Assets/UI/button.gd" id="2_f5efp"]
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 7.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ob48")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 1276.0
+offset_bottom = 717.0
+scale = Vector2(0.90508, 0.9113014)
+
+[node name="WinnerImage" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_6lrkt")
+
+[node name="ButtonMainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 855.0
+offset_top = 509.0
+offset_right = 1115.0
+offset_bottom = 581.0
+theme_override_font_sizes/font_size = 46
+text = "Main menu"
+script = ExtResource("2_f5efp")
+
+[connection signal="pressed" from="ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
+[connection signal="pressed" from="ButtonMainMenu" to="." method="_on_button_pressed"]
