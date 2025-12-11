@@ -678,7 +678,7 @@ animations = [{
 "duration": 0.1,
 "texture": ExtResource("84_gsaqe")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_Block",
 "speed": 5.0
 }, {
@@ -1374,7 +1374,7 @@ animations = [{
 "duration": 0.1,
 "texture": ExtResource("311_tko0j")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dragonfly_Jab",
 "speed": 5.0
 }, {
@@ -1711,7 +1711,7 @@ size = Vector2(21, 88)
 size = Vector2(40, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsqk6"]
-size = Vector2(72, 88)
+size = Vector2(56, 64.899994)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw6kr"]
 size = Vector2(36, 88)
@@ -1759,9 +1759,9 @@ script = ExtResource("1_ufpjl")
 position = Vector2(28.2, -81.2)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
-animation = &"Dragonfly_New_Jab"
-frame = 6
-frame_progress = 1.0
+animation = &"Grab&Sting"
+frame = 4
+frame_progress = 0.24131966
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
 position = Vector2(59, -60.5)
@@ -1785,7 +1785,7 @@ collision_layer = 255
 collision_mask = 255
 
 [node name="Jab Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-64.3, -0.200012)
+position = Vector2(-89.5, -7)
 shape = SubResource("RectangleShape2D_px1sc")
 disabled = true
 
@@ -1807,7 +1807,7 @@ shape = SubResource("RectangleShape2D_ufpjl")
 disabled = true
 
 [node name="SpearSpin Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-38.3, -0.200012)
+position = Vector2(-48.5, 9.449997)
 shape = SubResource("RectangleShape2D_dsqk6")
 disabled = true
 
