@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://73k4jyophb7o"]
+
+[ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="1_523uh"]
+[ext_resource type="Script" uid="uid://bl8c3n3wiqy6c" path="res://Rhino Beetle/rhino_beetle.gd" id="1_gtp6c"]
+[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_l2ihp"]
+[ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://StateMachine/attack_states.gd" id="5_5380r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvhbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocslu"]
+
+[node name="RhinoBeetle" type="CharacterBody2D"]
+script = ExtResource("1_gtp6c")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_l2ihp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pvhbl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ocslu")
+
+[node name="Movement States" type="Node" parent="."]
+script = ExtResource("1_523uh")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="Attack States" type="Node" parent="."]
+script = ExtResource("5_5380r")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"

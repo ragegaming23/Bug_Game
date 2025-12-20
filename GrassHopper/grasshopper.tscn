@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkxeqybn873kw"]
+
+[ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_82tpw"]
+[ext_resource type="Script" uid="uid://ramki5n7mlp3" path="res://GrassHopper/grasshopper.gd" id="1_xvt13"]
+[ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="1_yhju7"]
+[ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://StateMachine/attack_states.gd" id="5_hbp6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p43rd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kq73g"]
+
+[node name="Grasshopper" type="CharacterBody2D"]
+script = ExtResource("1_xvt13")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_82tpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p43rd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kq73g")
+
+[node name="Movement States" type="Node" parent="."]
+script = ExtResource("1_yhju7")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
+
+[node name="Attack States" type="Node" parent="."]
+script = ExtResource("5_hbp6f")
+metadata/_custom_type_script = "uid://cmr70fhjuepl6"
