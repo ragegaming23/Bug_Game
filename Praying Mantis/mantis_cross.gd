@@ -23,7 +23,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	queue_free()
 	if body.is_in_group("enemy"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 50.0, 1.0)
+		body.apply_knockback(knockback_direction, 50.0, 0.1)
 		body.Take_Damage(2)
 		queue_free()
 		
@@ -31,6 +31,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
 			
 			var knockback_direction = (body.global_position - global_position).normalized()
-			body.apply_knockback(knockback_direction, 200.0, 1.0)
+			body.apply_knockback(knockback_direction, 200.0, 0.1)
 			body.Take_Damage(2)
 			queue_free()

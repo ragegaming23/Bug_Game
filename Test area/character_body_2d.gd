@@ -138,6 +138,6 @@ func _on_area_2d_body_entered(body):
 	var direction = (body.global_position - global_position).normalized()
 
 	if body.has_method("apply_knockback"):
-		body.apply_knockback(direction, 200.0, 1.0)
+		body.apply_knockback(direction, 200.0, 0.1)
 
 	body.Take_Damage(1, "Mantis", player_id)
