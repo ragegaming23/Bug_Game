@@ -6,13 +6,13 @@ class_name punch
 
 
 func enter() -> void:
-	if Input.is_action_pressed("punch_%s" %[player.player_id]):
-		$"../../Animantis".play("punch")
-		await get_tree().create_timer(.1).timeout
-		get_node("../../Area2D/Punch Damage").disabled = false
-		await get_tree().create_timer(.3).timeout
-		#$Animantis.stop("punch")
-		get_node("../../Area2D/Punch Damage").disabled = true
+	#if Input.is_action_pressed("punch_%s" %[player.player_id]):
+	$"../../Animantis".play("punch")
+	await get_tree().create_timer(.1).timeout
+	get_node("../../Area2D/Punch Damage").disabled = false
+	await get_tree().create_timer(.3).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/Punch Damage").disabled = true
 
 func exit() -> void:
 	pass

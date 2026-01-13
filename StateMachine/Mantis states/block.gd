@@ -6,12 +6,12 @@ class_name block
 
 
 func enter() -> void:
-	if Input.is_action_pressed("block_%s" %[player.player_id]):
-		$"../../Animantis".play("block")
-		#get_node("../../Area2D/CollisionShape2D").disabled = false
-		#await get_tree().create_timer(1.0).timeout
-		#$Animantis.stop("punch")
-		#get_node("../../Area2D/CollisionShape2D").disabled = true
+	#if Input.is_action_pressed("block_%s" %[player.player_id]):
+	$"../../Animantis".play("block")
+	#get_node("../../Area2D/CollisionShape2D").disabled = false
+	#await get_tree().create_timer(1.0).timeout
+	#$Animantis.stop("punch")
+	#get_node("../../Area2D/CollisionShape2D").disabled = true
 
 func exit() -> void:
 	pass

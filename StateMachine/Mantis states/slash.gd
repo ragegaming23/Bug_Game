@@ -6,23 +6,25 @@ class_name slash
 
 
 func enter() -> void:
-	if Input.is_action_pressed("slash_%s" %[player.player_id]):
-		$"../../Animantis".play("slash")
-		await get_tree().create_timer(.2).timeout
-		get_node("../../Area2D/Slash Damage").disabled = false
-		await get_tree().create_timer(.3).timeout
-		#$Animantis.stop("punch")
-		get_node("../../Area2D/Slash Damage").disabled = true
+	#if Input.is_action_pressed("slash_%s" %[player.player_id]):
+	$"../../Animantis".play("slash")
+	await get_tree().create_timer(.2).timeout
+	get_node("../../Area2D/Slash Damage").disabled = false
+	await get_tree().create_timer(.3).timeout
+	#$Animantis.stop("punch")
+	get_node("../../Area2D/Slash Damage").disabled = true
 
 func exit() -> void:
 	pass
 	
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("slash_%s" %[player.player_id]):
-		await get_tree().create_timer(0.8).timeout
-		$"..".on_child_transitioned("No_Attack")
+		await get_tree().create_timer(0.9).timeout
+		if !player.Combo:
+			$"..".on_child_transitioned("No_Attack")
 
 	if Input.is_action_just_pressed("slash_%s" %[player.player_id]):
+		player.Combo = true
 		$"..".on_child_transitioned("multislash")
 
 	if Input.is_action_pressed("block_%s" %[player.player_id]):

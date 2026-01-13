@@ -1753,7 +1753,7 @@ size = Vector2(2, 11)
 [node name="enemy" type="CharacterBody2D" groups=["enemy"]]
 modulate = Color(1, 0.4509804, 1, 1)
 collision_layer = 8
-collision_mask = 3
+collision_mask = 8
 script = ExtResource("1_sogp8")
 
 [node name="Dragonfly" type="AnimatedSprite2D" parent="."]

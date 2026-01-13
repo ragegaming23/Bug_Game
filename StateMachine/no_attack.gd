@@ -25,9 +25,6 @@ func update(_delta: float) -> void:
 	if Input.is_action_just_pressed("Antiair_%s" %[player.player_id]):
 		$"..".on_child_transitioned("Anti air")
 
-	if Input.is_action_just_pressed("multislash_%s" %[player.player_id]):
-		$"..".on_child_transitioned("multislash")
-
 	if Input.is_action_just_pressed("headbut_%s" %[player.player_id]):
 		$"..".on_child_transitioned("headbut")
 

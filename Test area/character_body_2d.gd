@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var max_health: int = 100
 @export var move_speed: float = 300.0
 @export var jump_force: float = -400.0
+@export var Combo = false
 
 @onready var main = get_tree().get_root().get_node(".")
 @onready var projectile = preload("res://Fighters/Praying Mantis/Praying Mantis ANTIAIR/mantis_cross.tscn")

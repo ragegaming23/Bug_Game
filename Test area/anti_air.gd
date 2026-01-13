@@ -6,11 +6,11 @@ extends Attack_State
 
 
 func enter() -> void:
-	if Input.is_action_pressed("Antiair_%s" %[player.player_id]):
-		$"../../Animantis".play("antiair")
-		await get_tree().create_timer(0.3).timeout
-		player.MantisCross()
-		
+	#if Input.is_action_pressed("Antiair_%s" %[player.player_id]):
+	$"../../Animantis".play("antiair")
+	await get_tree().create_timer(0.3).timeout
+	player.MantisCross()
+	
 
 func exit() -> void:
 	pass

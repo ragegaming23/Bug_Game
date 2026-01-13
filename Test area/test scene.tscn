@@ -553,8 +553,8 @@ texture = ExtResource("18_djvg0")
 25:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_nt11a"]
-physics_layer_0/collision_layer = 255
-physics_layer_0/collision_mask = 255
+physics_layer_0/collision_layer = 4294967295
+physics_layer_0/collision_mask = 4294967295
 sources/0 = SubResource("TileSetAtlasSource_myoe6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djvg0"]
@@ -596,7 +596,7 @@ tile_map_data = PackedByteArray("AADl/wwAAAAHABQAAADm/wwAAAAIABQAAADm/wsAAAAIABM
 tile_set = SubResource("TileSet_nt11a")
 
 [node name="world edges" type="StaticBody2D" parent="."]
-collision_layer = 255
+collision_layer = 4294967295
 
 [node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
 position = Vector2(4.499939, 338.5)

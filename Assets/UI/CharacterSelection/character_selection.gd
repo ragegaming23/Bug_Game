@@ -33,7 +33,7 @@ func _set_player_choice(character_name: String) -> void:
 
 func _start_game() -> void:
 	print("Both players selected. Loading game...")
-	var Chosen_stage = Global.Chosen_Stage
+	var _Chosen_stage = Global.Chosen_Stage
 	await get_tree().process_frame
 	_start_client_and_load_game()
 
