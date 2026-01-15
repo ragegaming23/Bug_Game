@@ -14,20 +14,20 @@ func exit() -> void:
 	pass
 
 func update(_delta: float) -> void:
-	if Input.is_action_pressed("punch_%s" %[player.player_id]):
+	if Input.is_action_pressed("MediumP_%s" %[player.player_id]):
 		$"..".on_child_transitioned("Jab")
 		return
 
-	if Input.is_action_pressed("bicyclekick_%s" %[player.player_id]):
+	if Input.is_action_pressed("HeavyK_%s" %[player.player_id]):
 		$"..".on_child_transitioned("BicycleKick")
 
-	if Input.is_action_pressed("spearthrow_%s" %[player.player_id]):
+	if Input.is_action_pressed("spearthrow_%s" %[player.player_id]) and Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
 		$"..".on_child_transitioned("SpearThrow")
 
-	if Input.is_action_pressed("spear_spin_%s" %[player.player_id]):
+	if Input.is_action_pressed("MediumK_%s" %[player.player_id]):
 		$"..".on_child_transitioned("SpearSpin")
 
-	if Input.is_action_pressed("winddust_%s" %[player.player_id]):
+	if Input.is_action_pressed("LightK_%s" %[player.player_id]):
 		$"..".on_child_transitioned("WindDust")
 
 	if Input.is_action_pressed("block_%s" %[player.player_id]):

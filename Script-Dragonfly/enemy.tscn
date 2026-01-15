@@ -1711,7 +1711,7 @@ size = Vector2(21, 88)
 size = Vector2(40, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsqk6"]
-size = Vector2(56, 64.899994)
+size = Vector2(56, 64.9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw6kr"]
 size = Vector2(36, 88)
@@ -1761,7 +1761,7 @@ scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
 animation = &"Grab&Sting"
 frame = 4
-frame_progress = 0.24131966
+frame_progress = 0.24132
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
 position = Vector2(59, -60.5)
@@ -1807,7 +1807,7 @@ shape = SubResource("RectangleShape2D_ufpjl")
 disabled = true
 
 [node name="SpearSpin Damage" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-48.5, 9.449997)
+position = Vector2(-48.5, 9.45)
 shape = SubResource("RectangleShape2D_dsqk6")
 disabled = true
 
