@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dx7r1lw6mjxmq" path="res://Platforms/Sticky Floor.tscn" id="2_iemxh"]
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="3_317mm"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="4_dntir"]
-[ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="12_15mh6"]
+[ext_resource type="AudioStream" uid="uid://cendu4k25kkkj" path="res://SoundEffects/Music/CreepyBrawlers_Cave_01.mp3" id="6_8y6e6"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="13_wpluu"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="14_tj6fv"]
 
@@ -77,7 +77,7 @@ position = Vector2(-13, -167)
 position = Vector2(-8, 177)
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_15mh6")
+stream = ExtResource("6_8y6e6")
 volume_db = -10.0
 
 [node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
