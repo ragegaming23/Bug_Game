@@ -19,7 +19,7 @@ func exit() -> void:
 	pass
 	
 func update(_delta: float) -> void:
-	if Input.is_action_just_released("headbut_%s" %[player.player_id]):
+	if Input.is_action_just_released("LightP_%s" %[player.player_id]):
 		await get_tree().create_timer(0.5).timeout
 		$"..".on_child_transitioned("No_Attack")
 

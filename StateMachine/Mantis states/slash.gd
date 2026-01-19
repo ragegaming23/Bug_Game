@@ -18,12 +18,12 @@ func exit() -> void:
 	pass
 	
 func update(_delta: float) -> void:
-	if Input.is_action_just_released("slash_%s" %[player.player_id]):
+	if Input.is_action_just_released("HeavyP_%s" %[player.player_id]):
 		await get_tree().create_timer(0.9).timeout
 		if !player.Combo:
 			$"..".on_child_transitioned("No_Attack")
 
-	if Input.is_action_just_pressed("slash_%s" %[player.player_id]):
+	if Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
 		player.Combo = true
 		$"..".on_child_transitioned("multislash")
 

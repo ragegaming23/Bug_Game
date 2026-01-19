@@ -21,7 +21,7 @@ func exit() -> void:
 	pass
 
 func update(_delta: float) -> void:
-	if Input.is_action_just_released("spearthrow_%s" %[player.player_id]):
+	if Input.is_action_just_released("MeduimK_%s" %[player.player_id]) and Input.is_action_just_released("HeavyP_%s" %[player.player_id]):
 		await get_tree().create_timer(1).timeout
 		$"..".on_child_transitioned("DF_No_Attack")
 
