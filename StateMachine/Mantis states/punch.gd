@@ -18,9 +18,10 @@ func exit() -> void:
 	pass
 	
 func update(_delta: float) -> void:
-	if Input.is_action_just_released("LightP_%s" %[player.player_id]):
-		await get_tree().create_timer(0.3).timeout
-		$"..".on_child_transitioned("No_Attack")
+	if Input.is_action_just_released("MediumP_%s" %[player.player_id]):
+		if $"../../Animantis".animation_finished:
+			await get_tree().create_timer(0.4).timeout
+			$"..".on_child_transitioned("No_Attack")
 
 
 	if Input.is_action_pressed("block_%s" %[player.player_id]):

@@ -19,9 +19,10 @@ func exit() -> void:
 	
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("HeavyP_%s" %[player.player_id]):
-		await get_tree().create_timer(0.9).timeout
-		if !player.Combo:
-			$"..".on_child_transitioned("No_Attack")
+		if $"../../Animantis".animation_finished:
+			await get_tree().create_timer(0.5).timeout
+			if !player.Combo:
+				$"..".on_child_transitioned("No_Attack")
 
 	if Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
 		player.Combo = true

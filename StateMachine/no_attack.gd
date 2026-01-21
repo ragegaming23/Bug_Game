@@ -22,8 +22,9 @@ func update(_delta: float) -> void:
 	if Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
 		$"..".on_child_transitioned("slash")
 
-	if Input.is_action_just_pressed("MediumK_%s" %[player.player_id]) and Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
-		$"..".on_child_transitioned("Anti air")
+	if Input.is_action_just_pressed("MediumK_%s" %[player.player_id]): 
+		if Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
+			$"..".on_child_transitioned("Anti air")
 
 	if Input.is_action_just_pressed("LightP_%s" %[player.player_id]):
 		$"..".on_child_transitioned("headbut")
