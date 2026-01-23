@@ -38,10 +38,13 @@ func Take_Damage(dmg: int, attacker_insect: String = "", attacker_player_id: int
 
 	current_health = max(current_health - dmg, 0)
 
-	if has_node("HealthSFX"):
-		if $HealthSFX.playing:
-			$HealthSFX.stop()
-		$HealthSFX.play()
+	var sfx_node = get_node_or_null("HitSFX")
+	if sfx_node and sfx_node is AudioStreamPlayer:
+		var sfx := sfx_node as AudioStreamPlayer
+		sfx.pitch_scale = randf_range(0.6, 1.5)
+		if sfx.playing:
+			sfx.stop()
+		sfx.play()
 
 	emit_signal("health_changed", current_health, max_health)
 

@@ -537,6 +537,7 @@ stream = ExtResource("107_v24a8")
 
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("108_vq3x2")
+volume_db = -10.0
 
 [node name="Movement States" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("109_fsy0b")

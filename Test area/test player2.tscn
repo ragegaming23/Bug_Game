@@ -514,6 +514,7 @@ replication_config = SubResource("SceneReplicationConfig_86wen")
 
 [node name="HealthSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("85_owk3j")
+volume_db = -10.0
 
 [node name="HitSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("86_ytxgs")
