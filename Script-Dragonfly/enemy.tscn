@@ -1759,9 +1759,7 @@ script = ExtResource("1_ufpjl")
 position = Vector2(28.2, -81.2)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_k2yf2")
-animation = &"Grab&Sting"
-frame = 4
-frame_progress = 0.24132
+animation = &"WindDust"
 
 [node name="Front Tail" type="CollisionShape2D" parent="."]
 position = Vector2(59, -60.5)

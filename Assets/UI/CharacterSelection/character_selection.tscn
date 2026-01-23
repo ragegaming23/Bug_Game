@@ -107,5 +107,16 @@ offset_bottom = 531.0
 scale = Vector2(2.996234, 2.996234)
 text = "Player 1, choose your character!"
 
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1152.3823
+offset_top = 3.9383495
+offset_right = 1421.7704
+offset_bottom = 650.81226
+
+[node name="RandomButton" type="TextureButton" parent="BoxContainer"]
+layout_mode = 2
+
 [connection signal="pressed" from="Dragonfly/ButtonDragonfly" to="." method="_on_dragonfly_pressed"]
 [connection signal="pressed" from="Mantis/ButtonMantis" to="." method="_on_mantis_pressed"]
+[connection signal="pressed" from="BoxContainer/RandomButton" to="." method="_on_random_button_pressed"]

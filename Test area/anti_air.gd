@@ -17,7 +17,8 @@ func exit() -> void:
 	
 func update(_delta: float) -> void:
 	if Input.is_action_just_pressed("HeavyP_%s" %[player.player_id]):
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.5).timeout
+		player.Combo = false
 		$"..".on_child_transitioned("No_Attack")
 
 	if Input.is_action_pressed("block_%s" %[player.player_id]):

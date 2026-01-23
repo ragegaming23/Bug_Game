@@ -19,7 +19,7 @@ func exit() -> void:
 	
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("HeavyP_%s" %[player.player_id]):
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(.3).timeout
 		if !player.Combo:
 			$"..".on_child_transitioned("No_Attack")
 
@@ -29,7 +29,10 @@ func update(_delta: float) -> void:
 
 	if Input.is_action_pressed("block_%s" %[player.player_id]):
 		$"..".on_child_transitioned("block")
-	pass
+
+	if Input.is_action_just_pressed("MediumK_%s" %[player.player_id]):
+		player.Combo = true
+		$"..".on_child_transitioned("Anti air")
 
 func physics_update(_delta: float) -> void:
 	pass

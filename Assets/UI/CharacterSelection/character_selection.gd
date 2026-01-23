@@ -5,6 +5,8 @@ var current_player := 1
 @onready var player_label: Label = $Label_Player
 @onready var button_mantis: TextureButton = $Mantis/ButtonMantis
 @onready var button_dragonfly: TextureButton = $Dragonfly/ButtonDragonfly
+var Character = ["Mantis","Dragonfly"]
+var Random = Character.pick_random()
 
 func _ready() -> void:
 	button_mantis.grab_focus()
@@ -18,6 +20,8 @@ func _on_mantis_pressed() -> void:
 func _on_dragonfly_pressed() -> void:
 	_set_player_choice("Dragonfly")
 
+func _on_random_button_pressed() -> void:
+	_set_player_choice(Random)
 
 func _set_player_choice(character_name: String) -> void:
 	if current_player == 1:

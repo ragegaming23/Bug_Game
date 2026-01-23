@@ -20,7 +20,7 @@ func exit() -> void:
 	
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("MediumP_%s" %[player.player_id]):
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(0.8).timeout
 		$"..".on_child_transitioned("No_Attack")
 
 
