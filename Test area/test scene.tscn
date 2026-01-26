@@ -597,6 +597,7 @@ tile_set = SubResource("TileSet_nt11a")
 
 [node name="world edges" type="StaticBody2D" parent="."]
 collision_layer = 4294967295
+collision_mask = 4294967295
 
 [node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
 position = Vector2(4.499939, 338.5)

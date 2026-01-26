@@ -37,6 +37,7 @@ size = Vector2(41, 12)
 size = Vector2(41, 15)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 4294967295
 script = ExtResource("1_qpmql")
 Force = 800.0
 
@@ -53,8 +54,8 @@ position = Vector2(-3.5, 6)
 shape = SubResource("RectangleShape2D_ysuam")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 4294967295
+collision_mask = 4294967295
 
 [node name="Bounce Effect" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-3.5, -7.5)

@@ -5,6 +5,7 @@ var current_player := 1
 @onready var player_label: Label = $Label_Player
 @onready var button_mantis: TextureButton = $Mantis/ButtonMantis
 @onready var button_dragonfly: TextureButton = $Dragonfly/ButtonDragonfly
+
 var Character = ["Mantis","Dragonfly"]
 var Random = Character.pick_random()
 

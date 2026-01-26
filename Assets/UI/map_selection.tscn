@@ -23,6 +23,7 @@ Stage_2 = ExtResource("3_c4jnd")
 Stage_3 = ExtResource("4_lk5kp")
 Stage_4 = ExtResource("5_op1ma")
 Stage_5 = ExtResource("6_fep7l")
+Random_Stage = [ExtResource("2_ao80t"), ExtResource("3_c4jnd"), ExtResource("4_lk5kp"), ExtResource("5_op1ma"), ExtResource("6_fep7l")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -77,6 +78,10 @@ icon = ExtResource("2_xwpqq")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
+[node name="RandomMapButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Random"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbn6b")
 
@@ -86,3 +91,4 @@ stream = ExtResource("3_jbn6b")
 [connection signal="pressed" from="BoxContainer/Stage 3" to="." method="_on_stage_3_pressed"]
 [connection signal="pressed" from="BoxContainer/Stage 4" to="." method="_on_stage_4_pressed"]
 [connection signal="pressed" from="BoxContainer/Stage 5" to="." method="_on_stage_5_pressed"]
+[connection signal="pressed" from="BoxContainer/RandomMapButton" to="." method="_on_random_map_button_pressed"]

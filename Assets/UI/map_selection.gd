@@ -5,6 +5,10 @@ extends Control
 @export var Stage_3 : PackedScene
 @export var Stage_4 : PackedScene
 @export var Stage_5 : PackedScene
+
+@export var Random_Stage : Array[PackedScene] = []
+
+
 func _ready():
 	$BoxContainer/Stage_1.grab_focus()
 
@@ -38,4 +42,10 @@ func _on_stage_4_pressed() -> void:
 func _on_stage_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
 	Global.Chosen_Stage = Stage_5
+	LocalNetwork.start_server()
+
+
+func _on_random_map_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Assets/UI/CharacterSelection/character_selection.tscn")
+	Global.Chosen_Stage = Random_Stage.pick_random()
 	LocalNetwork.start_server()
