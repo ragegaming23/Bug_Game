@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=15 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://Assets/UI/menu.gd" id="1_0h2wq"]
 [ext_resource type="Texture2D" uid="uid://u7pp1rqmbn5u" path="res://Assets/Main Menu/backgound_NoButtons.png" id="2_dvixa"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://csrjkkt6wmsdr" path="res://Assets/Main Menu/png/TV_On.png" id="4_6a31s"]
 [ext_resource type="Script" uid="uid://dosf7p6ss2yl0" path="res://Assets/UI/TVStart.gd" id="5_6a31s"]
 [ext_resource type="AudioStream" uid="uid://r50j651vjq5e" path="res://Assets/Main Menu/SE/TV_ON_PH.mp3" id="6_nwcpr"]
+[ext_resource type="AudioStream" uid="uid://bgsaqs8w4x750" path="res://SoundEffects/Tv off sound.mp3" id="7_2wtde"]
 [ext_resource type="Texture2D" uid="uid://cnon56lf2ur84" path="res://Assets/Main Menu/png/Settings_Hoovered.png" id="8_7skmn"]
 [ext_resource type="Script" uid="uid://byonpjh2qe8yw" path="res://Assets/UI/FocusTextureButton.gd" id="9_mbd6i"]
 [ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://Assets/UI/Loading Screen/Loading Screen.jpg" id="10_8ngtt"]
@@ -41,6 +42,9 @@ script = ExtResource("5_6a31s")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Start"]
 stream = ExtResource("6_nwcpr")
 volume_db = 15.876
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Start"]
+stream = ExtResource("7_2wtde")
 
 [node name="Options" type="TextureButton" parent="." groups=["menu_button"]]
 layout_mode = 0
