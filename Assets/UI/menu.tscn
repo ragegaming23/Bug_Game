@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cg2ch8yn4qy1r"]
+[gd_scene load_steps=16 format=3 uid="uid://cg2ch8yn4qy1r"]
 
 [ext_resource type="Script" uid="uid://ddgge0hxf3b5d" path="res://Assets/UI/menu.gd" id="1_0h2wq"]
 [ext_resource type="Texture2D" uid="uid://u7pp1rqmbn5u" path="res://Assets/Main Menu/backgound_NoButtons.png" id="2_dvixa"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://fylo7uxccd0c" path="res://Assets/UI/Loading Screen/Loading Screen.jpg" id="10_8ngtt"]
 [ext_resource type="Texture2D" uid="uid://ceicvkl03a6pc" path="res://Assets/Main Menu/png/CreepyBrawlers Tittle.png" id="11_0lkms"]
 [ext_resource type="Script" uid="uid://bwf8tsqn0ccrk" path="res://settings_menu.gd" id="11_r2cov"]
+[ext_resource type="Texture2D" uid="uid://px7r7wvdy3ml" path="res://Assets/UI/Loading Screen/maxresdefault.jpg" id="15_mdxw0"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -66,6 +67,14 @@ position = Vector2(557, 285)
 scale = Vector2(0.195646, 0.117433)
 texture = ExtResource("11_0lkms")
 
+[node name="Controller Layout" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 661.0
+texture = ExtResource("15_mdxw0")
+expand_mode = 1
+
 [node name="SettingsMenu" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
@@ -94,6 +103,10 @@ text = "Back"
 layout_mode = 2
 text = "Quit Game"
 
+[node name="ButtonControl" type="Button" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
 [node name="LoadingScreen" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
@@ -107,3 +120,4 @@ texture = ExtResource("10_8ngtt")
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]
 [connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/ButtonControl" to="SettingsMenu" method="_on_button_control_pressed"]
