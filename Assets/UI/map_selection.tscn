@@ -23,7 +23,7 @@ Stage_2 = ExtResource("3_c4jnd")
 Stage_3 = ExtResource("4_lk5kp")
 Stage_4 = ExtResource("5_op1ma")
 Stage_5 = ExtResource("6_fep7l")
-Random_Stage = [ExtResource("2_ao80t"), ExtResource("3_c4jnd"), ExtResource("4_lk5kp"), ExtResource("5_op1ma"), ExtResource("6_fep7l")]
+Random_Stage = Array[PackedScene]([ExtResource("2_ao80t"), ExtResource("3_c4jnd"), ExtResource("4_lk5kp"), ExtResource("5_op1ma"), ExtResource("6_fep7l")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -41,8 +41,10 @@ offset_bottom = 236.0
 
 [node name="Stage_1" type="Button" parent="BoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../RandomMapButton")
 text = "Stage 1"
 icon = ExtResource("2_xwpqq")
+flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
@@ -51,6 +53,7 @@ modulate = Color(0.60634255, 0.07016479, 0.53611076, 1)
 layout_mode = 2
 text = "Stage 2"
 icon = ExtResource("2_xwpqq")
+flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
@@ -59,6 +62,7 @@ modulate = Color(0.6192527, 0.49142516, 0.1376951, 1)
 layout_mode = 2
 text = "Stage 3"
 icon = ExtResource("2_xwpqq")
+flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
@@ -67,6 +71,7 @@ modulate = Color(0.34741336, 0.5795659, 0.5074838, 1)
 layout_mode = 2
 text = "Stage 4"
 icon = ExtResource("2_xwpqq")
+flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
@@ -75,12 +80,19 @@ modulate = Color(0.7882353, 0.6, 0.36078432, 1)
 layout_mode = 2
 text = "Stage 5"
 icon = ExtResource("2_xwpqq")
+flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
 [node name="RandomMapButton" type="Button" parent="BoxContainer"]
+modulate = Color(0.94533974, 0.3589058, 0.3155625, 1)
 layout_mode = 2
+focus_neighbor_right = NodePath("../Stage_1")
 text = "Random"
+icon = ExtResource("2_xwpqq")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbn6b")
