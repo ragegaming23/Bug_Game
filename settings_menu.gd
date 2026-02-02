@@ -22,10 +22,8 @@ func _on_button_back_pressed() -> void:
 	if parent and parent.has_node("Start"):
 		parent.get_node("Start").grab_focus()
 
-
 func _on_button_quit_pressed() -> void:
 	get_tree().quit()
-
 
 func _on_button_control_pressed() -> void:
 	control_screen.visible = true

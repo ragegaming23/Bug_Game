@@ -97,7 +97,8 @@ func die() -> void:
 			scene_path = "res://Assets/DeathVideoScenes/DragonflyAttacker_New0000-0210.tscn"
 		_:
 			scene_path = "res://Assets/DeathVideoScenes/Dragonfly_DeathVideo.tscn"
-
+	GameManager.can_pause = false
+	GameManager.in_map = false
 	get_tree().change_scene_to_file(scene_path)
 
 

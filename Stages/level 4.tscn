@@ -56,6 +56,7 @@ position = Vector2(-2, -2)
 script = ExtResource("6_80qkx")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
+process_mode = 2
 stream = ExtResource("11_bj3eb")
 volume_db = -10.0
 

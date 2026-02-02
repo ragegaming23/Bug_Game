@@ -34,8 +34,6 @@ func _spawn_players():
 	player1.name = p1_choice
 	player1.add_to_group("player_1")
 
-	print("Spawned Player 1 as ", p1_choice)
-
 	var use_alt_for_p2 := same_character
 	var p2_scene: PackedScene = _get_character_scene_for_slot(p2_choice, 2, use_alt_for_p2)
 	var player2 = p2_scene.instantiate()
@@ -44,8 +42,8 @@ func _spawn_players():
 	player2.player_id = 2
 	player2.name = p2_choice
 	player2.add_to_group("player_2")
-
-	print("Spawned Player 2 as ", p2_choice, " (alt: ", use_alt_for_p2, ")")
+	GameManager.can_pause = true
+	GameManager.in_map = true
 
 
 func _get_character_scene_for_slot(character_name: String, player_id: int, use_alt: bool) -> PackedScene:

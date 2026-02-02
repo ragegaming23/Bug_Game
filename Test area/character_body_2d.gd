@@ -64,7 +64,6 @@ func lose_life():
 	else:
 		die()
 
-
 func die():
 	emit_signal("died")
 
@@ -87,11 +86,11 @@ func die():
 	Global.last_winner_player_id = last_attacker_player_id
 	Global.last_winner_insect = last_attacker_insect
 
-	# --- Pick death video ---
 	var scene_path := "res://Assets/DeathVideoScenes/DragonflyWins_MantisDies_2025-10-29_16-58-07.tscn"
 	if last_attacker_insect == "Mantis":
 		scene_path = "res://Assets/DeathVideoScenes/MantisVsMantis_Fatality_PLACEHOLDER.tscn"
-
+	GameManager.can_pause = false
+	GameManager.in_map = false
 	get_tree().change_scene_to_file(scene_path)
 
 
@@ -111,7 +110,6 @@ func _physics_process(delta):
 		_movement(delta)
 
 	move_and_slide()
-
 
 func MantisCross() -> void:
 	var instance = projectile.instantiate()

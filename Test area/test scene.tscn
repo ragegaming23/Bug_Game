@@ -587,7 +587,6 @@ Knockback_timer = 0.1
 [node name="StaticBody2D17" parent="." instance=ExtResource("18_6t5vm")]
 position = Vector2(543, 97)
 rotation = -0.40171957
-collision_layer = 4294967295
 collision_mask = 4294967295
 Knockback_timer = 0.1
 
@@ -623,6 +622,7 @@ scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_5figy")
 
 [node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
+process_mode = 2
 stream = ExtResource("8_nqsoe")
 volume_db = -10.0
 
