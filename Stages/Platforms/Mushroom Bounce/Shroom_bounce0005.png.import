@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brppmhqsncwp5"
-path="res://.godot/imported/Shroom_bounce0005.png-728802989ba3c11c8935bdb9f6f8893c.ctex"
+path="res://.godot/imported/Shroom_bounce0005.png-49051f62bd41e713f98e828e5827546e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Platforms/Mushroom Bounce/Shroom_bounce0005.png"
-dest_files=["res://.godot/imported/Shroom_bounce0005.png-728802989ba3c11c8935bdb9f6f8893c.ctex"]
+source_file="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0005.png"
+dest_files=["res://.godot/imported/Shroom_bounce0005.png-49051f62bd41e713f98e828e5827546e.ctex"]
 
 [params]
 

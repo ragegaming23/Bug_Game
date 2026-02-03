@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyvoaagn655vk"
-path="res://.godot/imported/Shroom_bounce0002.png-67304bee495de85a5baf5a5dc4253eb7.ctex"
+uid="uid://cnjf3hpeqasr2"
+path="res://.godot/imported/Tile-Map_STONES.png-30684bddc70c0a267724be361c5d3549.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Platforms/Mushroom Bounce/Shroom_bounce0002.png"
-dest_files=["res://.godot/imported/Shroom_bounce0002.png-67304bee495de85a5baf5a5dc4253eb7.ctex"]
+source_file="res://Stages/Platforms/tile maps/Tile-Map_STONES.png"
+dest_files=["res://.godot/imported/Tile-Map_STONES.png-30684bddc70c0a267724be361c5d3549.ctex"]
 
 [params]
 

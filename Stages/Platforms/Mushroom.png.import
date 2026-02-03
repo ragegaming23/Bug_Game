@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnjf3hpeqasr2"
-path="res://.godot/imported/Tile-Map_STONES.png-c5738cb031ed7445e599e2c9cd8c3bc4.ctex"
+uid="uid://dxjk4mk6amle0"
+path="res://.godot/imported/Mushroom.png-76202d8c14e67224100e639b9e06c78c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Platforms/tile maps/Tile-Map_STONES.png"
-dest_files=["res://.godot/imported/Tile-Map_STONES.png-c5738cb031ed7445e599e2c9cd8c3bc4.ctex"]
+source_file="res://Stages/Platforms/Mushroom.png"
+dest_files=["res://.godot/imported/Mushroom.png-76202d8c14e67224100e639b9e06c78c.ctex"]
 
 [params]
 

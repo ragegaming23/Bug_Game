@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkxeqybn873kw"]
+[gd_scene format=3 uid="uid://dkxeqybn873kw"]
 
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_82tpw"]
-[ext_resource type="Script" uid="uid://ramki5n7mlp3" path="res://GrassHopper/grasshopper.gd" id="1_xvt13"]
+[ext_resource type="Script" uid="uid://ramki5n7mlp3" path="res://Fighters/GrassHopper/grasshopper.gd" id="1_xvt13"]
 [ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="1_yhju7"]
 [ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://StateMachine/attack_states.gd" id="5_hbp6f"]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bifcuulr8176p"]
+[gd_scene format=3 uid="uid://bifcuulr8176p"]
 
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_0i422"]
 [ext_resource type="Script" uid="uid://ccbk0e6a1ej3g" path="res://Stages/level_4.gd" id="1_imial"]
-[ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Platforms/Bouncy platform.tscn" id="2_imial"]
+[ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Stages/Platforms/Bouncy platform.tscn" id="2_imial"]
+[ext_resource type="Texture2D" uid="uid://dv8o3ms5boq3p" path="res://Stages/patch of grass.png" id="2_typkp"]
 [ext_resource type="Script" uid="uid://dwmofl5w0fp6t" path="res://Test area/camera_2d.gd" id="6_80qkx"]
 [ext_resource type="AudioStream" uid="uid://cb5uk0805tcyo" path="res://SoundEffects/Music/CreepyBrawlers_GrassField_New_03.mp3" id="11_bj3eb"]
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="12_j3bco"]
@@ -20,89 +21,93 @@ size = Vector2(90.57408, 5.2445717)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ao3ad"]
 size = Vector2(164.7059, 5.3862686)
 
-[node name="Level4" type="Node2D"]
+[node name="Level4" type="Node2D" unique_id=374772465]
 script = ExtResource("1_imial")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("1_0i422")]
+[node name="PatchOfGrass" type="Sprite2D" parent="." unique_id=563954490]
+scale = Vector2(2.1090908, 1.6199999)
+texture = ExtResource("2_typkp")
+
+[node name="StaticBody2D" parent="." unique_id=1305085651 instance=ExtResource("1_0i422")]
 position = Vector2(-27, 196)
 scale = Vector2(40, 1)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D3" parent="." unique_id=375218345 instance=ExtResource("2_imial")]
 position = Vector2(-460, 191)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D2" parent="." unique_id=1037277985 instance=ExtResource("2_imial")]
 position = Vector2(418, 188)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("1_0i422")]
+[node name="StaticBody2D4" parent="." unique_id=48158289 instance=ExtResource("1_0i422")]
 position = Vector2(-27, 36)
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D5" parent="." unique_id=1537057389 instance=ExtResource("2_imial")]
 position = Vector2(-555, -19.99997)
 rotation = 1.22173
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D6" parent="." unique_id=773640894 instance=ExtResource("2_imial")]
 position = Vector2(541, -12.0000305)
 rotation = -1.22173
 
-[node name="Spawnpoint2" type="Marker2D" parent="."]
+[node name="Spawnpoint2" type="Marker2D" parent="." unique_id=226503529]
 position = Vector2(297, 95)
 
-[node name="Spawnpoint1" type="Marker2D" parent="."]
+[node name="Spawnpoint1" type="Marker2D" parent="." unique_id=1535363127]
 position = Vector2(-208, -57)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1258023853]
 position = Vector2(-2, -2)
 script = ExtResource("6_80qkx")
 
-[node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
+[node name="PlaceholderOST" type="AudioStreamPlayer" parent="." unique_id=573099015]
 process_mode = 2
 stream = ExtResource("11_bj3eb")
 volume_db = -10.0
 
-[node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
+[node name="AnnouncerReady" type="AudioStreamPlayer" parent="." unique_id=297100809]
 stream = ExtResource("12_j3bco")
 volume_db = 1.5
 
-[node name="AnnouncerFight" type="AudioStreamPlayer" parent="."]
+[node name="AnnouncerFight" type="AudioStreamPlayer" parent="." unique_id=1762957393]
 stream = ExtResource("13_8rfu6")
 volume_db = 1.5
 
-[node name="world edges" type="StaticBody2D" parent="."]
+[node name="world edges" type="StaticBody2D" parent="." unique_id=1169749727]
 
-[node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
+[node name="world wall Bottom" type="CollisionShape2D" parent="world edges" unique_id=2139852484]
 position = Vector2(4.499939, 338.5)
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_8o5lg")
 
-[node name="world wall Right" type="CollisionShape2D" parent="world edges"]
+[node name="world wall Right" type="CollisionShape2D" parent="world edges" unique_id=1528358478]
 position = Vector2(595.49976, -9.1552734e-05)
 rotation = -1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_l3cf0")
 
-[node name="world wall Left" type="CollisionShape2D" parent="world edges"]
+[node name="world wall Left" type="CollisionShape2D" parent="world edges" unique_id=1577278910]
 position = Vector2(-590.4998, 0.49993896)
 rotation = 1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_5ct8i")
 
-[node name="world wall Top" type="CollisionShape2D" parent="world edges"]
+[node name="world wall Top" type="CollisionShape2D" parent="world edges" unique_id=937204192]
 position = Vector2(6.000061, -342.99997)
 rotation = 3.14159
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_ao3ad")
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D7" parent="." unique_id=1235981092 instance=ExtResource("2_imial")]
 position = Vector2(-503, 190)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D8" parent="." unique_id=1580652153 instance=ExtResource("2_imial")]
 position = Vector2(460, 190)
 
-[node name="StaticBody2D9" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D9" parent="." unique_id=1935506593 instance=ExtResource("2_imial")]
 position = Vector2(-542, 19)
 rotation = 1.2217305
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("2_imial")]
+[node name="StaticBody2D10" parent="." unique_id=746941906 instance=ExtResource("2_imial")]
 position = Vector2(524, 28)
 rotation = -1.2217305

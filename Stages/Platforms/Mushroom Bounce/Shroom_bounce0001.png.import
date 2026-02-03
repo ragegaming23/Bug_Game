@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uhbj6fyscamr"
-path="res://.godot/imported/Shroom_bounce0003.png-78f0be0a1a99f2a73cac1ac160dc4b8e.ctex"
+uid="uid://c2hh3eviuyn8x"
+path="res://.godot/imported/Shroom_bounce0001.png-dd767a84ed70d15cd4465e16c22bc457.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Platforms/Mushroom Bounce/Shroom_bounce0003.png"
-dest_files=["res://.godot/imported/Shroom_bounce0003.png-78f0be0a1a99f2a73cac1ac160dc4b8e.ctex"]
+source_file="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0001.png"
+dest_files=["res://.godot/imported/Shroom_bounce0001.png-dd767a84ed70d15cd4465e16c22bc457.ctex"]
 
 [params]
 

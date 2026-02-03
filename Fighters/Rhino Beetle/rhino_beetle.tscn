@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://73k4jyophb7o"]
+[gd_scene format=3 uid="uid://73k4jyophb7o"]
 
 [ext_resource type="Script" uid="uid://bng6nf8likdxb" path="res://StateMachine/movement_states.gd" id="1_523uh"]
-[ext_resource type="Script" uid="uid://bl8c3n3wiqy6c" path="res://Rhino Beetle/rhino_beetle.gd" id="1_gtp6c"]
+[ext_resource type="Script" uid="uid://bl8c3n3wiqy6c" path="res://Fighters/Rhino Beetle/rhino_beetle.gd" id="1_gtp6c"]
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_l2ihp"]
 [ext_resource type="Script" uid="uid://dqwcqjann8op1" path="res://StateMachine/attack_states.gd" id="5_5380r"]
 

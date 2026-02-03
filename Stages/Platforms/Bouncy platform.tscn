@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhn64fcs7wwj6"]
+[gd_scene format=3 uid="uid://bhn64fcs7wwj6"]
 
-[ext_resource type="Script" uid="uid://c2howxvogiq8v" path="res://Platforms/bouncy_platform.gd" id="1_qpmql"]
-[ext_resource type="Texture2D" uid="uid://c2hh3eviuyn8x" path="res://Platforms/Mushroom Bounce/Shroom_bounce0001.png" id="2_06qmi"]
-[ext_resource type="Texture2D" uid="uid://dyvoaagn655vk" path="res://Platforms/Mushroom Bounce/Shroom_bounce0002.png" id="3_7gno6"]
-[ext_resource type="Texture2D" uid="uid://uhbj6fyscamr" path="res://Platforms/Mushroom Bounce/Shroom_bounce0003.png" id="4_gxj8y"]
-[ext_resource type="Texture2D" uid="uid://htxfijuhddms" path="res://Platforms/Mushroom Bounce/Shroom_bounce0004.png" id="5_8ywvr"]
-[ext_resource type="Texture2D" uid="uid://brppmhqsncwp5" path="res://Platforms/Mushroom Bounce/Shroom_bounce0005.png" id="6_a16yu"]
+[ext_resource type="Script" uid="uid://c2howxvogiq8v" path="res://Stages/Platforms/bouncy_platform.gd" id="1_qpmql"]
+[ext_resource type="Texture2D" uid="uid://c2hh3eviuyn8x" path="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0001.png" id="2_06qmi"]
+[ext_resource type="Texture2D" uid="uid://dyvoaagn655vk" path="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0002.png" id="3_7gno6"]
+[ext_resource type="Texture2D" uid="uid://uhbj6fyscamr" path="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0003.png" id="4_gxj8y"]
+[ext_resource type="Texture2D" uid="uid://htxfijuhddms" path="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0004.png" id="5_8ywvr"]
+[ext_resource type="Texture2D" uid="uid://brppmhqsncwp5" path="res://Stages/Platforms/Mushroom Bounce/Shroom_bounce0005.png" id="6_a16yu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_35wmu"]
 animations = [{

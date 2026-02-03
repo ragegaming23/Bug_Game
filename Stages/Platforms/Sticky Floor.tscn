@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx7r1lw6mjxmq"]
+[gd_scene format=3 uid="uid://dx7r1lw6mjxmq"]
 
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="1_2ocfh"]
-[ext_resource type="Script" uid="uid://j17fg8w057w3" path="res://Platforms/sticky_floor.gd" id="1_l6isy"]
+[ext_resource type="Script" uid="uid://j17fg8w057w3" path="res://Stages/Platforms/sticky_floor.gd" id="1_l6isy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6isy"]
 size = Vector2(18, 18)
