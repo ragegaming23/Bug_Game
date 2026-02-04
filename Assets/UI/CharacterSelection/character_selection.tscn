@@ -127,6 +127,10 @@ focus_neighbor_top = NodePath("../../Mantis/ButtonMantis")
 texture_normal = ExtResource("9_m2gxm")
 texture_hover = ExtResource("9_m2gxm")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3.9909346, -0.9845874)
+anchor_mode = 0
+
 [connection signal="pressed" from="Dragonfly/ButtonDragonfly" to="." method="_on_dragonfly_pressed"]
 [connection signal="pressed" from="Mantis/ButtonMantis" to="." method="_on_mantis_pressed"]
 [connection signal="pressed" from="BoxContainer/RandomButton" to="." method="_on_random_button_pressed"]

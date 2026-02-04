@@ -430,21 +430,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uc3h"]
-size = Vector2(12, 10)
+size = Vector2(20.75, 15.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjc8k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqtej"]
-size = Vector2(20.784607, 27.563034)
+[sub_resource type="CircleShape2D" id="CircleShape2D_qjc8k"]
+radius = 13.999998
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4fcr"]
-size = Vector2(34.500015, 22.999949)
+size = Vector2(39.125008, 20.49997)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d42gp"]
 size = Vector2(127, 41)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa75d"]
-size = Vector2(79, 37.489285)
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqtej"]
+radius = 13.601471
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wov"]
 size = Vector2(84, 20)
@@ -474,20 +474,19 @@ sprite_frames = SubResource("SpriteFrames_20rux")
 animation = &"antiair"
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 5)
+position = Vector2(13, 2)
 shape = SubResource("RectangleShape2D_3uc3h")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(22, -20)
+position = Vector2(30, -14)
 shape = SubResource("RectangleShape2D_qjc8k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-21.999998, 17)
-scale = Vector2(2.2253942, 0.6263155)
-shape = SubResource("RectangleShape2D_dqtej")
+position = Vector2(1, 18)
+shape = SubResource("CircleShape2D_qjc8k")
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(42, -27)
+position = Vector2(67, -8)
 rotation = 1.5707941
 shape = SubResource("RectangleShape2D_s4fcr")
 
@@ -496,8 +495,8 @@ position = Vector2(-22.5, 46.5)
 shape = SubResource("RectangleShape2D_d42gp")
 
 [node name="ArmCollision" type="CollisionShape2D" parent="."]
-position = Vector2(39.5, 8.402588)
-shape = SubResource("RectangleShape2D_qa75d")
+position = Vector2(47, -31)
+shape = SubResource("CircleShape2D_dqtej")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
