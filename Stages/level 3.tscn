@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dk0yycfoueis4"]
+[gd_scene load_steps=9 format=3 uid="uid://dk0yycfoueis4"]
 
 [ext_resource type="Script" uid="uid://bwk8bpcvcvt2v" path="res://Stages/level_3.gd" id="1_3o4tr"]
 [ext_resource type="PackedScene" uid="uid://cfshj5p1g3jk5" path="res://Test area/testfloor01.tscn" id="1_lauke"]
@@ -9,302 +9,303 @@
 [ext_resource type="AudioStream" uid="uid://cjp456p0hb71m" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Ready.ogg" id="12_r6b76"]
 [ext_resource type="AudioStream" uid="uid://cw3owxb7k33w1" path="res://SoundEffects/Voice Lines/Announcer/AnnouncerHall_Fight.ogg" id="13_50jjw"]
 
-[node name="Level3" type="Node2D" unique_id=462550815]
+[node name="Level3" type="Node2D"]
 script = ExtResource("1_3o4tr")
 
-[node name="PatchOfGrass" type="Sprite2D" parent="." unique_id=1062160980]
+[node name="PatchOfGrass" type="Sprite2D" parent="."]
 position = Vector2(-4, -56)
 scale = Vector2(2.0509093, 1.28)
 texture = ExtResource("2_u3gje")
 
-[node name="StaticBody2D" parent="." unique_id=409158105 instance=ExtResource("1_lauke")]
+[node name="StaticBody2D" parent="." instance=ExtResource("1_lauke")]
 position = Vector2(-416.00003, 8)
 scale = Vector2(10, 1)
 
-[node name="StaticBody2D2" parent="." unique_id=305037091 instance=ExtResource("1_lauke")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_lauke")]
 position = Vector2(4, 72)
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D5" parent="." unique_id=2124862332 instance=ExtResource("1_lauke")]
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_lauke")]
 position = Vector2(419, -5)
 scale = Vector2(10, 1)
 
-[node name="StaticBody2D6" parent="." unique_id=1406871613 instance=ExtResource("1_lauke")]
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_lauke")]
 position = Vector2(0, -186)
 scale = Vector2(20, 1)
 
-[node name="Mushroom wall" parent="." unique_id=6390536 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom wall" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(-576, -288)
 rotation = 1.5707964
 
-[node name="Mushroom2" parent="Mushroom wall" unique_id=1244549064 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom2" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(40, 0)
 
-[node name="Mushroom3" parent="Mushroom wall" unique_id=1293989963 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom3" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(80, 0)
 
-[node name="Mushroom4" parent="Mushroom wall" unique_id=1008850121 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom4" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(120, 0)
 
-[node name="Mushroom5" parent="Mushroom wall" unique_id=1014577416 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom5" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(160, 0)
 
-[node name="Mushroom6" parent="Mushroom wall" unique_id=994536433 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom6" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(200, 0)
 
-[node name="Mushroom7" parent="Mushroom wall" unique_id=1589297141 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom7" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(240, 0)
 
-[node name="Mushroom8" parent="Mushroom wall" unique_id=660764719 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom8" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(280, 0)
 
-[node name="Mushroom9" parent="Mushroom wall" unique_id=1519946734 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom9" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(320, 0)
 
-[node name="Mushroom10" parent="Mushroom wall" unique_id=1024230885 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom10" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(360, 0)
 
-[node name="Mushroom11" parent="Mushroom wall" unique_id=1892374413 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom11" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(400, 0)
 
-[node name="Mushroom12" parent="Mushroom wall" unique_id=517161665 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom12" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(440, 0)
 
-[node name="Mushroom13" parent="Mushroom wall" unique_id=578629735 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom13" parent="Mushroom wall" instance=ExtResource("2_1vnp6")]
 position = Vector2(480, 0)
 
-[node name="Mushroom wall2" parent="." unique_id=1590284065 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom wall2" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(576, 184)
 rotation = 4.7123823
 
-[node name="Mushroom2" parent="Mushroom wall2" unique_id=2108323166 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom2" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(40, 0)
 
-[node name="Mushroom3" parent="Mushroom wall2" unique_id=465706612 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom3" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(80, 0)
 
-[node name="Mushroom4" parent="Mushroom wall2" unique_id=560382322 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom4" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(120, 0)
 
-[node name="Mushroom5" parent="Mushroom wall2" unique_id=1846924537 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom5" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(160, 0)
 
-[node name="Mushroom6" parent="Mushroom wall2" unique_id=265777048 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom6" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(200, 0)
 
-[node name="Mushroom7" parent="Mushroom wall2" unique_id=1369382248 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom7" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(240, 0)
 
-[node name="Mushroom8" parent="Mushroom wall2" unique_id=768176926 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom8" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(280, 0)
 
-[node name="Mushroom9" parent="Mushroom wall2" unique_id=177627412 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom9" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(320, 0)
 
-[node name="Mushroom10" parent="Mushroom wall2" unique_id=1472503427 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom10" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(360, 0)
 
-[node name="Mushroom11" parent="Mushroom wall2" unique_id=316777345 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom11" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(400, 0)
 
-[node name="Mushroom12" parent="Mushroom wall2" unique_id=2086180913 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom12" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(440, 0)
 
-[node name="Mushroom13" parent="Mushroom wall2" unique_id=38953949 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom13" parent="Mushroom wall2" instance=ExtResource("2_1vnp6")]
 position = Vector2(480, 0)
 
-[node name="Mushroom wall3" parent="." unique_id=755169423 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom wall3" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(-536, 216)
 
-[node name="Mushroom2" parent="Mushroom wall3" unique_id=1238326195 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom2" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(40, 0)
 
-[node name="Mushroom3" parent="Mushroom wall3" unique_id=164910363 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom3" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(80, 0)
 
-[node name="Mushroom4" parent="Mushroom wall3" unique_id=575702560 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom4" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(120, 0)
 
-[node name="Mushroom5" parent="Mushroom wall3" unique_id=849179038 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom5" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(160, 0)
 
-[node name="Mushroom6" parent="Mushroom wall3" unique_id=1328833298 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom6" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(200, 0)
 
-[node name="Mushroom7" parent="Mushroom wall3" unique_id=1056258419 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom7" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(240, 0)
 
-[node name="Mushroom8" parent="Mushroom wall3" unique_id=1836516917 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom8" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(280, 0)
 
-[node name="Mushroom9" parent="Mushroom wall3" unique_id=1851552868 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom9" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(320, 0)
 
-[node name="Mushroom10" parent="Mushroom wall3" unique_id=292134765 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom10" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(360, 0)
 
-[node name="Mushroom11" parent="Mushroom wall3" unique_id=2138654062 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom11" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(400, 0)
 
-[node name="Mushroom12" parent="Mushroom wall3" unique_id=494242749 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom12" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(440, 0)
 
-[node name="Mushroom13" parent="Mushroom wall3" unique_id=94852083 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom13" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(480, 0)
 
-[node name="Mushroom14" parent="Mushroom wall3" unique_id=85140049 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom14" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(520, 0)
 
-[node name="Mushroom15" parent="Mushroom wall3" unique_id=1840206355 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom15" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(560, 0)
 
-[node name="Mushroom16" parent="Mushroom wall3" unique_id=231450759 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom16" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(600, -0.00035095215)
 rotation = -1.1150037e-05
 
-[node name="Mushroom17" parent="Mushroom wall3" unique_id=753570757 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom17" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(640, -0.0007171631)
 
-[node name="Mushroom18" parent="Mushroom wall3" unique_id=755186841 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom18" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(680, -0.0010681152)
 
-[node name="Mushroom19" parent="Mushroom wall3" unique_id=977300433 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom19" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(720, -0.0014190674)
 
-[node name="Mushroom20" parent="Mushroom wall3" unique_id=55955011 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom20" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(760, -0.0017700195)
 
-[node name="Mushroom21" parent="Mushroom wall3" unique_id=968923842 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom21" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(800, -0.0021362305)
 
-[node name="Mushroom22" parent="Mushroom wall3" unique_id=358159393 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom22" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(840, -0.0024871826)
 
-[node name="Mushroom23" parent="Mushroom wall3" unique_id=1809204694 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom23" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(880, -0.0028381348)
 
-[node name="Mushroom24" parent="Mushroom wall3" unique_id=501912798 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom24" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(920, -0.0032043457)
 rotation = -1.1150037e-05
 
-[node name="Mushroom25" parent="Mushroom wall3" unique_id=1975371845 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom25" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(960, -0.0035552979)
 
-[node name="Mushroom26" parent="Mushroom wall3" unique_id=1461103131 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom26" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(1000, -0.00390625)
 
-[node name="Mushroom27" parent="Mushroom wall3" unique_id=2125042799 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom27" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(1040, -0.004257202)
 
-[node name="Mushroom28" parent="Mushroom wall3" unique_id=1100008302 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom28" parent="Mushroom wall3" instance=ExtResource("2_1vnp6")]
 position = Vector2(1080, 0)
 
-[node name="Mushroom wall4" parent="." unique_id=1695513201 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom wall4" parent="." instance=ExtResource("2_1vnp6")]
 position = Vector2(536, -328)
 rotation = -3.1415882
 
-[node name="Mushroom2" parent="Mushroom wall4" unique_id=869544260 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom2" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(40, 0)
 
-[node name="Mushroom3" parent="Mushroom wall4" unique_id=665861081 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom3" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(80, 0)
 
-[node name="Mushroom4" parent="Mushroom wall4" unique_id=1786367468 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom4" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(120, 0)
 
-[node name="Mushroom5" parent="Mushroom wall4" unique_id=451316218 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom5" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(160, 0)
 
-[node name="Mushroom6" parent="Mushroom wall4" unique_id=1862011342 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom6" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(200, 0)
 
-[node name="Mushroom7" parent="Mushroom wall4" unique_id=1870722291 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom7" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(240, 0)
 
-[node name="Mushroom8" parent="Mushroom wall4" unique_id=1312261648 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom8" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(280, 0)
 
-[node name="Mushroom9" parent="Mushroom wall4" unique_id=2039126987 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom9" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(320, 0)
 
-[node name="Mushroom10" parent="Mushroom wall4" unique_id=798927174 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom10" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(360, 0)
 
-[node name="Mushroom11" parent="Mushroom wall4" unique_id=1419465454 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom11" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(400, 0)
 
-[node name="Mushroom12" parent="Mushroom wall4" unique_id=1416933763 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom12" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(440, 0)
 
-[node name="Mushroom13" parent="Mushroom wall4" unique_id=185369132 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom13" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(480, 0)
 
-[node name="Mushroom14" parent="Mushroom wall4" unique_id=1253766117 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom14" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(520, 0)
 
-[node name="Mushroom15" parent="Mushroom wall4" unique_id=257605604 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom15" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(560, 0)
 
-[node name="Mushroom16" parent="Mushroom wall4" unique_id=2066603810 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom16" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(600, -0.00035095215)
 rotation = -1.1150037e-05
 
-[node name="Mushroom17" parent="Mushroom wall4" unique_id=1008399314 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom17" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(640, -0.0007171631)
 
-[node name="Mushroom18" parent="Mushroom wall4" unique_id=377527829 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom18" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(680, -0.0010681152)
 
-[node name="Mushroom19" parent="Mushroom wall4" unique_id=2113850029 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom19" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(720, -0.0014190674)
 
-[node name="Mushroom20" parent="Mushroom wall4" unique_id=1409085482 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom20" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(760, -0.0017700195)
 
-[node name="Mushroom21" parent="Mushroom wall4" unique_id=1815401491 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom21" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(800, -0.0021362305)
 
-[node name="Mushroom22" parent="Mushroom wall4" unique_id=1122350714 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom22" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(840, -0.0024871826)
 
-[node name="Mushroom23" parent="Mushroom wall4" unique_id=1184262815 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom23" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(880, -0.0028381348)
 
-[node name="Mushroom24" parent="Mushroom wall4" unique_id=662891440 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom24" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(920, -0.0032043457)
 rotation = -1.1150037e-05
 
-[node name="Mushroom25" parent="Mushroom wall4" unique_id=1188377965 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom25" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(960, -0.0035552979)
 
-[node name="Mushroom26" parent="Mushroom wall4" unique_id=1249645464 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom26" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(1000, -0.00390625)
 
-[node name="Mushroom27" parent="Mushroom wall4" unique_id=202011960 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom27" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(1040, -0.004257202)
 
-[node name="Mushroom28" parent="Mushroom wall4" unique_id=46984207 instance=ExtResource("2_1vnp6")]
+[node name="Mushroom28" parent="Mushroom wall4" instance=ExtResource("2_1vnp6")]
 position = Vector2(1080, 0)
 
-[node name="Spawnpoint2" type="Marker2D" parent="." unique_id=1244476126]
+[node name="Spawnpoint2" type="Marker2D" parent="."]
 position = Vector2(420, -100)
 
-[node name="Spawnpoint1" type="Marker2D" parent="." unique_id=490037911]
+[node name="Spawnpoint1" type="Marker2D" parent="."]
 position = Vector2(-408, -104)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=90022669]
-position = Vector2(4, 1)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -56)
+zoom = Vector2(1, 1.205)
 script = ExtResource("6_3hkdd")
 
-[node name="PlaceholderOST" type="AudioStreamPlayer" parent="." unique_id=1398943256]
+[node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 process_mode = 2
 stream = ExtResource("5_4ccli")
 volume_db = -10.0
 
-[node name="AnnouncerReady" type="AudioStreamPlayer" parent="." unique_id=1810591003]
+[node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_r6b76")
 volume_db = 1.5
 
-[node name="AnnouncerFight" type="AudioStreamPlayer" parent="." unique_id=2073528740]
+[node name="AnnouncerFight" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_50jjw")
 volume_db = 1.5

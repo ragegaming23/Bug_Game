@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://yssrdt8rjr8c"]
+[gd_scene load_steps=13 format=3 uid="uid://yssrdt8rjr8c"]
 
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Stages/Platforms/Bouncy platform.tscn" id="1_hj4m8"]
 [ext_resource type="Script" uid="uid://datk0sob4bi7g" path="res://Stages/level_5.gd" id="1_wgam1"]
@@ -21,95 +21,95 @@ size = Vector2(90.57408, 5.2445717)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi554"]
 size = Vector2(164.7059, 5.3862686)
 
-[node name="Level5" type="Node2D" unique_id=676895780]
+[node name="Level5" type="Node2D"]
 script = ExtResource("1_wgam1")
 
-[node name="PatchOfGrass" type="Sprite2D" parent="." unique_id=1134445159]
-position = Vector2(8.000015, 8.000019)
-scale = Vector2(2.0945454, 1.5999999)
+[node name="PatchOfGrass" type="Sprite2D" parent="."]
+position = Vector2(8, 4)
+scale = Vector2(2.16, 1.65)
 texture = ExtResource("2_iv1ev")
 
-[node name="StaticBody2D" parent="." unique_id=728006975 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(-169, 253)
 
-[node name="StaticBody2D2" parent="." unique_id=1295669671 instance=ExtResource("2_wgam1")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_wgam1")]
 position = Vector2(-433, 92.99994)
 rotation = 0.872665
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D3" parent="." unique_id=2120667699 instance=ExtResource("2_wgam1")]
-position = Vector2(-185, -67)
-scale = Vector2(20, 1)
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_wgam1")]
+position = Vector2(-131, -66)
+scale = Vector2(16.239998, 1)
 
-[node name="StaticBody2D4" parent="." unique_id=1322726560 instance=ExtResource("2_wgam1")]
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_wgam1")]
 position = Vector2(175, 205)
 scale = Vector2(20, 1)
 
-[node name="StaticBody2D5" parent="." unique_id=932973599 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(439, 149)
 
-[node name="StaticBody2D6" parent="." unique_id=107605251 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(535, -155)
 rotation = -1.309
 
-[node name="StaticBody2D7" parent="." unique_id=702766197 instance=ExtResource("2_wgam1")]
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_wgam1")]
 position = Vector2(183, -67)
 scale = Vector2(10, 1)
 
-[node name="Spawnpoint2" type="Marker2D" parent="." unique_id=1577091572]
+[node name="Spawnpoint2" type="Marker2D" parent="."]
 position = Vector2(185, 146)
 
-[node name="Spawnpoint1" type="Marker2D" parent="." unique_id=629390306]
+[node name="Spawnpoint1" type="Marker2D" parent="."]
 position = Vector2(-316, -122)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1442095227]
-position = Vector2(0, -1)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4, 7)
 script = ExtResource("6_tcq6s")
 
-[node name="PlaceholderOST" type="AudioStreamPlayer" parent="." unique_id=270953820]
+[node name="PlaceholderOST" type="AudioStreamPlayer" parent="."]
 process_mode = 2
 stream = ExtResource("5_yvie5")
 volume_db = -10.0
 
-[node name="AnnouncerReady" type="AudioStreamPlayer" parent="." unique_id=1387404914]
+[node name="AnnouncerReady" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_qvh7v")
 volume_db = 1.5
 
-[node name="AnnouncerFight" type="AudioStreamPlayer" parent="." unique_id=1903130103]
+[node name="AnnouncerFight" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_py08a")
 volume_db = 1.5
 
-[node name="world edges" type="StaticBody2D" parent="." unique_id=826050194]
+[node name="world edges" type="StaticBody2D" parent="."]
 
-[node name="world wall Bottom" type="CollisionShape2D" parent="world edges" unique_id=1269780416]
+[node name="world wall Bottom" type="CollisionShape2D" parent="world edges"]
 position = Vector2(4.499939, 338.5)
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_b14hn")
 
-[node name="world wall Right" type="CollisionShape2D" parent="world edges" unique_id=385662551]
+[node name="world wall Right" type="CollisionShape2D" parent="world edges"]
 position = Vector2(595.49976, -9.1552734e-05)
 rotation = -1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_tn748")
 
-[node name="world wall Left" type="CollisionShape2D" parent="world edges" unique_id=253133838]
+[node name="world wall Left" type="CollisionShape2D" parent="world edges"]
 position = Vector2(-590.4998, 0.49993896)
 rotation = 1.57079
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_l4y1b")
 
-[node name="world wall Top" type="CollisionShape2D" parent="world edges" unique_id=727951648]
-position = Vector2(6.000061, -342.99997)
+[node name="world wall Top" type="CollisionShape2D" parent="world edges"]
+position = Vector2(6, -335)
 rotation = 3.14159
 scale = Vector2(7.055, 7.055)
 shape = SubResource("RectangleShape2D_oi554")
 
-[node name="StaticBody2D8" parent="." unique_id=480897977 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(-212, 253)
 
-[node name="StaticBody2D9" parent="." unique_id=1272398749 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(481, 149)
 
-[node name="StaticBody2D10" parent="." unique_id=906833006 instance=ExtResource("1_hj4m8")]
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_hj4m8")]
 position = Vector2(522, -112.999985)
 rotation = -1.3089969
