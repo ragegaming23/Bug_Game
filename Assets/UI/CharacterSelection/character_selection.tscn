@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bi3ln36os3gja" path="res://Assets/UI/CharacterSelection/Unselected.png" id="2_bf7sj"]
 [ext_resource type="Script" uid="uid://c8po28rsgaqpw" path="res://Assets/UI/localmultiplayer_spawner.gd" id="4_hhfm1"]
 [ext_resource type="Texture2D" uid="uid://b4urwn8i3resf" path="res://Assets/UI/CharacterSelection/Mantis_CC.png" id="5_5sdtd"]
-[ext_resource type="Texture2D" uid="uid://bel5duo0eqb1l" path="res://Assets/UI/CharacterSelection/Franky's Godsend Blank.png" id="5_48e1e"]
 [ext_resource type="PackedScene" uid="uid://de3wg1slg72gg" path="res://Test area/test player.tscn" id="5_fmww8"]
 [ext_resource type="Script" uid="uid://byonpjh2qe8yw" path="res://Assets/UI/FocusTextureButton.gd" id="6_5sdtd"]
 [ext_resource type="Texture2D" uid="uid://8vimhn620l1i" path="res://Assets/UI/CharacterSelection/Dragonfly_CC.png" id="6_48e1e"]
+[ext_resource type="Texture2D" uid="uid://bppcvoygyd8bw" path="res://Assets/UI/Pause Menu/Artboard 1.png" id="8_m2gxm"]
 [ext_resource type="Texture2D" uid="uid://dvsveegw4gw6t" path="res://icon.svg" id="9_m2gxm"]
 
 [sub_resource type="GDScript" id="GDScript_ejiwe"]
@@ -64,12 +64,13 @@ layout_mode = 0
 offset_left = 279.3654
 offset_right = 578.36536
 offset_bottom = 642.0
+scale = Vector2(0.9806118, 0.8147939)
 
 [node name="ButtonDragonfly" type="TextureButton" parent="Dragonfly"]
 layout_mode = 2
 focus_neighbor_right = NodePath("../../Mantis/ButtonMantis")
 focus_neighbor_bottom = NodePath("../../BoxContainer/RandomButton")
-texture_normal = ExtResource("5_48e1e")
+texture_normal = ExtResource("6_48e1e")
 texture_hover = ExtResource("6_48e1e")
 script = ExtResource("6_5sdtd")
 
@@ -86,45 +87,57 @@ offset_right = 27.995483
 offset_bottom = 315.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.98747045, 0.8157719)
 
 [node name="ButtonMantis" type="TextureButton" parent="Mantis"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../Dragonfly/ButtonDragonfly")
 focus_neighbor_bottom = NodePath("../../BoxContainer/RandomButton")
-texture_normal = ExtResource("5_48e1e")
+texture_normal = ExtResource("5_5sdtd")
 texture_hover = ExtResource("5_5sdtd")
 script = ExtResource("6_5sdtd")
 
 [node name="ChooseYourBrawler" type="Label" parent="."]
 layout_mode = 0
-offset_left = 289.00003
-offset_top = 45.000004
-offset_right = 455.00003
-offset_bottom = 68.0
-scale = Vector2(3.2627187, 5.399097)
+offset_left = 319.27478
+offset_top = 30.522205
+offset_right = 837.2748
+offset_bottom = 99.5222
+theme_override_font_sizes/font_size = 50
 text = "Choose your Brawler!"
 
 [node name="Label_Player" type="Label" parent="."]
 layout_mode = 0
-offset_left = 222.0
-offset_top = 508.0
-offset_right = 469.0
-offset_bottom = 531.0
-scale = Vector2(2.996234, 2.996234)
+offset_left = 203.53766
+offset_top = 437.15677
+offset_right = 975.53766
+offset_bottom = 506.15677
+theme_override_font_sizes/font_size = 50
 text = "Player 1, choose your character!"
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 6.984131
-offset_top = 522.81586
-offset_right = 1149.3892
-offset_bottom = 650.81586
+offset_left = 377.1433
+offset_top = 502.13953
+offset_right = 781.1433
+offset_bottom = 639.1395
+theme_override_font_sizes/font_size = 100
+text = "	Random"
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2.9932022
+offset_top = 517.8929
+offset_right = 130.9932
+offset_bottom = 645.8929
+scale = Vector2(0.59930927, 0.11858353)
 
 [node name="RandomButton" type="TextureButton" parent="BoxContainer"]
 z_index = -1
 layout_mode = 2
 focus_neighbor_top = NodePath("../../Mantis/ButtonMantis")
-texture_normal = ExtResource("9_m2gxm")
+texture_normal = ExtResource("8_m2gxm")
 texture_hover = ExtResource("9_m2gxm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
