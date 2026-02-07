@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://lgipcsgc5s1w"]
+[gd_scene format=3 uid="uid://lgipcsgc5s1w"]
 
 [ext_resource type="Script" uid="uid://c20anioq5clld" path="res://Assets/UI/CharacterSelection/character_selection.gd" id="1_3gqe6"]
 [ext_resource type="Texture2D" uid="uid://bi3ln36os3gja" path="res://Assets/UI/CharacterSelection/Unselected.png" id="2_bf7sj"]
@@ -18,7 +18,7 @@ script/source = "extends Node
 script/source = "extends Node
 "
 
-[node name="Character selection" type="Control"]
+[node name="Character selection" type="Control" unique_id=1290100606]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,41 +32,41 @@ grow_vertical = 2
 scale = Vector2(1.0022715, 1.015654)
 script = ExtResource("1_3gqe6")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=363607645]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 522.8159
 texture = ExtResource("2_bf7sj")
 expand_mode = 1
 
-[node name="PlayerSelectors" type="Control" parent="."]
+[node name="PlayerSelectors" type="Control" parent="." unique_id=911447881]
 anchors_preset = 0
 offset_left = 4.0
 offset_top = 2.0
 offset_right = 55.0
 offset_bottom = 53.0
 
-[node name="player1" type="Node" parent="PlayerSelectors"]
+[node name="player1" type="Node" parent="PlayerSelectors" unique_id=112092129]
 script = SubResource("GDScript_ejiwe")
 
-[node name="player2" type="Node" parent="PlayerSelectors"]
+[node name="player2" type="Node" parent="PlayerSelectors" unique_id=1631866527]
 script = SubResource("GDScript_bf7sj")
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=413468771]
 _spawnable_scenes = PackedStringArray("uid://de3wg1slg72gg")
 spawn_path = NodePath("../PlayerSelectors/player1")
 spawn_limit = 2
 script = ExtResource("4_hhfm1")
 network_player = ExtResource("5_fmww8")
 
-[node name="Dragonfly" type="BoxContainer" parent="."]
+[node name="Dragonfly" type="BoxContainer" parent="." unique_id=958632240]
 layout_mode = 0
 offset_left = 279.3654
 offset_right = 578.36536
 offset_bottom = 642.0
 scale = Vector2(0.9806118, 0.8147939)
 
-[node name="ButtonDragonfly" type="TextureButton" parent="Dragonfly"]
+[node name="ButtonDragonfly" type="TextureButton" parent="Dragonfly" unique_id=480296175]
 layout_mode = 2
 focus_neighbor_right = NodePath("../../Mantis/ButtonMantis")
 focus_neighbor_bottom = NodePath("../../BoxContainer/RandomButton")
@@ -74,7 +74,7 @@ texture_normal = ExtResource("6_48e1e")
 texture_hover = ExtResource("6_48e1e")
 script = ExtResource("6_5sdtd")
 
-[node name="Mantis" type="BoxContainer" parent="."]
+[node name="Mantis" type="BoxContainer" parent="." unique_id=1736374060]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,7 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.98747045, 0.8157719)
 
-[node name="ButtonMantis" type="TextureButton" parent="Mantis"]
+[node name="ButtonMantis" type="TextureButton" parent="Mantis" unique_id=91849506]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../Dragonfly/ButtonDragonfly")
 focus_neighbor_bottom = NodePath("../../BoxContainer/RandomButton")
@@ -97,7 +97,7 @@ texture_normal = ExtResource("5_5sdtd")
 texture_hover = ExtResource("5_5sdtd")
 script = ExtResource("6_5sdtd")
 
-[node name="ChooseYourBrawler" type="Label" parent="."]
+[node name="ChooseYourBrawler" type="Label" parent="." unique_id=1633329876]
 layout_mode = 0
 offset_left = 319.27478
 offset_top = 30.522205
@@ -106,7 +106,7 @@ offset_bottom = 99.5222
 theme_override_font_sizes/font_size = 50
 text = "Choose your Brawler!"
 
-[node name="Label_Player" type="Label" parent="."]
+[node name="Label_Player" type="Label" parent="." unique_id=1691696698]
 layout_mode = 0
 offset_left = 203.53766
 offset_top = 437.15677
@@ -115,7 +115,7 @@ offset_bottom = 506.15677
 theme_override_font_sizes/font_size = 50
 text = "Player 1, choose your character!"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1953002561]
 layout_mode = 0
 offset_left = 377.1433
 offset_top = 502.13953
@@ -124,8 +124,7 @@ offset_bottom = 639.1395
 theme_override_font_sizes/font_size = 100
 text = "	Random"
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-visible = false
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=2038378363]
 layout_mode = 0
 offset_left = 2.9932022
 offset_top = 517.8929
@@ -133,14 +132,14 @@ offset_right = 130.9932
 offset_bottom = 645.8929
 scale = Vector2(0.59930927, 0.11858353)
 
-[node name="RandomButton" type="TextureButton" parent="BoxContainer"]
+[node name="RandomButton" type="TextureButton" parent="BoxContainer" unique_id=1203427594]
 z_index = -1
 layout_mode = 2
 focus_neighbor_top = NodePath("../../Mantis/ButtonMantis")
 texture_normal = ExtResource("8_m2gxm")
 texture_hover = ExtResource("9_m2gxm")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1525985905]
 position = Vector2(3.9909346, -0.9845874)
 anchor_mode = 0
 
