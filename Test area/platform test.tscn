@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dowkmmq41k08q"]
+[gd_scene load_steps=7 format=3 uid="uid://dowkmmq41k08q"]
 
 [ext_resource type="PackedScene" uid="uid://bhn64fcs7wwj6" path="res://Stages/Platforms/Bouncy platform.tscn" id="1_pmxtv"]
 [ext_resource type="PackedScene" uid="uid://dx7r1lw6mjxmq" path="res://Stages/Platforms/Sticky Floor.tscn" id="2_uxlkv"]
@@ -14,12 +14,10 @@ position = Vector2(192, 248)
 rotation = 0.64751714
 scale = Vector2(5.84, 1)
 Knockback_timer = 0.1
-Force = 800.0
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_uxlkv")]
 position = Vector2(624, 248)
 scale = Vector2(16.2, 1)
-slow = 0.05
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("3_qbgw2")]
 position = Vector2(360, 248)

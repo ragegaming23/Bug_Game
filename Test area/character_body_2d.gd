@@ -130,6 +130,9 @@ func _movement(_delta: float):
 	pass
 
 
+func apply_slow(slow: float) -> void:
+	move_speed = move_speed * slow
+
 func _on_area_2d_body_entered(body):
 	if not body.has_method("Take_Damage"):
 		return
