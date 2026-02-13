@@ -430,12 +430,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uc3h"]
-size = Vector2(20.75, 15.75)
+size = Vector2(20.75, 35.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjc8k"]
+size = Vector2(20, 26)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qjc8k"]
-radius = 13.999998
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqtej"]
+size = Vector2(63, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4fcr"]
 size = Vector2(39.125008, 20.49997)
@@ -474,16 +475,16 @@ sprite_frames = SubResource("SpriteFrames_20rux")
 animation = &"antiair"
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(13, 2)
+position = Vector2(13, -5)
 shape = SubResource("RectangleShape2D_3uc3h")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(30, -14)
+position = Vector2(33, -11)
 shape = SubResource("RectangleShape2D_qjc8k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1, 18)
-shape = SubResource("CircleShape2D_qjc8k")
+position = Vector2(-10.5, 20)
+shape = SubResource("RectangleShape2D_dqtej")
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(67, -8)
