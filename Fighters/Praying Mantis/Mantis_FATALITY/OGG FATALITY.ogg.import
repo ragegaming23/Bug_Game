@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bm45g8653a6si"
+path="res://.godot/imported/OGG FATALITY.ogg-37108b042c360bf90726641f61d2d7b9.oggvorbisstr"
+
+[deps]
+
+source_file="res://Fighters/Praying Mantis/Mantis_FATALITY/OGG FATALITY.ogg"
+dest_files=["res://.godot/imported/OGG FATALITY.ogg-37108b042c360bf90726641f61d2d7b9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
